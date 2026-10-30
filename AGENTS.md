@@ -103,7 +103,7 @@ PROGRESS.md 里一条日志（新的写在最上面）：
 
 - 先遵守 `docs/CONTRACT.md`：`src/core/**` 必须是纯函数（不碰 DOM、不用 `Math.random`、不用 `Date.now()`），随机数一律走 `Rng`
 - `data/*.json` 由 `tools/` 里的脚本生成，不许手改，要改就改脚本再重建
-- `dist-web/` 里有一个独立的 git 仓库，它就是线上网站。**线上网站的任何更新都要先问我**，不许自己 push
+- **push 到 `main` 就会自动部署到线上网站**（GitHub Actions，测试通过才部署）。所以每次 push 前都要先问我；平时只在本地 commit。`dist-web/.git` 是旧的手动发布方式，已经弃用，不要再用
 - 游戏必须在没有 AI、没有数据库的情况下也能完整游玩
 - `raw/`（342 MB 原始数据）、`node_modules/`、`dist/`、`dist-web/`、`tests/screens/`（截图）不进 git
 - 数据来源（联合国 WPP 2024、世界银行 WDI）和照片（Wikimedia Commons）的出处和许可证必须在 README 里写明
