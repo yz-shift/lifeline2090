@@ -1,0 +1,22 @@
+# Build the site and run the unit tests on every push and pull request.
+# Deployment to GitHub Pages is a separate step (not enabled yet).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node tools/build_web.mjs
+      - run: npm test
