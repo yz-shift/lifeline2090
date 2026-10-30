@@ -1,0 +1,81 @@
+/* 成就图鉴 — achievement cards (.ac- classes, tokens from styles.css only; tier colours reuse existing tokens) */
+.ac-t-N { --ac-tier: var(--ink-3); }
+.ac-t-R { --ac-tier: var(--accent); }
+.ac-t-SR { --ac-tier: var(--st-wealth); }
+.ac-t-SSR { --ac-tier: var(--cat-4); }
+
+.ac-page { max-width: 1100px; margin: 0 auto; padding-block: 24px 64px; display: grid; gap: 16px; }
+.ac-hd { display: grid; gap: 6px; }
+.ac-eyebrow { margin: 0; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--ink-3); }
+.ac-title { margin: 0; font-family: var(--font-display); font-size: clamp(26px, 4.4vw, 40px); line-height: 1.2; color: var(--ink); }
+.ac-lede { margin: 0; max-width: 62ch; color: var(--ink-2); line-height: 1.8; }
+.ac-progress { display: grid; gap: 8px; margin-top: 6px; max-width: 560px; }
+.ac-progress-t { margin: 0; font-family: var(--font-display); font-size: 20px; color: var(--ink); }
+.ac-progress-bar { height: 8px; background: var(--paper-2); border: 1px solid var(--line); overflow: hidden; }
+.ac-progress-fill { display: block; height: 100%; width: 0; background: var(--seal); transition: width 0.6s ease; }
+.ac-tiers { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--ink-2); }
+.ac-tiers li { display: inline-flex; align-items: center; gap: 4px; }
+.ac-tiers b { color: var(--ac-tier); font-weight: 600; }
+
+.ac-filters, .ac-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ac-filter, .ac-chip { appearance: none; font: inherit; font-size: 13px; min-height: 36px; padding: 4px 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.ac-filter[aria-pressed="true"], .ac-chip[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); font-weight: 600; background: var(--paper-2); }
+.ac-chip-n { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+.ac-filter:focus-visible, .ac-chip:focus-visible, .ac-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.ac-grid { display: grid; gap: 22px; }
+.ac-group { display: grid; gap: 10px; }
+.ac-group-t { margin: 0; font-family: var(--font-display); font-size: 18px; color: var(--ink); display: flex; align-items: baseline; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.ac-group-n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+.ac-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
+.ac-empty { margin: 0; padding: 28px 20px; border: 1px dashed var(--line); background: var(--paper); color: var(--ink-2); display: grid; gap: 12px; justify-items: start; }
+
+/* one card tile: portrait, tier-coloured frame */
+.ac-card { appearance: none; font: inherit; position: relative; aspect-ratio: 3 / 4; min-width: 0; padding: 10px 8px; cursor: pointer;
+  display: grid; grid-template-rows: auto 1fr auto auto; justify-items: center; align-items: center; gap: 2px;
+  background: var(--paper); color: var(--ink); border: 2px solid var(--ac-tier); border-radius: 8px;
+  box-shadow: inset 0 0 0 3px var(--paper), inset 0 0 0 4px color-mix(in srgb, var(--ac-tier) 45%, transparent);
+  transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.ac-card:hover { transform: translateY(-2px); }
+.ac-tier { justify-self: start; font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--ac-tier); letter-spacing: 0.04em; }
+.ac-icon { font-size: 34px; line-height: 1; }
+.ac-name { font-size: 13px; line-height: 1.3; text-align: center; color: var(--ink); overflow-wrap: anywhere; }
+.ac-count { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+.ac-new { position: absolute; top: 6px; right: 6px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; padding: 1px 5px; color: #fff; background: var(--seal); border-radius: 2px; }
+.ac-got.ac-t-SSR, .ac-big.ac-got.ac-t-SSR { background: linear-gradient(150deg, color-mix(in srgb, var(--cat-4) 16%, var(--paper)), var(--paper) 55%, color-mix(in srgb, var(--cat-4) 12%, var(--paper))); }
+.ac-got.ac-t-SR, .ac-big.ac-got.ac-t-SR { background: linear-gradient(150deg, color-mix(in srgb, var(--st-wealth) 12%, var(--paper)), var(--paper) 60%); }
+.ac-locked { background: repeating-linear-gradient(135deg, var(--paper-2) 0 6px, var(--paper) 6px 12px); border-style: dashed; }
+.ac-locked .ac-icon { color: var(--ink-3); font-family: var(--font-display); }
+.ac-locked .ac-name { color: var(--ink-3); }
+
+/* new cards on the death screen flip in one by one */
+.ac-fresh { animation: ac-flip 0.7s ease both; animation-delay: calc(var(--i, 0) * 120ms); }
+@keyframes ac-flip { from { transform: perspective(600px) rotateY(90deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .ac-fresh { animation: none; } .ac-progress-fill { transition: none; } }
+
+/* detail dialog */
+.ac-dialog { position: fixed; inset: 0; z-index: 55; background: var(--overlay); display: grid; place-items: center; padding: 16px; }
+.ac-dialog[hidden] { display: none; }
+.ac-dialog-box { width: min(420px, 100%); max-height: calc(100vh - 32px); overflow: auto; background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 20px; display: grid; gap: 14px; }
+.ac-big { position: relative; border: 3px solid var(--ac-tier); border-radius: 12px; padding: 22px 18px 18px; display: grid; justify-items: center; gap: 8px; text-align: center; background: var(--paper); }
+.ac-big-tier { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--ac-tier); letter-spacing: 0.08em; }
+.ac-big-icon { font-size: 64px; line-height: 1.1; }
+.ac-locked .ac-big-icon { color: var(--ink-3); font-family: var(--font-display); }
+.ac-big-t { margin: 0; font-family: var(--font-display); font-size: 26px; color: var(--ink); }
+.ac-big-d { margin: 0; color: var(--ink-2); line-height: 1.7; }
+.ac-big-r { margin: 0; font-size: 12px; color: var(--ink-3); }
+.ac-dialog-meta { display: grid; gap: 4px; font-size: 14px; color: var(--ink-2); }
+.ac-dialog-meta p { margin: 0; line-height: 1.6; }
+.ac-muted { color: var(--ink-3); }
+.ac-dialog-actions { justify-content: flex-end; }
+.ac-foot { margin: 0; font-size: 12px; color: var(--ink-3); line-height: 1.7; }
+
+/* death screen: cards this life earned */
+.g-cards .ac-tiles { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+.g-cards-more { margin: 0; font-size: 13px; color: var(--ink-3); }
+
+@media (max-width: 520px) {
+  .ac-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .ac-icon { font-size: 28px; }
+  .ac-name { font-size: 12px; }
+}

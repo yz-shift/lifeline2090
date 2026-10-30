@@ -1,0 +1,16 @@
+{
+  "name": "lifeline2090",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "python tools/build_data.py && python tools/build_content.py",
+    "build": "node tools/build.mjs",
+    "test": "node --test tests/",
+    "serve": "python -m http.server 8090 -d dist"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "playwright-core": "^1.49.1"
+  }
+}

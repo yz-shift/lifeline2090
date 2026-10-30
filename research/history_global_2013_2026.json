@@ -1,0 +1,7067 @@
+{
+ "file": "history_global_2013_2026",
+ "events": [
+  {
+   "id": "smartphone_era_2013",
+   "start": "2013",
+   "year": 2013,
+   "end_year": 2017,
+   "scope": "global",
+   "countries": [
+    "CHN",
+    "IND",
+    "IDN",
+    "BRA",
+    "NGA",
+    "USA"
+   ],
+   "category": "technology",
+   "title": "智能手机与移动互联网普及",
+   "summary": "2013年全球智能手机年出货量首次超过10亿部，低价安卓手机推动智能手机在发展中国家迅速普及，移动互联网成为大多数人上网的主要方式；社交媒体、即时通讯、网购和移动支付由此深入日常生活。",
+   "personal_hooks": [
+    "第一次拥有智能手机，开始用即时通讯软件与远方亲友视频通话",
+    "年轻人通过手机获取新闻、学习和娱乐，网络社交成为日常"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 3
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Smartphone",
+    "https://ourworldindata.org/internet"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "opioid_epidemic_usa",
+   "start": "2013",
+   "year": 2013,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "CAN"
+   ],
+   "category": "epidemic",
+   "title": "北美芬太尼与阿片类药物危机",
+   "summary": "2010年代中期起，非法芬太尼等合成阿片类药物在美国和加拿大泛滥，美国药物过量死亡人数在2022年前后达到每年约11万人的峰值，成为青壮年的主要死因之一，并拉低美国人均预期寿命；2024年死亡人数明显下降。",
+   "personal_hooks": [
+    "社区里有人因药物过量离世，纳洛酮急救培训开始普及"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -2,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     20,
+     59
+    ],
+    "applies_to": [
+     "USA"
+    ]
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Opioid_epidemic_in_the_United_States",
+    "https://en.wikipedia.org/wiki/Fentanyl"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_hsr_expansion",
+   "start": "2013",
+   "year": 2013,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "中国高铁网络快速扩张",
+   "summary": "2010年代起中国高速铁路网快速扩张，运营里程在2016年超过2万公里，到2024年底约4.8万公里，占全球高铁里程的三分之二以上，城市间出行时间大幅缩短，“高铁通勤”和跨城就业更加普遍。",
+   "personal_hooks": [
+    "春节回家从坐一整夜火车变成乘几个小时高铁",
+    "一些年轻人在邻近城市工作、周末乘高铁回家"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/High-speed_rail_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_air_pollution_2013",
+   "start": "2013-01",
+   "year": 2013,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "严重雾霾与《大气污染防治行动计划》",
+   "summary": "2013年1月华北等地遭遇持续严重雾霾，细颗粒物(PM2.5)浓度多次严重超标；同年9月国务院发布《大气污染防治行动计划》，推进燃煤治理、淘汰落后产能和机动车排放管控，此后全国主要城市PM2.5浓度明显下降。",
+   "personal_hooks": [
+    "冬季家里添置空气净化器，出门查看空气质量指数并佩戴口罩",
+    "北方农村逐步推行“煤改气”“煤改电”取暖"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Air_pollution_in_China",
+    "https://en.wikipedia.org/wiki/Air_Pollution_Prevention_and_Control_Action_Plan"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "syria_war_2013",
+   "start": "2013-01",
+   "year": 2013,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "SYR",
+    "LBN",
+    "JOR",
+    "TUR"
+   ],
+   "category": "war",
+   "title": "叙利亚内战最惨烈阶段与难民外流",
+   "summary": "叙利亚内战在2013至2016年进入最惨烈阶段：2013年8月大马士革东古塔发生化学武器袭击，2015年9月俄罗斯出兵支持叙利亚政府，2016年底政府军收复阿勒颇东部。战争总死亡人数估计达数十万，约一半人口流离失所，数百万人逃往土耳其、黎巴嫩、约旦和欧洲，是本世纪规模最大的难民危机之一。",
+   "personal_hooks": [
+    "家庭逃往土耳其或黎巴嫩，孩子在异国难民营或学校中长大",
+    "留在国内的人经历物价飞涨、断电和征兵"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -3,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.5,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "SYR"
+    ],
+    "note": "黎巴嫩、约旦、土耳其主要受难民涌入影响，不施加死亡率乘数"
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Syrian_civil_war",
+    "https://en.wikipedia.org/wiki/Ghouta_chemical_attack",
+    "https://en.wikipedia.org/wiki/Russian_intervention_in_the_Syrian_civil_war",
+    "https://en.wikipedia.org/wiki/Syrian_refugee_crisis"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "car_conflict_2013",
+   "start": "2013-03-24",
+   "year": 2013,
+   "end_year": 2016,
+   "scope": "countries",
+   "countries": [
+    "CAF",
+    "TCD",
+    "CMR"
+   ],
+   "category": "war",
+   "title": "中非共和国冲突",
+   "summary": "2013年3月中非共和国“塞雷卡”武装攻占首都班吉、推翻博齐泽政府，随后与“反巴拉卡”民兵之间爆发宗教与族群暴力，约四分之一人口流离失所，大批难民逃往喀麦隆和乍得；联合国于2014年部署维和特派团。",
+   "personal_hooks": [
+    "村民为躲避武装袭击逃入丛林或邻国难民营"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 3,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Central_African_Republic_Civil_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "abenomics_2013",
+   "start": "2013-04-04",
+   "year": 2013,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "JPN"
+   ],
+   "category": "economy",
+   "title": "“安倍经济学”与日本超宽松货币政策",
+   "summary": "2012年底安倍晋三再次出任日本首相后推出“安倍经济学”，日本银行自2013年4月实施大规模量化质化宽松，日元明显贬值、股市上涨、就业改善，但低增长与低通胀问题未根本解决；消费税于2014年和2019年先后提高至8%和10%。",
+   "personal_hooks": [
+    "企业招聘回暖，应届毕业生求职比前几年容易",
+    "日元贬值后出国旅行和进口商品变贵，访日外国游客大幅增加"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Abenomics"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "rana_plaza_2013",
+   "start": "2013-04-24",
+   "year": 2013,
+   "end_year": 2013,
+   "scope": "countries",
+   "countries": [
+    "BGD"
+   ],
+   "category": "society",
+   "title": "孟加拉国拉纳广场大楼倒塌",
+   "summary": "2013年4月24日，孟加拉国萨瓦尔区拉纳广场大楼倒塌，楼内多家成衣工厂的1,134名工人遇难，是服装业史上最严重的工业事故之一。事故后国际服装品牌与工会签署《孟加拉国消防与建筑安全协议》，推动工厂安全检查。",
+   "personal_hooks": [
+    "在成衣厂打工的年轻人和家人更加关注厂房安全与劳动条件",
+    "工厂周边的社区为遇难工友举行悼念活动"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rana_Plaza_collapse",
+    "https://en.wikipedia.org/wiki/Accord_on_Fire_and_Building_Safety_in_Bangladesh"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "snowden_disclosures_2013",
+   "start": "2013-06-06",
+   "year": 2013,
+   "end_year": 2014,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "DEU"
+   ],
+   "category": "technology",
+   "title": "斯诺登披露大规模监控项目",
+   "summary": "2013年6月起，美国国家安全局前合同雇员爱德华·斯诺登向媒体披露美英情报机构的大规模电子监控项目(如“棱镜”)，引发全球关于网络隐私、数据安全与政府监控的持续讨论，多国随后加强数据本地化与加密要求。",
+   "personal_hooks": [
+    "人们开始更在意手机和社交软件中的个人隐私设置"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013–present)",
+    "https://en.wikipedia.org/wiki/Edward_Snowden"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "egypt_coup_2013",
+   "start": "2013-07-03",
+   "year": 2013,
+   "end_year": 2014,
+   "scope": "countries",
+   "countries": [
+    "EGY"
+   ],
+   "category": "politics",
+   "title": "埃及2013年政变与政局剧变",
+   "summary": "2013年6月底埃及爆发反对总统穆罕默德·穆尔西的大规模示威，7月3日国防部长阿卜杜勒-法塔赫·塞西领导的军方解除穆尔西职务并中止宪法；8月14日安全部队强行清场开罗拉巴阿等地支持穆尔西的静坐营地，造成数百人死亡。同年12月穆斯林兄弟会被政府列为恐怖组织，塞西于2014年5月当选总统。",
+   "personal_hooks": [
+    "开罗等城市多次实施宵禁并发生大规模示威，人们尽量减少外出",
+    "旅游业受局势动荡影响，依赖游客收入的家庭生计受损"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2013_Egyptian_coup_d'état",
+    "https://en.wikipedia.org/wiki/Abdel_Fattah_el-Sisi"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bri_2013",
+   "start": "2013-09-07",
+   "year": 2013,
+   "end_year": 2026,
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "SEA",
+    "SAS",
+    "CAS",
+    "WAS",
+    "SSA",
+    "EEU"
+   ],
+   "countries": [
+    "CHN",
+    "PAK",
+    "KAZ",
+    "IDN",
+    "LAO",
+    "KEN",
+    "ETH",
+    "LKA",
+    "KHM",
+    "MYS"
+   ],
+   "category": "economy",
+   "title": "“一带一路”倡议提出",
+   "summary": "2013年9月和10月，中国国家主席习近平先后在哈萨克斯坦和印度尼西亚提出共建“丝绸之路经济带”和“21世纪海上丝绸之路”。此后中国在许多发展中国家参与建设铁路、港口、电站等基础设施，如中巴经济走廊、蒙内铁路和中老铁路；相关项目的融资与债务可持续性也受到国际关注。",
+   "personal_hooks": [
+    "当地青年进入中资基建项目工作，开始学习中文",
+    "中国工程技术人员被派往海外项目长期驻场"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Belt_and_Road_Initiative",
+    "https://en.wikipedia.org/wiki/China–Pakistan_Economic_Corridor"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "haiyan_2013",
+   "start": "2013-11-08",
+   "year": 2013,
+   "end_year": 2014,
+   "scope": "countries",
+   "countries": [
+    "PHL"
+   ],
+   "category": "disaster",
+   "title": "超强台风“海燕”袭击菲律宾",
+   "summary": "2013年11月8日，超强台风“海燕”(菲律宾称“尤兰达”)在菲律宾中部登陆，莱特岛塔克洛班等地遭风暴潮重创，超过6,300人死亡，约400万人流离失所，是菲律宾有记录以来最致命的台风之一。",
+   "personal_hooks": [
+    "沿海居民在风暴潮中失去房屋，在临时安置点度过数月",
+    "在海外务工的菲律宾人汇款帮助家乡亲人重建"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Typhoon_Haiyan"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "euromaidan_2013",
+   "start": "2013-11-21",
+   "end": "2014-02-22",
+   "year": 2013,
+   "end_year": 2014,
+   "scope": "countries",
+   "countries": [
+    "UKR"
+   ],
+   "category": "politics",
+   "title": "乌克兰独立广场抗议与政权更迭",
+   "summary": "2013年11月，乌克兰政府暂停签署与欧盟的联系国协定，引发基辅独立广场长期抗议；2014年2月冲突造成一百余人死亡，总统亚努科维奇出走，议会解除其职务，乌克兰随后转向与欧盟加强联系。",
+   "personal_hooks": [
+    "基辅市民到广场送食物和保暖用品，或因局势动荡暂停出行"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Euromaidan",
+    "https://en.wikipedia.org/wiki/Revolution_of_Dignity"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "south_sudan_war_2013",
+   "start": "2013-12-15",
+   "year": 2013,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "SSD",
+    "UGA",
+    "ETH",
+    "SDN"
+   ],
+   "category": "war",
+   "title": "南苏丹内战",
+   "summary": "2013年12月南苏丹总统基尔与前副总统马沙尔的支持者之间爆发内战，伴随族群屠杀和饥荒；伦敦卫生与热带医学院的研究估计至2018年约38万人因战争死亡，约400万人流离失所。2018年9月双方签署振兴版和平协议，2020年组建联合政府。",
+   "personal_hooks": [
+    "家庭逃往乌干达的难民定居点，孩子在那里上学",
+    "牧民失去牛群，依靠粮食援助度日"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.4,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "SSD"
+    ]
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "venezuela_crisis_2014",
+   "start": "2014",
+   "year": 2014,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "VEN",
+    "COL",
+    "PER",
+    "CHL",
+    "ECU",
+    "BRA"
+   ],
+   "category": "economy",
+   "title": "委内瑞拉经济崩溃与人口大规模外流",
+   "summary": "2014年起委内瑞拉陷入严重的经济与政治危机：油价下跌叠加政策与治理问题使经济规模大幅萎缩，2017至2021年出现恶性通货膨胀，食品和药品严重短缺。数百万人移居国外，主要前往哥伦比亚、秘鲁、巴西、智利和美国，成为美洲有记录以来规模最大的人口外流。",
+   "personal_hooks": [
+    "家庭成员陆续前往哥伦比亚、秘鲁或智利谋生，靠汇款维持国内生活",
+    "超市货架空空，购买基本食品需要长时间排队"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": -1
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Crisis_in_Venezuela",
+    "https://en.wikipedia.org/wiki/Hyperinflation_in_Venezuela",
+    "https://en.wikipedia.org/wiki/Venezuelan_refugee_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "brazil_recession_2014",
+   "start": "2014",
+   "year": 2014,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "BRA"
+   ],
+   "category": "economy",
+   "title": "巴西经济衰退与政治危机",
+   "summary": "2014至2016年巴西陷入严重衰退，2015年和2016年GDP分别下降约3.5%和3.3%，失业率大幅上升；同期“洗车行动”反腐调查牵涉大量政商人士，总统罗塞夫于2016年8月被参议院弹劾罢免。",
+   "personal_hooks": [
+    "父母失业后家庭削减开支，孩子从私立学校转入公立学校"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2014_Brazilian_economic_crisis",
+    "https://en.wikipedia.org/wiki/Operation_Car_Wash",
+    "https://en.wikipedia.org/wiki/Impeachment_of_Dilma_Rousseff"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_mobile_payment_2014",
+   "start": "2014-01",
+   "year": 2014,
+   "end_year": 2018,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "移动支付与手机生活服务在中国普及",
+   "summary": "2014年微信推出“红包”功能，与支付宝一道推动移动支付在中国迅速普及；到2010年代末，扫码支付已覆盖街边小店、公共交通和水电缴费，现金使用大幅减少。网约车、外卖、共享单车等基于手机的服务也在这一时期兴起。",
+   "personal_hooks": [
+    "春节在微信群里抢红包成为新的过年习俗",
+    "出门只带手机、不带钱包逐渐成为城市生活常态"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/WeChat_Pay",
+    "https://en.wikipedia.org/wiki/Alipay"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "crimea_donbas_2014",
+   "start": "2014-02-27",
+   "end": "2022-02-24",
+   "year": 2014,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "UKR",
+    "RUS"
+   ],
+   "category": "war",
+   "title": "克里米亚并入俄罗斯与顿巴斯战争",
+   "summary": "2014年2月底俄罗斯军队控制克里米亚，3月当地举行公投后俄罗斯宣布将其并入，联合国大会通过决议重申乌克兰领土完整；同年4月起顿涅茨克和卢汉斯克地区爆发武装冲突，至2021年底约1.4万人死亡、约150万人在国内流离失所。2014年7月马航MH17航班在冲突区上空被击落，298人遇难。西方国家对俄罗斯实施制裁。",
+   "personal_hooks": [
+    "顿巴斯居民在炮火中离开家乡，成为国内流离失所者",
+    "俄乌之间的亲属往来、工作与贸易受到影响"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Annexation_of_Crimea_by_the_Russian_Federation",
+    "https://en.wikipedia.org/wiki/War_in_Donbas",
+    "https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_17",
+    "https://en.wikipedia.org/wiki/United_Nations_General_Assembly_Resolution_68/262"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ebola_west_africa_2014",
+   "start": "2014-03",
+   "end": "2016-06",
+   "year": 2014,
+   "end_year": 2016,
+   "scope": "countries",
+   "countries": [
+    "GIN",
+    "LBR",
+    "SLE"
+   ],
+   "category": "epidemic",
+   "title": "西非埃博拉疫情",
+   "summary": "西非埃博拉疫情于2014年在几内亚、利比里亚和塞拉利昂大规模暴发，至2016年共报告约2.86万例病例、约1.13万人死亡，是有记录以来规模最大的埃博拉疫情。世卫组织于2014年8月宣布其为国际关注的突发公共卫生事件；疫情期间学校停课、边境关闭，常规医疗服务严重中断。",
+   "personal_hooks": [
+    "学校停课数月，孩子们在家通过广播课程学习",
+    "家人患病只能送往隔离治疗中心，传统葬礼被禁止"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -3,
+    "happiness": -2,
+    "safety": -1,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.06,
+    "ages": [
+     0,
+     120
+    ],
+    "by_country": {
+     "LBR": 1.1,
+     "SLE": 1.06,
+     "GIN": 1.03
+    },
+    "years": [
+     2014,
+     2015
+    ]
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Western_African_Ebola_virus_epidemic"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "mh370_2014",
+   "start": "2014-03-08",
+   "year": 2014,
+   "end_year": 2014,
+   "scope": "countries",
+   "countries": [
+    "MYS",
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "马航MH370航班失踪",
+   "summary": "2014年3月8日，马来西亚航空MH370航班在从吉隆坡飞往北京途中与地面失去联系，机上239人中有150多名中国乘客。多国在南印度洋开展大规模搜寻，此后在印度洋沿岸陆续发现少量残骸，但多轮搜寻均未找到主残骸，失踪原因至今未有定论。",
+   "personal_hooks": [
+    "乘客家属长期聚集等待消息，持续要求公开调查信息",
+    "人们乘坐国际航班时更加关注航空安全与航班追踪"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_370"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "boko_haram_2014",
+   "start": "2014-04-14",
+   "year": 2014,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "NGA",
+    "CMR",
+    "TCD",
+    "NER"
+   ],
+   "category": "conflict",
+   "title": "“博科圣地”武装活动高峰",
+   "summary": "尼日利亚东北部“博科圣地”武装活动在2014至2015年达到高峰，2014年4月在奇博克绑架276名女学生，袭击导致数万人死亡、约200万人流离失所，并波及喀麦隆、乍得和尼日尔的乍得湖周边地区。",
+   "personal_hooks": [
+    "东北部的学生因学校遭袭而被迫停学",
+    "村民逃往迈杜古里等城市的安置营地"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Boko_Haram_insurgency",
+    "https://en.wikipedia.org/wiki/Chibok_schoolgirls_kidnapping"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sewol_2014",
+   "start": "2014-04-16",
+   "year": 2014,
+   "end_year": 2014,
+   "scope": "countries",
+   "countries": [
+    "KOR"
+   ],
+   "category": "disaster",
+   "title": "韩国“世越号”沉船事故",
+   "summary": "2014年4月16日，韩国“世越号”客轮在珍岛附近海域沉没，304人遇难，其中大多数是安山市檀园高中的学生。事故引发韩国社会对安全监管、救援体系与政府问责的长期反思。",
+   "personal_hooks": [
+    "全国学校组织悼念活动，黄丝带成为纪念符号"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sinking_of_MV_Sewol"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_modi_2014",
+   "start": "2014-05-16",
+   "year": 2014,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "politics",
+   "title": "莫迪当选印度总理",
+   "summary": "2014年印度大选中，纳伦德拉·莫迪领导的印度人民党赢得人民院过半数席位，此后推出普惠金融账户、“清洁印度”、“印度制造”等计划，2017年实施全国统一的商品和服务税(GST)，并于2019年和2024年连任。",
+   "personal_hooks": [
+    "许多农村家庭第一次在银行开设账户",
+    "村里开始修建厕所，政府宣传卫生习惯"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2014_Indian_general_election",
+    "https://en.wikipedia.org/wiki/Pradhan_Mantri_Jan_Dhan_Yojana",
+    "https://en.wikipedia.org/wiki/Swachh_Bharat_Mission"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "libya_civil_war_2014",
+   "start": "2014-05-16",
+   "end": "2020-10-23",
+   "year": 2014,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "LBY"
+   ],
+   "category": "war",
+   "title": "利比亚第二次内战",
+   "summary": "2014年起利比亚陷入分别以的黎波里和东部为中心的两个对立政府之间的内战，东部由哈夫塔尔领导的“利比亚国民军”主导，“伊斯兰国”一度在2015至2016年控制苏尔特。2019年4月国民军进攻的黎波里，冲突在外国势力介入下持续至2020年6月，同年10月23日双方在联合国斡旋下签署永久停火协议。长期动荡使石油生产频繁中断，利比亚也成为移民经地中海偷渡欧洲的主要出发地之一。",
+   "personal_hooks": [
+    "的黎波里居民在交战期间经历长时间停电和断水，部分家庭迁往较安全的城市",
+    "途经利比亚的外国移民在拘留中心或偷渡船上面临生命危险"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Libyan_civil_war_(2014–2020)",
+    "https://en.wikipedia.org/wiki/Western_Libya_campaign"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "thailand_coup_2014",
+   "start": "2014-05-22",
+   "year": 2014,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "THA"
+   ],
+   "category": "politics",
+   "title": "泰国2014年军事政变",
+   "summary": "2014年5月22日泰国军方发动政变，推翻看守政府，由巴育领导的全国维持和平秩序委员会执政，2017年颁布新宪法，2019年举行大选后巴育继续出任总理。",
+   "personal_hooks": [
+    "街头一度实施宵禁，政治集会受到限制"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2014_Thai_coup_d'état"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "oil_price_collapse_2014",
+   "start": "2014-06",
+   "end": "2016-02",
+   "year": 2014,
+   "end_year": 2016,
+   "scope": "countries",
+   "countries": [
+    "RUS",
+    "VEN",
+    "NGA",
+    "AGO",
+    "SAU",
+    "AZE",
+    "KAZ",
+    "IRQ",
+    "DZA",
+    "ECU"
+   ],
+   "category": "economy",
+   "title": "国际油价暴跌",
+   "summary": "2014年中至2016年初，受美国页岩油增产、欧佩克不减产和需求放缓影响，国际油价由每桶100美元以上跌至30美元以下。俄罗斯(叠加西方制裁)于2014年底爆发卢布危机，委内瑞拉、尼日利亚、安哥拉、阿塞拜疆、哈萨克斯坦等产油国财政收入骤减、货币大幅贬值；石油进口国则受益于燃料价格下降。",
+   "personal_hooks": [
+    "产油国的公务员和石油工人面临减薪或裁员",
+    "本币贬值使进口商品涨价，家庭储蓄缩水"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010s_oil_glut",
+    "https://en.wikipedia.org/wiki/Russian_financial_crisis_(2014–2016)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "isis_2014",
+   "start": "2014-06-10",
+   "end": "2019-03-23",
+   "year": 2014,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "IRQ",
+    "SYR"
+   ],
+   "category": "war",
+   "title": "“伊斯兰国”的崛起与覆灭",
+   "summary": "2014年6月，极端组织“伊斯兰国”攻占伊拉克第二大城市摩苏尔并宣布建立所谓“哈里发国”，一度控制伊拉克和叙利亚大片领土，对雅兹迪人等少数群体实施屠杀和奴役。美国领导的国际联盟自2014年8月起空袭，伊拉克军队于2017年7月收复摩苏尔，同年10月拉卡被收复，2019年3月该组织失去最后据点巴古兹。",
+   "personal_hooks": [
+    "伊拉克北部居民逃往难民营，数年后才得以返乡重建",
+    "许多家庭因战乱中断了子女的学业"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "IRQ"
+    ],
+    "note": "叙利亚的死亡率影响已计入叙利亚内战事件",
+    "years": [
+     2014,
+     2015,
+     2016,
+     2017
+    ]
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Islamic_State",
+    "https://en.wikipedia.org/wiki/War_in_Iraq_(2013–2017)",
+    "https://en.wikipedia.org/wiki/Battle_of_Mosul_(2016–2017)",
+    "https://en.wikipedia.org/wiki/Yazidi_genocide"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "gaza_2014",
+   "start": "2014-07-08",
+   "end": "2014-08-26",
+   "year": 2014,
+   "end_year": 2014,
+   "scope": "countries",
+   "countries": [
+    "PSE",
+    "ISR"
+   ],
+   "category": "war",
+   "title": "2014年加沙冲突",
+   "summary": "2014年7月至8月，以色列与哈马斯等加沙武装组织爆发持续约50天的冲突。据联合国统计，加沙约2,250名巴勒斯坦人死亡，以色列方面73人死亡，加沙大量住房和基础设施被毁。",
+   "personal_hooks": [
+    "加沙家庭在空袭中失去住房，暂住在联合国学校里"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2014_Gaza_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "europe_terror_2015",
+   "start": "2015-01-07",
+   "year": 2015,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "FRA",
+    "BEL",
+    "DEU",
+    "GBR",
+    "ESP"
+   ],
+   "category": "conflict",
+   "title": "欧洲恐怖袭击潮",
+   "summary": "2015至2017年欧洲多国发生与“伊斯兰国”等极端组织相关的恐怖袭击，包括2015年1月巴黎《查理周刊》袭击、2015年11月巴黎连环袭击(130人遇难)、2016年3月布鲁塞尔爆炸、2016年7月尼斯卡车冲撞(86人遇难)和2017年5月曼彻斯特体育馆爆炸，多国长期提高安保级别。",
+   "personal_hooks": [
+    "大型活动和地铁站加强安检，街头出现武装巡逻士兵",
+    "人们出行时对人群密集场所更加警惕"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/November_2015_Paris_attacks",
+    "https://en.wikipedia.org/wiki/Charlie_Hebdo_shooting",
+    "https://en.wikipedia.org/wiki/2016_Brussels_bombings",
+    "https://en.wikipedia.org/wiki/2016_Nice_truck_attack",
+    "https://en.wikipedia.org/wiki/Manchester_Arena_bombing"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "el_nino_2015",
+   "start": "2015-03",
+   "end": "2016-05",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "SEA"
+   ],
+   "countries": [
+    "ETH",
+    "ZAF",
+    "ZWE",
+    "MWI",
+    "MOZ",
+    "IDN",
+    "PHL"
+   ],
+   "category": "disaster",
+   "title": "2015-2016年强厄尔尼诺",
+   "summary": "2015至2016年出现有记录以来最强的厄尔尼诺事件之一，2016年成为当时有记录以来最热的一年。埃塞俄比亚和南部非洲遭遇数十年来最严重的干旱，数千万人需要粮食援助；印度尼西亚泥炭地火灾产生的烟霾笼罩东南亚多国。",
+   "personal_hooks": [
+    "农作物歉收，农户靠出售牲畜和接受粮食援助度日",
+    "烟霾严重时学校停课，人们戴口罩出行"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2014–2016_El_Niño_event",
+    "https://en.wikipedia.org/wiki/2015_Southeast_Asian_haze"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "yemen_war_2015",
+   "start": "2015-03-26",
+   "end": "2022-04-02",
+   "year": 2015,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "YEM",
+    "SAU"
+   ],
+   "category": "war",
+   "title": "也门战争与人道危机",
+   "summary": "2014年9月胡塞武装攻占萨那后，2015年3月以沙特为首的多国联军介入也门内战。战争与封锁造成严重人道危机：联合国开发计划署估计至2021年底约37.7万人死于战争及其间接后果；2016年起暴发的霍乱疫情疑似病例累计超过200万例。2022年4月各方实现停火，冲突强度下降。",
+   "personal_hooks": [
+    "儿童因营养不良和霍乱面临严重健康威胁",
+    "公务员长期领不到工资，家庭依靠援助粮食维生"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.25,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "YEM"
+    ]
+   },
+   "migration_push": 2,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Yemeni_civil_war_(2014–present)",
+    "https://en.wikipedia.org/wiki/Saudi_Arabian-led_intervention_in_Yemen",
+    "https://en.wikipedia.org/wiki/2016–2022_Yemen_cholera_outbreak"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "europe_migrant_crisis_2015",
+   "start": "2015-04",
+   "end": "2016-03-20",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU",
+    "WAS"
+   ],
+   "countries": [
+    "DEU",
+    "SWE",
+    "AUT",
+    "GRC",
+    "ITA",
+    "HUN",
+    "TUR",
+    "SYR",
+    "AFG",
+    "IRQ"
+   ],
+   "category": "society",
+   "title": "欧洲难民危机",
+   "summary": "2015年逾100万难民和移民经地中海进入欧洲，主要来自叙利亚、阿富汗和伊拉克，许多人经土耳其和希腊沿“巴尔干路线”前往德国和瑞典，德国当年接收约89万名寻求庇护者，数千人在海上遇难。2016年3月欧盟与土耳其达成协议后人数下降，移民问题此后深刻影响欧洲政治。",
+   "personal_hooks": [
+    "德国小镇的体育馆被临时改建为难民住所，志愿者到车站迎接",
+    "叙利亚家庭冒险乘橡皮艇从土耳其渡海前往希腊岛屿"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/European_migrant_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "nepal_quake_2015",
+   "start": "2015-04-25",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "countries",
+   "countries": [
+    "NPL"
+   ],
+   "category": "disaster",
+   "title": "尼泊尔大地震",
+   "summary": "2015年4月25日尼泊尔廓尔喀地区发生7.8级地震，5月12日又发生7.3级强余震，共造成近9,000人死亡、约2.2万人受伤，数十万栋房屋和大量历史建筑损毁，中国西藏和印度也有伤亡。",
+   "personal_hooks": [
+    "村庄房屋倒塌后，全家在帐篷里度过雨季",
+    "许多年轻人前往海湾国家或马来西亚务工以筹集重建资金"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ],
+    "years": [
+     2015
+    ]
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/April_2015_Nepal_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "zika_2015",
+   "start": "2015-05",
+   "end": "2016-11-18",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "regions",
+   "regions": [
+    "LAC"
+   ],
+   "countries": [
+    "BRA",
+    "COL",
+    "VEN",
+    "PRI",
+    "MEX"
+   ],
+   "category": "epidemic",
+   "title": "寨卡病毒疫情",
+   "summary": "2015年寨卡病毒在巴西等美洲国家迅速传播，孕期感染与新生儿小头症等先天异常相关，世卫组织于2016年2月至11月将其列为国际关注的突发公共卫生事件；巴西报告了数千例相关先天异常病例。",
+   "personal_hooks": [
+    "准备怀孕的夫妇推迟生育计划，孕妇加强防蚊措施"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2015–2016_Zika_virus_epidemic"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_stock_crash_2015",
+   "start": "2015-06-12",
+   "end": "2016-01",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "economy",
+   "title": "中国股市异常波动",
+   "summary": "2015年6月中旬起，中国A股在杠杆资金推动的大涨后急跌，上证综指约三周内下跌约三成，监管部门采取救市措施；同年8月人民币汇率中间价形成机制改革引发一次性贬值，2016年1月推出的指数熔断机制实施四天后暂停。",
+   "personal_hooks": [
+    "不少散户在股市暴跌中亏损积蓄，借钱炒股的人损失更大"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2015–2016_Chinese_stock_market_turbulence"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "greek_crisis_2015",
+   "start": "2015-06-29",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "countries",
+   "countries": [
+    "GRC"
+   ],
+   "category": "economy",
+   "title": "希腊债务危机再度激化",
+   "summary": "2015年6月底希腊银行关门并实施资本管制，7月公投否决债权人方案，但政府随后仍接受约860亿欧元的第三轮援助及紧缩条件。2008至2016年间希腊经济萎缩约四分之一，青年失业率一度超过50%。",
+   "personal_hooks": [
+    "储户每天只能从自动取款机提取有限现金",
+    "许多受过高等教育的年轻人移居德国、英国工作"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Greek_government-debt_crisis",
+    "https://en.wikipedia.org/wiki/2015_Greek_bailout_referendum"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "tianjin_explosion_2015",
+   "start": "2015-08-12",
+   "year": 2015,
+   "end_year": 2015,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "天津港“8·12”危险品仓库爆炸",
+   "summary": "2015年8月12日深夜，天津滨海新区天津港一处危险化学品仓库发生火灾并引发两次剧烈爆炸，造成165人遇难、8人失踪，遇难者中有大量消防人员，周边住宅和港区数千辆汽车受损。事故调查认定这是一起特别重大生产安全责任事故，此后全国开展危险化学品安全专项整治。",
+   "personal_hooks": [
+    "附近小区居民的门窗被冲击波震碎，被迫临时安置",
+    "消防员的牺牲引发社会对危化品管理和消防安全的广泛讨论"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2015_Tianjin_explosions"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "paris_agreement_2015",
+   "start": "2015-12-12",
+   "year": 2015,
+   "end_year": 2016,
+   "scope": "global",
+   "countries": [],
+   "category": "policy",
+   "title": "《巴黎协定》与可持续发展目标",
+   "summary": "2015年12月《联合国气候变化框架公约》缔约方在巴黎通过《巴黎协定》，目标是将全球升温控制在比工业化前水平高2°C以内并努力限制在1.5°C，各国自主提交减排承诺，协定于2016年11月生效。美国曾于2020年退出、2021年重新加入，2025年1月再次宣布退出，2026年1月生效。2015年9月联合国还通过了包含17项目标的《2030年可持续发展议程》。",
+   "personal_hooks": [
+    "学校开始开设气候变化和环保相关课程"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Paris_Agreement",
+    "https://en.wikipedia.org/wiki/Sustainable_Development_Goals",
+    "https://unfccc.int/process-and-meetings/the-paris-agreement"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iran_jcpoa_2015",
+   "start": "2015-07-14",
+   "year": 2016,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "policy",
+   "title": "伊朗核协议达成",
+   "summary": "2015年7月伊朗与美国、英国、法国、俄罗斯、中国和德国达成伊朗核问题全面协议，伊朗限制铀浓缩活动，换取自2016年1月起解除部分国际制裁，伊朗石油出口和对外贸易随之回升。",
+   "personal_hooks": [
+    "伊朗民众期待外国投资和进口商品增加，出国旅行与留学更方便"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "populism_wave_2016",
+   "start": "2016",
+   "year": 2016,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "GBR",
+    "PHL",
+    "ITA",
+    "BRA",
+    "HUN",
+    "POL"
+   ],
+   "category": "politics",
+   "title": "民粹主义浪潮",
+   "summary": "2010年代中后期，民粹主义和民族主义力量在多国选举中崛起：英国脱欧公投、美国特朗普当选、菲律宾杜特尔特当选(2016)、意大利五星运动与联盟党联合执政(2018)、巴西博索纳罗当选(2018)等，移民、全球化与精英政治成为主要议题，各国政策走向随之改变。",
+   "personal_hooks": [
+    "家庭聚会上因政治观点分歧而争论，社交媒体上的立场分化加剧"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Populism",
+    "https://en.wikipedia.org/wiki/Right-wing_populism"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_two_child_2016",
+   "start": "2016-01-01",
+   "year": 2016,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国全面放开二孩",
+   "summary": "2015年10月中国宣布全面实施一对夫妇可生育两个孩子的政策，自2016年1月1日起施行，结束了实行三十多年的独生子女政策。2016年出生人口升至约1,786万的阶段高点，此后逐年回落。",
+   "personal_hooks": [
+    "一些家庭迎来“二孩”，长子长女有了弟弟妹妹",
+    "“要不要生二胎”成为年轻夫妇常讨论的话题"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Two-child_policy",
+    "https://en.wikipedia.org/wiki/One-child_policy"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "saudi_vision_2016",
+   "start": "2016-04-25",
+   "year": 2016,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "SAU"
+   ],
+   "category": "society",
+   "title": "沙特“2030愿景”与社会开放",
+   "summary": "2016年沙特阿拉伯公布“2030愿景”，推动经济摆脱对石油的依赖；此后社会限制逐步放宽，2018年6月允许女性驾车，重开电影院，2019年开放旅游签证，女性就业率明显上升。",
+   "personal_hooks": [
+    "女性第一次考取驾照，开始外出工作",
+    "城市里出现音乐会和电影院"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Saudi_Vision_2030",
+    "https://en.wikipedia.org/wiki/Women_to_drive_movement"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "brexit_2016",
+   "start": "2016-06-23",
+   "end": "2020-12-31",
+   "year": 2016,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "GBR",
+    "IRL"
+   ],
+   "category": "politics",
+   "title": "英国脱欧",
+   "summary": "2016年6月23日英国就是否留在欧盟举行全民公投，51.9%的选民支持脱欧。经过多轮谈判和政治动荡，英国于2020年1月31日正式退出欧盟，过渡期于2020年底结束，英国与欧盟之间的人员自由流动终止，双边贸易增加了海关与监管手续。",
+   "personal_hooks": [
+    "在英国工作的欧盟公民需申请定居身份，部分人选择离开",
+    "英国学生不再参加欧盟“伊拉斯谟+”交换项目"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2016_United_Kingdom_European_Union_membership_referendum",
+    "https://en.wikipedia.org/wiki/Brexit"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ph_drug_war_2016",
+   "start": "2016-07-01",
+   "end": "2022-06-30",
+   "year": 2016,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "PHL"
+   ],
+   "category": "policy",
+   "title": "菲律宾禁毒战争",
+   "summary": "2016年杜特尔特就任菲律宾总统后推行强硬的禁毒运动，官方统计约6,200人在警方行动中死亡，人权组织估计总死亡人数更高；国际刑事法院对此展开调查，2025年3月杜特尔特依国际刑事法院的逮捕令被捕并被移交海牙。",
+   "personal_hooks": [
+    "城市贫民社区的家庭担心亲属在夜间行动中遭遇不测"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Philippine_drug_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "turkey_coup_2016",
+   "start": "2016-07-15",
+   "year": 2016,
+   "end_year": 2018,
+   "scope": "countries",
+   "countries": [
+    "TUR"
+   ],
+   "category": "politics",
+   "title": "土耳其未遂政变",
+   "summary": "2016年7月15日土耳其部分军人发动政变未遂，冲突造成约250名平民和安全人员死亡。政府随后实施两年紧急状态，十余万名公务员、军人、法官和教师被解职或停职；2017年修宪公投通过，土耳其改为总统制。",
+   "personal_hooks": [
+    "一些家庭成员因被认定与政变有关而失去公职"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2016_Turkish_coup_attempt",
+    "https://en.wikipedia.org/wiki/2017_Turkish_constitutional_referendum"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_jio_upi_2016",
+   "start": "2016-09-05",
+   "year": 2016,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "technology",
+   "title": "印度廉价移动数据与UPI支付革命",
+   "summary": "2016年信实Jio以免费和极低价格推出4G移动数据服务，引发电信价格战，印度移动数据价格降至全球最低之列，数亿人首次通过手机上网；同年推出的统一支付接口(UPI)使二维码手机支付迅速普及，到2020年代中期月交易量已达百亿笔级别。",
+   "personal_hooks": [
+    "农村青年用便宜的智能手机和流量看短视频、上网课",
+    "菜市场摊位挂出UPI二维码，买菜不再找零"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 1,
+    "tech": 3
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jio",
+    "https://en.wikipedia.org/wiki/Unified_Payments_Interface"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "korea_park_impeachment_2016",
+   "start": "2016-10",
+   "end": "2017-05-09",
+   "year": 2016,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "KOR"
+   ],
+   "category": "politics",
+   "title": "朴槿惠弹劾案与“烛光集会”",
+   "summary": "2016年10月韩国总统朴槿惠的亲信崔顺实干政丑闻曝光，首尔等地连续数月举行大规模“烛光集会”；国会于12月9日通过弹劾案，宪法法院于2017年3月10日裁定罢免朴槿惠，她成为韩国首位被弹劾罢免的总统，文在寅在5月9日的提前大选中当选。",
+   "personal_hooks": [
+    "周末许多市民手持蜡烛前往光化门广场参加集会",
+    "学校和家庭中关于政治与法治的讨论明显增多"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Impeachment_of_Park_Geun-hye",
+    "https://en.wikipedia.org/wiki/2016–2017_South_Korean_protests"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_demonetisation_2016",
+   "start": "2016-11-08",
+   "year": 2016,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "economy",
+   "title": "印度废钞令",
+   "summary": "2016年11月8日印度政府宣布500和1,000卢比纸币即时停止流通，这两种面额约占流通现金的86%，民众需在银行兑换或存入，造成数周现金短缺，依赖现金的非正规经济受到冲击，数字支付使用量明显上升。",
+   "personal_hooks": [
+    "人们在银行和取款机前排长队兑换新钞",
+    "街边小贩开始接受手机钱包付款"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2016_Indian_banknote_demonetisation"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "colombia_peace_2016",
+   "start": "2016-11-24",
+   "year": 2016,
+   "end_year": 2017,
+   "scope": "countries",
+   "countries": [
+    "COL"
+   ],
+   "category": "politics",
+   "title": "哥伦比亚和平协议",
+   "summary": "哥伦比亚政府与哥伦比亚革命武装力量(FARC)在2016年10月公投否决后修订和平协议，于11月签署并经国会批准，结束了持续逾50年的武装冲突，约7,000名战斗人员于2017年交出武器。时任总统桑托斯获2016年诺贝尔和平奖。",
+   "personal_hooks": [
+    "曾经的冲突地区开始修路、发展旅游，前游击队员参加重返社会项目"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Colombian_peace_process"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "douyin_tiktok_2016",
+   "start": "2016-09",
+   "year": 2017,
+   "end_year": 2022,
+   "scope": "global",
+   "countries": [
+    "CHN",
+    "USA",
+    "IND",
+    "IDN",
+    "BRA"
+   ],
+   "category": "technology",
+   "title": "短视频时代：抖音与TikTok",
+   "summary": "2016年9月字节跳动推出短视频应用抖音，2017年推出海外版TikTok并于2018年与Musical.ly合并，2021年TikTok全球月活跃用户超过10亿。短视频和直播带货改变了娱乐、营销与信息获取方式；印度于2020年封禁TikTok，美国则就其所有权问题长期立法和谈判。",
+   "personal_hooks": [
+    "年轻人刷短视频追逐潮流，一些人成为网红或从事直播带货",
+    "家里长辈也开始用手机看短视频"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/TikTok",
+    "https://en.wikipedia.org/wiki/Douyin"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "uzbekistan_reforms_2016",
+   "start": "2016-12-14",
+   "year": 2017,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "UZB"
+   ],
+   "category": "economy",
+   "title": "乌兹别克斯坦改革开放",
+   "summary": "2016年米尔济约耶夫接任乌兹别克斯坦总统后推行改革：2017年9月放开外汇兑换，改善与邻国关系，取消棉花采摘中的系统性强迫劳动，外资和旅游业增长；赴俄罗斯等地务工的侨汇仍是许多家庭的重要收入来源。",
+   "personal_hooks": [
+    "换汇不再需要找黑市，外国游客明显增多"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shavkat_Mirziyoyev",
+    "https://en.wikipedia.org/wiki/Economy_of_Uzbekistan"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "crypto_boom_2017",
+   "start": "2017",
+   "year": 2017,
+   "end_year": 2018,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "CHN",
+    "KOR",
+    "JPN"
+   ],
+   "category": "economy",
+   "title": "比特币与加密货币热潮",
+   "summary": "2017年比特币价格从年初约1,000美元升至12月接近2万美元，首次代币发行(ICO)盛行；中国于2017年9月叫停ICO并关闭境内虚拟货币交易平台，2018年加密货币价格大幅回落。此后加密货币几经暴涨暴跌，2022年交易平台FTX破产。",
+   "personal_hooks": [
+    "身边有人炒币一夜暴富，也有人在暴跌中亏掉积蓄"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cryptocurrency_bubble",
+    "https://en.wikipedia.org/wiki/History_of_bitcoin"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mexico_cartel_violence",
+   "start": "2017",
+   "year": 2017,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "MEX"
+   ],
+   "category": "conflict",
+   "title": "墨西哥贩毒集团暴力高峰",
+   "summary": "墨西哥凶杀案在2018至2019年达到高峰，每年约3.6万人遇害，其中相当部分与贩毒集团等有组织犯罪有关，此后略有下降；官方登记的失踪人数累计超过10万人。",
+   "personal_hooks": [
+    "家人叮嘱夜间不要走某些公路，部分地区居民因暴力迁往城市或美国"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mexican_drug_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "trump_first_term_2017",
+   "start": "2017-01-20",
+   "end": "2021-01-20",
+   "year": 2017,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "politics",
+   "title": "特朗普第一任期的“美国优先”政策",
+   "summary": "2016年11月唐纳德·特朗普当选美国总统，任内推行“美国优先”政策：退出跨太平洋伙伴关系协定、宣布退出《巴黎协定》和伊朗核协议，对多国加征关税，收紧移民与难民入境政策，并于2017年底通过大规模减税法案。",
+   "personal_hooks": [
+    "计划赴美留学或工作的人更关注签证政策变化"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2016_United_States_presidential_election",
+    "https://en.wikipedia.org/wiki/First_presidency_of_Donald_Trump"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "qatar_crisis_2017",
+   "start": "2017-06-05",
+   "end": "2021-01-05",
+   "year": 2017,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "QAT",
+    "SAU",
+    "ARE",
+    "BHR",
+    "EGY"
+   ],
+   "category": "politics",
+   "title": "卡塔尔断交危机",
+   "summary": "2017年6月沙特阿拉伯、阿联酋、巴林和埃及以卡塔尔支持恐怖主义、与伊朗关系密切为由与其断交，并切断陆海空交通，卡塔尔否认上述指控。卡塔尔转而经土耳其、伊朗等途径进口物资并扩大本国食品生产；2021年1月各方在欧拉峰会上签署声明恢复关系。",
+   "personal_hooks": [
+    "卡塔尔超市一度出现抢购，此后货架上的进口商品来源明显变化",
+    "跨国家庭因边境关闭和航线中断而难以往来"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Qatar_diplomatic_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "korean_peninsula_2017",
+   "start": "2017-07-04",
+   "year": 2017,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "PRK",
+    "KOR",
+    "JPN",
+    "USA"
+   ],
+   "category": "politics",
+   "title": "朝鲜半岛核危机与首脑外交",
+   "summary": "2017年朝鲜多次试射洲际弹道导弹并于9月进行第六次核试验，联合国安理会加强制裁，半岛局势高度紧张；2018年朝韩领导人三次会晤，朝美领导人于6月在新加坡举行首次会晤，但2019年2月河内会晤未达成协议，对话此后陷入停滞。",
+   "personal_hooks": [
+    "日本部分地区举行导弹预警避难演练",
+    "韩国民众关注南北离散家属团聚活动"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2017–2018_North_Korea_crisis",
+    "https://en.wikipedia.org/wiki/2018_North_Korea–United_States_Singapore_Summit"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "rohingya_exodus_2017",
+   "start": "2017-08-25",
+   "year": 2017,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "MMR",
+    "BGD"
+   ],
+   "category": "conflict",
+   "title": "罗兴亚人大规模逃离缅甸",
+   "summary": "2017年8月缅甸若开邦发生武装袭击后，缅甸军方展开大规模“清剿行动”，约74万罗兴亚人逃往孟加拉国，聚居在考克斯巴扎尔一带的难民营。联合国独立国际实况调查团报告了严重侵犯人权行为，冈比亚已就此向国际法院提起诉讼；难民至今难以返乡。",
+   "personal_hooks": [
+    "难民家庭在拥挤的竹棚营地中生活，孩子只能接受非正规教育",
+    "营地周边的孟加拉国村民面临物价上涨与资源紧张"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rohingya_genocide",
+    "https://en.wikipedia.org/wiki/Rohingya_refugees_in_Bangladesh"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "atlantic_hurricanes_2017",
+   "start": "2017-08-25",
+   "year": 2017,
+   "end_year": 2018,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "PRI",
+    "DMA",
+    "ATG",
+    "CUB"
+   ],
+   "category": "disaster",
+   "title": "2017年大西洋飓风季：哈维、艾尔玛、玛丽亚",
+   "summary": "2017年大西洋飓风季异常活跃：飓风“哈维”在美国得克萨斯州造成严重洪灾，“艾尔玛”重创加勒比岛屿和佛罗里达，“玛丽亚”于9月袭击多米尼克和波多黎各，波多黎各全岛长期断电，研究估计约2,975人超额死亡，大批居民迁往美国本土。",
+   "personal_hooks": [
+    "波多黎各家庭在断电数月的情况下靠发电机生活，一些人搬到佛罗里达投亲"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hurricane_Maria",
+    "https://en.wikipedia.org/wiki/Hurricane_Harvey",
+    "https://en.wikipedia.org/wiki/Hurricane_Irma"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "metoo_2017",
+   "start": "2017-10",
+   "year": 2017,
+   "end_year": 2019,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "FRA",
+    "KOR",
+    "JPN",
+    "IND",
+    "CHN"
+   ],
+   "category": "society",
+   "title": "#MeToo运动",
+   "summary": "2017年10月美国电影制片人韦恩斯坦性骚扰事件曝光后，“#MeToo”运动在社交媒体上扩散至全球，促使多国职场、娱乐、学术和政界重新审视性骚扰与性别权力问题，一些国家和机构修订了相关法律与规章。",
+   "personal_hooks": [
+    "公司开始开展防止性骚扰培训，员工有了更明确的举报渠道"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/MeToo_movement"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mozambique_insurgency_2017",
+   "start": "2017-10-05",
+   "year": 2017,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "MOZ"
+   ],
+   "category": "conflict",
+   "title": "莫桑比克德尔加杜角省叛乱",
+   "summary": "2017年10月起莫桑比克北部德尔加杜角省出现伊斯兰武装叛乱，该组织后与“伊斯兰国”建立联系。2021年3月武装分子袭击帕尔马镇，附近的大型液化天然气项目随之暂停；同年卢旺达和南部非洲发展共同体派兵协助政府军。冲突造成数千人死亡，一度有近100万人流离失所。",
+   "personal_hooks": [
+    "村庄遭袭后，家庭徒步或乘船逃往彭巴等较安全的城镇",
+    "当地青年原本期待天然气项目带来就业，项目暂停后希望落空"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Insurgency_in_Cabo_Delgado"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "em_currency_crisis_2018",
+   "start": "2018",
+   "year": 2018,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "TUR",
+    "ARG"
+   ],
+   "category": "economy",
+   "title": "土耳其与阿根廷货币危机",
+   "summary": "2018年土耳其里拉对美元贬值约三成，阿根廷比索贬值约一半，阿根廷向国际货币基金组织申请了当时史上最大规模的约570亿美元贷款，两国通胀率随之攀升。",
+   "personal_hooks": [
+    "工资按本币计算，进口商品和出国旅行变得昂贵",
+    "民众纷纷把积蓄换成美元保值"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2018_Turkish_currency_and_debt_crisis",
+    "https://en.wikipedia.org/wiki/2018_Argentine_monetary_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "data_privacy_2018",
+   "start": "2018-03-17",
+   "year": 2018,
+   "end_year": 2021,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "DEU",
+    "FRA",
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "数据隐私丑闻与数据保护立法",
+   "summary": "2018年3月剑桥分析公司不当获取数千万脸书用户数据的事件曝光；同年5月欧盟《通用数据保护条例》(GDPR)生效，此后各国相继出台数据保护法律，如中国《个人信息保护法》于2021年11月施行。",
+   "personal_hooks": [
+    "网站和应用开始弹出隐私授权提示，用户可要求删除个人数据"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook–Cambridge_Analytica_data_scandal",
+    "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation",
+    "https://en.wikipedia.org/wiki/Personal_Information_Protection_Law_of_the_People's_Republic_of_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_jcpoa_exit_2018",
+   "start": "2018-05-08",
+   "year": 2018,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "economy",
+   "title": "美国退出伊朗核协议与对伊“极限施压”",
+   "summary": "2018年5月美国退出伊朗核协议并恢复对伊朗石油、金融等领域的制裁，伊朗石油出口锐减，里亚尔大幅贬值，此后通胀率长期在30%以上，民众生活水平明显下降。",
+   "personal_hooks": [
+    "物价飞涨使中产家庭的储蓄迅速缩水",
+    "进口药品一度出现短缺"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/United_States_withdrawal_from_the_Joint_Comprehensive_Plan_of_Action"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_china_trade_war_2018",
+   "start": "2018-07-06",
+   "end": "2020-01-15",
+   "year": 2018,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "USA",
+    "VNM",
+    "MEX"
+   ],
+   "category": "economy",
+   "title": "中美贸易战",
+   "summary": "2018年7月起美国以“301调查”为由对中国商品分批加征关税，中国对等反制，至2019年双方加征关税覆盖了大部分双边贸易。2020年1月双方签署第一阶段经贸协议，但大部分关税仍保留；部分制造业订单和产能转移至越南、墨西哥等地。",
+   "personal_hooks": [
+    "沿海出口工厂订单减少，一些企业把生产线迁往东南亚",
+    "美国农民因大豆对华出口下降而领取政府补贴"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/China–United_States_trade_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "african_swine_fever_2018",
+   "start": "2018-08",
+   "year": 2018,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "VNM",
+    "PHL"
+   ],
+   "category": "economy",
+   "title": "非洲猪瘟与猪肉价格暴涨",
+   "summary": "2018年8月非洲猪瘟首次在中国发现并蔓延全国，生猪存栏量大幅下降，2019年下半年猪肉价格较上年翻倍，带动居民消费价格上涨；疫情亦波及越南、菲律宾等东南亚国家。",
+   "personal_hooks": [
+    "家里餐桌上的猪肉变少，养猪户损失严重"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/African_swine_fever_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ebola_drc_2018",
+   "start": "2018-08-01",
+   "end": "2020-06-25",
+   "year": 2018,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "COD",
+    "UGA"
+   ],
+   "category": "epidemic",
+   "title": "刚果(金)基伍埃博拉疫情",
+   "summary": "2018年8月至2020年6月刚果(金)东部北基伍和伊图里省暴发埃博拉疫情，共报告3,470例、2,287人死亡，是当时有记录以来第二大的埃博拉疫情；武装冲突阻碍了防控，rVSV-ZEBOV疫苗首次被大规模使用。",
+   "personal_hooks": [
+    "社区出现接种点，医护人员在武装冲突中坚持工作"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -2,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kivu_Ebola_epidemic"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sulawesi_quake_2018",
+   "start": "2018-09-28",
+   "year": 2018,
+   "end_year": 2018,
+   "scope": "countries",
+   "countries": [
+    "IDN"
+   ],
+   "category": "disaster",
+   "title": "印尼苏拉威西地震与海啸",
+   "summary": "2018年9月28日印度尼西亚中苏拉威西省发生7.5级地震并引发海啸和大面积土壤液化，帕卢市等地约4,300人死亡；同年8月龙目岛也发生了致命地震。",
+   "personal_hooks": [
+    "帕卢居民在土壤液化中失去整片社区，迁入临时安置区"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2018_Sulawesi_earthquake_and_tsunami"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "global_protests_2019",
+   "start": "2019",
+   "year": 2019,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "CHL",
+    "LBN",
+    "IRQ",
+    "ECU",
+    "BOL",
+    "SDN",
+    "DZA",
+    "IRN",
+    "COL"
+   ],
+   "category": "society",
+   "title": "2019年全球抗议浪潮",
+   "summary": "2019年全球多地爆发大规模抗议：苏丹和阿尔及利亚的长期执政者于4月下台；智利因地铁票价上涨引发的抗议推动了修宪进程；黎巴嫩、伊拉克、厄瓜多尔、玻利维亚、伊朗、哥伦比亚等国也出现大规模示威，部分地区发生致命冲突。",
+   "personal_hooks": [
+    "城市交通因示威中断，学校临时停课"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sudanese_revolution",
+    "https://en.wikipedia.org/wiki/2019–2022_Chilean_protests",
+    "https://en.wikipedia.org/wiki/2019–2021_Iraqi_protests"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cyclone_idai_2019",
+   "start": "2019-03-14",
+   "year": 2019,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "MOZ",
+    "ZWE",
+    "MWI"
+   ],
+   "category": "disaster",
+   "title": "热带气旋“伊代”",
+   "summary": "2019年3月热带气旋“伊代”在莫桑比克贝拉附近登陆，引发莫桑比克、津巴布韦和马拉维特大洪灾，超过1,300人死亡，随后又暴发霍乱；6周后气旋“肯尼斯”再次袭击莫桑比克北部。",
+   "personal_hooks": [
+    "洪水淹没农田和房屋，灾民在学校和教堂中避难"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cyclone_Idai"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "5g_launch_2019",
+   "start": "2019-04-03",
+   "year": 2019,
+   "end_year": 2023,
+   "scope": "global",
+   "countries": [
+    "CHN",
+    "KOR",
+    "USA",
+    "JPN"
+   ],
+   "category": "technology",
+   "title": "5G商用",
+   "summary": "2019年4月韩国和美国率先推出5G商用服务，中国于同年6月发放5G商用牌照、10月31日正式商用，此后建成全球规模最大的5G网络；更快的移动网络支撑了高清视频、远程办公和物联网应用。",
+   "personal_hooks": [
+    "换了新手机后，在地铁里也能流畅看高清视频"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/5G"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sri_lanka_easter_2019",
+   "start": "2019-04-21",
+   "year": 2019,
+   "end_year": 2019,
+   "scope": "countries",
+   "countries": [
+    "LKA"
+   ],
+   "category": "conflict",
+   "title": "斯里兰卡复活节连环爆炸",
+   "summary": "2019年4月21日复活节当天，斯里兰卡科伦坡、尼甘布和拜蒂克洛的三座教堂和三家酒店遭自杀式炸弹袭击，约270人死亡、数百人受伤，遇难者中有数十名外国人；袭击由当地极端组织实施，政府随后宣布紧急状态，旅游业遭受重创。",
+   "personal_hooks": [
+    "教堂礼拜和大型集会加强安检，一些家庭暂时避免前往人多的场所",
+    "依靠旅游业的酒店员工和导游收入骤减"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2019_Sri_Lanka_Easter_bombings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "tech_decoupling_2019",
+   "start": "2019-05-15",
+   "year": 2019,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "USA",
+    "NLD",
+    "JPN",
+    "KOR",
+    "TWN"
+   ],
+   "category": "technology",
+   "title": "中美科技竞争与芯片出口管制",
+   "summary": "2019年5月美国将华为列入“实体清单”，限制其获取美国技术；2022年10月起美国对华实施先进芯片及制造设备出口管制并多次扩大范围，荷兰、日本也收紧光刻机等设备出口。中国加大半导体自主研发投入，并自2023年起对镓、锗、稀土等关键矿产实施出口管制。",
+   "personal_hooks": [
+    "芯片和半导体专业毕业生成为热门人才",
+    "部分科技企业调整海外业务和供应链布局"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Huawei",
+    "https://en.wikipedia.org/wiki/United_States_New_Export_Controls_on_Advanced_Computing_and_Semiconductors_to_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hk_turmoil_2019",
+   "start": "2019-06-09",
+   "year": 2019,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "HKG"
+   ],
+   "category": "politics",
+   "title": "香港修例风波与《香港国安法》",
+   "summary": "2019年6月起，香港因《逃犯条例》修订草案引发大规模游行示威和持续的社会动荡，特区政府于同年9月宣布撤回草案。2020年6月30日全国人大常委会通过《中华人民共和国香港特别行政区维护国家安全法》并在香港实施，2021年全国人大决定完善香港选举制度。此后部分香港居民移居英国、加拿大、澳大利亚等地。",
+   "personal_hooks": [
+    "交通和商业活动多次受到冲击，部分家庭讨论是否移居海外"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2019–2020_Hong_Kong_protests",
+    "https://en.wikipedia.org/wiki/Hong_Kong_national_security_law",
+    "https://en.wikipedia.org/wiki/2021_Hong_Kong_electoral_reform"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kashmir_article370_2019",
+   "start": "2019-08-05",
+   "year": 2019,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "politics",
+   "title": "印度取消查谟和克什米尔特殊地位",
+   "summary": "2019年8月5日印度政府宣布废止宪法第370条赋予查谟和克什米尔邦的特殊地位，并将其改组为查谟和克什米尔、拉达克两个中央直辖区；当地随后实施长时间的通信和出行管制，巴基斯坦对此强烈反对。2023年12月印度最高法院裁定该决定有效，2024年当地举行立法议会选举。",
+   "personal_hooks": [
+    "克什米尔谷地长期断网，学生和商户难以上网学习与经营",
+    "外地人在当地购置土地和就业的规定发生变化"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Revocation_of_the_special_status_of_Jammu_and_Kashmir"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "australia_bushfires_2019",
+   "start": "2019-09",
+   "end": "2020-03",
+   "year": 2019,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "AUS"
+   ],
+   "category": "disaster",
+   "title": "澳大利亚“黑色夏季”林火",
+   "summary": "2019至2020年澳大利亚“黑色夏季”林火烧毁约2,400万公顷土地，33人直接死亡，数千栋房屋被毁，烟雾笼罩悉尼、堪培拉等城市数周，大量野生动物死亡。",
+   "personal_hooks": [
+    "新年假期海滨小镇居民撤离到海滩躲避山火",
+    "城市空气质量恶化，学校取消户外活动"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2019–20_Australian_bushfire_season"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "lebanon_collapse_2019",
+   "start": "2019-10",
+   "year": 2019,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "LBN"
+   ],
+   "category": "economy",
+   "title": "黎巴嫩金融崩溃与贝鲁特港大爆炸",
+   "summary": "2019年10月起黎巴嫩陷入金融崩溃，黎巴嫩镑在黑市上对美元贬值超过95%，银行冻结储户提款，世界银行称其为19世纪中期以来全球最严重的经济危机之一；2020年8月4日贝鲁特港硝酸铵仓库爆炸，造成逾200人死亡、约30万人无家可归。",
+   "personal_hooks": [
+    "储户无法取出自己在银行的美元存款",
+    "许多医生、工程师等专业人士移居海外"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -3,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lebanese_liquidity_crisis",
+    "https://en.wikipedia.org/wiki/2020_Beirut_explosion"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ev_boom",
+   "start": "2020",
+   "year": 2020,
+   "end_year": 2026,
+   "scope": "global",
+   "countries": [
+    "CHN",
+    "NOR",
+    "USA",
+    "DEU",
+    "GBR"
+   ],
+   "category": "technology",
+   "title": "电动汽车快速普及",
+   "summary": "2020年代电动汽车快速普及：国际能源署数据显示2024年全球电动汽车销量超过1,700万辆，占新车销量的五分之一以上，其中中国超过1,100万辆、约占中国新车销量的一半，挪威新车中纯电动车占比约九成。比亚迪等中国车企迅速崛起，美国和欧盟对中国产电动车加征关税。",
+   "personal_hooks": [
+    "家里第一次买车选择了电动车，小区开始安装充电桩",
+    "传统燃油车零部件工厂的工人面临转岗"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Electric_car_use_by_country",
+    "https://en.wikipedia.org/wiki/BYD_Auto",
+    "https://www.iea.org/reports/global-ev-outlook-2025"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_zero_covid",
+   "start": "2020-01-23",
+   "end": "2023-01-08",
+   "year": 2020,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国的新冠防控：从武汉封城到“动态清零”的结束",
+   "summary": "2020年1月23日武汉“封城”，4月8日解封；此后中国长期实行“动态清零”政策，以大规模核酸检测、健康码、隔离和封控应对疫情，2022年上海等地实施约两个月的全域静态管理。2022年12月防控措施大幅优化调整，随后出现全国性感染高峰，2023年1月8日起新冠感染改为“乙类乙管”。",
+   "personal_hooks": [
+    "每隔几天排队做核酸成为日常，出入小区需要扫码",
+    "大学生在宿舍上网课，毕业典礼改为线上举行",
+    "2022年底身边许多人几乎同时感染，药店退烧药一度紧缺"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -2,
+    "safety": 0,
+    "education": -1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/COVID-19_pandemic_in_mainland_China",
+    "https://en.wikipedia.org/wiki/2022_Shanghai_COVID-19_outbreak"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "covid19_pandemic",
+   "start": "2020-01-30",
+   "end": "2023-05-05",
+   "year": 2020,
+   "end_year": 2023,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "BRA",
+    "IND",
+    "RUS",
+    "MEX",
+    "PER",
+    "GBR",
+    "ITA",
+    "ZAF",
+    "IDN"
+   ],
+   "category": "epidemic",
+   "title": "新冠肺炎大流行",
+   "summary": "2019年底在中国武汉首次报告的新型冠状病毒感染(COVID-19)迅速蔓延全球，世卫组织于2020年1月30日宣布其为国际关注的突发公共卫生事件，3月11日称之为大流行，2023年5月5日宣布紧急状态结束。世卫组织估计2020至2021年全球超额死亡约1,490万人；《经济学人》模型估计至2023年底累计超额死亡超过2,000万人(区间较宽)。秘鲁、厄瓜多尔、墨西哥、玻利维亚、俄罗斯及东欧、印度、伊朗等地的超额死亡率尤其高。",
+   "personal_hooks": [
+    "长辈因感染离世，家人因防疫限制无法见最后一面或正常举办葬礼",
+    "居家隔离期间学会了网上购物、线上上课和视频会议",
+    "接种疫苗后，生活逐渐恢复正常"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -3,
+    "happiness": -2,
+    "safety": -1,
+    "education": -2,
+    "tech": 1
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     40,
+     120
+    ],
+    "by_year": {
+     "2020": 1.08,
+     "2021": 1.18,
+     "2022": 1.1,
+     "2023": 1.05
+    },
+    "by_country_year": {
+     "PER": {
+      "2020": 1.39,
+      "2021": 1.51,
+      "2022": 1.11,
+      "2023": 1.03
+     },
+     "ECU": {
+      "2020": 1.5,
+      "2021": 1.33,
+      "2022": 1.13,
+      "2023": 1.08
+     },
+     "BOL": {
+      "2020": 1.27,
+      "2021": 1.34,
+      "2022": 1.11
+     },
+     "MEX": {
+      "2020": 1.42,
+      "2021": 1.42,
+      "2022": 1.06
+     },
+     "COL": {
+      "2020": 1.2,
+      "2021": 1.39,
+      "2022": 1.09,
+      "2023": 1.04
+     },
+     "BRA": {
+      "2020": 1.14,
+      "2021": 1.34,
+      "2022": 1.11,
+      "2023": 1.05
+     },
+     "ARG": {
+      "2020": 1.1,
+      "2021": 1.27,
+      "2022": 1.17,
+      "2023": 1.08
+     },
+     "CHL": {
+      "2020": 1.11,
+      "2021": 1.19,
+      "2022": 1.18,
+      "2023": 1.04
+     },
+     "PRY": {
+      "2020": 1.06,
+      "2021": 1.51,
+      "2022": 1.13
+     },
+     "GTM": {
+      "2020": 1.12,
+      "2021": 1.36,
+      "2022": 1.09,
+      "2023": 1.03
+     },
+     "HND": {
+      "2020": 1.19,
+      "2021": 1.42,
+      "2022": 1.05,
+      "2023": 1.01
+     },
+     "CUB": {
+      "2021": 1.48,
+      "2022": 1.03,
+      "2023": 1.01
+     },
+     "RUS": {
+      "2020": 1.21,
+      "2021": 1.39,
+      "2022": 1.17,
+      "2023": 1.05
+     },
+     "BLR": {
+      "2020": 1.21,
+      "2021": 1.3,
+      "2022": 1.13,
+      "2023": 1.03
+     },
+     "UKR": {
+      "2020": 1.08,
+      "2021": 1.28,
+      "2022": 1.1
+     },
+     "KAZ": {
+      "2020": 1.22,
+      "2021": 1.39,
+      "2022": 1.02
+     },
+     "BGR": {
+      "2020": 1.16,
+      "2021": 1.39,
+      "2022": 1.12
+     },
+     "ROU": {
+      "2020": 1.15,
+      "2021": 1.29,
+      "2022": 1.05
+     },
+     "SRB": {
+      "2020": 1.16,
+      "2021": 1.36,
+      "2022": 1.11
+     },
+     "MKD": {
+      "2020": 1.29,
+      "2021": 1.43,
+      "2022": 1.13,
+      "2023": 1.01
+     },
+     "ALB": {
+      "2020": 1.3,
+      "2021": 1.43,
+      "2022": 1.08
+     },
+     "BIH": {
+      "2020": 1.18,
+      "2021": 1.32,
+      "2022": 1.12
+     },
+     "LTU": {
+      "2020": 1.18,
+      "2021": 1.3,
+      "2022": 1.19,
+      "2023": 1.08
+     },
+     "POL": {
+      "2020": 1.16,
+      "2021": 1.24,
+      "2022": 1.06
+     },
+     "CZE": {
+      "2020": 1.16,
+      "2021": 1.24,
+      "2022": 1.06
+     },
+     "SVK": {
+      "2020": 1.11,
+      "2021": 1.36,
+      "2022": 1.11,
+      "2023": 1.02
+     },
+     "HUN": {
+      "2020": 1.1,
+      "2021": 1.21,
+      "2022": 1.07,
+      "2023": 1.01
+     },
+     "HRV": {
+      "2020": 1.13,
+      "2021": 1.24,
+      "2022": 1.14,
+      "2023": 1.04
+     },
+     "GEO": {
+      "2020": 1.11,
+      "2021": 1.34,
+      "2022": 1.12
+     },
+     "ARM": {
+      "2020": 1.21,
+      "2021": 1.28,
+      "2022": 1.05,
+      "2023": 1.01
+     },
+     "AZE": {
+      "2020": 1.18,
+      "2021": 1.29,
+      "2022": 1.09,
+      "2023": 1.02
+     },
+     "IRN": {
+      "2020": 1.29,
+      "2021": 1.34,
+      "2022": 1.07,
+      "2023": 1.03
+     },
+     "IRQ": {
+      "2020": 1.25,
+      "2021": 1.36,
+      "2022": 1.1,
+      "2023": 1.04
+     },
+     "EGY": {
+      "2020": 1.18,
+      "2021": 1.3,
+      "2022": 1.08,
+      "2023": 1.04
+     },
+     "TUR": {
+      "2020": 1.15,
+      "2021": 1.27,
+      "2022": 1.12,
+      "2023": 1.08
+     },
+     "LBN": {
+      "2020": 1.09,
+      "2021": 1.31,
+      "2022": 1.1,
+      "2023": 1.01
+     },
+     "DZA": {
+      "2020": 1.25,
+      "2021": 1.17,
+      "2022": 1.11,
+      "2023": 1.08
+     },
+     "MAR": {
+      "2020": 1.17,
+      "2021": 1.17,
+      "2022": 1.09,
+      "2023": 1.03
+     },
+     "TUN": {
+      "2020": 1.04,
+      "2021": 1.27,
+      "2022": 1.08
+     },
+     "ZAF": {
+      "2020": 1.1,
+      "2021": 1.35,
+      "2022": 1.07,
+      "2023": 1.05
+     },
+     "IND": {
+      "2020": 1.12,
+      "2021": 1.3,
+      "2022": 1.14,
+      "2023": 1.06
+     },
+     "NPL": {
+      "2020": 1.13,
+      "2021": 1.29,
+      "2022": 1.13,
+      "2023": 1.08
+     },
+     "BGD": {
+      "2020": 1.17,
+      "2021": 1.28,
+      "2022": 1.19,
+      "2023": 1.08
+     },
+     "PAK": {
+      "2020": 1.14,
+      "2021": 1.21,
+      "2022": 1.06,
+      "2023": 1.04
+     },
+     "IDN": {
+      "2020": 1.03,
+      "2021": 1.22,
+      "2022": 1.08,
+      "2023": 1.04
+     },
+     "PHL": {
+      "2021": 1.36,
+      "2022": 1.05,
+      "2023": 1.04
+     },
+     "MMR": {
+      "2020": 1.05,
+      "2021": 1.19,
+      "2022": 1.11,
+      "2023": 1.05
+     },
+     "LKA": {
+      "2020": 1.03,
+      "2021": 1.25,
+      "2022": 1.07,
+      "2023": 1.06
+     },
+     "VNM": {
+      "2021": 1.13,
+      "2022": 1.33,
+      "2023": 1.08,
+      "2020": 1.0
+     },
+     "KHM": {
+      "2020": 1.02,
+      "2021": 1.17,
+      "2022": 1.28,
+      "2023": 1.08
+     },
+     "THA": {
+      "2021": 1.11,
+      "2022": 1.16,
+      "2023": 1.08,
+      "2020": 1.0
+     },
+     "MYS": {
+      "2021": 1.24,
+      "2022": 1.1
+     },
+     "USA": {
+      "2020": 1.17,
+      "2021": 1.18,
+      "2022": 1.1,
+      "2023": 1.03
+     },
+     "GBR": {
+      "2020": 1.14,
+      "2021": 1.1,
+      "2022": 1.09,
+      "2023": 1.08
+     },
+     "ITA": {
+      "2020": 1.18,
+      "2021": 1.12,
+      "2022": 1.13,
+      "2023": 1.05
+     },
+     "ESP": {
+      "2020": 1.18,
+      "2021": 1.08,
+      "2022": 1.11,
+      "2023": 1.05
+     },
+     "FRA": {
+      "2020": 1.09,
+      "2021": 1.07,
+      "2022": 1.08,
+      "2023": 1.02
+     },
+     "DEU": {
+      "2020": 1.05,
+      "2021": 1.08,
+      "2022": 1.12,
+      "2023": 1.07
+     },
+     "PRT": {
+      "2020": 1.11,
+      "2021": 1.11,
+      "2022": 1.11,
+      "2023": 1.05
+     },
+     "BEL": {
+      "2020": 1.17,
+      "2021": 1.04,
+      "2022": 1.08,
+      "2023": 1.04
+     },
+     "NLD": {
+      "2020": 1.11,
+      "2021": 1.11,
+      "2022": 1.1,
+      "2023": 1.08
+     },
+     "SWE": {
+      "2020": 1.1,
+      "2021": 1.03,
+      "2022": 1.07,
+      "2023": 1.07
+     },
+     "CAN": {
+      "2020": 1.05,
+      "2021": 1.05,
+      "2022": 1.11,
+      "2023": 1.07
+     },
+     "KOR": {
+      "2021": 1.03,
+      "2022": 1.19,
+      "2023": 1.08,
+      "2020": 1.0
+     },
+     "JPN": {
+      "2021": 1.02,
+      "2022": 1.1,
+      "2023": 1.08,
+      "2020": 1.0
+     },
+     "CHN": {
+      "2021": 1.0,
+      "2022": 1.09,
+      "2023": 1.08,
+      "2020": 1.0
+     },
+     "HKG": {
+      "2020": 1.02,
+      "2021": 1.03,
+      "2022": 1.25,
+      "2023": 1.08
+     },
+     "AUS": {
+      "2021": 1.03,
+      "2022": 1.13,
+      "2023": 1.07,
+      "2020": 1.0
+     },
+     "NZL": {
+      "2022": 1.07,
+      "2023": 1.03,
+      "2020": 1.0,
+      "2021": 1.0
+     },
+     "TWN": {
+      "2020": 1.0,
+      "2021": 1.0
+     }
+    },
+    "note": "全因死亡风险乘数，约等于1+超额死亡/基线死亡。by_year为全球平均(未列出的国家使用)；by_country_year依据《经济学人》超额死亡模型中位估计(经Our World in Data发布)除以世界银行2019年粗死亡率计算，2023年数值上限设为1.08。仅为近似值；超额死亡主要集中在40岁以上人群。已列出国家缺失的年份不使用全球平均；2020年东亚和大洋洲等未出现明显超额死亡的国家设为1.0。"
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/COVID-19_pandemic",
+    "https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates",
+    "https://ourworldindata.org/excess-mortality-covid",
+    "https://www.economist.com/graphic-detail/coronavirus-excess-deaths-estimates",
+    "https://data.worldbank.org/indicator/SP.DYN.CDRT.IN"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "covid_recession_2020",
+   "start": "2020-03",
+   "year": 2020,
+   "end_year": 2021,
+   "scope": "global",
+   "countries": [
+    "IND",
+    "GBR",
+    "ESP",
+    "ITA",
+    "PER",
+    "ARG",
+    "ZAF",
+    "PHL",
+    "MEX",
+    "USA"
+   ],
+   "category": "economy",
+   "title": "新冠疫情经济衰退",
+   "summary": "疫情及各国封锁措施导致2020年全球经济萎缩约3%，是大萧条以来最严重的衰退；国际旅游几乎停摆，美国4月失业率升至约14.8%，4月20日美国原油期货价格史上首次跌至负值。各国推出大规模财政与货币刺激，2021年经济明显反弹，但旅游、餐饮和非正规就业者受损最重。",
+   "personal_hooks": [
+    "餐馆、商店暂停营业，许多临时工和服务业员工失去收入",
+    "政府发放现金补贴或允许延期还贷，帮助家庭渡过难关"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": 0,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/COVID-19_recession"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "covid_school_remote_2020",
+   "start": "2020-03",
+   "year": 2020,
+   "end_year": 2022,
+   "scope": "global",
+   "countries": [
+    "IND",
+    "BRA",
+    "MEX",
+    "PHL",
+    "IDN",
+    "USA",
+    "CHN"
+   ],
+   "category": "society",
+   "title": "停课、网课与远程办公",
+   "summary": "疫情高峰期全球约16亿学生受到学校停课影响，许多国家改为线上授课，缺少设备和网络的低收入家庭学生学习损失更大，一些国家停课超过一年；远程办公、视频会议、外卖和电子商务迅速普及。",
+   "personal_hooks": [
+    "学生在家对着电脑或手机上网课，毕业典礼改为线上举行",
+    "父母在家远程办公，同时照看孩子"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": -2,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic_on_education",
+    "https://en.wikipedia.org/wiki/Remote_work"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "george_floyd_2020",
+   "start": "2020-05-25",
+   "year": 2020,
+   "end_year": 2020,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "society",
+   "title": "弗洛伊德之死与“黑人的命也是命”抗议",
+   "summary": "2020年5月25日非裔男子乔治·弗洛伊德在明尼阿波利斯被警察执法时死亡，引发全美乃至多国大规模抗议，推动了关于种族平等与警务改革的讨论。",
+   "personal_hooks": [
+    "城市实施宵禁，学校和企业讨论多元与平等议题"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/George_Floyd_protests",
+    "https://en.wikipedia.org/wiki/Black_Lives_Matter"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_india_border_2020",
+   "start": "2020-06-15",
+   "year": 2020,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "IND"
+   ],
+   "category": "conflict",
+   "title": "中印边境冲突",
+   "summary": "2020年中印在拉达克/加勒万河谷一带边境地区发生对峙，6月15日双方军人发生冲突，印方20人、中方4人死亡；此后印度以安全为由封禁TikTok等数百款中国应用，并收紧对中国投资的审查。2024年10月双方就边境巡逻安排达成协议。",
+   "personal_hooks": [
+    "印度用户发现常用的中国手机应用无法下载"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2020–2021_China–India_skirmishes"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gerd_dam",
+   "start": "2020-07",
+   "year": 2020,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "ETH",
+    "EGY",
+    "SDN"
+   ],
+   "category": "economy",
+   "title": "埃塞俄比亚复兴大坝",
+   "summary": "埃塞俄比亚在青尼罗河上修建的复兴大坝自2020年起分阶段蓄水，2025年9月正式落成，是非洲装机容量最大的水电站；埃及和苏丹对下游水资源安全表示担忧，三国长期谈判未达成协议。",
+   "personal_hooks": [
+    "埃塞俄比亚民众购买大坝债券，期待家中通电"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Grand_Ethiopian_Renaissance_Dam"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "belarus_protests_2020",
+   "start": "2020-08-09",
+   "year": 2020,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "BLR",
+    "LTU",
+    "POL"
+   ],
+   "category": "politics",
+   "title": "白俄罗斯2020年大选争议与抗议",
+   "summary": "2020年8月9日白俄罗斯总统选举官方公布卢卡申科以约80%的得票率连任，反对派和欧盟等不承认选举结果，全国爆发独立以来规模最大的抗议，当局大规模拘捕，数万人被拘留。反对派候选人季哈诺夫斯卡娅出走立陶宛，大批民众移居波兰、立陶宛等国，欧盟等对白俄罗斯实施制裁。",
+   "personal_hooks": [
+    "周末街头出现身穿白红白服装的游行人群",
+    "一些IT从业者和年轻人移居波兰、立陶宛或格鲁吉亚"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2020–2021_Belarusian_protests",
+    "https://en.wikipedia.org/wiki/2020_Belarusian_presidential_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sahel_coups_2020",
+   "start": "2020-08-18",
+   "year": 2020,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "MLI",
+    "BFA",
+    "NER",
+    "GIN",
+    "GAB",
+    "TCD"
+   ],
+   "category": "politics",
+   "title": "萨赫勒地区军事政变潮",
+   "summary": "2020至2023年非洲萨赫勒及周边地区接连发生军事政变：马里(2020、2021)、几内亚(2021)、布基纳法索(2022年两次)、尼日尔(2023)和加蓬(2023)。马里、布基纳法索和尼日尔的军政府驱逐法国驻军、转向与俄罗斯合作，于2023年组建萨赫勒国家联盟，并于2025年1月正式退出西非国家经济共同体。该地区圣战组织武装活动持续扩散，布基纳法索约200万人流离失所。",
+   "personal_hooks": [
+    "村庄遭武装分子袭击后，学校关闭，家庭迁往城镇",
+    "年轻人被招募参加政府组建的民兵或志愿防卫队"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Alliance_of_Sahel_States",
+    "https://en.wikipedia.org/wiki/2020_Malian_coup_d'état",
+    "https://en.wikipedia.org/wiki/2023_Nigerien_coup_d'état",
+    "https://en.wikipedia.org/wiki/Jihadist_insurgency_in_Burkina_Faso"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_dual_carbon_2020",
+   "start": "2020-09-22",
+   "year": 2020,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国“双碳”目标与可再生能源扩张",
+   "summary": "2020年9月中国宣布力争2030年前实现二氧化碳排放达峰、2060年前实现碳中和。此后中国风电和光伏装机规模快速增长，成为全球最大的可再生能源市场和光伏、电池产品生产国，并带动全球光伏组件价格大幅下降。",
+   "personal_hooks": [
+    "农村屋顶安装了光伏板，家里多了一份发电收入",
+    "新能源相关企业成为年轻人求职的新方向"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Renewable_energy_in_China",
+    "https://en.wikipedia.org/wiki/Climate_change_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "nagorno_karabakh_2020",
+   "start": "2020-09-27",
+   "year": 2020,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "ARM",
+    "AZE"
+   ],
+   "category": "war",
+   "title": "纳戈尔诺-卡拉巴赫战争与亚美尼亚族居民出走",
+   "summary": "2020年9月至11月阿塞拜疆与亚美尼亚就纳戈尔诺-卡拉巴赫爆发为期44天的战争，双方约7,000名军人死亡，阿塞拜疆收复大片地区。2023年9月阿塞拜疆发动军事行动后，该地区超过10万名亚美尼亚族居民迁往亚美尼亚，当地分离主义实体于2024年1月解散。2025年8月两国领导人在美国白宫签署和平宣言。",
+   "personal_hooks": [
+    "亚美尼亚青年被征召上前线，一些家庭失去亲人",
+    "从卡拉巴赫撤离的家庭在埃里温重新安家"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Nagorno-Karabakh_War",
+    "https://en.wikipedia.org/wiki/2023_Azerbaijani_offensive_in_Nagorno-Karabakh",
+    "https://en.wikipedia.org/wiki/Flight_of_Nagorno-Karabakh_Armenians"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "tigray_war_2020",
+   "start": "2020-11-03",
+   "end": "2022-11-02",
+   "year": 2020,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "ETH",
+    "ERI"
+   ],
+   "category": "war",
+   "title": "提格雷战争",
+   "summary": "2020年11月埃塞俄比亚联邦政府与提格雷人民解放阵线爆发战争，厄立特里亚军队参战，提格雷地区长期断网断粮，出现严重饥荒风险。2022年11月双方在比勒陀利亚签署停止敌对行动协议。各方对死亡人数的估计差异很大，多数估计达数十万人，是本世纪最致命的冲突之一。",
+   "personal_hooks": [
+    "提格雷居民在长期通信中断中无法得知亲人消息",
+    "难民越境逃往苏丹"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "ETH"
+    ],
+    "note": "全国平均；提格雷地区远高于此"
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tigray_war",
+    "https://en.wikipedia.org/wiki/Pretoria_Agreement"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "india_farm_protests_2020",
+   "start": "2020-11-26",
+   "year": 2020,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "society",
+   "title": "印度农民抗议农业改革法",
+   "summary": "2020年11月起数十万印度农民(主要来自旁遮普邦和哈里亚纳邦)在新德里周边扎营一年多，抗议三项农业市场改革法律，政府于2021年11月宣布废除这些法律。",
+   "personal_hooks": [
+    "农户轮流到首都郊外的营地参加抗议，村里组织送粮"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2020–2021_Indian_farmers'_protest"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "asian_space_2020",
+   "start": "2020-12",
+   "year": 2020,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "IND"
+   ],
+   "category": "science",
+   "title": "中国与印度的探月和空间站进展",
+   "summary": "2020年中国嫦娥五号完成月球采样返回，2021年天问一号着陆火星，2022年中国空间站完成建造；2023年8月印度“月船三号”成为首个在月球南极附近着陆的探测器；2024年6月嫦娥六号带回人类首份月球背面样品。",
+   "personal_hooks": [
+    "孩子们在电视上观看航天直播，“航天员”成为热门梦想职业"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chang'e_5",
+    "https://en.wikipedia.org/wiki/Tianwen-1",
+    "https://en.wikipedia.org/wiki/Tiangong_space_station",
+    "https://en.wikipedia.org/wiki/Chandrayaan-3",
+    "https://en.wikipedia.org/wiki/Chang'e_6"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "horn_africa_drought_2020",
+   "start": "2020-10",
+   "end": "2023-03",
+   "year": 2021,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "SOM",
+    "ETH",
+    "KEN"
+   ],
+   "category": "disaster",
+   "title": "东非之角大旱",
+   "summary": "2020年底至2023年初，东非之角连续五个雨季降水不足，出现40年来最严重的干旱，大量牲畜死亡；研究估计仅2022年索马里就有约4.3万人因干旱超额死亡，其中约一半为五岁以下儿童。",
+   "personal_hooks": [
+    "牧民的牲畜大批死去，全家迁往城镇附近的营地领取援助"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     0,
+     120
+    ],
+    "by_country": {
+     "SOM": 1.12
+    }
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Horn_of_Africa_drought_(2020–2023)"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_platform_regulation_2020",
+   "start": "2020-11-03",
+   "year": 2021,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国平台经济监管整顿",
+   "summary": "2020年11月蚂蚁集团上市被暂缓，随后中国监管部门加强对平台经济的反垄断和数据安全监管：阿里巴巴于2021年4月被处以182亿元罚款，滴滴赴美上市后接受网络安全审查，部分互联网企业裁员；2023年起政策转向支持平台经济规范健康发展。",
+   "personal_hooks": [
+    "互联网大厂招聘收紧，应届生求职更关注稳定岗位"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ant_Group",
+    "https://en.wikipedia.org/wiki/Didi_(company)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "covid_vaccines_2021",
+   "start": "2020-12-02",
+   "year": 2021,
+   "end_year": 2022,
+   "scope": "global",
+   "countries": [],
+   "category": "science",
+   "title": "新冠疫苗与史上最大规模接种行动",
+   "summary": "2020年12月起mRNA疫苗、腺病毒载体疫苗和灭活疫苗等新冠疫苗陆续获批，全球开展史上规模最大的疫苗接种行动，累计接种超过130亿剂；低收入国家的疫苗获取明显滞后。mRNA技术的奠基者获2023年诺贝尔生理学或医学奖。",
+   "personal_hooks": [
+    "排队接种疫苗，出示接种证明才能进入部分场所或出国旅行"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 2,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/COVID-19_vaccine",
+    "https://en.wikipedia.org/wiki/2023_Nobel_Prize_in_Physiology_or_Medicine"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "supply_chain_crisis_2021",
+   "start": "2021",
+   "year": 2021,
+   "end_year": 2022,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "DEU",
+    "JPN",
+    "KOR",
+    "CHN",
+    "TWN"
+   ],
+   "category": "economy",
+   "title": "全球供应链危机与芯片短缺",
+   "summary": "2021至2022年全球供应链紧张：芯片短缺迫使汽车等行业减产，集装箱运价一度上涨数倍，2021年3月“长赐号”货轮在苏伊士运河搁浅六天；许多国家出现商品缺货和交货延迟。",
+   "personal_hooks": [
+    "买新车要等好几个月，二手车价格反而上涨"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2021–2023_global_supply_chain_crisis",
+    "https://en.wikipedia.org/wiki/2020–2023_global_chip_shortage",
+    "https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_capitol_attack_2021",
+   "start": "2021-01-06",
+   "year": 2021,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "politics",
+   "title": "美国国会大厦遭冲击事件",
+   "summary": "2021年1月6日，国会联席会议认证2020年总统选举结果期间，大批特朗普支持者冲入国会大厦，会议一度中断，认证于次日凌晨完成。众议院随后第二次弹劾特朗普，参议院表决未定罪；司法部起诉了一千多名参与者，特朗普于2025年1月再次就任后赦免了其中绝大多数人。",
+   "personal_hooks": [
+    "许多美国家庭通过电视直播目睹国会遭冲击，家庭和社交圈中的政治分歧加剧",
+    "华盛顿在总统就职典礼前大幅加强安保"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/January_6_United_States_Capitol_attack",
+    "https://en.wikipedia.org/wiki/Second_impeachment_of_Donald_Trump"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "myanmar_coup_2021",
+   "start": "2021-02-01",
+   "year": 2021,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "MMR",
+    "THA",
+    "BGD"
+   ],
+   "category": "war",
+   "title": "缅甸政变与内战",
+   "summary": "2021年2月1日缅甸军方发动政变，扣押昂山素季等民选领导人，镇压抗议后国内冲突演变为全面内战；2023年10月起多支民族武装和民主力量联合发动攻势，军方失去大片边境地区。截至2025年境内流离失所者约350万人，军方于2024年启动强制征兵；军方主导的选举于2025年12月至2026年1月举行，联合国等多方认为不具备自由公正条件。",
+   "personal_hooks": [
+    "城市青年为躲避兵役征召离开家乡或出国务工",
+    "学校和医院因冲突关闭，许多家庭迁往泰国边境"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "MMR"
+    ]
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2021_Myanmar_coup_d'état",
+    "https://en.wikipedia.org/wiki/Myanmar_civil_war_(2021–present)",
+    "https://en.wikipedia.org/wiki/Operation_1027"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_poverty_2021",
+   "start": "2021-02-25",
+   "year": 2021,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国宣布消除绝对贫困",
+   "summary": "2021年2月中国宣布脱贫攻坚战取得全面胜利，按现行标准(2010年不变价每人每年2,300元)，全国9,899万农村贫困人口全部脱贫，832个贫困县全部摘帽；此后转入巩固脱贫成果、推进乡村振兴阶段。",
+   "personal_hooks": [
+    "村里通了硬化路和网络，一些家庭从山区搬进易地扶贫搬迁安置点"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Poverty_in_China",
+    "https://en.wikipedia.org/wiki/Targeted_poverty_alleviation"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "inflation_wave_2021",
+   "start": "2021-04",
+   "year": 2021,
+   "end_year": 2023,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "DEU",
+    "TUR",
+    "ARG",
+    "EGY",
+    "NGA",
+    "PAK",
+    "LKA",
+    "HUN"
+   ],
+   "category": "economy",
+   "title": "全球通胀潮与急速加息",
+   "summary": "疫情后需求反弹、供应链瓶颈以及2022年能源和粮食价格飙升，引发数十年来最严重的全球通胀：美国CPI同比涨幅在2022年6月达到9.1%，欧元区10月达10.6%，土耳其、阿根廷、斯里兰卡等国通胀更为严重。美联储自2022年3月起快速加息至5.25%至5.5%，各国央行普遍收紧货币政策，房贷利率大幅上升；2023年3月美国硅谷银行等因利率上升引发的亏损和挤兑而倒闭，瑞士信贷被瑞银收购。",
+   "personal_hooks": [
+    "超市账单和房租明显上涨，工资涨幅跟不上物价",
+    "浮动利率房贷的月供大幅增加"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2021–2023_inflation_surge",
+    "https://en.wikipedia.org/wiki/Federal_funds_rate",
+    "https://en.wikipedia.org/wiki/2023_United_States_banking_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_birth_decline_2021",
+   "start": "2021-05-31",
+   "year": 2021,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "title": "三孩政策与中国人口负增长",
+   "summary": "2021年5月中国宣布实施一对夫妻可以生育三个子女的政策及配套支持措施，2025年7月又宣布对3周岁以下婴幼儿每人每年发放3,600元育儿补贴。但出生人口持续下降：从2016年的约1,786万降至2024年的954万和2025年的792万；全国总人口自2022年起连续负增长，2025年末约14.05亿。",
+   "personal_hooks": [
+    "独生子女一代成为父母，面临育儿成本和照顾老人的双重压力",
+    "一些地方的幼儿园和小学开始合并或停办"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Three-child_policy",
+    "https://en.wikipedia.org/wiki/Demographics_of_China",
+    "https://global.hk01.com/即时中国/60314031/中国人口连续第四年下滑-去年792万人出生创1949年以来新低",
+    "https://www.yicai.com/news/103338525.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "haiti_crisis_2021",
+   "start": "2021-07-07",
+   "year": 2021,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "HTI",
+    "DOM"
+   ],
+   "category": "conflict",
+   "title": "海地帮派暴力与国家危机",
+   "summary": "2021年7月海地总统莫伊兹遇刺后国家陷入政治真空，武装帮派逐渐控制首都太子港大部分地区，绑架和暴力事件频发，截至2025年流离失所者超过100万人。肯尼亚领导的多国安全支助团自2024年6月部署，联合国安理会于2025年9月授权组建打击帮派部队。",
+   "personal_hooks": [
+    "家庭因帮派冲突多次搬家，孩子的学校被迫关闭",
+    "许多人设法前往多米尼加、美国或其他国家"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Haitian_crisis_(2018–present)",
+    "https://en.wikipedia.org/wiki/Assassination_of_Jovenel_Moïse"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "henan_floods_2021",
+   "start": "2021-07-20",
+   "year": 2021,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "河南特大暴雨",
+   "summary": "2021年7月河南遭遇特大暴雨，郑州7月20日最大小时降雨量达201.9毫米，地铁5号线和京广快速路隧道等处发生严重伤亡，全省因灾死亡失踪398人。",
+   "personal_hooks": [
+    "郑州市民在网上接力转发求助信息，陌生人互相救援"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2021_Henan_floods"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_double_reduction_2021",
+   "start": "2021-07-24",
+   "year": 2021,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "“双减”政策",
+   "summary": "2021年7月中国出台“双减”政策，减轻义务教育阶段学生作业负担和校外培训负担，禁止学科类校外培训机构以营利为目的运营和资本化运作，大型教育培训企业大幅裁员转型，中小学普遍推行课后服务。",
+   "personal_hooks": [
+    "孩子周末的补习班停了，学校开设课后托管和兴趣课程",
+    "在培训机构工作的老师转行或进入学校任教"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Double_Reduction_Policy"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "haiti_quake_2021",
+   "start": "2021-08-14",
+   "year": 2021,
+   "end_year": 2021,
+   "scope": "countries",
+   "countries": [
+    "HTI"
+   ],
+   "category": "disaster",
+   "title": "海地2021年大地震",
+   "summary": "2021年8月14日海地西南部蒂比龙半岛发生7.2级地震，约2,200人死亡、1.2万多人受伤，十多万栋房屋受损或倒塌；地震发生在总统莫伊兹遇刺一个多月后，数日后热带风暴“格雷丝”又带来暴雨，救援工作十分困难。",
+   "personal_hooks": [
+    "灾民在露天或临时帐篷中度过雨季",
+    "海外海地侨民汇款帮助家乡亲人重建房屋"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2021_Haiti_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "afghanistan_taliban_2021",
+   "start": "2021-08-15",
+   "year": 2021,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "AFG"
+   ],
+   "category": "politics",
+   "title": "塔利班重掌阿富汗",
+   "summary": "2021年8月，随着美国和北约撤军，塔利班迅速攻占全国并于8月15日进入喀布尔，大批民众试图经喀布尔机场撤离。此后国际援助和外汇储备被冻结，经济急剧收缩；塔利班当局禁止女孩接受六年级以上教育(2022年3月)和女性上大学(2022年12月)，并限制女性工作和出行。",
+   "personal_hooks": [
+    "女孩小学毕业后无法继续上学，只能在家或参加地下课堂",
+    "曾为外国机构工作的人设法出国避险"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -3,
+    "safety": -1,
+    "education": -3,
+    "tech": -1
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)",
+    "https://en.wikipedia.org/wiki/2021_Taliban_offensive",
+    "https://en.wikipedia.org/wiki/Education_in_Afghanistan"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_property_crisis_2021",
+   "start": "2021-12",
+   "year": 2021,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "economy",
+   "title": "中国房地产市场深度调整",
+   "summary": "2020年中国出台房企融资“三道红线”后，恒大集团于2021年底违约，碧桂园于2023年违约，香港法院于2024年1月下令清盘恒大。此后房地产销售和投资连年下降，部分预售住房延期交付，房价下跌削弱了居民财富和消费信心，地方政府土地出让收入减少。",
+   "personal_hooks": [
+    "买了期房的家庭担心房子迟迟不能交付",
+    "房价下跌后，家里最主要的资产缩水，年轻人买房观望"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chinese_property_sector_crisis_(2020–present)",
+    "https://en.wikipedia.org/wiki/Evergrande_Group",
+    "https://en.wikipedia.org/wiki/Country_Garden"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "rcep_2022",
+   "start": "2022-01-01",
+   "year": 2022,
+   "end_year": 2026,
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "SEA",
+    "OCE"
+   ],
+   "countries": [
+    "CHN",
+    "JPN",
+    "KOR",
+    "AUS",
+    "NZL",
+    "IDN",
+    "VNM",
+    "THA",
+    "MYS",
+    "PHL",
+    "SGP"
+   ],
+   "category": "economy",
+   "title": "《区域全面经济伙伴关系协定》(RCEP)生效",
+   "summary": "2020年11月东盟十国与中国、日本、韩国、澳大利亚、新西兰签署《区域全面经济伙伴关系协定》，2022年1月起陆续生效，形成按人口和经济总量计算的全球最大自由贸易区。",
+   "personal_hooks": [
+    "外贸企业可以享受更多关税减免，跨境电商更加活跃"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Regional_Comprehensive_Economic_Partnership"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "em_debt_distress_2022",
+   "start": "2022",
+   "year": 2022,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "ZMB",
+    "GHA",
+    "LKA",
+    "ETH",
+    "EGY",
+    "PAK",
+    "NGA"
+   ],
+   "category": "economy",
+   "title": "发展中国家债务与货币危机",
+   "summary": "美元走强和全球加息使多个发展中国家陷入债务和货币困境：赞比亚(2020年)、斯里兰卡(2022年)、加纳(2022年)、埃塞俄比亚(2023年)先后债务违约；埃及镑和尼日利亚奈拉在2023至2024年大幅贬值，尼日利亚取消燃油补贴后通胀率一度超过30%；巴基斯坦多次接受国际货币基金组织贷款。",
+   "personal_hooks": [
+    "进口药品和燃油涨价，家庭不得不压缩开支",
+    "受过教育的年轻人寻求出国工作"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sovereign_default",
+    "https://en.wikipedia.org/wiki/2023_Nigerian_currency_crisis"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "south_africa_loadshedding",
+   "start": "2022",
+   "year": 2022,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "ZAF"
+   ],
+   "category": "economy",
+   "title": "南非轮流限电危机",
+   "summary": "南非国家电力公司因燃煤电厂老化和维护不足长期实施轮流限电，2022至2023年限电达到最严重程度，2023年几乎每天都有数小时停电，严重拖累经济；2024年3月后限电基本停止。",
+   "personal_hooks": [
+    "家里按限电时间表安排做饭和学习，买了太阳能板和蓄电池"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/South_African_energy_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kazakh_unrest_2022",
+   "start": "2022-01-02",
+   "year": 2022,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "KAZ"
+   ],
+   "category": "politics",
+   "title": "哈萨克斯坦“一月事件”",
+   "summary": "2022年1月哈萨克斯坦因液化气价格上涨引发全国性抗议和骚乱，阿拉木图等地发生暴力冲突，约230人死亡，集体安全条约组织应邀派出维和部队；托卡耶夫随后推动政治改革。",
+   "personal_hooks": [
+    "阿拉木图一度断网，银行和商店停业数日"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022_Kazakh_unrest"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "energy_food_crisis_2022",
+   "start": "2022-02",
+   "year": 2022,
+   "end_year": 2023,
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU",
+    "NAF",
+    "WAS",
+    "SSA"
+   ],
+   "countries": [
+    "DEU",
+    "ITA",
+    "GBR",
+    "FRA",
+    "EGY",
+    "LBN",
+    "TUN",
+    "KEN",
+    "SOM",
+    "PAK"
+   ],
+   "category": "economy",
+   "title": "2022年能源与粮食危机",
+   "summary": "俄乌战争导致2022年能源和粮食价格飙升：欧洲天然气价格在8月创历史新高，9月“北溪”管道遭破坏，欧洲加速摆脱对俄罗斯能源的依赖；联合国粮农组织食品价格指数于3月创纪录，依赖进口小麦的中东、北非和东非国家受冲击最大。2022年7月签署的黑海粮食外运协议使乌克兰粮食出口部分恢复，至2023年7月终止。",
+   "personal_hooks": [
+    "冬天家里调低暖气温度，电费和燃气账单翻倍",
+    "面包和食用油价格上涨，低收入家庭削减餐食"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022_Russia–European_Union_gas_dispute",
+    "https://en.wikipedia.org/wiki/2022_food_crises",
+    "https://en.wikipedia.org/wiki/Black_Sea_Grain_Initiative",
+    "https://en.wikipedia.org/wiki/Nord_Stream_pipelines_sabotage"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "beijing_olympics_2022",
+   "start": "2022-02-04",
+   "end": "2022-02-20",
+   "year": 2022,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "sport",
+   "title": "北京冬奥会",
+   "summary": "2022年2月北京冬奥会举行，北京成为首个同时举办过夏季和冬季奥运会的城市，赛事在闭环防疫管理下进行，带动了中国冰雪运动的参与。",
+   "personal_hooks": [
+    "孩子们参加学校的冰雪运动课程，冬奥吉祥物“冰墩墩”一度一“墩”难求"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022_Winter_Olympics"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "russia_ukraine_war_2022",
+   "start": "2022-02-24",
+   "year": 2022,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "UKR",
+    "RUS",
+    "POL",
+    "MDA",
+    "BLR"
+   ],
+   "category": "war",
+   "title": "俄乌战争",
+   "summary": "2022年2月24日俄罗斯对乌克兰发动全面入侵，成为二战以来欧洲规模最大的战争。俄军一度逼近基辅后撤退，此后战线主要集中在乌克兰东部和南部，俄罗斯控制乌克兰约20%领土；俄罗斯于2022年9月实施部分动员，大批俄罗斯人出境。战争造成数十万军人伤亡和数万名乌克兰平民伤亡，六七百万乌克兰人逃往国外。2025年起美国推动和谈，但截至2026年战事仍在持续。",
+   "personal_hooks": [
+    "乌克兰成年男性被限制出境，许多家庭因此分隔两地",
+    "防空警报响起时，城市居民躲进地铁站和地下室",
+    "俄罗斯年轻男性面临动员征召，部分人移居格鲁吉亚、哈萨克斯坦等国"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.15,
+    "ages": [
+     18,
+     60
+    ],
+    "by_country": {
+     "UKR": 1.25,
+     "RUS": 1.1
+    },
+    "note": "主要反映军人伤亡，集中于成年男性；仅适用于UKR和RUS",
+    "applies_to": [
+     "UKR",
+     "RUS"
+    ]
+   },
+   "migration_push": 3,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine",
+    "https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022–present)",
+    "https://en.wikipedia.org/wiki/Ukrainian_refugee_crisis",
+    "https://en.wikipedia.org/wiki/2022_Russian_mobilization"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "el_salvador_crackdown_2022",
+   "start": "2022-03-27",
+   "year": 2022,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "SLV"
+   ],
+   "category": "policy",
+   "title": "萨尔瓦多大规模打击帮派",
+   "summary": "2022年3月萨尔瓦多宣布进入“例外状态”，大规模逮捕帮派嫌疑人(超过8万人)，凶杀率大幅下降至西半球较低水平；人权组织对任意拘押和狱中死亡表示关切。",
+   "personal_hooks": [
+    "居民可以在曾被帮派控制的街区自由走动，但也有人担心亲属被误捕"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Salvadoran_gang_crackdown"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sri_lanka_crisis_2022",
+   "start": "2022-04-12",
+   "year": 2022,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "LKA"
+   ],
+   "category": "economy",
+   "title": "斯里兰卡经济危机",
+   "summary": "2022年斯里兰卡外汇储备枯竭，4月宣布暂停偿还外债，燃料、药品和食品严重短缺，通胀率在9月接近70%；大规模抗议迫使总统拉贾帕克萨于7月出走并辞职。2023年3月国际货币基金组织批准约29亿美元贷款，经济逐步企稳。",
+   "personal_hooks": [
+    "加油站前排队数日，学校因燃料短缺停课",
+    "许多年轻人申请出国务工"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sri_Lankan_economic_crisis_(2019–present)",
+    "https://en.wikipedia.org/wiki/2022_Sri_Lankan_protests"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mpox_2022",
+   "start": "2022-05",
+   "year": 2022,
+   "end_year": 2023,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "BRA",
+    "ESP",
+    "GBR",
+    "DEU",
+    "FRA"
+   ],
+   "category": "epidemic",
+   "title": "猴痘(mpox)多国传播",
+   "summary": "2022年5月起猴痘(后更名为mpox)在非流行国家出现多国传播，世卫组织于2022年7月宣布其为国际关注的突发公共卫生事件，2023年5月解除。",
+   "personal_hooks": [
+    "高风险人群开始接种疫苗，相关健康宣传增多"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022–2023_mpox_outbreak"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pakistan_floods_2022",
+   "start": "2022-06-14",
+   "year": 2022,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "PAK"
+   ],
+   "category": "disaster",
+   "title": "巴基斯坦特大洪灾",
+   "summary": "2022年6月至10月，季风暴雨和冰川融水导致巴基斯坦约三分之一国土被淹，1,739人死亡，约3,300万人受灾，灾后需求评估显示损失和破坏超过300亿美元。",
+   "personal_hooks": [
+    "信德省农户的房屋和庄稼被洪水淹没，全家在路边帐篷中度过数月"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022_Pakistan_floods"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "abe_assassination_2022",
+   "start": "2022-07-08",
+   "year": 2022,
+   "end_year": 2022,
+   "scope": "countries",
+   "countries": [
+    "JPN"
+   ],
+   "category": "politics",
+   "title": "安倍晋三遇刺",
+   "summary": "2022年7月8日，日本前首相安倍晋三在奈良市为参议院选举助选演讲时遭枪击身亡，同年9月日本为其举行国葬。凶手称对统一教会(现称世界和平统一家庭联合会)心怀怨恨，事件引发日本社会对该团体与政界关系及高额捐献问题的广泛审视，东京地方法院于2025年3月下令解散该团体。",
+   "personal_hooks": [
+    "选举期间政治人物街头演讲的安保明显加强",
+    "受宗教团体高额捐献影响的家庭开始公开讲述自身经历"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Assassination_of_Shinzo_Abe",
+    "https://en.wikipedia.org/wiki/Unification_Church"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_industrial_policy_2022",
+   "start": "2022-08-09",
+   "year": 2022,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "policy",
+   "title": "美国芯片法案与《通胀削减法》",
+   "summary": "2022年8月美国通过《芯片与科学法》(约527亿美元半导体补贴)和《通胀削减法》(包含大规模清洁能源税收抵免)，推动半导体和电池工厂在美国落地，并引发欧盟、日本、韩国等的产业政策回应；2025年部分清洁能源和电动车税收抵免被国会取消。",
+   "personal_hooks": [
+    "新建的芯片厂和电池厂在当地招聘大量工人"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/CHIPS_and_Science_Act",
+    "https://en.wikipedia.org/wiki/Inflation_Reduction_Act"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iran_protests_2022",
+   "start": "2022-09-16",
+   "year": 2022,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "society",
+   "title": "伊朗玛莎·阿米尼事件抗议",
+   "summary": "2022年9月伊朗女子玛莎·阿米尼因头巾问题被道德警察拘留后死亡，引发全国性抗议并持续数月，人权组织统计数百名抗议者死亡、上万人被捕。",
+   "personal_hooks": [
+    "大学校园出现抗议，互联网和社交软件访问受到限制"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mahsa_Amini_protests"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "brazil_polarization_2022",
+   "start": "2022-10-30",
+   "year": 2022,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "BRA"
+   ],
+   "category": "politics",
+   "title": "巴西大选与政治对立",
+   "summary": "2022年10月卢拉在巴西总统选举第二轮以微弱优势击败博索纳罗；2023年1月8日博索纳罗的支持者冲击巴西利亚三权广场的国会、总统府和最高法院。2025年9月巴西联邦最高法院以策划政变等罪名判处博索纳罗27年徒刑。",
+   "personal_hooks": [
+    "家庭和朋友之间因支持不同候选人而产生分歧"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022_Brazilian_general_election",
+    "https://en.wikipedia.org/wiki/2023_Brazilian_Congress_attack"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "population_milestones_2022",
+   "start": "2022-11-15",
+   "year": 2022,
+   "end_year": 2023,
+   "scope": "global",
+   "countries": [
+    "IND",
+    "CHN"
+   ],
+   "category": "society",
+   "title": "世界人口达80亿，印度人口超过中国",
+   "summary": "联合国估算世界人口于2022年11月15日达到80亿；2023年印度人口超过中国，成为世界人口第一大国。",
+   "personal_hooks": [
+    "新闻报道人口里程碑，学校课堂讨论人口增长与资源问题"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Day_of_Eight_Billion",
+    "https://en.wikipedia.org/wiki/Demographics_of_India"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "chatgpt_2022",
+   "start": "2022-11-30",
+   "year": 2022,
+   "end_year": 2024,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "CHN",
+    "GBR"
+   ],
+   "category": "technology",
+   "title": "ChatGPT与生成式人工智能爆发",
+   "summary": "2022年11月30日OpenAI发布ChatGPT，两个月内用户数估计突破1亿，成为当时用户增长最快的消费级应用。生成式人工智能随即在写作、编程、翻译、图像和视频生成等领域迅速普及，中国企业也相继推出大模型产品；2024年诺贝尔物理学奖和化学奖均授予与人工智能相关的研究。各国开始讨论人工智能对就业、教育和安全的影响。",
+   "personal_hooks": [
+    "学生开始用AI助手查资料、写作业，学校随之调整考核方式",
+    "办公室职员用AI撰写邮件、报告和代码"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 3
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/ChatGPT",
+    "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+    "https://en.wikipedia.org/wiki/2024_Nobel_Prize_in_Physics"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "heat_records_2023",
+   "start": "2023",
+   "year": 2023,
+   "end_year": 2025,
+   "scope": "global",
+   "countries": [
+    "IND",
+    "PAK",
+    "SAU",
+    "MEX",
+    "USA",
+    "ITA",
+    "ESP",
+    "GRC"
+   ],
+   "category": "disaster",
+   "title": "全球气温连创新高与极端高温",
+   "summary": "2023年和2024年相继成为有记录以来最热年份，据世界气象组织和哥白尼气候变化服务的数据，2024年全球平均气温比工业化前高约1.55°C至1.6°C，是首个超过1.5°C的日历年。极端高温频发：研究估计2022年和2023年夏季欧洲分别约有6万和4.7万人死于高温相关原因，2024年麦加朝觐期间超过1,300人因酷热死亡。",
+   "personal_hooks": [
+    "夏季户外工作被调整到清晨或夜间",
+    "空调成为家庭必需品，电费随之上升"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.01,
+    "ages": [
+     65,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://climate.copernicus.eu/global-climate-highlights-2024",
+    "https://en.wikipedia.org/wiki/2022_European_heatwaves",
+    "https://en.wikipedia.org/wiki/2024_Hajj_disaster"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "korea_low_fertility",
+   "start": "2023",
+   "year": 2023,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "KOR"
+   ],
+   "category": "society",
+   "title": "韩国生育率降至世界最低",
+   "summary": "韩国总和生育率持续下降至世界最低水平，2023年降至0.72，2024年小幅回升至0.75；政府将人口问题列为国家紧急课题，加大住房、育儿补贴和工作家庭平衡方面的支持。",
+   "personal_hooks": [
+    "身边的同龄人普遍晚婚或选择不生孩子，许多小学因生源不足而合并"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Demographics_of_South_Korea"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cholera_upsurge_2023",
+   "start": "2023",
+   "year": 2023,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "SDN",
+    "SSD",
+    "YEM",
+    "AFG",
+    "COD",
+    "ETH",
+    "HTI"
+   ],
+   "category": "epidemic",
+   "title": "全球霍乱疫情反弹",
+   "summary": "2020年代中期全球霍乱疫情显著反弹，世卫组织将其列为最高级别的紧急事件；2024年全球报告约80万例病例、近6,000人死亡，苏丹、南苏丹、也门、阿富汗和刚果(金)等受冲突影响的国家最为严重，口服霍乱疫苗长期供不应求。",
+   "personal_hooks": [
+    "村里的水井被污染，家人需要把水煮沸后再饮用"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://www.who.int/news-room/fact-sheets/detail/cholera",
+    "https://en.wikipedia.org/wiki/Cholera_outbreaks_and_pandemics"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "turkey_syria_quake_2023",
+   "start": "2023-02-06",
+   "year": 2023,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "TUR",
+    "SYR"
+   ],
+   "category": "disaster",
+   "title": "土耳其-叙利亚大地震",
+   "summary": "2023年2月6日土耳其东南部接连发生7.8级和7.5级强烈地震，土耳其和叙利亚共有超过5.9万人死亡，数百万人失去住所，是土耳其现代史上最严重的自然灾害。",
+   "personal_hooks": [
+    "城市楼房倒塌，幸存者在帐篷和集装箱板房中生活",
+    "许多家庭迁往其他城市投靠亲友"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ],
+    "years": [
+     2023
+    ]
+   },
+   "migration_push": 1,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2023_Turkey–Syria_earthquakes"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sudan_war_2023",
+   "start": "2023-04-15",
+   "year": 2023,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "SDN",
+    "TCD",
+    "SSD",
+    "EGY"
+   ],
+   "category": "war",
+   "title": "苏丹内战",
+   "summary": "2023年4月15日苏丹武装部队与快速支援部队爆发内战，首都喀土穆和达尔富尔地区受创严重。截至2026年7月，超过1,400万人被迫离开家园，其中约450万人逃往国外，是世界上最大的流离失所危机之一。2024年8月扎姆扎姆营地被确认出现饥荒，2025年10月快速支援部队攻占法希尔，此后当地也被确认出现饥荒。",
+   "personal_hooks": [
+    "喀土穆居民逃往埃及或乍得，许多孩子已两年以上没有上学",
+    "家庭依赖社区厨房和国际援助获取食物"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -3,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.2,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "SDN"
+    ]
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023–present)",
+    "https://en.wikipedia.org/wiki/Famine_in_Sudan_(2024–present)"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ai_investment_boom_2023",
+   "start": "2023-05",
+   "year": 2023,
+   "end_year": 2026,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "CHN",
+    "TWN",
+    "KOR",
+    "NLD",
+    "JPN"
+   ],
+   "category": "economy",
+   "title": "人工智能投资热潮",
+   "summary": "生成式人工智能引发全球投资热潮：英伟达市值于2023年突破1万亿美元，2025年7月和10月先后突破4万亿和5万亿美元；大型科技公司每年投入数千亿美元建设数据中心，芯片供应链企业受益，电力需求快速增长，市场也持续关注估值泡沫风险。国际货币基金组织2026年10月《世界经济展望》认为，全球人工智能投资是抵消地缘政治逆风的重要力量。",
+   "personal_hooks": [
+    "计算机和芯片相关专业毕业生成为热门招聘对象",
+    "部分文职和客服岗位开始被AI工具替代或改变"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/AI_boom",
+    "https://en.wikipedia.org/wiki/Nvidia",
+    "https://www.argusmedia.com/de/news-and-insights/latest-market-news/2889923-imf-upgrades-outlook-modestly-despite-war-risks"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "canada_wildfires_2023",
+   "start": "2023-05",
+   "year": 2023,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "CAN",
+    "USA"
+   ],
+   "category": "disaster",
+   "title": "加拿大创纪录林火",
+   "summary": "2023年加拿大经历有记录以来最严重的林火季，过火面积超过1,500万公顷，二十多万人一度撤离，浓烟多次笼罩美国东北部和中西部城市，纽约等地空气质量一度居全球最差之列。",
+   "personal_hooks": [
+    "城市天空被烟雾染成橙色，学校取消户外活动"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2023_Canadian_wildfires"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "el_nino_2023",
+   "start": "2023-06",
+   "end": "2024-05",
+   "year": 2023,
+   "end_year": 2024,
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "LAC"
+   ],
+   "countries": [
+    "ZMB",
+    "ZWE",
+    "MWI",
+    "MOZ",
+    "BRA",
+    "ETH"
+   ],
+   "category": "disaster",
+   "title": "2023-2024年厄尔尼诺与南部非洲大旱",
+   "summary": "2023年中至2024年中的厄尔尼诺事件加剧了极端天气：2024年南部非洲遭遇数十年来最严重的干旱，赞比亚、津巴布韦和马拉维宣布国家灾难状态，玉米大幅减产，水电不足导致大面积停电；亚马孙流域也出现创纪录干旱。",
+   "personal_hooks": [
+    "玉米歉收，家里每天的餐食减少",
+    "赞比亚城市每天停电十多个小时，小商户难以经营"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2023–2024_El_Niño_event",
+    "https://en.wikipedia.org/wiki/2024_Southern_Africa_drought"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_youth_jobs_2023",
+   "start": "2023-06",
+   "year": 2023,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "title": "中国青年就业压力",
+   "summary": "2023年6月中国16至24岁城镇青年调查失业率升至21.3%的纪录高位，国家统计局随后暂停发布并于2024年1月起改用不含在校生的新口径；高校毕业生人数持续创新高(2025届约1,222万人)，报考公务员和事业单位的热度上升。",
+   "personal_hooks": [
+    "大学毕业后一时找不到满意工作，选择考研、考公或“灵活就业”"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Unemployment_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "wagner_mutiny_2023",
+   "start": "2023-06-23",
+   "end": "2023-06-24",
+   "year": 2023,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "RUS",
+    "BLR"
+   ],
+   "category": "politics",
+   "title": "瓦格纳集团兵变",
+   "summary": "2023年6月23日至24日，俄罗斯私营军事公司瓦格纳集团负责人普里戈任率部占领罗斯托夫的南部军区司令部并向莫斯科进军，在白俄罗斯总统卢卡申科斡旋下于一天内停止行动，部分人员随后转往白俄罗斯。同年8月23日普里戈任在飞机坠毁事件中身亡。",
+   "personal_hooks": [
+    "莫斯科等地一度宣布进入反恐行动状态，民众密切关注局势变化"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wagner_Group_rebellion",
+    "https://en.wikipedia.org/wiki/2023_Wagner_Group_plane_crash"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "morocco_quake_2023",
+   "start": "2023-09-08",
+   "year": 2023,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "MAR"
+   ],
+   "category": "disaster",
+   "title": "摩洛哥阿特拉斯山区地震",
+   "summary": "2023年9月8日摩洛哥马拉喀什西南的阿特拉斯山区发生6.8级地震，近3,000人死亡，许多山村的土坯房屋倒塌。",
+   "personal_hooks": [
+    "山区村民在帐篷中度过冬天，等待政府重建补助"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2023_Marrakesh–Safi_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "derna_floods_2023",
+   "start": "2023-09-10",
+   "year": 2023,
+   "end_year": 2023,
+   "scope": "countries",
+   "countries": [
+    "LBY",
+    "GRC"
+   ],
+   "category": "disaster",
+   "title": "利比亚德尔纳溃坝洪灾",
+   "summary": "2023年9月风暴“丹尼尔”给利比亚东部带来极端降雨，德尔纳市上游两座水坝溃决，洪水冲毁城市大片街区，数千人死亡、数千人失踪(各方统计的死亡人数在约4,000至5,900人之间)；此前该风暴已在希腊造成严重洪灾。",
+   "personal_hooks": [
+    "许多家庭失去多名亲人，幸存者迁往其他城市"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "LBY"
+    ]
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Storm_Daniel"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "afghan_returns_2023",
+   "start": "2023-10",
+   "year": 2023,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "AFG",
+    "PAK",
+    "IRN"
+   ],
+   "category": "society",
+   "title": "巴基斯坦和伊朗大规模遣返阿富汗人",
+   "summary": "2023年10月巴基斯坦启动遣返无证外国人计划，2025年伊朗也大规模遣返阿富汗人，联合国机构统计仅2025年就有超过200万阿富汗人从两国返回或被遣返，给本已脆弱的阿富汗带来巨大的住房、就业和人道压力。",
+   "personal_hooks": [
+    "在巴基斯坦或伊朗长大的阿富汗青年被迫回到从未生活过的“祖国”"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": 0,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2023_Pakistani_expulsion_of_Afghans",
+    "https://en.wikipedia.org/wiki/Afghan_refugees"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "gaza_war_2023",
+   "start": "2023-10-07",
+   "year": 2023,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "PSE",
+    "ISR",
+    "LBN"
+   ],
+   "category": "war",
+   "title": "加沙战争",
+   "summary": "2023年10月7日哈马斯等武装人员袭击以色列南部，约1,200人死亡、251人被劫持为人质；以色列随即对加沙地带展开大规模军事行动。据加沙卫生部门统计，截至2026年已有超过7万名巴勒斯坦人死亡，绝大多数加沙居民流离失所，2025年8月粮食安全阶段综合分类(IPC)确认加沙省出现饥荒。双方于2025年1月和10月两度达成停火，2025年10月的停火协议下在世人质全部获释，冲突强度此后下降。",
+   "personal_hooks": [
+    "加沙家庭多次被迫迁移，住在帐篷里依赖援助物资生活",
+    "以色列南部社区居民撤离家园，大批预备役人员被征召"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -3,
+    "tech": -1
+   },
+   "mortality": {
+    "mult": 1.0,
+    "ages": [
+     0,
+     120
+    ],
+    "by_country": {
+     "PSE": 2.0
+    },
+    "note": "加沙地带的实际风险远高于巴勒斯坦全境平均；2025年10月停火后死亡风险明显下降，故2026年不施加乘数",
+    "years": [
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaza_war",
+    "https://en.wikipedia.org/wiki/October_7_attacks",
+    "https://en.wikipedia.org/wiki/Gaza_Strip_famine"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "red_sea_crisis_2023",
+   "start": "2023-11-19",
+   "year": 2023,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "YEM",
+    "EGY"
+   ],
+   "category": "economy",
+   "title": "红海航运危机",
+   "summary": "2023年11月起也门胡塞武装以声援加沙为由袭击红海商船，大批航运公司改道绕行好望角，苏伊士运河通行量和埃及运河收入大幅下降，全球海运成本和交货时间上升；美国、英国等对胡塞目标实施空袭。",
+   "personal_hooks": [
+    "进口商品的运输时间变长，部分商品涨价"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Red_Sea_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ecuador_security_2024",
+   "start": "2024-01-09",
+   "year": 2024,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "ECU"
+   ],
+   "category": "conflict",
+   "title": "厄瓜多尔安全危机",
+   "summary": "厄瓜多尔原是南美较安全的国家之一，但贩毒集团暴力在2020年代迅速升级，2023年凶杀率位居拉美前列；2024年1月武装团伙劫持电视台直播后，总统诺沃亚宣布国家进入“内部武装冲突”状态并派军队打击犯罪团伙。",
+   "personal_hooks": [
+    "沿海城市居民天黑后尽量不出门，商户被迫向团伙缴纳“保护费”"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_Ecuadorian_conflict"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "argentina_milei_2023",
+   "start": "2023-11-19",
+   "year": 2024,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "ARG"
+   ],
+   "category": "economy",
+   "title": "米莱当选阿根廷总统与经济“休克疗法”",
+   "summary": "2023年11月自由主义经济学家哈维尔·米莱当选阿根廷总统，推行大幅削减公共开支、取消补贴和比索贬值等“休克疗法”。年通胀率从2023年的约211%降至2024年的约118%和2025年的约31%，贫困率在2024年上半年升至约53%后回落。",
+   "personal_hooks": [
+    "公共交通和水电补贴取消，账单大幅上涨",
+    "物价涨幅放缓后，家庭重新开始用比索储蓄"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Javier_Milei",
+    "https://en.wikipedia.org/wiki/Presidency_of_Javier_Milei"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "elections_2024",
+   "start": "2024",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "global",
+   "countries": [
+    "IND",
+    "IDN",
+    "MEX",
+    "ZAF",
+    "GBR",
+    "FRA",
+    "JPN",
+    "LKA",
+    "BWA",
+    "USA"
+   ],
+   "category": "politics",
+   "title": "2024年“超级选举年”",
+   "summary": "2024年数十个国家和地区举行全国性选举，涉及约一半世界人口：印度人民党失去单独过半数，但莫迪领导的联盟继续执政；墨西哥选出首位女总统辛鲍姆；南非非国大首次失去议会多数并组建民族团结政府；英国工党大胜；日本自民党与公明党失去众议院多数；博茨瓦纳民主党结束58年执政；斯里兰卡全国人民力量联盟赢得总统和议会选举；11月特朗普再次当选美国总统。许多国家的执政党得票下降。",
+   "personal_hooks": [
+    "第一次投票的年轻人通过社交媒体了解候选人"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_Indian_general_election",
+    "https://en.wikipedia.org/wiki/2024_South_African_general_election",
+    "https://en.wikipedia.org/wiki/2024_United_Kingdom_general_election",
+    "https://en.wikipedia.org/wiki/2024_United_States_presidential_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "noto_quake_2024",
+   "start": "2024-01-01",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "JPN"
+   ],
+   "category": "disaster",
+   "title": "日本能登半岛地震",
+   "summary": "2024年1月1日日本石川县能登半岛发生7.5级地震，引发海啸和火灾，直接死亡及灾害关联死亡人数合计超过500人，轮岛等地的老龄化社区受灾严重。",
+   "personal_hooks": [
+    "新年团聚时突遭地震，老人在避难所度过数月"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_Noto_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "rio_grande_do_sul_floods_2024",
+   "start": "2024-04-29",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "BRA"
+   ],
+   "category": "disaster",
+   "title": "巴西南里奥格兰德州特大洪灾",
+   "summary": "2024年4月底至5月，巴西南里奥格兰德州遭遇该州有记录以来最严重的洪灾，州府阿雷格里港大片城区被淹，国际机场关闭数月，180余人死亡，数十万人一度离开家园，州内绝大多数市镇受灾。",
+   "personal_hooks": [
+    "阿雷格里港居民乘船撤离被淹的街区，在临时避难所住了数周",
+    "企业和农场受灾停产，许多家庭失去收入来源"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_Rio_Grande_do_Sul_floods"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "genz_protests_2024",
+   "start": "2024-06-25",
+   "year": 2024,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "KEN",
+    "NPL",
+    "MDG",
+    "MAR",
+    "IDN",
+    "PHL",
+    "PER"
+   ],
+   "category": "society",
+   "title": "“Z世代”抗议浪潮",
+   "summary": "2024至2025年多国爆发以“Z世代”青年为主体、通过社交媒体组织的抗议：肯尼亚青年于2024年6月抗议加税法案；2025年9月尼泊尔政府封禁社交媒体引发抗议，冲突造成70余人死亡，奥利政府倒台，2026年3月提前大选中国家独立党(RSP)获压倒性胜利；2025年10月马达加斯加抗议后军方接管政权；摩洛哥、印度尼西亚、菲律宾、秘鲁等地也出现青年抗议。",
+   "personal_hooks": [
+    "年轻人在社交平台上组织集会，抗议腐败和就业机会匮乏"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gen_Z_protests",
+    "https://en.wikipedia.org/wiki/2026_Nepalese_general_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bangladesh_uprising_2024",
+   "start": "2024-07",
+   "year": 2024,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "BGD"
+   ],
+   "category": "politics",
+   "title": "孟加拉国七月起义与政权更迭",
+   "summary": "2024年6月起孟加拉国学生就公务员配额制度发起抗议，7月的镇压造成大量伤亡(联合国人权办公室估计最多约1,400人死亡)，8月5日总理哈西娜辞职出走印度，诺贝尔和平奖得主尤努斯领导临时政府；2026年2月大选中孟加拉国民族主义党获得压倒性胜利。",
+   "personal_hooks": [
+    "大学生走上街头，全国断网数日，学校长期停课"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/July_Uprising",
+    "https://en.wikipedia.org/wiki/2026_Bangladeshi_general_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mpox_clade1b_2024",
+   "start": "2024-08-14",
+   "end": "2025-09-05",
+   "year": 2024,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "COD",
+    "BDI",
+    "UGA",
+    "KEN"
+   ],
+   "category": "epidemic",
+   "title": "Ib分支mpox疫情",
+   "summary": "2024年刚果(金)等中非国家mpox病例激增，新出现的Ib分支更易在家庭和性接触中传播，世卫组织于2024年8月再次宣布其为国际关注的突发公共卫生事件，2025年9月解除。",
+   "personal_hooks": [
+    "社区开展疫苗接种和隔离宣传"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mpox",
+    "https://www.who.int/news/item/14-08-2024-who-director-general-declares-mpox-outbreak-a-public-health-emergency-of-international-concern"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "typhoon_yagi_2024",
+   "start": "2024-09-01",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "VNM",
+    "MMR",
+    "LAO",
+    "THA",
+    "PHL",
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "超强台风“摩羯”",
+   "summary": "2024年9月超强台风“摩羯”先后影响菲律宾、中国海南和越南北部，其残余环流在缅甸、老挝和泰国引发洪水和山体滑坡，共造成至少844人死亡。",
+   "personal_hooks": [
+    "越南北部河流泛滥，居民在屋顶等待救援"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Typhoon_Yagi"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "lebanon_war_2024",
+   "start": "2024-09-17",
+   "end": "2024-11-27",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "LBN",
+    "ISR"
+   ],
+   "category": "war",
+   "title": "2024年以色列-黎巴嫩真主党战争",
+   "summary": "2023年10月起以色列与黎巴嫩真主党持续交火，2024年9月冲突急剧升级：真主党寻呼机等通信设备爆炸，真主党领导人纳斯鲁拉遇袭身亡，以军10月起地面进入黎巴嫩南部。冲突共造成黎巴嫩约4,000人死亡、逾百万人一度流离失所，双方于11月27日停火。",
+   "personal_hooks": [
+    "黎巴嫩南部居民逃往贝鲁特或叙利亚，以色列北部居民撤离边境社区"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hurricane_helene_2024",
+   "start": "2024-09-26",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "disaster",
+   "title": "飓风“海伦”",
+   "summary": "2024年9月下旬飓风“海伦”在佛罗里达登陆后深入内陆，在北卡罗来纳州西部山区引发特大洪灾，共造成约250人死亡，是2005年“卡特里娜”以来美国本土最致命的飓风；两周后飓风“米尔顿”再次袭击佛罗里达。",
+   "personal_hooks": [
+    "山区小镇道路被冲毁，居民数周断电断水"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hurricane_Helene",
+    "https://en.wikipedia.org/wiki/Hurricane_Milton"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "valencia_floods_2024",
+   "start": "2024-10-29",
+   "year": 2024,
+   "end_year": 2024,
+   "scope": "countries",
+   "countries": [
+    "ESP"
+   ],
+   "category": "disaster",
+   "title": "西班牙瓦伦西亚洪灾",
+   "summary": "2024年10月29日西班牙瓦伦西亚地区遭遇高空冷涡(DANA)带来的极端降雨，数小时内降下相当于一年的雨量，山洪造成两百多人死亡，是西班牙数十年来最严重的洪灾。",
+   "personal_hooks": [
+    "志愿者自发涌入受灾城镇清理淤泥"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_Spanish_floods"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "korea_martial_law_2024",
+   "start": "2024-12-03",
+   "year": 2024,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "KOR"
+   ],
+   "category": "politics",
+   "title": "韩国紧急戒严风波",
+   "summary": "2024年12月3日韩国总统尹锡悦宣布紧急戒严，国会数小时内投票要求解除，戒严随即撤销；国会于12月14日通过弹劾案，宪法法院于2025年4月4日裁定罢免尹锡悦，李在明在6月3日的提前大选中当选总统。",
+   "personal_hooks": [
+    "深夜看到戒严新闻的市民赶往国会，此后数月持续关注弹劾进程"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_South_Korean_martial_law_crisis",
+    "https://en.wikipedia.org/wiki/Impeachment_of_Yoon_Suk_Yeol",
+    "https://en.wikipedia.org/wiki/2025_South_Korean_presidential_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "syria_transition_2024",
+   "start": "2024-12-08",
+   "year": 2024,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "SYR",
+    "TUR",
+    "LBN",
+    "JOR",
+    "DEU"
+   ],
+   "category": "politics",
+   "title": "阿萨德政权倒台与叙利亚过渡",
+   "summary": "2024年11月底叙利亚反对派武装发动攻势，12月8日攻入大马士革，阿萨德出走俄罗斯，其家族逾半个世纪的统治结束，以艾哈迈德·沙拉为首的过渡政府成立。2025年美欧逐步解除对叙制裁，逾百万难民回国；但沿海地区(2025年3月)和苏韦达(2025年7月)发生严重教派暴力。2026年1月政府军对库尔德人主导的叙利亚民主力量发起攻势后双方达成停火与整编协议，同年8月该武装宣布解散并并入国家军队。",
+   "personal_hooks": [
+    "流亡多年的叙利亚家庭开始考虑返乡，但面临住房被毁和就业困难",
+    "黎巴嫩、土耳其、德国的叙利亚难民社区讨论是否回国"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fall_of_the_Assad_regime",
+    "https://en.wikipedia.org/wiki/Syrian_transitional_government",
+    "https://en.wikipedia.org/wiki/Syrian_Democratic_Forces"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_retirement_reform_2025",
+   "start": "2025-01-01",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国渐进式延迟法定退休年龄",
+   "summary": "2024年9月全国人大常委会决定渐进式延迟法定退休年龄：自2025年1月起用15年时间，将男职工退休年龄从60岁逐步延迟至63岁，女职工从50岁、55岁分别逐步延迟至55岁、58岁，同时自2030年起逐步提高领取基本养老金的最低缴费年限。",
+   "personal_hooks": [
+    "临近退休的职工按出生年月查询自己新的退休时间",
+    "家庭重新安排由祖辈帮忙带孩子的计划"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pensions_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_aid_cuts_2025",
+   "start": "2025-01-20",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "SAS"
+   ],
+   "countries": [
+    "COD",
+    "ETH",
+    "NGA",
+    "MOZ",
+    "ZAF",
+    "KEN",
+    "UGA",
+    "SDN",
+    "AFG",
+    "HTI"
+   ],
+   "category": "policy",
+   "title": "美国等削减对外援助",
+   "summary": "2025年美国政府冻结并大幅削减对外援助，约八成美国国际开发署项目被终止，该机构于2025年7月并入国务院；美国于2026年1月正式退出世界卫生组织。英国、德国、法国等也削减援助预算。艾滋病防治、疟疾防控、营养和人道援助项目受到冲击，《柳叶刀》刊发的一项研究预测，若削减持续，到2030年可能额外造成逾1,400万人死亡。",
+   "personal_hooks": [
+    "当地诊所的免费药物和营养补充品供应中断",
+    "在国际援助机构工作的本地员工失业"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/United_States_Agency_for_International_Development",
+    "https://en.wikipedia.org/wiki/United_States_withdrawal_from_the_World_Health_Organization"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "us_immigration_2025",
+   "start": "2025-01-20",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "MEX",
+    "GTM",
+    "HND",
+    "SLV",
+    "VEN",
+    "IND",
+    "CHN",
+    "HTI"
+   ],
+   "category": "policy",
+   "title": "美国大幅收紧移民政策",
+   "summary": "2025年起美国大幅收紧移民政策：扩大移民执法和驱逐行动，移民拘留人数创纪录；暂停难民接收并大幅降低难民上限；6月起对多国公民实施入境禁令；9月起对新的H-1B工作签证申请征收10万美元费用。",
+   "personal_hooks": [
+    "计划赴美留学或工作的年轻人改选加拿大、英国或其他目的地",
+    "在美国的无证移民家庭担心被拘留和遣返"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Immigration_policy_of_the_second_Donald_Trump_administration"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "deepseek_2025",
+   "start": "2025-01-20",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "USA"
+   ],
+   "category": "technology",
+   "title": "DeepSeek与中国开源大模型",
+   "summary": "2025年1月中国公司深度求索(DeepSeek)发布开源推理模型R1，以较低的训练成本达到与国际领先模型相近的性能，1月27日美国科技股大跌，英伟达单日市值蒸发约6,000亿美元；此后中国开源大模型在全球开发者中被广泛使用。",
+   "personal_hooks": [
+    "普通用户在手机上下载国产AI助手，用它查资料、写文案"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/DeepSeek"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "drc_m23_2025",
+   "start": "2025-01-27",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "COD",
+    "RWA",
+    "BDI"
+   ],
+   "category": "war",
+   "title": "刚果(金)东部M23攻势",
+   "summary": "2025年1月至2月，M23武装(联合国专家报告称其获卢旺达支持)攻占刚果(金)东部重要城市戈马和布卡武，数千人死亡、数十万人流离失所。刚果(金)与卢旺达于2025年6月在美国斡旋下签署和平协议，但东部冲突此后仍未平息。",
+   "personal_hooks": [
+    "戈马居民在炮火中逃往邻近城镇或布隆迪",
+    "难民营中霍乱和mpox等疾病风险上升"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_Goma_offensive",
+    "https://en.wikipedia.org/wiki/M23_campaign_(2022–present)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "trump_tariffs_2025",
+   "start": "2025-02-01",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "CHN",
+    "CAN",
+    "MEX",
+    "VNM",
+    "IND",
+    "JPN",
+    "KOR",
+    "DEU",
+    "BRA"
+   ],
+   "category": "economy",
+   "title": "美国关税大幅升级及其全球影响",
+   "summary": "2025年特朗普再次就任后大幅提高关税：4月2日宣布对几乎所有贸易伙伴征收至少10%的“对等关税”，美中关税一度互相加至145%和125%，5月日内瓦会谈后降温，10月底两国元首在釜山会晤达成阶段性协议；钢铝、汽车等商品被征收高额“232条款”关税，印度、巴西商品税率一度达50%，美国平均有效关税率升至约一个世纪以来最高。2026年2月20日美国最高法院裁定《国际紧急经济权力法》不授权总统征收关税，政府随即改用《1974年贸易法》第122条征收临时性全球关税。",
+   "personal_hooks": [
+    "出口企业的美国订单突然减少，部分工厂缩短工时",
+    "进口商品价格上涨，商家提前囤货"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration",
+    "https://en.wikipedia.org/wiki/Liberation_Day_tariffs",
+    "https://en.wikipedia.org/wiki/Learning_Resources_v._Trump",
+    "https://www.cov.com/news-and-insights/insights/2026/02/ieepa-tariffs-terminated-replacement-section-122-tariffs-take-effect"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "europe_rearmament_2025",
+   "start": "2025-03",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [
+    "DEU",
+    "POL",
+    "FRA",
+    "GBR",
+    "LTU",
+    "LVA",
+    "EST",
+    "FIN"
+   ],
+   "category": "policy",
+   "title": "欧洲重整军备",
+   "summary": "俄乌战争持续和美国对欧政策变化促使欧洲大规模重整军备：2025年3月德国修改宪法中的“债务刹车”规定，为国防开支松绑，欧盟推出“重新武装欧洲”计划；6月北约海牙峰会同意到2035年将国防及相关开支提高至GDP的5%。多国扩大征兵和预备役训练。",
+   "personal_hooks": [
+    "欧洲年轻人讨论兵役与预备役训练，军工企业大量招聘"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_The_Hague_NATO_summit",
+    "https://en.wikipedia.org/wiki/ReArm_Europe"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "myanmar_quake_2025",
+   "start": "2025-03-28",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "MMR",
+    "THA"
+   ],
+   "category": "disaster",
+   "title": "缅甸曼德勒大地震",
+   "summary": "2025年3月28日缅甸实皆地区发生7.7级强震，震中靠近第二大城市曼德勒，死亡人数在约3,700至5,300人之间(不同统计)；泰国约百人死亡，多数因曼谷一栋在建高楼倒塌所致。地震发生在内战背景下，救援工作受到严重阻碍。",
+   "personal_hooks": [
+    "曼德勒居民在街头露宿，寺庙和学校成为临时避难所"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_Myanmar_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pope_leo_2025",
+   "start": "2025-04-21",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "global",
+   "countries": [
+    "VAT",
+    "ITA",
+    "PER",
+    "USA",
+    "ARG"
+   ],
+   "category": "culture",
+   "title": "教宗方济各逝世与良十四世当选",
+   "summary": "2025年4月21日首位拉美籍教宗方济各逝世，5月8日枢机团选出美国出生、长期在秘鲁传教的罗伯特·普雷沃斯特为新教宗，称良十四世，是首位来自北美的教宗。",
+   "personal_hooks": [
+    "天主教徒聚集教堂悼念并关注新教宗选举"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Death_and_funeral_of_Pope_Francis",
+    "https://en.wikipedia.org/wiki/Pope_Leo_XIV"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_pakistan_2025",
+   "start": "2025-04-22",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "IND",
+    "PAK"
+   ],
+   "category": "conflict",
+   "title": "2025年印巴冲突",
+   "summary": "2025年4月22日印控克什米尔帕哈尔加姆发生针对游客的袭击，26名平民遇害；印度随后宣布暂停执行《印度河水条约》，并于5月7日对巴基斯坦境内目标发动导弹打击，双方随即爆发空中、导弹、无人机和炮击冲突，5月10日宣布停火。",
+   "personal_hooks": [
+    "边境地区居民躲进掩体，航班一度大面积停飞"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_India–Pakistan_conflict",
+    "https://en.wikipedia.org/wiki/2025_Pahalgam_attack"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "twelve_day_war_2025",
+   "start": "2025-06-13",
+   "end": "2025-06-24",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "IRN",
+    "ISR",
+    "USA",
+    "QAT"
+   ],
+   "category": "war",
+   "title": "伊朗与以色列“十二日战争”",
+   "summary": "2024年4月和10月伊朗与以色列首次直接互相发动导弹和空袭。2025年6月13日以色列对伊朗核设施和军事目标发动大规模空袭，伊朗以导弹和无人机反击，美国于6月22日轰炸福尔多等三处核设施，6月24日双方停火。冲突造成伊朗约1,000余人、以色列约30人死亡。",
+   "personal_hooks": [
+    "德黑兰居民连夜离城投靠外地亲友，以色列民众多次进入防空洞"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Twelve-Day_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cambodia_thailand_2025",
+   "start": "2025-07-24",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "KHM",
+    "THA"
+   ],
+   "category": "conflict",
+   "title": "柬泰边境冲突",
+   "summary": "2025年7月24日柬埔寨与泰国因边境领土争议爆发武装冲突，造成数十人死亡、逾10万人撤离，7月28日双方同意停火；同年12月冲突再度爆发，泰军占领争议地区若干据点。",
+   "personal_hooks": [
+    "边境村民撤往临时安置点，在泰国务工的柬埔寨工人大批返乡"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_Cambodian–Thai_border_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kunar_quake_2025",
+   "start": "2025-08-31",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "AFG"
+   ],
+   "category": "disaster",
+   "title": "阿富汗库纳尔地震",
+   "summary": "2025年8月31日阿富汗东部库纳尔省一带发生6.0级地震，山区土坯房大面积倒塌，至少2,200人死亡(世卫组织估计近3,000人)，救援受到援助资金削减和山区交通困难的制约。",
+   "personal_hooks": [
+    "山村房屋倒塌，幸存者在露天度过寒冷的夜晚"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -2,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_Kunar_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "latam_right_turn_2025",
+   "start": "2025-10-19",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "BOL",
+    "CHL",
+    "HND",
+    "CRI",
+    "PER",
+    "COL"
+   ],
+   "category": "politics",
+   "title": "拉美多国选举右转",
+   "summary": "2025至2026年拉丁美洲多国选举出现右转：玻利维亚“争取社会主义运动”党结束近20年执政，罗德里戈·帕斯当选总统(2025年10月)；智利选出何塞·安东尼奥·卡斯特(2025年12月)；洪都拉斯、哥斯达黎加相继由右翼候选人胜选；2026年6月秘鲁藤森庆子和哥伦比亚阿贝拉多·德拉埃斯普列亚分别在第二轮投票中胜出。",
+   "personal_hooks": [
+    "选民关注治安、通胀和就业问题，社交媒体上的竞选宣传异常激烈"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_Bolivian_general_election",
+    "https://en.wikipedia.org/wiki/2025_Chilean_general_election",
+    "https://en.wikipedia.org/wiki/2026_Peruvian_general_election",
+    "https://en.wikipedia.org/wiki/2026_Colombian_presidential_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hurricane_melissa_2025",
+   "start": "2025-10-28",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "JAM",
+    "HTI",
+    "CUB"
+   ],
+   "category": "disaster",
+   "title": "飓风“梅丽莎”",
+   "summary": "2025年10月28日五级飓风“梅丽莎”以约每小时295公里的持续风速登陆牙买加，是该国有记录以来最强的飓风，并影响海地和古巴，共造成约95人死亡，牙买加西部的房屋和基础设施严重受损。",
+   "personal_hooks": [
+    "牙买加西部居民的屋顶被掀翻，全岛大面积停电"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hurricane_Melissa"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_japan_tension_2025",
+   "start": "2025-11",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "JPN"
+   ],
+   "category": "politics",
+   "title": "中日关系紧张",
+   "summary": "2025年11月日本首相高市早苗在国会答辩中就台湾问题发表涉及“存亡危机事态”的言论，中方提出严正交涉并要求撤回，随后发布赴日旅行提醒、暂停进口日本水产品并限制部分人员和文化交流，中日关系明显紧张。",
+   "personal_hooks": [
+    "原计划赴日旅游的家庭取消行程，日本旅游业者感受到客源减少"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025–2026_China–Japan_diplomatic_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "asia_floods_2025",
+   "start": "2025-11-22",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "IDN",
+    "THA",
+    "MYS",
+    "LKA",
+    "IND",
+    "PHL",
+    "VNM"
+   ],
+   "category": "disaster",
+   "title": "2025年底亚洲特大洪灾",
+   "summary": "2025年11月下旬，罕见在马六甲海峡形成的气旋风暴“森雅”给印度尼西亚苏门答腊、泰国南部和马来西亚带来特大暴雨，洪水和山体滑坡造成至少1,500人死亡；几乎同时，气旋“迪特瓦”在斯里兰卡造成600多人死亡，是该国近年来最严重的自然灾害之一。此前台风“海鸥”已在菲律宾和越南造成近300人死亡。",
+   "personal_hooks": [
+    "洪水冲毁村庄，灾民在清真寺、寺庙和学校中避难"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cyclone_Senyar",
+    "https://en.wikipedia.org/wiki/Cyclone_Ditwah",
+    "https://en.wikipedia.org/wiki/Typhoon_Kalmaegi_(2025)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hk_tai_po_fire_2025",
+   "start": "2025-11-26",
+   "year": 2025,
+   "end_year": 2025,
+   "scope": "countries",
+   "countries": [
+    "HKG"
+   ],
+   "category": "disaster",
+   "title": "香港大埔宏福苑火灾",
+   "summary": "2025年11月26日香港大埔宏福苑发生大火，正在进行外墙维修的8座住宅楼中有7座被波及，大火燃烧约44小时，造成168人死亡，是香港自1948年以来死亡人数最多的火灾；事故引发社会对外墙维修工程棚架防护网防火标准和工程监管的广泛关注与调查。",
+   "personal_hooks": [
+    "全港市民为灾民捐款捐物，许多屋苑检查维修工程的防火安全"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wang_Fuk_Court_fire"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "australia_social_media_age_2025",
+   "start": "2025-12-10",
+   "year": 2025,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "AUS"
+   ],
+   "category": "policy",
+   "title": "澳大利亚禁止16岁以下使用社交媒体",
+   "summary": "澳大利亚自2025年12月10日起禁止16岁以下青少年在主要社交媒体平台开设账户，是全球首个此类全国性法律，平台需采取年龄验证措施，多国随后讨论效仿。",
+   "personal_hooks": [
+    "中学生的社交媒体账号被停用，家长和学校讨论青少年的上网习惯"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "japan_takaichi_2026",
+   "start": "2025-10-21",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "JPN"
+   ],
+   "category": "politics",
+   "title": "高市早苗出任日本首相与2026年众议院选举",
+   "summary": "2025年10月高市早苗成为日本首位女首相，2026年2月8日众议院提前选举中自民党大胜，取得超过三分之二的席位。",
+   "personal_hooks": [
+    "日本选民关注物价、防卫和对华关系等议题"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Japanese_general_election",
+    "https://en.wikipedia.org/wiki/Sanae_Takaichi"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iran_protests_2026",
+   "start": "2025-12-28",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "politics",
+   "title": "伊朗2025-2026年全国抗议与镇压",
+   "summary": "2025年12月底伊朗因货币暴跌和高通胀爆发全国性抗议，蔓延至200多个城市，是1979年以来规模最大的反政府抗议；当局切断互联网，并在2026年1月8日至9日起实施大规模镇压，人权组织记录的死亡人数达数千人，另有部分估计高达数万人，数以万计的人被捕。",
+   "personal_hooks": [
+    "物价飞涨后商贩罢市，城市陷入断网和戒严",
+    "许多家庭打听在抗议中失踪或被捕的亲人下落"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -3,
+    "safety": -3,
+    "education": -1,
+    "tech": -1
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025–2026_Iranian_protests"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "cuba_fuel_crisis_2026",
+   "start": "2026-01",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "CUB"
+   ],
+   "category": "economy",
+   "title": "古巴燃料封锁与能源危机",
+   "summary": "委内瑞拉政局变化后，其对古巴的石油供应中断，美国自2026年初起拦截驶往古巴的油轮，古巴燃料严重短缺，停电、交通和食品供应危机加剧；3月古巴领导人确认正与美方就此进行谈判。",
+   "personal_hooks": [
+    "每天停电十几个小时，冰箱里的食物无法保存",
+    "公共交通几乎停摆，人们骑自行车或步行上班"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": -1
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_United_States_fuel_blockade_on_Cuba"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "venezuela_us_intervention_2026",
+   "start": "2026-01-03",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "VEN",
+    "USA",
+    "CUB"
+   ],
+   "category": "politics",
+   "title": "美国军事行动抓捕马杜罗",
+   "summary": "委内瑞拉2024年7月总统选举结果存在争议。2025年下半年美国在加勒比海集结军力并打击涉毒船只，2026年1月3日美军对委内瑞拉北部多处目标实施空袭，并在加拉加斯抓获总统马杜罗及其妻子，将其押往纽约受审，行动造成约80人死亡。副总统德尔西·罗德里格斯出任代总统，此后美委恢复外交关系，美国放松对委石油制裁并深度介入委内瑞拉财政与石油事务，数百名政治犯获释。联合国官员和多国认为该行动违反《联合国宪章》。",
+   "personal_hooks": [
+    "加拉加斯居民在凌晨的爆炸声中醒来，此后数周密切关注政局走向",
+    "海外委内瑞拉侨民讨论是否回国"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela",
+    "https://news.usni.org/2026/01/03/maduro-wife-captured-by-american-forces-u-s-to-oversee-venezuela-ahead-of-new-government-trump-says",
+    "https://wdet.org/2026/01/03/u-s-hit-venezuela-with-large-scale-strike-captured-nicolas-maduro/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "afghanistan_pakistan_war_2026",
+   "start": "2026-02-21",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "AFG",
+    "PAK"
+   ],
+   "category": "war",
+   "title": "2026年阿富汗-巴基斯坦战争",
+   "summary": "2026年2月下旬巴基斯坦空袭阿富汗境内其所称的巴基斯坦塔利班营地，冲突迅速升级，巴方宣布与阿富汗塔利班当局进入“公开战争”，空袭波及喀布尔和坎大哈等城市，边境沿线持续交火；期间两次节日停火均未能终止冲突，9月战事再度升级。",
+   "personal_hooks": [
+    "边境口岸关闭，跨境贸易和探亲中断",
+    "开伯尔-普什图省居民担忧袭击事件增多"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Afghanistan–Pakistan_war",
+    "https://www.newarab.com/news/pakistan-bombs-kabul-open-war-afghanistans-taliban",
+    "https://www.chronicle.lu/category/international-news/59786-pakistan-bombs-targets-in-afghan-cities-minister-calls-it-open-war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iran_war_2026",
+   "start": "2026-02-28",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "IRN",
+    "ISR",
+    "USA",
+    "SAU",
+    "ARE",
+    "KWT",
+    "BHR",
+    "QAT",
+    "IRQ",
+    "OMN"
+   ],
+   "category": "war",
+   "title": "2026年伊朗战争与霍尔木兹海峡危机",
+   "summary": "2026年2月28日美国和以色列对伊朗发动大规模空袭，伊朗最高领袖哈梅内伊等多名高级官员身亡，其子穆杰塔巴·哈梅内伊于3月被选为新任最高领袖。伊朗向以色列和海湾地区的美军基地发射导弹和无人机，并封锁霍尔木兹海峡。4月双方停火后局势多次反复：美国4月起封锁伊朗港口，6月中旬美伊签署旨在结束战争的备忘录并解除双重封锁，但7月8日停火协议破裂、海峡航运再度中断。战争已造成数千人死亡，并波及黎巴嫩、伊拉克、也门和海湾国家，截至2026年10月冲突尚未结束。",
+   "personal_hooks": [
+    "德黑兰居民在空袭期间离开城市投亲靠友，互联网时断时续",
+    "海湾国家的外籍劳工经历防空警报和航班大面积停飞"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -1,
+    "tech": -1
+   },
+   "migration_push": 2,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Iran_war",
+    "https://www.al-monitor.com/originals/2026/02/israel-us-launched-strikes-iranian-leader-met-inner-circle-sources-say",
+    "https://cyprus-mail.com/2026/02/28/iranian-leader-khamenei-killed-in-strikes-israel-says"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "oil_shock_2026",
+   "start": "2026-03",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "global",
+   "countries": [
+    "PAK",
+    "BGD",
+    "LKA",
+    "IND",
+    "JPN",
+    "KOR",
+    "CHN",
+    "DEU",
+    "EGY",
+    "PHL"
+   ],
+   "category": "economy",
+   "title": "2026年全球石油与燃料危机",
+   "summary": "霍尔木兹海峡关闭后，经该海峡的石油流量从战前每天约2,000万桶骤降，国际能源署称这是石油市场史上最大规模的供应中断。布伦特油价从战前约每桶72美元一度升至约118美元，此后大幅波动，柴油价格涨幅更大；国际能源署32个成员国于3月11日同意释放4亿桶应急储备，为该机构史上规模最大的一次。依赖海湾进口燃料的南亚和东南亚国家出现燃油短缺和限电，化肥和液化天然气供应也受到冲击。国际货币基金组织2026年10月预计当年全球经济增长约3.1%。",
+   "personal_hooks": [
+    "加油站限购、油价飞涨，通勤和物流成本大幅上升",
+    "农民因化肥涨价而减少施肥或改种作物"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+    "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
+    "https://www.iea.org/commentaries/how-global-oil-supplies-have-readjusted-to-help-fill-the-huge-gap-left-by-the-strait-of-hormuz-shock",
+    "https://www.argusmedia.com/de/news-and-insights/latest-market-news/2889923-imf-upgrades-outlook-modestly-despite-war-risks",
+    "https://iea.org/news/iea-member-countries-to-carry-out-largest-ever-oil-stock-release-amid-market-disruptions-from-middle-east-conflict"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "lebanon_war_2026",
+   "start": "2026-03-02",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "LBN",
+    "ISR"
+   ],
+   "category": "war",
+   "title": "2026年黎巴嫩战争",
+   "summary": "伊朗战争爆发后，黎巴嫩真主党于2026年3月2日向以色列发动攻击，以色列随即在黎巴嫩全境实施大规模空袭，并于3月中旬起地面进入黎巴嫩南部、宣布将控制至利塔尼河一线；冲突已造成黎巴嫩4,000多人死亡、逾100万人流离失所。4月16日起双方实施临时停火并多次延长，但以军空袭和对南部部分地区的占领仍在持续。",
+   "personal_hooks": [
+    "黎巴嫩南部家庭再次逃离家园，挤在贝鲁特的学校避难所中"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Lebanon_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "artemis_ii_2026",
+   "start": "2026-04-01",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "CAN"
+   ],
+   "category": "science",
+   "title": "“阿耳忒弥斯2号”载人绕月飞行",
+   "summary": "2026年4月美国“阿耳忒弥斯2号”任务搭载4名宇航员绕月飞行并于4月10日安全返回，是1972年以来人类首次飞出近地轨道，首次有女性、黑人和非美国籍宇航员飞抵月球附近。",
+   "personal_hooks": [
+    "学生们在课堂上观看绕月直播，航天话题再度升温"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Artemis_II"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hungary_election_2026",
+   "start": "2026-04-12",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "HUN"
+   ],
+   "category": "politics",
+   "title": "匈牙利政党轮替",
+   "summary": "2026年4月12日匈牙利议会选举中，彼得·马扎尔领导的蒂萨党以压倒性优势获胜并取得三分之二多数席位，结束了欧尔班领导的青民盟连续16年的执政。",
+   "personal_hooks": [
+    "投票率创1990年以来新高，许多年轻选民第一次投票"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mali_offensive_2026",
+   "start": "2026-04-25",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "MLI"
+   ],
+   "category": "war",
+   "title": "2026年马里武装攻势",
+   "summary": "2026年4月25日起，“支持伊斯兰与穆斯林组织”(JNIM)与阿扎瓦德解放阵线在马里多地发动协同攻势，袭击首都巴马科附近的卡蒂等地，国防部长萨迪奥·卡马拉身亡，北部城市基达尔一度易手(10月被政府军收复)，是2012年以来马里冲突中规模最大的攻势。",
+   "personal_hooks": [
+    "城市燃料和物资供应紧张，学校一度停课"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Mali_offensives"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ebola_bundibugyo_2026",
+   "start": "2026-05-15",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "COD",
+    "UGA",
+    "KEN"
+   ],
+   "category": "epidemic",
+   "title": "2026年中非埃博拉疫情",
+   "summary": "2026年5月刚果(金)伊图里省暴发由本迪布焦型埃博拉病毒引起的疫情，世卫组织于5月17日宣布其为国际关注的突发公共卫生事件。该型病毒尚无获批疫苗和特效药，疫情扩散至刚果(金)八个省份，乌干达、肯尼亚等国出现病例；截至2026年10月中旬累计报告约9,700例确诊病例、约4,700人死亡，世卫组织称其为有记录以来规模第二大的埃博拉疫情。",
+   "personal_hooks": [
+    "社区设立洗手点和体温检测，葬礼须由专业团队安全处理",
+    "学校和市场因疫情临时关闭"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -3,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Central_Africa_Ebola_epidemic",
+    "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern",
+    "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-39-week-ending-27-september-2026"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "europe_heatwave_2026",
+   "start": "2026-05-24",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "regions",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "FRA",
+    "ESP",
+    "PRT",
+    "ITA",
+    "DEU",
+    "GBR"
+   ],
+   "category": "disaster",
+   "title": "2026年欧洲热浪与山火",
+   "summary": "2026年5月下旬起欧洲接连遭遇创纪录热浪，法国6月23日成为有气象记录以来最热的一天，巴黎刷新6月最高气温纪录；法国公共卫生部门初步估计，6月17日至7月2日的热浪期间法国全因超额死亡至少5,764人；夏季南欧多地还发生山火。",
+   "personal_hooks": [
+    "城市开放避暑中心，老人被建议白天留在室内",
+    "山火逼近村庄，居民连夜撤离"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.01,
+    "ages": [
+     65,
+     120
+    ],
+    "years": [
+     2026
+    ]
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_European_heatwaves",
+    "https://www.santepubliquefrance.fr/en/climate/extreme-heat-heat-wave/national-bulletin/heat-waves-and-health-excess-mortality-during-heat-wave-june-17-july-2-2026"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "el_nino_2026",
+   "start": "2026-06-11",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "global",
+   "countries": [],
+   "category": "disaster",
+   "title": "2026年厄尔尼诺形成",
+   "summary": "2026年6月11日美国国家海洋和大气管理局宣布厄尔尼诺现象已经形成，并预测其有约63%的概率在2026年11月至2027年1月发展为“极强”事件(海温距平超过2°C)，可能加剧部分地区的干旱、洪涝和高温。",
+   "personal_hooks": [
+    "农民关注降雨预报，提前调整播种计划"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://www.wsmv.com/2026/06/12/el-nio-has-officially-arrived-heres-what-that-means-tennessee/",
+    "https://www.freshplaza.com/north-america/article/9847254/noaa-sees-63-chance-of-very-strong-el-nino/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "world_cup_2026",
+   "start": "2026-06-11",
+   "end": "2026-07-19",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "CAN",
+    "MEX",
+    "ESP"
+   ],
+   "category": "sport",
+   "title": "2026年美加墨世界杯",
+   "summary": "2026年6月至7月，美国、加拿大和墨西哥联合举办首届有48支球队参赛的世界杯，7月19日西班牙在新泽西州大都会人寿体育场举行的决赛中经加时1比0击败阿根廷夺冠。",
+   "personal_hooks": [
+    "球迷熬夜看球，城市广场设置大屏幕观赛区"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_final"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "venezuela_quake_2026",
+   "start": "2026-06-24",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "VEN"
+   ],
+   "category": "disaster",
+   "title": "委内瑞拉大地震",
+   "summary": "2026年6月24日委内瑞拉西北部和中部沿海相继发生7.2级和7.5级地震，首都加拉加斯和拉瓜伊拉州受灾最重，大量建筑倒塌；截至8月官方确认死亡人数超过6,500人，是委内瑞拉一百多年来最强的地震。",
+   "personal_hooks": [
+    "拉瓜伊拉沿海社区大批楼房倒塌，幸存者在临时营地等待重建"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     0,
+     120
+    ],
+    "years": [
+     2026
+    ]
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Venezuela_earthquakes",
+    "https://gulfnews.com/world/americas/death-toll-from-double-earthquake-in-venezuela-rises-to-3685-1.500600410",
+    "https://en.ara.cat/international/rise-to-more-than-6-500-the-dead-from-the-double-earthquake-of-june-in-venezuela_25_5831468.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "nepal_tibet_flood_2026",
+   "start": "2026-08-26",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "NPL",
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "尼泊尔-中国西藏冰崩山洪",
+   "summary": "2026年8月26日中尼边境附近发生冰岩崩塌，引发山洪和泥石流，摧毁中国吉隆口岸，并沿尼泊尔特里苏利河谷冲毁大量村镇和水电工程；截至10月初尼泊尔确认约1,500人死亡、5,000多人失踪；中国西藏40余人遇难、数百人失踪。",
+   "personal_hooks": [
+    "河谷村庄被泥石流掩埋，在水电站工作的工人下落不明"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Nepal–Tibet_floods",
+    "https://www.deseret.com/environment/2026/08/27/over-1000-missing-following-nepalese-floods-scientists-worry-more-floods-are-to-come/",
+    "https://theprint.in/feature/nepal-rasuwa-floods-glacial-collapse-usgs/3026053/"
+   ],
+   "confidence": "medium",
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     0,
+     120
+    ],
+    "applies_to": [
+     "NPL"
+    ],
+    "years": [
+     2026
+    ]
+   }
+  },
+  {
+   "id": "yemen_war_2026",
+   "start": "2026-09-03",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "YEM",
+    "SAU"
+   ],
+   "category": "war",
+   "title": "也门内战重燃与曼德海峡危机",
+   "summary": "2026年7月20日胡塞武装宣布对沙特实施海上封锁并威胁关闭曼德海峡，9月3日在塔伊兹省向也门政府方面发动大规模地面攻势，9月10日夺取红海沿岸的穆哈镇，并对沙特多座城市和机场发动无人机和导弹袭击，也门内战全面重燃。",
+   "personal_hooks": [
+    "也门家庭再次逃离战火，粮食和燃料价格飞涨"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Yemen_offensives",
+    "https://en.wikipedia.org/wiki/Bab_al-Mandab_Strait_crisis"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ethiopia_conflict_2026",
+   "start": "2026-09-23",
+   "year": 2026,
+   "end_year": 2026,
+   "scope": "countries",
+   "countries": [
+    "ETH",
+    "ERI"
+   ],
+   "category": "war",
+   "title": "埃塞俄比亚北部冲突再起",
+   "summary": "2026年1月底至2月初提格雷人民解放阵线与联邦军队发生数日交火；9月23日以提格雷武装为主的反政府武装联盟在提格雷、阿法尔和阿姆哈拉地区发动大规模攻势，联邦军队随后反攻，10月初进入提格雷首府默克莱并相继收复阿迪格拉特、阿杜瓦等地，据报厄立特里亚军队也一度进入提格雷，是2020至2022年提格雷战争以来最严重的冲突升级。",
+   "personal_hooks": [
+    "提格雷居民再次面临断网和物资短缺，许多人逃往山区"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2026_Ethiopian_offensive"
+   ],
+   "confidence": "medium"
+  }
+ ]
+}

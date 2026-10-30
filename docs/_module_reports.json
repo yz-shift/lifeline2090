@@ -1,0 +1,74 @@
+{
+ "v2:7a2ad8736958d9f76a38ce351dbf8ae82ebc9fc8684d06b0325eca800b759873": {
+  "files": [
+   "D:/LifeLine2090/src/core/data.js",
+   "D:/LifeLine2090/src/core/world.js",
+   "D:/LifeLine2090/tests/data_world.test.mjs",
+   "D:/LifeLine2090/docs/CHANGES.md"
+  ],
+  "exports": [
+   "data.js: loadData(fetchJson) -> Promise<DataStore> (loads countries, mortality and content in parallel; if content fails, content is empty with every array/object normalised; if countries or mortality fails, it rejects with a Chinese error message)",
+   "data.js: makeDataStore({countries, mortality, content}) -> DataStore {years, countries, isoList, content, meta, mortalityMeta, country, regionName, series, mx, qx, birthsWeights, incomeGroup, lifePath, currency, periodLifeExpectancy(iso3, year, sex, multFn?, fromAge=0), cohortLifeExpectancy(iso3, birthYear, sex, multFn?, fromAge=0), cohortSurvival(iso3, birthYear, sex, fromAge=0, multFn?) -> array indexed by exact age 0..115 (length 116)}; multFn(year, age) multiplies the hazard mx",
+   "data.js: decodeBase64(str) -> Uint8Array (portable, no Buffer/atob); decodeUint16LE(bytes) -> Uint16Array",
+   "world.js: createWorld(data, worldSeed, forcedBranches?) -> World {seed, code, branches, label, description, dims, assumptions, modifiers(iso3, year) (returns a copy and includes life_exp_add), indicator(iso3, key, year), incomeGroup(iso3, year), lifeExpectancy(iso3, year, sex), cohortLifeExpectancy(iso3, birthYear, sex, fromAge?), cohortSurvival(iso3, birthYear, sex, fromAge?), mortalityMult(iso3, year, age), events(iso3, year), headlines(year, iso3, n=6), isProjection(year), timeline(), toJSON() -> {seed, branches}}"
+  ],
+  "tests": "node --test tests/data_world.test.mjs: 24 tests, 23 pass, 0 fail, 1 skipped, about 0.6 s. The skipped test is branch frequency on the real content.json, which still has no future dimensions. The same check always runs and passes on synthetic content: 3000 seeds, every branch within ±0.05. Results: periodLifeExpectancy for 10 large countries in 2000/2020/2050, both sexes, is within about 0.15 years of WPP le_m/le_f (limit 0.7). CHN 2000 q0 is 30.0 per 1000 for males and 26.2 for females, against an IMR of 27.9. birthsWeights(2000).total = 135764. 1e6 qx calls take about 35 ms. Worlds are deterministic, including when rebuilt from toJSON() branches. Modifiers are neutral, mortalityMult is 1 and indicator equals series for every year up to 2026. Ramps, region overrides, GDP compounding, gini ×100, the internet ceiling, history scope matching, headlines, milestone requires/prob/year_range, shock placement and overlap, and the pandemic age-range multiplier are all tested. src/core/world.js also bundles cleanly with esbuild.",
+  "deviations": [
+   "heat_risk and sea_level_risk phase in linearly 2027→2090 (climate change accumulates) instead of ramping over 2027–2031. retirement_age_add phases in to 2060, as SCHEMAS defines it. All other knobs ramp over 2027–2031, and mortality_mult ramps geometrically. Recorded in docs/CHANGES.md.",
+   "conflict_risk_add is implemented as an annual probability per game region of a generic shock titled '局部武装冲突（region）'. It affects one country, weighted by sqrt(population) × income group, and its mortality multiplier (up to 1.25) is diluted for countries above 20 million people. It never names two countries together, so the text cannot read as a war between them.",
+   "Localised content shocks: a war, conflict or disaster shock with scope 'countries' and more than 3 listed countries picks 1–2 of them (wars pick 1). A war or conflict shock with scope 'regions' picks one region and one country in it. The optional shock fields pick, year_range and max_occurrences are honoured.",
+   "Additions beyond the contract, all backwards compatible: DataStore.meta, mortalityMeta and regionName; lifePath gains incomeGroup, researched and the resolved currency; World gains code, assumptions, incomeGroup, cohortLifeExpectancy, cohortSurvival and timeline; WorldEvent gains date, basis, refId and prob. mx/qx for an unknown ISO3 fall back to a births-weighted world reference schedule instead of returning undefined, so the engine never gets NaN. country() still returns undefined and series() returns null for unknown codes.",
+   "Scenario effects in indicator() beyond those listed in the brief: poverty is recomputed with a lognormal model; le/le_m/le_f are shifted by life_exp_add − ln(mortality_mult)/0.09; imr, q5 and maternal_mort are scaled by the scenario mortality factor; health_exp_pc follows GDP; youth_unemp gets 2× unemployment_add; sec_enroll and ter_enroll are raised by education_years_add. All documented in docs/CHANGES.md."
+  ],
+  "known_issues": [
+   "data/content.json is still almost empty (no history, future, lifePaths or names files yet). World features were verified against synthetic content in the test file. Once research lands, re-run `python tools/build_content.py`, then the test file; the real-content frequency test will run automatically.",
+   "lifePath(iso3) returns a cached, shared object; callers must treat it as read-only.",
+   "Period life expectancy from abridged mx runs about 0.1 years below WPP's published LEx. This is a systematic, harmless bias from the constant-hazard assumption at age 0."
+  ]
+ },
+ "v2:62d8061e3cf1d21376c938faabed9a331be1ecd1c21f8143d758470f86f5db22": {
+  "files": [
+   "D:/LifeLine2090/src/social/store.js",
+   "D:/LifeLine2090/src/social/saves.js",
+   "D:/LifeLine2090/src/ui/screens/memorial.js",
+   "D:/LifeLine2090/src/ui/screens/shared.js",
+   "D:/LifeLine2090/src/ui/screens/past.js",
+   "D:/LifeLine2090/src/ui/screens/lifeDetail.js",
+   "D:/LifeLine2090/src/ui/social.css",
+   "D:/LifeLine2090/tests/saves.test.mjs",
+   "D:/LifeLine2090/docs/CHANGES.md (appended a section)"
+  ],
+  "exports": [
+   "store.js: initSocial(opts?) -> Promise<{mode:'shared'|'local'}>, runs once (opts.data optional)",
+   "store.js: setDataSource(data), socialStatus() -> {mode, ready, canWrite, owner, readOnly, degraded}, onSocialStatus(fn) -> off, canWrite() -> Promise<bool>, isOwner() -> Promise<bool>",
+   "store.js: shareLife(pastRecord|LifeState|shapedRecord) -> {ok, lifeId, local?} | {ok:false, error, message}",
+   "store.js: getShared(lifeId) -> life|null; listShared({limit, region, country, era} | {limit, filter}) -> life[]; subscribeShared(cb(lives, meta)) -> unsubscribe (one ref-counted live query)",
+   "store.js: lightCandle(lifeId) -> {ok, already?, count?}; candleCount(lifeId) -> number|'1000+'|null; hasLitCandle(lifeId); subscribeCandles(lifeId, cb({count,label,mine})) -> unsubscribe",
+   "store.js: addMessage(lifeId, text<=200) -> {ok, message}; listMessages(lifeId, limit=100) -> [{id,text,at,mine}]; subscribeMessages(lifeId, cb) -> unsubscribe; deleteMessage(lifeId, msgId); deleteShared(lifeId) (owner or author; also clears candles/messages)",
+   "store.js: sendFeedback(text, page) -> {ok, mode, local?} | error result; listFeedback(limit)",
+   "store.js: filterLives, buildShareRecord, sanitizeLife, encodeLifemap, decodeLifemap, cleanLine, cleanText, ERAS, SHARE_LIMITS, SOCIAL_MESSAGES, SHARE_VERSION",
+   "saves.js: autosave(state) -> bool; loadCurrent() -> LifeState|null; clearCurrent()",
+   "saves.js: pastLives() (newest first, max 10, state re-hydrated with history); getPastLife(id); addPastLife(state, extras?) -> record (same id replaces; also accepts a built record); updatePastLife(id, patch); deletePastLife(id) -> bool",
+   "saves.js: exportLives() -> JSON string {format:'lifeline2090', v:1, exportedAt, lives}; importLives(json) -> {added, skipped, error?}",
+   "saves.js: fitState(state, maxChars), sanitizeRecord(raw), SAVE_LIMITS, EXPORT_FORMAT, EXPORT_VERSION",
+   "screens/shared.js, memorial.js, past.js: mount(root, params, app) -> cleanup (shared/memorial take params.lifeId or params.id; past takes params.id)",
+   "screens/lifeDetail.js: mount(root, {lifeId|id, life?, from}, app); renderLifeDetail(root, {life}|{lifeId}, app, {variant, onBack, backLabel, onRemoved}) -> cleanup; helpers lifeStrip, candleIcon, lifeCard, statBars, emptyState, liveBanner, ask, archiveNo, relTime, absDate, candleText, lifeMeta, SEX_LABELS, ANON"
+  ],
+  "tests": "node --test tests/saves.test.mjs: 18/18 pass. 14 tests cover saves: autosave round trip, trimming above 1.5 MB while keeping every history row, newest-first and cap of 10, replace on the same id, delete/update, export/import round trip, dedupe, bare-array and single-record import, sanitizing hostile input, quota handling. 4 tests cover the store: local fallback; shared mode against an in-memory fake db (share, live feed, filters, candles incl. 1000+, messages, moderation); every DbError path (unavailable retried once, quota_exceeded, resource_exhausted, invalid_argument making the visit read-only, revoked degrading). I also ran a separate DOM smoke test with happy-dom in a scratchpad folder, not part of the repo: it mounts past, shared, memorial and lifeDetail with a fake app, in local and shared mode, with stubs and with the real lifemap.js and cards.js. Stubs: 30/30 checks pass in both modes, no runtime errors. Real modules: 29/30 in both modes; the one miss is export, because the real saveBlob reports 'unavailable' in happy-dom and in the fake host (which has no downloads capability), and the screen shows that message correctly. A full esbuild bundle of src/main.js reports only modules not written yet (core/engine.js, screens/death.js, ...), none from my files.",
+  "deviations": [
+   "saves.addPastLife(state, extras?) instead of the contract's addPastLife(record). A built record is still accepted. Saving the same id again replaces the record, so the death screen can add epitaph/bio after app.js has archived the bare state.",
+   "Past records are a superset of the requested fields: v, sex, mode, place, alive, causeDetail, deathSummary, lifeExpAtBirth, percentile, sharedId. record.state drops 'pending' and is stored without history; pastLives() puts the history back.",
+   "Each shared life document also stores 'region' and a cached 'candles' count. After each candle the count is recounted from the candles subcollection, so the feed and memorial can sort without one query per life.",
+   "Many extra exports in store.js (subscribeCandles, subscribeMessages, getShared, hasLitCandle, socialStatus, onSocialStatus, setDataSource, listFeedback, ...). Writes resolve {ok, error, message} and never throw; reads always resolve arrays, numbers or null. All recorded in docs/CHANGES.md.",
+   "The life detail is rendered inside shared/memorial rather than as a separate route. lifeDetail.js still exports mount() in case the integrator wants a 'lifeDetail' route.",
+   "Local mode treats the viewer as owner of their own device data, so they can withdraw locally shared lives and delete their own messages."
+  ],
+  "known_issues": [
+   "Untested in a real browser or on claude.ai (no browser allowed here). Shared mode was checked only against an in-memory fake of the db capability.",
+   "app.js recordDeath calls addPastLife(state) with no extras, so archived records have no epitaph/bio, and countryName is the ISO3 code. The screens and shareLife resolve the name from app.data. The death screen (not written yet) should call addPastLife(state, {epitaph, title, bio, highlights}) or updatePastLife(id, {...}) to add the biography, and updatePastLife(id, {sharedId}) after sharing.",
+   "With the default db rules any Contributor can overwrite or delete any shared document. The UI offers delete only to the owner or author and the store checks authorId before deleting, but the platform rules do not enforce this.",
+   "Messages are one document per message (up to 100 shown per life). With very heavy use the 25,000-document cap is reached; quota_exceeded is then shown to the viewer.",
+   "hot-reload snapshots keep params.id but not params.lifeId; shared and memorial accept params.id as an alias for this reason."
+  ]
+ }
+}

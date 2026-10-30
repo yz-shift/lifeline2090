@@ -1,0 +1,5893 @@
+{
+ "file": "life_paths_a",
+ "description": "亚洲、大洋洲、西亚/中东与北非各国（人口 100 万以上，另含中国台湾、中国香港、中国澳门）影响普通人一生的制度参数",
+ "as_of": "2026-10-24",
+ "conventions": {
+  "school_start_age": "小学法定入学年龄（UNESCO UIS 经世界银行 SE.PRM.AGES，最新年份）；*_history 为 1999 年以来的变化",
+  "compulsory_years": "义务教育年限（UNESCO UIS 经世界银行 SE.COM.DURS）；部分国家口径含学前教育",
+  "key_exams": "age 为通常参加考试的年龄；from/until 为该考试适用的年份范围",
+  "conscription": "months 为现行标准服役月数；months_range 为按学历/军种的范围；history 为 2000 年以来的变化",
+  "legal_marriage_age": "male/female 为一般允许结婚的最低年龄（含经父母同意的情形）；without_parental_consent 为无需父母同意的年龄；exception_min 为经法院或主管机关特许的最低年龄；null 表示法律未规定",
+  "median_first_marriage_age": "联合国《世界婚姻数据 2019》的单身平均初婚年龄（SMAM），year 为调查年份",
+  "retirement_age": "from 为生效年份；数值为法定退休或领取公共养老金的一般年龄，字符串表示渐进调整；null 表示未找到可靠来源，引擎应使用 defaults_by_income_group",
+  "common_destinations": "ISO3 代码，按移民存量从多到少排列",
+  "income_group": "世界银行收入分组（中国台湾按世界银行分组表列为高收入）"
+ },
+ "countries": {
+  "CHN": {
+   "name": "中国",
+   "region": "EAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "CNY",
+    "name": "人民币",
+    "symbol": "¥"
+   },
+   "school_start_age": 6,
+   "school_start_age_history": [
+    {
+     "from": 1999,
+     "value": 7
+    },
+    {
+     "from": 2004,
+     "value": 6
+    }
+   ],
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "中考（初中学业水平考试，决定普通高中录取）"
+    },
+    {
+     "age": 18,
+     "name": "高考（普通高等学校招生全国统一考试）"
+    },
+    {
+     "age": 22,
+     "name": "全国硕士研究生招生考试（考研）"
+    },
+    {
+     "age": 22,
+     "name": "公务员录用考试（国考、省考）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": "all",
+    "months": 0,
+    "since": null,
+    "until": null,
+    "voluntary_term_months": 24,
+    "note": "《兵役法》规定公民有服兵役义务，实行义务兵与志愿兵相结合；实践中以自愿应征为主，未系统强制征召。应征入伍者前两年为义务兵役期。"
+   },
+   "legal_marriage_age": {
+    "male": 22,
+    "female": 20
+   },
+   "median_first_marriage_age": {
+    "male": 27.1,
+    "female": 25.4,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": "50（女工人）/55（女干部）"
+    },
+    {
+     "from": 2025,
+     "male": "60→63（每4个月延迟1个月，约2039年到位）",
+     "female": "50→55（每2个月延迟1个月）；55→58（每4个月延迟1个月）",
+     "note": "2024-09-13 全国人大常委会通过《关于实施渐进式延迟法定退休年龄的决定》，2025-01-01 起施行；可弹性提前或延迟退休，最长不超过 3 年；2030 年起按月领取基本养老金的最低缴费年限由 15 年逐步提高至 20 年。"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "HKG",
+    "JPN",
+    "CAN",
+    "KOR",
+    "AUS",
+    "SGP"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "户籍（户口）制度将居民登记为城镇或农村户口并与户籍地挂钩，长期影响子女入学、社会保障、购房与落户资格；各地逐步放宽落户限制。",
+    "计划生育政策：1980 年起普遍提倡独生子女，2016 年起全面二孩，2021 年起实施三孩政策并取消相关限制措施。",
+    "高考按省份分配招生计划，考生一般须在户籍所在省份报名参加高考。",
+    "基本医疗保险分为城镇职工基本医疗保险与城乡居民基本医疗保险（2016 年起整合城镇居民医保与新型农村合作医疗）。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hukou",
+    "https://en.wikipedia.org/wiki/One-child_policy",
+    "https://en.wikipedia.org/wiki/Three-child_policy",
+    "https://en.wikipedia.org/wiki/Gaokao",
+    "https://en.wikipedia.org/wiki/Zhongkao",
+    "http://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
+    "https://en.wikipedia.org/wiki/Conscription_in_China",
+    "https://en.wikipedia.org/wiki/Healthcare_in_China",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "HKG": {
+   "name": "中国香港",
+   "region": "EAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "HKD",
+    "name": "港元",
+    "symbol": "HK$"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 16,
+     "name": "香港中学会考（HKCEE）",
+     "until": 2011
+    },
+    {
+     "age": 18,
+     "name": "香港高级程度会考（HKALE）",
+     "until": 2013
+    },
+    {
+     "age": 17,
+     "name": "香港中学文凭考试（HKDSE）",
+     "from": 2012
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "香港居民无服兵役义务，防务由中国人民解放军驻香港部队负责。"
+   },
+   "legal_marriage_age": {
+    "male": 16,
+    "female": 16,
+    "without_parental_consent": 21,
+    "note": "16-21 岁结婚须父母同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 32.1,
+    "female": 29.9,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 65,
+     "note": "无全港统一的法定退休年龄；强制性公积金（2000 年 12 月实施）一般于 65 岁提取，60-64 岁提早退休可提取；部分纪律部队与公务员职系退休年龄不同。"
+    }
+   ],
+   "common_destinations": [
+    "CAN",
+    "GBR",
+    "USA",
+    "AUS",
+    "CHN",
+    "TWN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2008/09 学年起公营学校提供 12 年免费中小学教育。",
+    "相当比例的居民居住于公共租住房屋（公屋），申请须轮候。",
+    "公营医疗由医院管理局以低收费提供。",
+    "2021 年 1 月起英国开设 BN(O) 签证途径，部分居民据此移居英国。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Education_in_Hong_Kong",
+    "https://en.wikipedia.org/wiki/Public_housing_in_Hong_Kong",
+    "https://en.wikipedia.org/wiki/Hospital_Authority",
+    "https://en.wikipedia.org/wiki/Mandatory_Provident_Fund",
+    "https://en.wikipedia.org/wiki/British_National_(Overseas)",
+    "https://en.wikipedia.org/wiki/Hong_Kong_Diploma_of_Secondary_Education_Examination",
+    "https://en.wikipedia.org/wiki/Hong_Kong_Certificate_of_Education_Examination",
+    "https://en.wikipedia.org/wiki/Hong_Kong_Advanced_Level_Examination",
+    "https://en.wikipedia.org/wiki/People's_Liberation_Army_Hong_Kong_Garrison",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "MAC": {
+   "name": "中国澳门",
+   "region": "EAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "MOP",
+    "name": "澳门元",
+    "symbol": "MOP$"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "澳门四高校联合入学考试（四校联考）",
+     "from": 2017
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "澳门居民无服兵役义务，防务由中国人民解放军驻澳门部队负责。"
+   },
+   "legal_marriage_age": {
+    "male": 16,
+    "female": 16,
+    "without_parental_consent": 18,
+    "note": "《民法典》第 1478、1479、1482 条。"
+   },
+   "median_first_marriage_age": {
+    "male": 32.7,
+    "female": 30.3,
+    "year": 2011,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源确认统一退休年龄，引擎可使用高收入组默认值。",
+   "common_destinations": [
+    "HKG",
+    "CHN",
+    "CAN",
+    "AUS",
+    "PRT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "非高等教育实行 15 年免费教育（幼儿教育至高中）。",
+    "自 2008 年起特区政府每年向居民发放现金（现金分享计划）。",
+    "博彩旅游业是最主要的就业来源。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Macau",
+    "https://en.wikipedia.org/wiki/Economy_of_Macau",
+    "https://zh.wikipedia.org/wiki/現金分享計劃",
+    "https://zh.wikipedia.org/wiki/澳門四高校聯合入學考試",
+    "https://en.wikipedia.org/wiki/People's_Liberation_Army_Macau_Garrison",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "TWN": {
+   "name": "中国台湾",
+   "region": "EAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "TWD",
+    "name": "新台币",
+    "symbol": "NT$"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_note": "九年国民义务教育；2014 年起实施十二年国民基本教育，高中阶段免学费、以免试入学为主但不属强迫入学。",
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "国民中学学生基本学力测验（基测）",
+     "from": 2001,
+     "until": 2013
+    },
+    {
+     "age": 15,
+     "name": "国中教育会考",
+     "from": 2014
+    },
+    {
+     "age": 18,
+     "name": "大学联合招生考试（联考）",
+     "until": 2001
+    },
+    {
+     "age": 18,
+     "name": "大学学科能力测验（学测）"
+    },
+    {
+     "age": 18,
+     "name": "指定科目考试（指考）",
+     "from": 2002,
+     "until": 2021
+    },
+    {
+     "age": 18,
+     "name": "分科测验",
+     "from": 2022
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "役期依出生年份而定：1994-2004 年出生者接受 4 个月军事训练；2005 年 1 月 1 日起出生者自 2024 年起服 1 年常备兵役；可申请替代役。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 22
+     },
+     {
+      "from": 2004,
+      "months": 20
+     },
+     {
+      "from": 2005,
+      "months": 18,
+      "note": "2005 年 7 月起"
+     },
+     {
+      "from": 2006,
+      "months": 16
+     },
+     {
+      "from": 2007,
+      "months": 14,
+      "note": "2007 年 7 月起"
+     },
+     {
+      "from": 2008,
+      "months": 12
+     },
+     {
+      "from": 2013,
+      "months": 4,
+      "note": "1994 年 1 月 1 日后出生者改为 4 个月军事训练役；1993 年及以前出生者仍服 1 年"
+     },
+     {
+      "from": 2024,
+      "months": 12,
+      "note": "2005 年 1 月 1 日起出生者恢复服 1 年常备兵役"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2023-01-01 起成年年龄降为 18 岁，男女最低婚龄均为 18 岁（此前男 18、女 16，未成年须法定代理人同意）。"
+   },
+   "median_first_marriage_age": {
+    "male": 32.4,
+    "female": 30.0,
+    "year": 2016,
+    "measure": "平均初婚年龄（行政院主计总处国情统计通报）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55,
+     "note": "劳工保险老年给付（一次请领）：投保满 1 年，男 60 岁、女 55 岁退职可请领"
+    },
+    {
+     "from": 2009,
+     "male": 60,
+     "female": 60,
+     "note": "2009 年劳保年金化，老年年金请领年龄 60 岁，此后分阶段提高"
+    },
+    {
+     "from": 2018,
+     "male": 61,
+     "female": 61
+    },
+    {
+     "from": 2020,
+     "male": 62,
+     "female": 62
+    },
+    {
+     "from": 2022,
+     "male": 63,
+     "female": 63
+    },
+    {
+     "from": 2024,
+     "male": 64,
+     "female": 64
+    },
+    {
+     "from": 2026,
+     "male": 65,
+     "female": 65,
+     "note": "1962 年（含）以后出生者请领年龄为 65 岁；可提前或延后最多 5 年请领并相应减增给付"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "CHN",
+    "CAN",
+    "JPN",
+    "AUS",
+    "NZL",
+    "SGP"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "1995 年起实施全民健康保险。",
+    "2014 年起实施十二年国民基本教育。",
+    "2005 年起实施劳工退休金新制，雇主须按月为劳工提缴退休金至个人专户。",
+    "男性须依出生年份履行兵役或军事训练义务。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Conscription_in_Taiwan",
+    "https://zh.wikipedia.org/wiki/中華民國兵役制度",
+    "https://zh.wikipedia.org/wiki/勞工保險_(中華民國)",
+    "https://zh.wikipedia.org/wiki/十二年國民基本教育",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://zh.wikipedia.org/wiki/初婚年齡",
+    "https://www.stat.gov.tw/public/Data/7111716316XUOZ7PXC.pdf",
+    "https://en.wikipedia.org/wiki/National_Health_Insurance_(Taiwan)",
+    "https://en.wikipedia.org/wiki/Education_in_Taiwan",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "JPN": {
+   "name": "日本",
+   "region": "EAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "JPY",
+    "name": "日元",
+    "symbol": "¥"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "高中入学考试"
+    },
+    {
+     "age": 18,
+     "name": "大学入试中心考试",
+     "until": 2020
+    },
+    {
+     "age": 18,
+     "name": "大学入学共通测试",
+     "from": 2021
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "战后无征兵制，自卫队为志愿制。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2022-04-01 起男女均为 18 岁（此前女性 16 岁，未成年人结婚须父母同意）。"
+   },
+   "median_first_marriage_age": {
+    "male": 30.5,
+    "female": 29.2,
+    "year": 2015,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "企业规定的退休年龄不得低于 60 岁；厚生年金领取年龄由 60 岁逐步提高到 65 岁（男性至 2025 年完成，女性晚 5 年）；国民年金（基础年金）65 岁起领取"
+    },
+    {
+     "from": 2013,
+     "male": 65,
+     "female": 65,
+     "note": "企业须为有意愿者确保就业至 65 岁（继续雇佣等）"
+    },
+    {
+     "from": 2021,
+     "male": 65,
+     "female": 65,
+     "note": "企业有努力义务为员工确保就业机会至 70 岁"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "AUS",
+    "CHN",
+    "THA",
+    "CAN",
+    "VNM"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "1961 年起实现全民医疗保险与全民年金，20 岁以上居民须加入国民年金。",
+    "企业普遍在学生毕业前统一招聘应届毕业生（新卒一括采用、就职活动）。",
+    "2022 年成年年龄由 20 岁降至 18 岁。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Common_Test_for_University_Admissions",
+    "https://en.wikipedia.org/wiki/Pensions_in_Japan",
+    "https://en.wikipedia.org/wiki/Health_care_system_in_Japan",
+    "https://en.wikipedia.org/wiki/Shūkatsu",
+    "https://en.wikipedia.org/wiki/Education_in_Japan",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "KOR": {
+   "name": "韩国",
+   "region": "EAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "KRW",
+    "name": "韩元",
+    "symbol": "₩"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2002,
+     "value": 7
+    },
+    {
+     "from": 2003,
+     "value": 8
+    },
+    {
+     "from": 2004,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "大学修学能力考试（修能）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 18,
+    "since": null,
+    "until": null,
+    "note": "陆军与海军陆战队 18 个月、海军 20 个月、空军 21 个月、社会服务要员 21 个月；2020 年起设立良心拒服兵役者替代服务（36 个月）；奥运会奖牌与亚运会金牌获得者可转为艺术体育要员。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 26,
+      "note": "陆军"
+     },
+     {
+      "from": 2003,
+      "months": 24,
+      "note": "陆军（约 2003 年起）"
+     },
+     {
+      "from": 2011,
+      "months": 21,
+      "note": "2008-2011 年逐步缩短"
+     },
+     {
+      "from": 2021,
+      "months": 18,
+      "note": "2018-2021 年逐步缩短"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "without_parental_consent": 19
+   },
+   "median_first_marriage_age": {
+    "male": 33.9,
+    "female": 31.5,
+    "year": 2015,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "国民年金领取年龄 60 岁（1952 年及以前出生者）"
+    },
+    {
+     "from": 2013,
+     "male": 61,
+     "female": 61,
+     "note": "国民年金领取年龄每 5 年提高 1 岁"
+    },
+    {
+     "from": 2016,
+     "male": 61,
+     "female": 61,
+     "note": "法定退休年龄不得低于 60 岁（2016 年起 300 人以上企业与公共机构，2017 年起全部企业）"
+    },
+    {
+     "from": 2018,
+     "male": 62,
+     "female": 62
+    },
+    {
+     "from": 2023,
+     "male": 63,
+     "female": 63
+    },
+    {
+     "from": 2028,
+     "male": 64,
+     "female": 64
+    },
+    {
+     "from": 2033,
+     "male": 65,
+     "female": 65
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "JPN",
+    "CAN",
+    "AUS",
+    "CHN",
+    "VNM",
+    "NZL"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2000 年各类医疗保险整合为单一的国民健康保险体系。",
+    "男性兵役通常在大学期间或毕业前后完成，影响升学与就业时间安排。",
+    "大学入学竞争激烈，课外补习班（学院）参与率高。",
+    "法定退休年龄 60 岁与年金领取年龄（2033 年达 65 岁）之间存在收入空档。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Conscription_in_South_Korea",
+    "https://ko.wikipedia.org/wiki/대한민국의_병역_제도",
+    "https://ko.wikipedia.org/wiki/정년",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/College_Scholastic_Ability_Test",
+    "https://en.wikipedia.org/wiki/National_Health_Insurance_Service",
+    "https://en.wikipedia.org/wiki/Hagwon",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "PRK": {
+   "name": "朝鲜",
+   "region": "EAS",
+   "income_group": "LIC",
+   "currency": {
+    "code": "KPW",
+    "name": "朝鲜元",
+    "symbol": "₩"
+   },
+   "school_start_age": 7,
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 11
+    },
+    {
+     "from": 2014,
+     "value": 12
+    }
+   ],
+   "key_exams": [],
+   "key_exams_note": "高中毕业后的升学主要经推荐与考试选拔，公开资料有限。",
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 120,
+    "since": null,
+    "until": null,
+    "note": "男性普遍征召，通常 17 岁高中毕业后入伍，服役期据外界资料约 10 年（1993 年起）；女性为选择性征召，据报道约 7 年。官方未公开完整规定。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 17
+   },
+   "median_first_marriage_age": {
+    "male": 29,
+    "female": 25.5,
+    "year": 2008,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    }
+   ],
+   "common_destinations": [
+    "CHN",
+    "KOR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "居民出境受严格限制；离开朝鲜者多经中国前往韩国（韩国不将其计入外国移民统计）。",
+   "notes": [
+    "出身成分（songbun）制度影响个人的教育、职业与居住机会。",
+    "实行国家分配工作与配给制度；1990 年代中期发生严重饥荒。",
+    "居民出境与国内迁移受严格管控。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Conscription_in_North_Korea",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Songbun",
+    "https://en.wikipedia.org/wiki/North_Korean_famine",
+    "https://en.wikipedia.org/wiki/North_Korean_defectors",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "MNG": {
+   "name": "蒙古",
+   "region": "EAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "MNT",
+    "name": "图格里克",
+    "symbol": "₮"
+   },
+   "school_start_age": 6,
+   "school_start_age_history": [
+    {
+     "from": 1999,
+     "value": 8
+    },
+    {
+     "from": 2005,
+     "value": 7
+    },
+    {
+     "from": 2009,
+     "value": 6
+    }
+   ],
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 8
+    },
+    {
+     "from": 2002,
+     "value": 9
+    },
+    {
+     "from": 2006,
+     "value": 12
+    }
+   ],
+   "compulsory_note": "UIS 数据为 12 年；英文维基百科称义务教育为 9 年，学制自 2008 年起向 12 年制过渡。",
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "全国高校统一入学考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "依《普遍兵役法》，18-25 岁男性服役一年，预备役至 45 岁。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "1999 年《家庭法》规定 18 岁；16-18 岁者依民法典取得完全行为能力后可结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 25.1,
+    "female": 23,
+    "year": 2013,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    },
+    {
+     "from": 2018,
+     "male": "60→65 渐进（1957 年及以后出生者逐步提高，1977 年以后出生者为 65 岁）",
+     "female": "55→65 渐进（1962 年及以后出生者逐步提高，2002 年以后出生者为 65 岁）",
+     "note": "养老金法修正案 2018 年 2 月生效，自 2018-01-01 起适用"
+    }
+   ],
+   "common_destinations": [
+    "KOR",
+    "KAZ",
+    "JPN",
+    "AUS",
+    "CZE",
+    "RUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "畜牧业与游牧传统仍深刻影响农村生活方式。",
+    "首都乌兰巴托集中了全国近一半人口。",
+    "2008 年起入学年龄降至 6 岁，学制向 12 年制过渡。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Mongolia",
+    "https://en.wikipedia.org/wiki/Mongolian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://ru.wikipedia.org/wiki/Пенсионный_возраст",
+    "https://en.wikipedia.org/wiki/Ulaanbaatar",
+    "https://en.wikipedia.org/wiki/Economy_of_Mongolia",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://assets.kpmg.com/content/dam/kpmg/xx/pdf/2018/02/fa18-026.pdf"
+   ],
+   "confidence": "medium"
+  },
+  "IDN": {
+   "name": "印度尼西亚",
+   "region": "SEA",
+   "income_group": "UMC",
+   "currency": {
+    "code": "IDR",
+    "name": "印度尼西亚盾",
+    "symbol": "Rp"
+   },
+   "school_start_age": 7,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中国家考试（Ujian Nasional）",
+     "until": 2019,
+     "note": "2020 年因疫情取消，此后改为国家评估"
+    },
+    {
+     "age": 18,
+     "name": "高中国家考试（Ujian Nasional）",
+     "until": 2019,
+     "note": "2020 年因疫情取消，此后改为国家评估"
+    },
+    {
+     "age": 18,
+     "name": "国立大学笔试统一选拔（2008-2012 年 SNMPTN 笔试，2013-2022 年 SBMPTN）",
+     "until": 2022
+    },
+    {
+     "age": 18,
+     "name": "国立大学笔试统一选拔 SNBT（UTBK）",
+     "from": 2023
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役，军队为志愿兵制"
+   },
+   "legal_marriage_age": {
+    "male": 19,
+    "female": 19,
+    "note": "2019 年修订《婚姻法》将女性最低婚龄由 16 岁提高到 19 岁，与男性一致；21 岁以下结婚须父母许可，父母可向法院申请特许。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.1,
+    "female": 22.4,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2015,
+     "male": 56,
+     "female": 56,
+     "note": "2015 年设立养老金保障计划（Jaminan Pensiun，2015 年第 45 号政府条例），领取年龄 56 岁"
+    },
+    {
+     "from": 2019,
+     "male": 57,
+     "female": 57,
+     "note": "此后每 3 年提高 1 岁"
+    },
+    {
+     "from": 2022,
+     "male": 58,
+     "female": 58
+    },
+    {
+     "from": 2025,
+     "male": 59,
+     "female": 59
+    },
+    {
+     "from": 2028,
+     "male": 60,
+     "female": 60
+    },
+    {
+     "from": 2043,
+     "male": 65,
+     "female": 65,
+     "note": "按现行规定 2043 年达到上限 65 岁"
+    }
+   ],
+   "common_destinations": [
+    "MYS",
+    "SAU",
+    "ARE",
+    "TWN",
+    "SGP",
+    "HKG",
+    "JPN",
+    "KWT",
+    "AUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2014 年起实施国家健康保险（JKN），由 BPJS Kesehatan 管理。",
+    "伊斯兰寄宿学校（pesantren）在农村教育中占有重要地位。",
+    "大量劳工赴马来西亚、沙特阿拉伯、中国台湾、中国香港等地从事家政、种植园和制造业工作。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Indonesia",
+    "https://en.wikipedia.org/wiki/National_Exam_(Indonesia)",
+    "https://en.wikipedia.org/wiki/Seleksi_Nasional_Berdasarkan_Tes",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Pesantren",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Indonesia",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "PHL": {
+   "name": "菲律宾",
+   "region": "SEA",
+   "income_group": "UMC",
+   "currency": {
+    "code": "PHP",
+    "name": "菲律宾比索",
+    "symbol": "₱"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 13,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 10
+    },
+    {
+     "from": 2012,
+     "value": 11
+    },
+    {
+     "from": 2018,
+     "value": 13
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "国家成就测试（NAT，六年级）"
+    },
+    {
+     "age": 16,
+     "name": "国家成就测试（NAT，十年级）"
+    },
+    {
+     "age": 18,
+     "name": "大学入学考试（各校自主，如菲律宾大学 UPCAT）"
+    },
+    {
+     "age": 21,
+     "name": "专业执业资格考试（专业监管委员会 PRC 执照考试，如护士、教师）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役；宪法允许在法律规定条件下要求公民服兵役。2002 年起大学预备役军官训练（ROTC）改为国家服务训练计划中的可选项。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "without_parental_consent": 21,
+    "note": "18-21 岁结婚须父母同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.1,
+    "female": 23.4,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "劳动法规定无退休计划时员工可于 60 岁（服务满 5 年）选择退休，65 岁为强制退休年龄"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "CAN",
+    "SAU",
+    "ARE",
+    "AUS",
+    "JPN",
+    "KWT",
+    "QAT",
+    "MYS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "除穆斯林适用伊斯兰个人法外，法律不允许离婚，婚姻只能通过宣告无效或撤销解除。",
+    "海外菲律宾劳工规模庞大，侨汇是许多家庭的重要收入来源。",
+    "2013 年《强化基础教育法》实施 K-12 学制，2016 年起增设高中十一、十二年级。",
+    "2019 年《全民医疗法》将全体公民纳入国家医疗保险（PhilHealth）。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_the_Philippines",
+    "https://en.wikipedia.org/wiki/Conscription_in_the_Philippines",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Divorce_in_the_Philippines",
+    "https://en.wikipedia.org/wiki/Overseas_Filipinos",
+    "https://en.wikipedia.org/wiki/Philippine_Health_Insurance_Corporation",
+    "https://en.wikipedia.org/wiki/University_of_the_Philippines_College_Admission_Test",
+    "https://en.wikipedia.org/wiki/Professional_Regulation_Commission",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "VNM": {
+   "name": "越南",
+   "region": "SEA",
+   "income_group": "UMC",
+   "currency": {
+    "code": "VND",
+    "name": "越南盾",
+    "symbol": "₫"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 5
+    },
+    {
+     "from": 2005,
+     "value": 9
+    },
+    {
+     "from": 2015,
+     "value": 10
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "十年级（普通高中）入学考试（各省组织）"
+    },
+    {
+     "age": 18,
+     "name": "全国高中毕业考试（2015 年起兼作大学录取依据）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "2015 年《兵役法》（2016-01-01 施行）：18-25 岁男性服现役 24 个月，接受高等教育者可推迟至 27 岁，特定情况可延长不超过 6 个月；女性可自愿服役。每年春节后统一入伍。2016 年前依 1990 年《兵役法》及其修订。",
+    "history": [
+     {
+      "from": 2016,
+      "months": 24
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 20,
+    "female": 18
+   },
+   "median_first_marriage_age": {
+    "male": 26.9,
+    "female": 22.8,
+    "year": 2015,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    },
+    {
+     "from": 2021,
+     "male": "60 岁 3 个月起每年 +3 个月，2028 年达 62",
+     "female": "55 岁 4 个月起每年 +4 个月，2035 年达 60",
+     "note": "2019 年《劳动法典》（2021 年施行）"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "JPN",
+    "AUS",
+    "TWN",
+    "KOR",
+    "CAN",
+    "DEU"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "大量青年通过劳务输出赴日本、韩国、中国台湾等地工作。",
+    "户籍登记（hộ khẩu）长期影响入学与公共服务。",
+    "高中毕业考试成绩是大学录取的主要依据。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Vietnam",
+    "https://en.wikipedia.org/wiki/Conscription_in_Vietnam",
+    "https://vi.wikipedia.org/wiki/Nghĩa_vụ_quân_sự_tại_Việt_Nam",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Bo-Luat-lao-dong-2019-333670.aspx",
+    "https://en.wikipedia.org/wiki/Hộ_khẩu",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "THA": {
+   "name": "泰国",
+   "region": "SEA",
+   "income_group": "UMC",
+   "currency": {
+    "code": "THB",
+    "name": "泰铢",
+    "symbol": "฿"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "国家基础教育测验 O-NET（小学六年级）"
+    },
+    {
+     "age": 15,
+     "name": "国家基础教育测验 O-NET（初中三年级）"
+    },
+    {
+     "age": 18,
+     "name": "国家基础教育测验 O-NET（高中六年级）"
+    },
+    {
+     "age": 18,
+     "name": "大学入学统一招生考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "months_range": [
+     6,
+     24
+    ],
+    "since": null,
+    "until": null,
+    "note": "男性年满 21 岁参加征兵抽签：抽中红签须服役；高中学历者被抽中服役 2 年，自愿报名减半为 1 年；学士及以上学历者被抽中服役 1 年、自愿报名 6 个月；完成三年预备役军官训练（高中阶段）者免抽签。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "without_parental_consent": 20,
+    "note": "《婚姻平等法》（民商法典修正案）2025 年 1 月生效，男女最低婚龄由 17 岁提高到 18 岁；未满 20 岁（成年年龄）结婚须父母同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 28.5,
+    "female": 24.9,
+    "year": 2010,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "公务员退休年龄 60 岁"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "KOR",
+    "AUS",
+    "TWN",
+    "JPN",
+    "MYS",
+    "SWE"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2002 年起实施全民医疗保障计划（俗称“30 泰铢计划”）。",
+    "男子短期出家为僧是常见的传统人生仪式。",
+    "男子年满 21 岁须参加征兵抽签。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Thailand",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Thailand",
+    "https://en.wikipedia.org/wiki/Buddhism_in_Thailand",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://insightplus.bakermckenzie.com/bm/employment-compensation/thailand-a-new-dawn-thailands-landmark-legislation-on-marriage-equality",
+    "https://www.aljazeera.com/news/2019/4/23/red-or-black-experiencing-thailands-military-draft"
+   ],
+   "confidence": "medium"
+  },
+  "MMR": {
+   "name": "缅甸",
+   "region": "SEA",
+   "income_group": "LMC",
+   "currency": {
+    "code": "MMK",
+    "name": "缅元",
+    "symbol": "K"
+   },
+   "school_start_age": 5,
+   "compulsory_years": 5,
+   "key_exams": [
+    {
+     "age": 16,
+     "name": "基础教育高中毕业考试（大学入学考试）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "all",
+    "months": 24,
+    "since": 2024,
+    "until": null,
+    "note": "2010 年《人民兵役法》长期未执行，2024 年 2 月起启用：18-35 岁男性与 18-27 岁女性须服役 2 年，紧急状态下可延长至 5 年；2024 年 5 月起暂停受理 23-31 岁男性的出国务工许可申请。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 0
+     },
+     {
+      "from": 2024,
+      "months": 24
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2019 年起禁止 18 岁以下婚姻。"
+   },
+   "median_first_marriage_age": {
+    "male": 25.4,
+    "female": 22.9,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "THA",
+    "MYS",
+    "CHN",
+    "SGP",
+    "JPN",
+    "USA",
+    "IND"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "2017 年起约百万罗兴亚人逃往孟加拉国（联合国数据中孟加拉国为第二大目的地）。",
+   "notes": [
+    "2021 年 2 月军方接管政权后，多地爆发武装冲突，大量人口流离失所。",
+    "依 1982 年《公民法》，部分群体（如罗兴亚人）未被承认为公民。",
+    "2024 年起实施征兵，大批青年出境务工或避征。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Conscription_in_Myanmar",
+    "https://en.wikipedia.org/wiki/Education_in_Myanmar",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/2021_Myanmar_coup_d'état",
+    "https://en.wikipedia.org/wiki/Myanmar_civil_war_(2021–present)",
+    "https://en.wikipedia.org/wiki/Rohingya_people",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.irrawaddy.com/news/burma/myanmar-regime-eases-some-restrictions-on-men-working-abroad.html",
+    "https://rfa.org/english/news/myanmar/thailand-myanmar-worker-visas-06072024162452.html"
+   ],
+   "confidence": "medium"
+  },
+  "MYS": {
+   "name": "马来西亚",
+   "region": "SEA",
+   "income_group": "UMC",
+   "currency": {
+    "code": "MYR",
+    "name": "林吉特",
+    "symbol": "RM"
+   },
+   "school_start_age": 6,
+   "school_start_note": "当年满 7 岁的儿童于 1 月入读一年级（UIS 口径为 6 岁）。",
+   "compulsory_years": 6,
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "小学评估考试 UPSR",
+     "until": 2019,
+     "note": "2021 年正式废除"
+    },
+    {
+     "age": 15,
+     "name": "初中评估考试 PMR",
+     "until": 2013
+    },
+    {
+     "age": 15,
+     "name": "三年级评估 PT3",
+     "from": 2014,
+     "until": 2019,
+     "note": "2022 年废除"
+    },
+    {
+     "age": 17,
+     "name": "马来西亚教育文凭 SPM"
+    },
+    {
+     "age": 19,
+     "name": "马来西亚高级教育文凭 STPM 或大学预科"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "all",
+    "months": 3,
+    "since": 2004,
+    "until": null,
+    "note": "国民服务训练计划（PLKN）：2004-2018 年以抽签方式选拔部分 18 岁青年参加约 3 个月训练，2018 年 8 月废止；2025 年起以 PLKN 3.0 形式恢复（约 45 天训练，以抽签选拔与自愿报名招收学员）。",
+    "history": [
+     {
+      "from": 2004,
+      "months": 3,
+      "note": "抽签选拔"
+     },
+     {
+      "from": 2018,
+      "months": 0,
+      "note": "2018 年 8 月废止"
+     },
+     {
+      "from": 2025,
+      "months": 1.5,
+      "note": "PLKN 3.0，约 45 天"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 16,
+    "note": "民事婚姻：最低 18 岁，女性 16 岁起可经特许；21 岁以下须父母同意。穆斯林依伊斯兰家庭法：男 18、女 16，更低年龄须伊斯兰法庭批准。"
+   },
+   "median_first_marriage_age": {
+    "male": 28,
+    "female": 25.7,
+    "year": 2010,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2013,
+     "male": 60,
+     "female": 60,
+     "note": "私营部门最低退休年龄 60 岁（2012 年《最低退休年龄法》）；公务员退休年龄 60 岁"
+    }
+   ],
+   "common_destinations": [
+    "SGP",
+    "AUS",
+    "GBR",
+    "USA",
+    "BRN",
+    "NZL",
+    "CAN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "土著（Bumiputera）优先政策在大学录取、公务员招聘、住房与企业持股等方面给予马来人及其他原住民优惠。",
+    "雇员公积金（EPF/KWSP）是私营部门雇员的主要养老储蓄。",
+    "穆斯林的婚姻、离婚与继承事务由伊斯兰法庭管辖。",
+    "华文、泰米尔文小学与国民小学并存。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Malaysia",
+    "https://en.wikipedia.org/wiki/Ujian_Pencapaian_Sekolah_Rendah",
+    "https://en.wikipedia.org/wiki/Penilaian_Menengah_Rendah",
+    "https://en.wikipedia.org/wiki/Sijil_Pelajaran_Malaysia",
+    "https://en.wikipedia.org/wiki/National_Service_Training_Programme_(Malaysia)",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Bumiputera_(Malaysia)",
+    "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+    "https://en.wikipedia.org/wiki/Syariah_Court",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://thesun.my/malaysia-news/govt-revives-plkn-30-training-at-military-camps-EM11599287"
+   ],
+   "confidence": "high"
+  },
+  "KHM": {
+   "name": "柬埔寨",
+   "region": "SEA",
+   "income_group": "LMC",
+   "currency": {
+    "code": "KHR",
+    "name": "瑞尔",
+    "symbol": "៛"
+   },
+   "currency_note": "美元与瑞尔并行流通，日常交易广泛使用美元。",
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_note": "UIS 未列义务教育年限；宪法规定国家提供免费基础教育，公民应接受至少 9 年教育。",
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "九年级（初中）毕业考试"
+    },
+    {
+     "age": 18,
+     "name": "十二年级高中毕业会考（Bac II）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": "male",
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "2006 年《征兵法》规定男性服役 18 个月，但长期未实际执行。"
+   },
+   "legal_marriage_age": {
+    "male": 16,
+    "female": 16,
+    "without_parental_consent": 18,
+    "note": "16-18 岁结婚须父母同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 24.5,
+    "female": 21.6,
+    "year": 2014,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "THA",
+    "USA",
+    "FRA",
+    "AUS",
+    "KOR",
+    "JPN",
+    "CAN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "美元与瑞尔并行流通。",
+    "1975-1979 年红色高棉统治造成大量人口死亡，对教育与人口结构影响深远。",
+    "大量劳工赴泰国、韩国务工。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Cambodia",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Cambodian_riel",
+    "https://en.wikipedia.org/wiki/Khmer_Rouge",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "LAO": {
+   "name": "老挝",
+   "region": "SEA",
+   "income_group": "LMC",
+   "currency": {
+    "code": "LAK",
+    "name": "基普",
+    "symbol": "₭"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 5
+    },
+    {
+     "from": 2016,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "高中（十二年级）毕业考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 18,
+    "since": null,
+    "until": null,
+    "note": "选择性征兵，最短服役 18 个月。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 15,
+    "note": "特殊情况下可降至 15 岁。"
+   },
+   "median_first_marriage_age": {
+    "male": 24.6,
+    "female": 20.7,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "THA",
+    "USA",
+    "FRA",
+    "CAN",
+    "AUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2010 年起高中延长一年，中小学形成 12 年学制。",
+    "大量青年赴泰国务工。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Laos",
+    "https://en.wikipedia.org/wiki/Lao_People's_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "SGP": {
+   "name": "新加坡",
+   "region": "SEA",
+   "income_group": "HIC",
+   "currency": {
+    "code": "SGD",
+    "name": "新加坡元",
+    "symbol": "S$"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 6,
+   "compulsory_note": "2000 年《义务教育法》将小学阶段教育定为义务教育。",
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "小学离校考试（PSLE）"
+    },
+    {
+     "age": 16,
+     "name": "新加坡-剑桥 GCE O 水准 / N 水准考试",
+     "until": 2026
+    },
+    {
+     "age": 16,
+     "name": "新加坡-剑桥中学教育证书（SEC）",
+     "from": 2027
+    },
+    {
+     "age": 18,
+     "name": "新加坡-剑桥 GCE A 水准考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "18 岁以上男性公民及第二代永久居民须服全职国民服役（新加坡武装部队、警察部队或民防部队）；入伍前通过体能测验者可缩短为 22 个月；此后作为战备军人每年参加训练约 10 年。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 30,
+      "note": "下士及以上军衔 2 年 6 个月，其他 2 年"
+     },
+     {
+      "from": 2004,
+      "months": 24,
+      "note": "2004 年 12 月起统一为 2 年"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "without_parental_consent": 21
+   },
+   "median_first_marriage_age": {
+    "male": 30.4,
+    "female": 27.9,
+    "year": 2010,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 62,
+     "female": 62,
+     "note": "法定最低退休年龄 62 岁"
+    },
+    {
+     "from": 2012,
+     "male": 62,
+     "female": 62,
+     "note": "《退休与重新雇佣法》：雇主须向合格员工提供重新雇佣至 65 岁（后提高至 67、68 岁）"
+    },
+    {
+     "from": 2022,
+     "male": 63,
+     "female": 63,
+     "note": "2022 年 7 月起退休年龄 63 岁、重新雇佣年龄 68 岁"
+    },
+    {
+     "from": 2026,
+     "male": 64,
+     "female": 64,
+     "note": "2026 年 7 月起退休年龄 64 岁、重新雇佣年龄 69 岁；计划 2030 年前提高至 65/70 岁"
+    }
+   ],
+   "common_destinations": [
+    "MYS",
+    "AUS",
+    "GBR",
+    "CAN",
+    "USA",
+    "HKG",
+    "CHN",
+    "NZL"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "中央公积金（CPF）为强制储蓄，用于养老、购买组屋与医疗。",
+    "大多数居民居住在建屋发展局（HDB）组屋，组屋分配实行族群融合政策。",
+    "双语教育政策：英语为主要教学语言，学生同时学习母语。",
+    "男性须服两年国民服役。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Singapore",
+    "https://en.wikipedia.org/wiki/Singapore-Cambridge_GCE_Ordinary_Level",
+    "https://en.wikipedia.org/wiki/Primary_School_Leaving_Examination",
+    "https://en.wikipedia.org/wiki/National_service_in_Singapore",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://www.straitstimes.com/singapore/politics/retirement-and-re-employment-ages-will-be-raised-to-65-and-70",
+    "https://en.wikipedia.org/wiki/Central_Provident_Fund",
+    "https://en.wikipedia.org/wiki/Public_housing_in_Singapore",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "TLS": {
+   "name": "东帝汶",
+   "region": "SEA",
+   "income_group": "LMC",
+   "currency": {
+    "code": "USD",
+    "name": "美元",
+    "symbol": "$"
+   },
+   "currency_note": "2000 年起以美元为法定货币，另发行本国分币。",
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 2000,
+     "value": 6
+    },
+    {
+     "from": 2008,
+     "value": 9
+    }
+   ],
+   "key_exams": [],
+   "key_exams_note": "未找到可靠来源确认全国统一考试名称。",
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无实际执行的义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 16,
+    "female": 16,
+    "without_parental_consent": 17
+   },
+   "median_first_marriage_age": {
+    "male": 27.9,
+    "female": 23,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "IDN",
+    "AUS",
+    "PRT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2002 年独立，政府财政高度依赖石油基金。",
+    "官方语言为德顿语和葡萄牙语。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/United_States_dollar",
+    "https://en.wikipedia.org/wiki/Petroleum_Fund_of_Timor-Leste",
+    "https://en.wikipedia.org/wiki/East_Timor",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "IND": {
+   "name": "印度",
+   "region": "SAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "INR",
+    "name": "印度卢比",
+    "symbol": "₹"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 8,
+   "compulsory_note": "2009 年《儿童免费义务教育权利法》（2010 年 4 月施行）规定 6-14 岁免费义务教育。",
+   "key_exams": [
+    {
+     "age": 16,
+     "name": "十年级毕业考试（中央或各邦教育委员会，如 CBSE）"
+    },
+    {
+     "age": 18,
+     "name": "十二年级毕业考试"
+    },
+    {
+     "age": 18,
+     "name": "联合入学考试 JEE（工科院校）"
+    },
+    {
+     "age": 18,
+     "name": "国家资格暨入学考试 NEET（医学院）"
+    },
+    {
+     "age": 18,
+     "name": "大学统一入学考试 CUET（中央大学）",
+     "from": 2022
+    },
+    {
+     "age": 21,
+     "name": "联邦公共服务委员会公务员考试（UPSC）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "独立以来从未实行义务兵役，军队为志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 21,
+    "female": 18,
+    "note": "2006 年《禁止童婚法》规定；属人法框架下穆斯林婚龄在司法实践中存在不同解释。"
+   },
+   "median_first_marriage_age": {
+    "male": 26,
+    "female": 21.4,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "中央政府公务员退休年龄 60 岁（部分职位不同，如高等法院法官 62 岁、最高法院法官 65 岁）；私营部门因雇主而异"
+    }
+   ],
+   "common_destinations": [
+    "ARE",
+    "USA",
+    "SAU",
+    "KWT",
+    "GBR",
+    "CAN",
+    "AUS",
+    "OMN",
+    "QAT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "保留制度为表列种姓、表列部落和其他落后阶层在高校招生、政府职位与议会席位中保留名额；2019 年起增设经济弱势群体 10% 名额。",
+    "婚姻、离婚与继承依宗教分别适用不同的属人法。",
+    "2009 年起推行 Aadhaar 生物识别身份号码，广泛用于福利发放与金融服务。",
+    "2018 年起实施国家医疗保障计划（Ayushman Bharat PM-JAY）。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_India",
+    "https://en.wikipedia.org/wiki/Right_of_Children_to_Free_and_Compulsory_Education_Act,_2009",
+    "https://en.wikipedia.org/wiki/Joint_Entrance_Examination",
+    "https://en.wikipedia.org/wiki/National_Eligibility_cum_Entrance_Test_(Undergraduate)",
+    "https://en.wikipedia.org/wiki/Common_University_Entrance_Test",
+    "https://en.wikipedia.org/wiki/Civil_Services_Examination_(India)",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Reservation_in_India",
+    "https://en.wikipedia.org/wiki/Aadhaar",
+    "https://en.wikipedia.org/wiki/Ayushman_Bharat_Yojana",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "PAK": {
+   "name": "巴基斯坦",
+   "region": "SAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "PKR",
+    "name": "巴基斯坦卢比",
+    "symbol": "Rs"
+   },
+   "school_start_age": 5,
+   "compulsory_years": 12,
+   "compulsory_note": "2010 年宪法第 25A 条规定 5-16 岁儿童享有免费义务教育。",
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "中学毕业考试（Matric / SSC，十年级）"
+    },
+    {
+     "age": 17,
+     "name": "中级证书考试（Intermediate / HSSC，十二年级）"
+    },
+    {
+     "age": 18,
+     "name": "医学与牙科院校入学考试（MDCAT）等专业入学考试"
+    },
+    {
+     "age": 22,
+     "name": "中央高级公务员考试（CSS）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "一直实行志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 16,
+    "note": "联邦《童婚限制法》规定男 18、女 16；部分省份（如信德省）规定男女均为 18 岁。"
+   },
+   "median_first_marriage_age": {
+    "male": 26.9,
+    "female": 23.2,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "公务员退休年龄 60 岁"
+    }
+   ],
+   "common_destinations": [
+    "SAU",
+    "ARE",
+    "GBR",
+    "USA",
+    "KWT",
+    "OMN",
+    "CAN",
+    "QAT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "国家数据库与注册局（NADRA）签发的计算机化身份证（CNIC）是办理各类事务的基础。",
+    "宗教学校（madrasa）是部分家庭子女的重要教育渠道。",
+    "2010 年宪法第 18 修正案将教育、卫生等事权下放各省。",
+    "大量劳工赴海湾国家务工，侨汇是重要收入来源。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Pakistan",
+    "https://en.wikipedia.org/wiki/Eighteenth_Amendment_to_the_Constitution_of_Pakistan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/National_Database_and_Registration_Authority",
+    "https://en.wikipedia.org/wiki/Madrasa",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "BGD": {
+   "name": "孟加拉国",
+   "region": "SAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "BDT",
+    "name": "塔卡",
+    "symbol": "৳"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 5,
+   "key_exams": [
+    {
+     "age": 11,
+     "name": "小学毕业考试（PEC）",
+     "from": 2009,
+     "until": 2019
+    },
+    {
+     "age": 14,
+     "name": "初中证书考试（JSC）",
+     "from": 2010,
+     "until": 2019
+    },
+    {
+     "age": 16,
+     "name": "中学证书考试（SSC）"
+    },
+    {
+     "age": 18,
+     "name": "高中证书考试（HSC）"
+    },
+    {
+     "age": 18,
+     "name": "大学入学考试（各校或联合组织）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "一直实行志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 21,
+    "female": 18,
+    "note": "法律对未达婚龄结婚规定了刑事处罚，但此类婚姻不因此无效。"
+   },
+   "median_first_marriage_age": {
+    "male": 25.2,
+    "female": 19.4,
+    "year": 2011,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 57,
+     "female": 57,
+     "note": "公务员"
+    },
+    {
+     "from": 2011,
+     "male": 59,
+     "female": 59,
+     "note": "公务员退休年龄提高到 59 岁；《劳动法》（2010 年修订后第 28 条）规定工人年满 60 岁退休"
+    }
+   ],
+   "common_destinations": [
+    "SAU",
+    "IND",
+    "ARE",
+    "OMN",
+    "KWT",
+    "GBR",
+    "USA",
+    "MYS",
+    "QAT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "服装出口业雇佣大量女性工人。",
+    "格莱珉银行等小额信贷机构覆盖广泛的农村家庭。",
+    "大量男性赴中东和马来西亚务工，侨汇是重要收入来源。",
+    "低洼三角洲地形使洪水与气旋风险较高。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Bangladesh",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://bida.gov.bd/details/minimum-maximum-age-labor",
+    "https://en.wikipedia.org/wiki/Textile_industry_in_Bangladesh",
+    "https://en.wikipedia.org/wiki/Grameen_Bank",
+    "https://en.wikipedia.org/wiki/Geography_of_Bangladesh",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.thedailystar.net/law-our-rights/your-advocate/news/your-advocate-1694065"
+   ],
+   "confidence": "medium"
+  },
+  "AFG": {
+   "name": "阿富汗",
+   "region": "SAS",
+   "income_group": "LIC",
+   "currency": {
+    "code": "AFN",
+    "name": "阿富汗尼",
+    "symbol": "؋"
+   },
+   "currency_note": "2002 年发行新阿富汗尼（1 新阿富汗尼 = 1000 旧阿富汗尼）。",
+   "school_start_age": 7,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2008,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "大学入学考试（Kankor）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无实际执行的义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 16,
+    "exception_min": 15,
+    "note": "1977 年《民法》第 70 条规定男 18 岁、女 16 岁；未达该年龄者经父亲或法院许可可结婚，但不得低于 15 岁；2021 年后法律实施框架发生变化。"
+   },
+   "median_first_marriage_age": {
+    "male": 24.7,
+    "female": 21.5,
+    "year": 2015,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用低收入组默认值。",
+   "common_destinations": [
+    "IRN",
+    "PAK",
+    "DEU",
+    "TUR",
+    "USA",
+    "SAU",
+    "GBR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2021 年 8 月塔利班重新掌权。",
+    "女性受教育与就业受到严格限制：女生六年级以上学校停课，2022 年 12 月起禁止女性上大学。",
+    "数百万阿富汗人在伊朗、巴基斯坦避难或务工，2023 年起两国大规模遣返阿富汗人。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Afghanistan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Afghan_afghani",
+    "https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)",
+    "https://en.wikipedia.org/wiki/Taliban_treatment_of_women",
+    "https://en.wikipedia.org/wiki/Afghan_refugees",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://en.wikipedia.org/wiki/Child_marriage_in_Afghanistan",
+    "https://www.amnestyusa.org/press-releases/afghanistan-new-code-enabling-child-marriage-compounds-dismal-situation-for-womens-and-girls-rights/"
+   ],
+   "confidence": "medium"
+  },
+  "NPL": {
+   "name": "尼泊尔",
+   "region": "SAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "NPR",
+    "name": "尼泊尔卢比",
+    "symbol": "Rs"
+   },
+   "school_start_age": 5,
+   "school_start_age_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2003,
+     "value": 5
+    }
+   ],
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "离校证书考试（SLC，十年级）",
+     "until": 2016
+    },
+    {
+     "age": 15,
+     "name": "中等教育考试（SEE，十年级）",
+     "from": 2017
+    },
+    {
+     "age": 17,
+     "name": "十二年级国家考试（国家考试委员会 NEB）"
+    },
+    {
+     "age": 21,
+     "name": "公共服务委员会（Lok Sewa Aayog）公务员考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "实行志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 20,
+    "female": 20,
+    "note": "2017 年《民法典》规定双方均须年满 20 岁。"
+   },
+   "median_first_marriage_age": {
+    "male": 23.6,
+    "female": 20.1,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到一致的可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "IND",
+    "MYS",
+    "SAU",
+    "QAT",
+    "USA",
+    "AUS",
+    "JPN",
+    "KOR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "尼泊尔与印度边境开放，两国公民可自由往来与工作（1950 年条约）。",
+    "大量劳工赴海湾国家与马来西亚务工，侨汇在经济中占很高比重。",
+    "2008 年废除君主制，2015 年颁布联邦制宪法。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Nepal",
+    "https://en.wikipedia.org/wiki/Secondary_Education_Examination_(Nepal)",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/1950_Indo-Nepal_Treaty_of_Peace_and_Friendship",
+    "https://en.wikipedia.org/wiki/Economy_of_Nepal",
+    "https://en.wikipedia.org/wiki/Constitution_of_Nepal",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "LKA": {
+   "name": "斯里兰卡",
+   "region": "SAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "LKR",
+    "name": "斯里兰卡卢比",
+    "symbol": "Rs"
+   },
+   "school_start_age": 5,
+   "compulsory_years": 11,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 9
+    },
+    {
+     "from": 2016,
+     "value": 11
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 10,
+     "name": "五年级奖学金考试"
+    },
+    {
+     "age": 16,
+     "name": "普通教育证书普通级考试（GCE O/L）"
+    },
+    {
+     "age": 19,
+     "name": "普通教育证书高级考试（GCE A/L，按 Z 分数录取大学）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "从未实行义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "《一般婚姻条例》规定 18 岁；穆斯林适用《穆斯林婚姻与离婚法》，未设最低年龄（须经卡迪许可）。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.2,
+    "female": 23.4,
+    "year": 2012,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 55,
+     "female": 55,
+     "note": "私营部门常见退休年龄"
+    }
+   ],
+   "common_destinations": [
+    "QAT",
+    "GBR",
+    "AUS",
+    "CAN",
+    "IND",
+    "ARE",
+    "ITA",
+    "SAU"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "公立学校至大学实行免费教育，公立医院提供免费医疗。",
+    "1983-2009 年内战。",
+    "2022 年发生严重经济危机，随后接受国际货币基金组织援助计划。",
+    "大量劳工赴中东务工。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Sri_Lanka",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Sri_Lanka",
+    "https://en.wikipedia.org/wiki/Sri_Lankan_civil_war",
+    "https://en.wikipedia.org/wiki/2019–present_Sri_Lankan_economic_crisis",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "KAZ": {
+   "name": "哈萨克斯坦",
+   "region": "CAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "KZT",
+    "name": "坚戈",
+    "symbol": "₸"
+   },
+   "school_start_age": 6,
+   "school_start_age_history": [
+    {
+     "from": 1999,
+     "value": 7
+    },
+    {
+     "from": 2020,
+     "value": 6
+    }
+   ],
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "全国统一测试（ЕНТ/UNT，高校入学）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "18-27 岁男性服役一年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 16
+   },
+   "median_first_marriage_age": {
+    "male": 26.3,
+    "female": 23.1,
+    "year": 2011,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 63,
+     "female": 58
+    },
+    {
+     "from": 2018,
+     "male": 63,
+     "female": "58→61（2018 年起每年提高半岁）",
+     "note": "2018 年起女性退休年龄逐步提高"
+    },
+    {
+     "from": 2023,
+     "male": 63,
+     "female": 61,
+     "note": "2022 年 12 月第 168-VII 号法律将女性退休年龄固定在 61 岁直至 2027 年底"
+    },
+    {
+     "from": 2028,
+     "male": 63,
+     "female": "61→63（2028 年 61.5 岁，此后每年提高半岁，2031 年达 63 岁）"
+    }
+   ],
+   "common_destinations": [
+    "RUS",
+    "DEU",
+    "UKR",
+    "TUR",
+    "BLR",
+    "KOR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "苏联解体后大批德意志族、俄罗斯族居民迁往德国与俄罗斯。",
+    "全国统一测试成绩决定高校录取与国家助学金分配。",
+    "养老金由国家统一积累养老基金管理的个人账户与国家基本养老金组成。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Kazakhstan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ru.wikipedia.org/wiki/Пенсионный_возраст",
+    "https://en.wikipedia.org/wiki/Germans_of_Kazakhstan",
+    "https://en.wikipedia.org/wiki/Unified_Accumulative_Pension_Fund",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://astanatimes.com/2022/10/kazakh-mazhilis-approves-draft-amendments-to-fix-womens-retirement-age-at-61-until-2028/",
+    "https://egov.kz/cms/en/articles/retire_1"
+   ],
+   "confidence": "medium"
+  },
+  "UZB": {
+   "name": "乌兹别克斯坦",
+   "region": "CAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "UZS",
+    "name": "苏姆",
+    "symbol": "so'm"
+   },
+   "school_start_age": 7,
+   "compulsory_years": 11,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 11
+    },
+    {
+     "from": 2011,
+     "value": 12
+    },
+    {
+     "from": 2024,
+     "value": 11
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "公立大学入学考试（国家测试中心组织，俗称 DTM）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "男性服役一年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 17
+   },
+   "median_first_marriage_age": {
+    "male": 24,
+    "female": 21.5,
+    "year": 2002,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    }
+   ],
+   "common_destinations": [
+    "RUS",
+    "KAZ",
+    "TUR",
+    "KOR",
+    "ISR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "大量劳动力赴俄罗斯、哈萨克斯坦务工，侨汇是重要收入来源。",
+    "马哈拉（mahalla）社区委员会在地方社会事务中发挥作用。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Uzbekistan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Mahalla",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "TJK": {
+   "name": "塔吉克斯坦",
+   "region": "CAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "TJS",
+    "name": "索莫尼",
+    "symbol": "SM"
+   },
+   "currency_note": "2000 年 10 月起取代塔吉克卢布。",
+   "school_start_age": 7,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "高校统一入学考试（国家测试中心）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "男性服役两年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 17
+   },
+   "median_first_marriage_age": {
+    "male": 24.2,
+    "female": 20.7,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    },
+    {
+     "from": 2003,
+     "male": 63,
+     "female": 58,
+     "note": "2001-2003 年间由男 60、女 55 岁提高（来源对具体年份说法不一）"
+    }
+   ],
+   "common_destinations": [
+    "RUS",
+    "KAZ",
+    "TUR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "劳务移民（主要赴俄罗斯）规模大，侨汇占 GDP 比重居世界前列。",
+    "1992-1997 年发生内战。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Tajikistan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Tajikistani_somoni",
+    "https://en.wikipedia.org/wiki/Economy_of_Tajikistan",
+    "https://en.wikipedia.org/wiki/Tajikistani_Civil_War",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://cabar.asia/?p=48586",
+    "https://tradingeconomics.com/tajikistan/retirement-age-men"
+   ],
+   "confidence": "medium"
+  },
+  "KGZ": {
+   "name": "吉尔吉斯斯坦",
+   "region": "CAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "KGS",
+    "name": "索姆",
+    "symbol": "сом"
+   },
+   "school_start_age": 7,
+   "compulsory_years": 10,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 9
+    },
+    {
+     "from": 2014,
+     "value": 10
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "全国统一测试（ORT，高校入学）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "男性服役一年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 17,
+    "note": "有正当理由时地方自治机关可将婚龄降低，但不超过 1 岁。"
+   },
+   "median_first_marriage_age": {
+    "male": 25.5,
+    "female": 21.8,
+    "year": 2012,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": "60→63 渐进（2006 年 1 月为 62 岁）",
+     "female": "55→58 渐进（2006 年 1 月为 57 岁 8 个月）"
+    },
+    {
+     "from": 2007,
+     "male": 63,
+     "female": 58,
+     "note": "2024 年 7 月起取消提前退休选项"
+    }
+   ],
+   "common_destinations": [
+    "RUS",
+    "KAZ",
+    "TUR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "劳务移民赴俄罗斯与哈萨克斯坦普遍，侨汇在经济中占很高比重。",
+    "“抢婚”（ala kachuu）属违法行为，但在部分农村地区仍有发生。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Kyrgyzstan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Bride_kidnapping",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.ssa.gov/policy/docs/progdesc/ssptw/2006-2007/asia/kyrgyzstan.html",
+    "https://cabar.asia/?p=472",
+    "https://daryo.uz/en/2024/07/01/kyrgyzstan-cancels-early-retirement-option-starting-july-1/"
+   ],
+   "confidence": "medium"
+  },
+  "TKM": {
+   "name": "土库曼斯坦",
+   "region": "CAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "TMT",
+    "name": "马纳特",
+    "symbol": "m"
+   },
+   "currency_note": "2009 年货币改革（1 新马纳特 = 5000 旧马纳特）。",
+   "school_start_age": 6,
+   "school_start_age_history": [
+    {
+     "from": 1999,
+     "value": 7
+    },
+    {
+     "from": 2014,
+     "value": 6
+    }
+   ],
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 9
+    },
+    {
+     "from": 2009,
+     "value": 10
+    },
+    {
+     "from": 2014,
+     "value": 12
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "高校入学考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "男性服役两年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 17
+   },
+   "median_first_marriage_age": {
+    "male": null,
+    "female": 23.5,
+    "year": 2015,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）；无男性数据"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 62,
+     "female": 57
+    }
+   ],
+   "common_destinations": [
+    "TUR",
+    "KAZ",
+    "RUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "公民出境、互联网与媒体受严格管控。",
+    "天然气出口是经济支柱。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Turkmenistan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Turkmenistan_manat",
+    "https://en.wikipedia.org/wiki/Human_rights_in_Turkmenistan",
+    "https://en.wikipedia.org/wiki/Economy_of_Turkmenistan",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "IRN": {
+   "name": "伊朗",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "IRR",
+    "name": "伊朗里亚尔",
+    "symbol": "﷼"
+   },
+   "currency_note": "日常生活中常以土曼计价（1 土曼 = 10 里亚尔）。2025 年 10 月议会通过、同年 11 月宪法监护委员会批准币值重估法案：1 新里亚尔 = 10,000 旧里亚尔，央行有至多两年准备期，其后新旧货币并行流通三年。",
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 5
+    },
+    {
+     "from": 2005,
+     "value": 8
+    },
+    {
+     "from": 2013,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "全国大学入学考试（Konkur）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "18 岁以上男性须服约两年兵役（具体期限因服役地区、学历等不同，历年有调整）；在校大学生可缓役。未完成兵役或未获豁免的男性在申请护照出境、就业等方面受限。"
+   },
+   "legal_marriage_age": {
+    "male": 15,
+    "female": 13,
+    "without_parental_consent": {
+     "male": 18,
+     "female": null
+    },
+    "note": "依《民法》第 1041 条，女 13 岁、男 15 岁（太阳历）；更低年龄须监护人同意并经法院许可。未婚女性初次结婚须经父亲或祖父许可（第 1043 条）。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.5,
+    "female": 23.1,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    },
+    {
+     "from": 2025,
+     "male": "60→62 渐进",
+     "female": 55,
+     "note": "议会 2023 年在审议第七个五年发展计划时通过提高退休年龄与缴费年限的条款，2025 年 2 月政府公布实施规则：男性最低退休年龄 62 岁、女性 55 岁，在职者分阶段过渡。"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "DEU",
+    "CAN",
+    "TUR",
+    "GBR",
+    "SWE",
+    "AUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "家庭法以伊斯兰教法为基础，已婚女性申请护照与出境须经丈夫同意。",
+    "国际制裁长期影响经济与就业，通货膨胀率高。",
+    "男性须完成兵役或获豁免后方可自由出境与正式就业。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Konkur",
+    "https://en.wikipedia.org/wiki/Education_in_Iran",
+    "https://en.wikipedia.org/wiki/Conscription_in_Iran",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Iranian_rial",
+    "https://en.wikipedia.org/wiki/Women's_rights_in_Iran",
+    "https://en.wikipedia.org/wiki/International_sanctions_against_Iran",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.iranintl.com/en/202311235066",
+    "https://www.intellinews.com/millions-face-longer-wait-to-retire-as-iran-overhauls-pensions-368522/",
+    "https://www.iranintl.com/en/202510050305",
+    "https://www.newarab.com/news/iranian-parliament-approves-currency-redenomination"
+   ],
+   "confidence": "medium"
+  },
+  "TUR": {
+   "name": "土耳其",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "TRY",
+    "name": "土耳其里拉",
+    "symbol": "₺"
+   },
+   "currency_note": "2005 年币值重估：1 新里拉 = 100 万旧里拉。",
+   "school_start_age": 6,
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 8
+    },
+    {
+     "from": 2012,
+     "value": 12
+    }
+   ],
+   "compulsory_note": "2012 年起实行“4+4+4”十二年义务教育（此前为 8 年）。",
+   "key_exams": [
+    {
+     "age": 14,
+     "name": "高中入学考试（2018 年起为 LGS，此前为 SBS、TEOG 等）"
+    },
+    {
+     "age": 18,
+     "name": "高等教育入学考试（2018 年起为 YKS，2010-2017 年为 YGS/LYS，此前为 ÖSS）"
+    },
+    {
+     "age": 22,
+     "name": "公职人员选拔考试（KPSS）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 6,
+    "since": null,
+    "until": null,
+    "note": "20-41 岁男性服兵役；2019 年 6 月新法后基本服役期为 6 个月（预备役军官 12 个月），完成 1 个月基础训练后可付费免除其余服役；在国外居住满 3 年者可付外汇免役。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 18,
+      "note": "未受高等教育者 18 个月、大学毕业者 15 个月；此后逐步缩短"
+     },
+     {
+      "from": 2013,
+      "months": 12,
+      "note": "2013 年 7 月起列兵 12 个月，大学毕业短期兵 6 个月"
+     },
+     {
+      "from": 2019,
+      "months": 6
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 17,
+    "female": 17,
+    "without_parental_consent": 18,
+    "exception_min": 16,
+    "note": "17 岁须父母同意，16 岁须法院特许。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.9,
+    "female": 23.4,
+    "year": 2013,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 58,
+     "note": "1999 年改革后参保者的最低退休年龄，另须满足缴费天数；更早参保者适用过渡规则"
+    },
+    {
+     "from": 2023,
+     "male": 60,
+     "female": 58,
+     "note": "2023 年法律取消 1999 年 9 月 8 日前参保者的最低年龄要求（按缴费年限退休）"
+    },
+    {
+     "from": 2036,
+     "male": "逐步提高，2048 年达 65",
+     "female": "逐步提高，2048 年达 65"
+    }
+   ],
+   "common_destinations": [
+    "DEU",
+    "FRA",
+    "NLD",
+    "USA",
+    "AUT",
+    "GBR",
+    "BEL",
+    "CHE"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2008 年起实施通用健康保险，由社会保障机构（SGK）统一管理。",
+    "高中与大学入学均依全国统考成绩分配。",
+    "收容数百万叙利亚难民，为世界最大的难民收容国之一。",
+    "2023 年 2 月东南部发生强烈地震。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Turkey",
+    "https://en.wikipedia.org/wiki/Conscription_in_Turkey",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Turkish_lira",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Turkey",
+    "https://en.wikipedia.org/wiki/Syrian_refugees_in_Turkey",
+    "https://en.wikipedia.org/wiki/2023_Turkey–Syria_earthquakes",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "SAU": {
+   "name": "沙特阿拉伯",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "SAR",
+    "name": "沙特里亚尔",
+    "symbol": "﷼"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "高中毕业成绩与国家评估中心（Qiyas）综合能力测试、学业成就测试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 15,
+    "note": "女性结婚须男性监护人（wali）同意，可由法官推翻；18 岁以下婚姻须经法院批准。"
+   },
+   "median_first_marriage_age": {
+    "male": 30,
+    "female": 26.6,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "按伊斯兰历计算"
+    },
+    {
+     "from": 2024,
+     "male": "60（伊斯兰历，约 58 周岁）→65 渐进",
+     "female": "60（伊斯兰历，约 58 周岁）→65 渐进",
+     "note": "2024 年 7 月新《社会保险法》：首次参保者法定退休年龄 65 岁；部分现有参保者逐步提高"
+    }
+   ],
+   "common_destinations": [
+    "TUR",
+    "CAN",
+    "AUS",
+    "ARE"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "沙特公民向外移民规模很小，出国以留学为主；联合国数据对部分目的地国统计不完整。",
+   "notes": [
+    "外籍劳工受担保人（kafala）制度约束；2021 年劳动改革允许部分劳工在一定条件下更换雇主和出入境无需雇主许可。",
+    "本地化就业政策（沙特化，2011 年起 Nitaqat 计划）要求企业雇佣一定比例沙特公民。",
+    "2018 年起女性可驾车；2019 年起 21 岁以上女性可自行申请护照与出行。",
+    "“2030 愿景”（2016 年发布）推动经济多元化以及娱乐、旅游业开放。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Saudi_Arabia",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "http://www.arabnews.com/news/566256",
+    "https://en.wikipedia.org/wiki/Kafala_system",
+    "https://en.wikipedia.org/wiki/Saudization",
+    "https://en.wikipedia.org/wiki/Women's_rights_in_Saudi_Arabia",
+    "https://en.wikipedia.org/wiki/Saudi_Vision_2030",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://global.lockton.com/us/en/news-insights/saudi-arabia-introduces-new-social-insurance-reforms",
+    "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2024/new-social-insurance-law-raises-the-retirement-age"
+   ],
+   "confidence": "medium"
+  },
+  "IRQ": {
+   "name": "伊拉克",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "IQD",
+    "name": "伊拉克第纳尔",
+    "symbol": "ع.د"
+   },
+   "currency_note": "2003 年 10 月起发行新第纳尔。",
+   "school_start_age": 6,
+   "compulsory_years": 6,
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "小学六年级部级统考"
+    },
+    {
+     "age": 15,
+     "name": "初中三年级部级统考"
+    },
+    {
+     "age": 18,
+     "name": "高中毕业部级统考（决定大学录取）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": "male",
+    "months": 0,
+    "since": null,
+    "until": 2003,
+    "note": "2003 年前实行义务兵役；2003 年后军队重建为志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 15,
+    "note": "经法院认定适婚并取得监护人同意可于 15 岁结婚；2025 年 1 月国民议会通过《个人身份法》修正案。"
+   },
+   "median_first_marriage_age": {
+    "male": 26.2,
+    "female": 22.7,
+    "year": 2012,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2019,
+     "male": 60,
+     "female": 60,
+     "note": "2019 年起公共部门退休年龄降至 60 岁"
+    }
+   ],
+   "common_destinations": [
+    "TUR",
+    "USA",
+    "DEU",
+    "JOR",
+    "SWE",
+    "AUS",
+    "GBR",
+    "CAN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "公共分配系统（粮食配给卡）长期为家庭提供基本食品。",
+    "库尔德斯坦地区由地区政府自治管理。",
+    "2014-2017 年与“伊斯兰国”的战争造成大量人口流离失所。",
+    "公共部门是最主要的就业来源。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Iraq",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://www.iraq-businessnews.com/2019/10/24/iraqi-govt-to-lower-retirement-age/",
+    "https://en.wikipedia.org/wiki/Iraqi_dinar",
+    "https://en.wikipedia.org/wiki/Kurdistan_Region",
+    "https://en.wikipedia.org/wiki/War_in_Iraq_(2013–2017)",
+    "https://en.wikipedia.org/wiki/Economy_of_Iraq",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "SYR": {
+   "name": "叙利亚",
+   "region": "WAS",
+   "income_group": "LIC",
+   "currency": {
+    "code": "SYP",
+    "name": "叙利亚镑",
+    "symbol": "£S"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2002,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "基础教育证书考试（九年级）"
+    },
+    {
+     "age": 18,
+     "name": "中学毕业证书考试（高中会考）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": "male",
+    "months": 0,
+    "since": null,
+    "until": 2024,
+    "note": "2024 年 12 月前男性须服义务兵役，内战期间大量士兵被超期留役；2024 年 12 月政权更迭后过渡当局废除义务兵役，改为志愿制。",
+    "history": [
+     {
+      "from": 2000,
+      "months": null,
+      "note": "2005 年前长于 24 个月（具体月数未找到可靠来源）"
+     },
+     {
+      "from": 2005,
+      "months": 24
+     },
+     {
+      "from": 2011,
+      "months": 18,
+      "note": "按学历 18-21 个月"
+     },
+     {
+      "from": 2025,
+      "months": 0,
+      "note": "已废除"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 15,
+    "note": "女性结婚无须监护人同意，但法官须听取其意见。"
+   },
+   "median_first_marriage_age": {
+    "male": 29.3,
+    "female": 25.4,
+    "year": 2001,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用低收入组默认值。",
+   "common_destinations": [
+    "TUR",
+    "JOR",
+    "DEU",
+    "LBN",
+    "SAU",
+    "IRQ",
+    "SWE",
+    "EGY",
+    "NLD",
+    "CAN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2011 年起的内战造成大规模伤亡，数百万人逃往邻国与欧洲。",
+    "2024 年 12 月阿萨德政府倒台，过渡当局执政。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Syria",
+    "https://en.wikipedia.org/wiki/Conscription_in_Syria",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Syrian_civil_war",
+    "https://en.wikipedia.org/wiki/Syrian_refugee_crisis",
+    "https://en.wikipedia.org/wiki/Fall_of_the_Assad_regime",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://english.enabbaladi.net/archives/2025/08/https-english-enabbaladi-net-archives-syria-new-currency-redenomination/",
+    "https://channel8.com/english/news/51165"
+   ],
+   "confidence": "medium",
+   "currency_note": "叙利亚中央银行宣布自 2026 年 1 月 1 日起发行去掉两个零的新叙利亚镑（1 新镑 = 100 旧镑），新旧纸币设过渡期并行流通。"
+  },
+  "ISR": {
+   "name": "以色列",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "ILS",
+    "name": "新谢克尔",
+    "symbol": "₪"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 15,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 11
+    },
+    {
+     "from": 2009,
+     "value": 13
+    },
+    {
+     "from": 2016,
+     "value": 15
+    }
+   ],
+   "compulsory_note": "UIS 口径包含 3 岁起的学前教育至 18 岁。",
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "高中毕业会考（Bagrut）"
+    },
+    {
+     "age": 21,
+     "name": "大学心理测量入学考试（多在服役后参加）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "all",
+    "months": 32,
+    "since": null,
+    "until": null,
+    "note": "男性服役 32 个月（部分岗位更长），犹太女性 24 个月；阿拉伯公民一般免征（德鲁兹与切尔克斯男性须服役）；宗教女性可改服民事国民服务。2024 年 6 月最高法院裁定极端正统派犹太男性须服兵役。退役后须服预备役至约 40 岁。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 36,
+      "note": "男性；女性 24 个月"
+     },
+     {
+      "from": 2015,
+      "months": 32,
+      "note": "男性；2020 年曾短暂缩为 30 个月，2021 年恢复"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 16,
+    "note": "2013 年 11 月由 17 岁提高到 18 岁；家庭法院在特殊情况下可批准 16 岁以上结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 29.2,
+    "female": 26.2,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 60
+    },
+    {
+     "from": 2004,
+     "male": "65→67（2004-2009 年逐步）",
+     "female": "60→62（逐步）"
+    },
+    {
+     "from": 2009,
+     "male": 67,
+     "female": 62
+    },
+    {
+     "from": 2022,
+     "male": 67,
+     "female": "62→65（2032 年达 65）"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "CAN",
+    "AUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "1995 年《国家健康保险法》规定全体居民须加入四家健康基金之一。",
+    "境内无民事婚姻，结婚由各宗教机构主持；在境外缔结的民事婚姻可登记。",
+    "《回归法》赋予犹太人及其后裔移民并取得公民身份的权利。",
+    "多数青年高中毕业后先服兵役，再进入大学或工作。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Conscription_in_Israel",
+    "https://en.wikipedia.org/wiki/Education_in_Israel",
+    "https://en.wikipedia.org/wiki/Bagrut_certificate",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.globes.co.il/en/article-retirement-age-for-women-in-israel-to-rise-to-65-1001377906",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Israel",
+    "https://en.wikipedia.org/wiki/Marriage_in_Israel",
+    "https://en.wikipedia.org/wiki/Law_of_Return",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "PSE": {
+   "name": "巴勒斯坦",
+   "region": "WAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "ILS",
+    "name": "新谢克尔（亦通用约旦第纳尔、美元）",
+    "symbol": "₪"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "普通中学毕业考试（Tawjihi）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2019 年起 18 岁以下结婚须经宗教法院许可；女性结婚须男性监护人同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 26.5,
+    "female": 22.1,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "JOR",
+    "SYR",
+    "LBN",
+    "SAU",
+    "EGY",
+    "ARE",
+    "KWT",
+    "TUR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "境外巴勒斯坦人多为 1948 年、1967 年及其后的难民及其后代。",
+   "notes": [
+    "联合国近东巴勒斯坦难民救济和工程处（UNRWA）为登记难民提供教育、医疗等服务。",
+    "约旦河西岸与加沙地带分治，人员与货物通行受以色列检查站与许可证制度限制。",
+    "2023 年 10 月以来的加沙战争造成大规模人员伤亡与流离失所。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tawjihi",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/UNRWA",
+    "https://en.wikipedia.org/wiki/West_Bank",
+    "https://en.wikipedia.org/wiki/Blockade_of_the_Gaza_Strip",
+    "https://en.wikipedia.org/wiki/Gaza_war",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "JOR": {
+   "name": "约旦",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "JOD",
+    "name": "约旦第纳尔",
+    "symbol": "JD"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "普通中学毕业考试（Tawjihi）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": null,
+    "since": 2026,
+    "until": null,
+    "note": "义务兵役自 1990 年代初起暂停；2025 年 8 月宣布恢复义务兵役，2026 年 2 月首批应征者开始受训。服役期限各方报道不一，未找到可靠的统一说法。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 0
+     },
+     {
+      "from": 2026,
+      "months": null
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 16,
+    "note": "2019 年《个人身份法》第 10 条：一般为 18 岁，法官经首席法官批准可允许年满 16 岁者结婚；女性结婚须男性监护人同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 30.9,
+    "female": 24.6,
+    "year": 2018,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中高收入组默认值。",
+   "common_destinations": [
+    "SAU",
+    "ARE",
+    "KWT",
+    "QAT",
+    "TUR",
+    "CAN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "收容大量巴勒斯坦难民及 2011 年后的叙利亚难民。",
+    "许多约旦人在海湾国家工作。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Jordan",
+    "https://en.wikipedia.org/wiki/Tawjihi",
+    "https://en.wikipedia.org/wiki/Jordanian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Palestinians_in_Jordan",
+    "https://en.wikipedia.org/wiki/Syrian_refugees_in_Jordan",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.newarab.com/news/jordan-reinstates-conscription-after-greater-israel-threats",
+    "https://www.law.cornell.edu/gender-justice/location/jordan"
+   ],
+   "confidence": "medium"
+  },
+  "LBN": {
+   "name": "黎巴嫩",
+   "region": "WAS",
+   "income_group": "LMC",
+   "currency": {
+    "code": "LBP",
+    "name": "黎巴嫩镑",
+    "symbol": "ل.ل"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2002,
+     "value": 9
+    },
+    {
+     "from": 2013,
+     "value": 10
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中毕业官方考试（Brevet）"
+    },
+    {
+     "age": 18,
+     "name": "黎巴嫩高中毕业会考（官方考试）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": "male",
+    "months": 0,
+    "since": null,
+    "until": 2007,
+    "note": "原实行一年义务兵役，2005 年 5 月改为 6 个月并承诺两年内取消，2007 年 2 月废止。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 12
+     },
+     {
+      "from": 2005,
+      "months": 6
+     },
+     {
+      "from": 2007,
+      "months": 0
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 17,
+    "note": "无统一民事婚姻法，婚龄因宗教社群而异（此处为逊尼派：男 18、女 17，经法官许可可更早；什叶派等社群规定不同）。"
+   },
+   "median_first_marriage_age": {
+    "male": 32.3,
+    "female": 28.3,
+    "year": 2007,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 64,
+     "female": 64,
+     "note": "国家社会保障基金服务终止补偿；2023 年通过私营部门养老金法，实施进展缓慢"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "CAN",
+    "AUS",
+    "SAU",
+    "FRA",
+    "ARE",
+    "SWE"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "教派分权制度：总统、总理、议长等职位按宗教社群分配。",
+    "个人身份事务（婚姻、离婚、继承）由各宗教社群法庭管辖。",
+    "2019 年起发生严重经济与金融危机，黎巴嫩镑大幅贬值。",
+    "2020 年 8 月贝鲁特港口发生大爆炸。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Lebanon",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Lebanese_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://today.lorientlejour.com/article/1454351/lebanons-new-pension-system-stalled-a-year-after-law-passed.html",
+    "https://en.wikipedia.org/wiki/Politics_of_Lebanon",
+    "https://en.wikipedia.org/wiki/Lebanese_liquidity_crisis",
+    "https://en.wikipedia.org/wiki/2020_Beirut_explosion",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "YEM": {
+   "name": "也门",
+   "region": "WAS",
+   "income_group": "LIC",
+   "currency": {
+    "code": "YER",
+    "name": "也门里亚尔",
+    "symbol": "﷼"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "基础教育毕业考试（九年级）"
+    },
+    {
+     "age": 18,
+     "name": "普通中学毕业考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无实际执行的义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": null,
+    "female": null,
+    "note": "法律未规定最低婚龄；女性结婚须男性监护人同意（可由法官推翻）。"
+   },
+   "median_first_marriage_age": {
+    "male": 26.1,
+    "female": 22.8,
+    "year": 2013,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用低收入组默认值。",
+   "common_destinations": [
+    "SAU",
+    "ARE",
+    "KWT",
+    "JOR",
+    "QAT",
+    "EGY",
+    "TUR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2014 年以来的冲突导致严重人道危机，大量人口依赖人道援助。",
+    "许多男性赴沙特阿拉伯务工。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Yemen",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Yemeni_civil_war_(2014–present)",
+    "https://en.wikipedia.org/wiki/Humanitarian_crisis_in_Yemen",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "ARE": {
+   "name": "阿拉伯联合酋长国",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "AED",
+    "name": "阿联酋迪拉姆",
+    "symbol": "د.إ"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2012,
+     "value": 12
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "十二年级毕业考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 11,
+    "months_range": [
+     11,
+     36
+    ],
+    "since": 2014,
+    "until": null,
+    "note": "2014 年起对 18-30 岁男性公民实行国民服役（服役期曾多次调整）；现行为高中毕业者 11 个月、未完成高中者 3 年；女性可自愿服役；外籍居民不适用。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 0
+     },
+     {
+      "from": 2014,
+      "months": null,
+      "note": "2014 年第 6 号联邦法设立国民服役；此后服役期多次调整，2022 年前高中毕业者为 16 个月"
+     },
+     {
+      "from": 2022,
+      "months": 11,
+      "note": "2022 年 5 月内阁第 15 号决议：高中及以上学历 11 个月，未完成高中者 3 年"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "女性结婚须男性监护人同意（可由法官推翻）。"
+   },
+   "median_first_marriage_age": {
+    "male": 26.8,
+    "female": 25.3,
+    "year": 2005,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2010,
+     "male": 65,
+     "female": 65,
+     "note": "私营部门外籍雇员原以 60 岁为限，2010 年底起允许续办工作许可至 65 岁；公民的养老金领取条件另行规定"
+    }
+   ],
+   "common_destinations": [
+    "CAN",
+    "KWT",
+    "AUS",
+    "TUR",
+    "QAT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "公民向外移民规模很小；联合国数据对部分目的地国统计不完整。",
+   "notes": [
+    "外籍居民约占总人口近九成，居留资格通常与雇主担保挂钩。",
+    "公民与外籍居民在公共服务、就业和福利上适用不同制度。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_the_United_Arab_Emirates",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/United_Arab_Emirates_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Demographics_of_the_United_Arab_Emirates",
+    "https://en.wikipedia.org/wiki/Kafala_system",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://wam.ae/en/details/1395303046387",
+    "https://en.wikipedia.org/wiki/Conscription_in_the_United_Arab_Emirates"
+   ],
+   "confidence": "medium"
+  },
+  "OMN": {
+   "name": "阿曼",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "OMR",
+    "name": "阿曼里亚尔",
+    "symbol": "ر.ع."
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "普通教育文凭考试（十二年级）"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "女性结婚须男性监护人同意；监护人可许可未成年人结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.7,
+    "female": 25.6,
+    "year": 2010,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55
+    }
+   ],
+   "common_destinations": [],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "公民向外移民规模很小，联合国数据中无显著目的地。",
+   "notes": [
+    "外籍劳工占人口比重高，“阿曼化”政策要求企业雇佣一定比例本国公民。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Oman",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Omanization",
+    "https://en.wikipedia.org/wiki/Demographics_of_Oman",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "QAT": {
+   "name": "卡塔尔",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "QAR",
+    "name": "卡塔尔里亚尔",
+    "symbol": "ر.ق"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 2001,
+     "value": 9
+    },
+    {
+     "from": 2021,
+     "value": 12
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "中学毕业证书考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "months_range": [
+     4,
+     12
+    ],
+    "since": 2014,
+    "until": null,
+    "note": "2013 年 11 月颁布《国民服役法》，适龄男性公民须服国民兵役；最初高等教育毕业者 3 个月、其他 4 个月，2018 年埃米尔令将服役期延长至 12 个月并开放女性自愿服役；退役后 10 年内可被召回。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 0
+     },
+     {
+      "from": 2014,
+      "months": 4,
+      "note": "高等教育毕业者 3 个月、其他 4 个月"
+     },
+     {
+      "from": 2018,
+      "months": 12
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 16,
+    "note": "女性结婚须男性监护人同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.6,
+    "female": 25.8,
+    "year": 2004,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用高收入组默认值。",
+   "common_destinations": [],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "公民向外移民规模很小，联合国数据中无显著目的地。",
+   "notes": [
+    "外籍居民约占总人口近九成。",
+    "外籍劳工的居留与就业长期受担保人（kafala）制度约束，2020 年前后进行了劳动制度改革。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Qatar",
+    "https://en.wikipedia.org/wiki/Conscription_in_Qatar",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Demographics_of_Qatar",
+    "https://en.wikipedia.org/wiki/Kafala_system",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.gulf-times.com/story/371557/cabinet-approves-draft-law-on-national-service",
+    "https://www.shephardmedia.com/news/defence-notes/qatar-introduces-national-service-women/"
+   ],
+   "confidence": "medium"
+  },
+  "KWT": {
+   "name": "科威特",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "KWD",
+    "name": "科威特第纳尔",
+    "symbol": "د.ك"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "中学毕业考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": 2017,
+    "until": null,
+    "note": "18-35 岁男性公民服一年义务兵役（前 4 个月为训练），之后转入预备役。原义务兵役于 2001 年暂停，2015 年通过新法，2017 年 5 月起恢复实施。",
+    "history": [
+     {
+      "from": 2000,
+      "months": null,
+      "note": "依 1980 年第 102 号法律实行义务兵役（月数未核实）"
+     },
+     {
+      "from": 2001,
+      "months": 0,
+      "note": "2001 年暂停"
+     },
+     {
+      "from": 2017,
+      "months": 12
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2025 年起禁止 18 岁以下结婚（此前经父母同意男 17、女 15 岁可结婚）；女性结婚须男性监护人同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.8,
+    "female": 25.7,
+    "year": 2011,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用高收入组默认值。",
+   "common_destinations": [
+    "ARE",
+    "CAN",
+    "TUR",
+    "AUS",
+    "QAT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "公民向外移民规模很小；联合国数据对部分目的地国统计不完整。",
+   "notes": [
+    "外籍人口约占总人口三分之二。",
+    "大多数在职公民受雇于公共部门。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Kuwait",
+    "https://en.wikipedia.org/wiki/Kuwait_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Demographics_of_Kuwait",
+    "https://en.wikipedia.org/wiki/Economy_of_Kuwait",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://gulfnews.com/world/gulf/kuwait/kuwait-lawmakers-approve-military-conscription-1.1478464",
+    "https://www.upr.info/sites/default/files/documents/2019-12/ifor_upr35_kwt_e_main.pdf"
+   ],
+   "confidence": "medium"
+  },
+  "BHR": {
+   "name": "巴林",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "BHD",
+    "name": "巴林第纳尔",
+    "symbol": ".د.ب"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "中学毕业考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 16,
+    "note": "女性结婚须男性监护人同意；监护人可许可未成年人结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 30,
+    "female": 26.3,
+    "year": 2001,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用高收入组默认值。",
+   "common_destinations": [],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "destinations_note": "公民向外移民规模很小，联合国数据中无显著目的地。",
+   "notes": [
+    "外籍人口约占总人口一半。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Bahrain",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Demographics_of_Bahrain",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "GEO": {
+   "name": "格鲁吉亚",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "GEL",
+    "name": "拉里",
+    "symbol": "₾"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2005,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "统一国家考试（高校入学）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "18-27 岁男性服役 12 个月；2024 年新法取消在校学生豁免，学生须在暑假参加 1 个月基础训练，仅可一次性缓征一年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2017 年起禁止 18 岁以下结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 27.4,
+    "female": 22.8,
+    "year": 2014,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 60
+    }
+   ],
+   "common_destinations": [
+    "GRC",
+    "ITA",
+    "ESP",
+    "RUS",
+    "TUR",
+    "CYP"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2013 年起实施全民医疗计划。",
+    "2017 年起公民赴申根区短期旅行免签，赴欧洲务工增多。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Georgia_(country)",
+    "https://en.wikipedia.org/wiki/Conscription_in_Georgia",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Georgia_(country)",
+    "https://en.wikipedia.org/wiki/Georgia–European_Union_relations",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "ARM": {
+   "name": "亚美尼亚",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "AMD",
+    "name": "德拉姆",
+    "symbol": "֏"
+   },
+   "school_start_age": 6,
+   "school_start_age_history": [
+    {
+     "from": 1999,
+     "value": 7
+    },
+    {
+     "from": 2011,
+     "value": 6
+    }
+   ],
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 10
+    },
+    {
+     "from": 2011,
+     "value": 11
+    },
+    {
+     "from": 2012,
+     "value": 12
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "统一国家考试（高校入学）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "18-27 岁男性服役两年。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2012 年起女性婚龄由 17 岁提高到 18 岁；2024 年 6 月废除提前结婚的例外条款。"
+   },
+   "median_first_marriage_age": {
+    "male": 28.5,
+    "female": 24.2,
+    "year": 2015,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2003,
+     "male": 63,
+     "female": "每年提高半岁，2011 年达 63",
+     "note": "2002 年《国家养老金法》（2003 年施行）；女性 2004 年为 59.5 岁"
+    },
+    {
+     "from": 2011,
+     "male": 63,
+     "female": 63
+    }
+   ],
+   "common_destinations": [
+    "RUS",
+    "FRA",
+    "UKR",
+    "GRC",
+    "GEO"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2023 年约 10 万名纳戈尔诺-卡拉巴赫亚美尼亚族居民迁入亚美尼亚。",
+    "海外亚美尼亚侨民规模大于国内人口。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Armenia",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ru.wikipedia.org/wiki/Пенсионный_возраст",
+    "https://en.wikipedia.org/wiki/Flight_of_Nagorno-Karabakh_Armenians",
+    "https://en.wikipedia.org/wiki/Armenian_diaspora",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.ssa.gov/policy/docs/progdesc/ssptw/2010-2011/asia/armenia.html"
+   ],
+   "confidence": "medium"
+  },
+  "AZE": {
+   "name": "阿塞拜疆",
+   "region": "WAS",
+   "income_group": "UMC",
+   "currency": {
+    "code": "AZN",
+    "name": "马纳特",
+    "symbol": "₼"
+   },
+   "currency_note": "2006 年币值重估：1 新马纳特 = 5000 旧马纳特。",
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 17,
+     "name": "国家考试中心高校入学考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 18,
+    "months_range": [
+     12,
+     18
+    ],
+    "since": null,
+    "until": null,
+    "note": "18 岁以上男性服役：未受高等教育者 18 个月，高等教育毕业者 12 个月；不设替代性民事服务。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2011 年女性婚龄由 17 岁提高到 18 岁；2024 年 6 月废除提前结婚的例外条款。"
+   },
+   "median_first_marriage_age": {
+    "male": 28.1,
+    "female": 24.2,
+    "year": 2018,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 62,
+     "female": 57,
+     "note": "2010 年前"
+    },
+    {
+     "from": 2010,
+     "male": 63,
+     "female": 60
+    },
+    {
+     "from": 2017,
+     "male": "63→65（每年 +6 个月）",
+     "female": "60→65（每年 +6 个月，2026 年 7 月达 65）"
+    },
+    {
+     "from": 2021,
+     "male": 65,
+     "female": "逐步提高中（2021 年 7 月起为 62.5 岁）"
+    },
+    {
+     "from": 2026,
+     "male": 65,
+     "female": 65
+    }
+   ],
+   "common_destinations": [
+    "RUS",
+    "TUR",
+    "UKR",
+    "KAZ",
+    "ISR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "石油天然气收入经国家石油基金（SOFAZ）支持财政。",
+    "2020 年与 2023 年冲突后，阿塞拜疆恢复对纳戈尔诺-卡拉巴赫地区的控制。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Azerbaijan",
+    "https://en.wikipedia.org/wiki/Conscription_in_Azerbaijan",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ru.wikipedia.org/wiki/Пенсионный_возраст",
+    "https://en.wikipedia.org/wiki/Azerbaijani_manat",
+    "https://en.wikipedia.org/wiki/State_Oil_Fund_of_Azerbaijan",
+    "https://en.wikipedia.org/wiki/2023_Azerbaijani_offensive_in_Nagorno-Karabakh",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://jam-news.net/pension-age-to-be-raised-in-azerbaijan/",
+    "https://jam-news.net/almost-half-of-azerbaijans-population-does-not-live-to-retirement-age/",
+    "https://www.trend.az/azerbaijan/society/3513418.html"
+   ],
+   "confidence": "medium"
+  },
+  "CYP": {
+   "name": "塞浦路斯",
+   "region": "WAS",
+   "income_group": "HIC",
+   "currency": {
+    "code": "EUR",
+    "name": "欧元",
+    "symbol": "€"
+   },
+   "currency_history": [
+    {
+     "until": 2007,
+     "code": "CYP",
+     "name": "塞浦路斯镑",
+     "symbol": "£"
+    },
+    {
+     "from": 2008,
+     "code": "EUR",
+     "name": "欧元",
+     "symbol": "€"
+    }
+   ],
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 9
+    },
+    {
+     "from": 2005,
+     "value": 10
+    }
+   ],
+   "compulsory_note": "UIS 口径含学前一年。",
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "全塞浦路斯统一考试（Pancyprian，大学入学）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 14,
+    "since": null,
+    "until": null,
+    "note": "希腊族塞浦路斯男性公民须在国民警卫队服役；2008 年起亚美尼亚裔、拉丁裔和马龙派群体也须服役；良心拒服兵役者可服较长的替代服务；退役后为预备役至 50 岁。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 24,
+      "note": "2016 年前约 24 个月"
+     },
+     {
+      "from": 2016,
+      "months": 14
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2023 年起禁止 18 岁以下结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 29.3,
+    "female": 26.4,
+    "year": 2011,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 65,
+     "note": "社会保险养老金 65 岁，满足条件可 63 岁领取"
+    }
+   ],
+   "common_destinations": [
+    "GRC",
+    "GBR",
+    "AUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "1974 年以来岛屿北部不在塞浦路斯共和国政府实际控制之下。",
+    "2004 年加入欧盟，2008 年起使用欧元。",
+    "2019 年起实施全民医疗系统（GeSY）。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Cyprus",
+    "https://en.wikipedia.org/wiki/Conscription_in_Cyprus",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Cypriot_pound",
+    "https://en.wikipedia.org/wiki/Cyprus_problem",
+    "https://en.wikipedia.org/wiki/Healthcare_in_Cyprus",
+    "https://en.wikipedia.org/wiki/Cypriot_diaspora",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "EGY": {
+   "name": "埃及",
+   "region": "NAF",
+   "income_group": "LMC",
+   "currency": {
+    "code": "EGP",
+    "name": "埃及镑",
+    "symbol": "E£"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 12,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 9
+    },
+    {
+     "from": 2015,
+     "value": 12
+    }
+   ],
+   "compulsory_note": "2014 年宪法将义务教育延长至中学阶段。",
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "小学六年级地区统考"
+    },
+    {
+     "age": 15,
+     "name": "预备阶段（初中，九年级）毕业证书考试"
+    },
+    {
+     "age": 18,
+     "name": "普通中学毕业考试（Thanaweya Amma，决定大学录取）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "months_range": [
+     12,
+     36
+    ],
+    "since": null,
+    "until": null,
+    "note": "18-30 岁男性须服兵役，期限依学历为 12-36 个月（大学毕业者较短，未完成学业者最长 36 个月），之后为 9 年预备役；在校学生可缓役；独子等可豁免。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18
+   },
+   "median_first_marriage_age": {
+    "male": 28.1,
+    "female": 22.3,
+    "year": 2017,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60
+    },
+    {
+     "from": 2032,
+     "male": "60→65（2032 年 7 月起为 61 岁，此后每两年提高 1 岁，2040 年达 65 岁）",
+     "female": "60→65（2032 年 7 月起为 61 岁，此后每两年提高 1 岁，2040 年达 65 岁）",
+     "note": "2019 年第 148 号《社会保险与养老金法》（2020-01-01 施行）"
+    }
+   ],
+   "common_destinations": [
+    "SAU",
+    "ARE",
+    "JOR",
+    "KWT",
+    "USA",
+    "QAT",
+    "ITA",
+    "OMN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "食品补贴卡为家庭提供补贴面包与基本食品。",
+    "高中毕业考试成绩在很大程度上决定大学与专业录取。",
+    "2016 年及 2022-2024 年埃及镑大幅贬值。",
+    "大量劳动力赴沙特阿拉伯、阿联酋等海湾国家工作。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Egypt",
+    "https://en.wikipedia.org/wiki/Thanaweya_Amma",
+    "https://en.wikipedia.org/wiki/Conscription_in_Egypt",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Economy_of_Egypt",
+    "https://en.wikipedia.org/wiki/Egyptian_pound",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://www.mercer.com/insights/law-and-policy/egypt-consolidates-pension-and-employee-social-insurance-law/",
+    "https://www.ssa.gov/policy/docs/progdesc/intl_update/2020-02/index.html"
+   ],
+   "confidence": "medium"
+  },
+  "DZA": {
+   "name": "阿尔及利亚",
+   "region": "NAF",
+   "income_group": "UMC",
+   "currency": {
+    "code": "DZD",
+    "name": "阿尔及利亚第纳尔",
+    "symbol": "د.ج"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中教育证书考试（BEM）"
+    },
+    {
+     "age": 18,
+     "name": "高中毕业会考（Baccalauréat）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "男性须服一年兵役（6 个月基础训练，其后 6 个月服役）。",
+    "history": [
+     {
+      "from": 2000,
+      "months": 24
+     },
+     {
+      "from": 2002,
+      "months": 18
+     },
+     {
+      "from": 2014,
+      "months": 12,
+      "note": "2014 年 8 月第 14-06 号法律"
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 19,
+    "female": 19,
+    "note": "《家庭法》第 7 条（2005 年修订）规定男女均为 19 岁，法官可特许提前；修订前男 21 岁、女 18 岁。"
+   },
+   "median_first_marriage_age": {
+    "male": 32.4,
+    "female": 28.2,
+    "year": 2012,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 55,
+     "note": "女性可选择 55 岁退休"
+    }
+   ],
+   "common_destinations": [
+    "FRA",
+    "CAN",
+    "ESP",
+    "BEL",
+    "ITA",
+    "TUR"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "油气出口收入支撑食品、燃料与住房补贴。",
+    "法语在高等教育和商业中广泛使用。",
+    "2019 年发生大规模和平抗议运动（Hirak）。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Algeria",
+    "https://en.wikipedia.org/wiki/Algerian_People's_National_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://fr.wikipedia.org/wiki/Âge_légal_de_départ_à_la_retraite",
+    "https://www.joradp.dz/FTP/JO-FRANCAIS/2016/F2016078.pdf",
+    "https://en.wikipedia.org/wiki/Economy_of_Algeria",
+    "https://en.wikipedia.org/wiki/2019–2021_Algerian_protests",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://en.connection-ev.org/article-2331",
+    "https://www.echoroukonline.com/official-duration-of-national-service-in-algeria-curtailed-to-just-one-year"
+   ],
+   "confidence": "medium"
+  },
+  "MAR": {
+   "name": "摩洛哥",
+   "region": "NAF",
+   "income_group": "LMC",
+   "currency": {
+    "code": "MAD",
+    "name": "摩洛哥迪拉姆",
+    "symbol": "د.م."
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "compulsory_years_history": [
+    {
+     "from": 1999,
+     "value": 6
+    },
+    {
+     "from": 2000,
+     "value": 9
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中毕业统考"
+    },
+    {
+     "age": 18,
+     "name": "高中毕业会考（Baccalauréat，全国统考）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "all",
+    "months": 12,
+    "since": 2019,
+    "until": null,
+    "note": "2006 年 8 月取消义务兵役，2019 年 2 月恢复：19-25 岁公民服役 12 个月（法律适用于男女，实际以男性为主），在校大学生可推迟。",
+    "history": [
+     {
+      "from": 2000,
+      "months": null,
+      "note": "2006 年前实行义务兵役（月数未找到可靠来源）"
+     },
+     {
+      "from": 2006,
+      "months": 0
+     },
+     {
+      "from": 2019,
+      "months": 12
+     }
+    ]
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "2004 年《家庭法》（Moudawana）规定 18 岁，法官可特许未成年人结婚。"
+   },
+   "median_first_marriage_age": {
+    "male": 31.3,
+    "female": 24.4,
+    "year": 2018,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60
+    },
+    {
+     "from": 2017,
+     "male": "60→63 渐进",
+     "female": "60→63 渐进",
+     "note": "2016 年改革：公务员法定退休年龄由 60 岁分阶段提高至 63 岁（各来源对过渡期长度说法不一）"
+    },
+    {
+     "from": 2022,
+     "male": 63,
+     "female": 63,
+     "note": "公务员退休年龄 63 岁"
+    }
+   ],
+   "common_destinations": [
+    "ESP",
+    "FRA",
+    "ITA",
+    "BEL",
+    "NLD",
+    "DEU",
+    "CAN"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2004 年《家庭法》改革提高婚龄并限制一夫多妻。",
+    "2011 年宪法将阿马齐格语（柏柏尔语）与阿拉伯语同列为官方语言。",
+    "大量侨民居住在西班牙、法国、意大利等欧洲国家。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Morocco",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Royal_Moroccan_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Moudawana",
+    "https://en.wikipedia.org/wiki/2011_Moroccan_constitutional_referendum",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217",
+    "https://oxfordbusinessgroup.com/demographic-changes-lead-to-pension-reform-in-morocco/"
+   ],
+   "confidence": "medium"
+  },
+  "TUN": {
+   "name": "突尼斯",
+   "region": "NAF",
+   "income_group": "LMC",
+   "currency": {
+    "code": "TND",
+    "name": "突尼斯第纳尔",
+    "symbol": "د.ت"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 18,
+     "name": "高中毕业会考（Baccalauréat）"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 12,
+    "since": null,
+    "until": null,
+    "note": "20-34 岁公民须服一年兵役，在读学生可推迟。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "18 岁以下结婚须父母与法院同意，仅限“极其严重”情形。"
+   },
+   "median_first_marriage_age": {
+    "male": 32.9,
+    "female": 28.2,
+    "year": 2014,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60
+    },
+    {
+     "from": 2019,
+     "male": 62,
+     "female": 62,
+     "note": "2019 年养老金改革后为 62 岁，可选择延至 65 岁"
+    }
+   ],
+   "common_destinations": [
+    "FRA",
+    "ITA",
+    "CAN",
+    "BEL",
+    "CHE",
+    "ARE"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "1956 年《个人身份法》禁止一夫多妻，并规定结婚须双方同意。",
+    "2011 年革命后开启政治转型。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Tunisia",
+    "https://en.wikipedia.org/wiki/Tunisia_National_service",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Code_of_Personal_Status_(Tunisia)",
+    "https://en.wikipedia.org/wiki/Tunisian_revolution",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "LBY": {
+   "name": "利比亚",
+   "region": "NAF",
+   "income_group": "UMC",
+   "currency": {
+    "code": "LYD",
+    "name": "利比亚第纳尔",
+    "symbol": "ل.د"
+   },
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "基础教育证书考试"
+    },
+    {
+     "age": 18,
+     "name": "中学毕业证书考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "male",
+    "months": 24,
+    "since": null,
+    "until": null,
+    "note": "维基百科将利比亚列为服役 2 年的国家；2011 年后国家长期分裂，实际执行情况缺乏可靠资料。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "note": "东部地区 20 岁、西部地区 18 岁；女性结婚须男性监护人同意（可由法官推翻），法官可批准 18 岁以下婚姻。"
+   },
+   "median_first_marriage_age": {
+    "male": 32,
+    "female": 29.2,
+    "year": 1995,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 60
+    }
+   ],
+   "common_destinations": [
+    "TUR",
+    "ITA",
+    "JOR",
+    "CAN",
+    "TUN",
+    "MLT"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2011 年后政治分裂，东西部长期存在对立的政府。",
+    "公共部门工资与燃料补贴依赖石油收入。",
+    "2023 年 9 月风暴“丹尼尔”导致德尔纳溃坝洪灾。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Libya",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Politics_of_Libya",
+    "https://en.wikipedia.org/wiki/Economy_of_Libya",
+    "https://en.wikipedia.org/wiki/2023_Libya_floods",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "SDN": {
+   "name": "苏丹",
+   "region": "NAF",
+   "income_group": "LIC",
+   "currency": {
+    "code": "SDG",
+    "name": "苏丹镑",
+    "symbol": "ج.س"
+   },
+   "currency_note": "2007 年起取代苏丹第纳尔。",
+   "school_start_age": 6,
+   "compulsory_years": 8,
+   "compulsory_years_history": [
+    {
+     "from": 2005,
+     "value": 6
+    },
+    {
+     "from": 2010,
+     "value": 8
+    }
+   ],
+   "key_exams": [
+    {
+     "age": 14,
+     "name": "基础教育证书考试（八年级）"
+    },
+    {
+     "age": 17,
+     "name": "苏丹中学毕业证书考试"
+    }
+   ],
+   "conscription": {
+    "exists": true,
+    "sex": "all",
+    "months": 18,
+    "months_range": [
+     12,
+     24
+    ],
+    "since": null,
+    "until": null,
+    "note": "1992 年《国民服役法》：18-33 岁公民须服役，大学毕业者 12 个月、高中毕业者 18 个月、其他 24 个月，女性亦适用；2019 年后执行松弛，2023 年战争爆发后进行大规模动员。"
+   },
+   "legal_marriage_age": {
+    "male": null,
+    "female": null,
+    "note": "1991 年《穆斯林个人身份法》允许青春期后（经监护人与法官许可最低 10 岁）结婚；其他婚姻须经父母同意男 18、女 16。"
+   },
+   "median_first_marriage_age": {
+    "male": 28.9,
+    "female": 22,
+    "year": 2010,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用低收入组默认值。",
+   "common_destinations": [
+    "TCD",
+    "SAU",
+    "SSD",
+    "EGY",
+    "UGA",
+    "ARE",
+    "ETH"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "2023 年 4 月起苏丹武装部队与快速支援部队爆发战争，造成世界上规模最大的流离失所危机之一。",
+    "2011 年南苏丹独立。",
+    "2019 年政局变化后进入过渡期。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Sudan",
+    "https://en.wikipedia.org/wiki/Conscription_in_Sudan",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Sudanese_pound",
+    "https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023–present)",
+    "https://en.wikipedia.org/wiki/South_Sudan",
+    "https://en.wikipedia.org/wiki/2019_Sudanese_coup_d'état",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  },
+  "AUS": {
+   "name": "澳大利亚",
+   "region": "OCE",
+   "income_group": "HIC",
+   "currency": {
+    "code": "AUD",
+    "name": "澳元",
+    "symbol": "A$"
+   },
+   "school_start_age": 5,
+   "compulsory_years": 11,
+   "compulsory_note": "各州规定不同，一般至 17 岁（须在校或参加培训、就业）。",
+   "key_exams": [
+    {
+     "age": 8,
+     "name": "全国读写与算术评估 NAPLAN（3、5、7、9 年级，2008 年起）"
+    },
+    {
+     "age": 17,
+     "name": "各州高中毕业证书考试（如 HSC、VCE），据此计算大学录取排名 ATAR"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "国民服役于 1972 年结束，军队为志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 16,
+    "note": "16-17 岁须法院批准并经父母同意，仅限特殊情况。"
+   },
+   "median_first_marriage_age": {
+    "male": 31.2,
+    "female": 29.9,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 61.5,
+     "note": "女性养老金年龄 1995-2013 年由 60 岁逐步提高到 65 岁"
+    },
+    {
+     "from": 2013,
+     "male": 65,
+     "female": 65
+    },
+    {
+     "from": 2017,
+     "male": 65.5,
+     "female": 65.5,
+     "note": "2017-2023 年每两年提高半岁"
+    },
+    {
+     "from": 2019,
+     "male": 66,
+     "female": 66
+    },
+    {
+     "from": 2021,
+     "male": 66.5,
+     "female": 66.5
+    },
+    {
+     "from": 2023,
+     "male": 67,
+     "female": 67,
+     "note": "2023 年 7 月起养老金领取年龄 67 岁"
+    }
+   ],
+   "common_destinations": [
+    "GBR",
+    "NZL",
+    "USA",
+    "CAN",
+    "SGP"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "Medicare 全民公共医疗保险（1984 年起）。",
+    "雇主须为雇员缴纳强制性养老金（Superannuation Guarantee），比例逐步提高至 2025 年的 12%。",
+    "大学学费可通过 HECS-HELP 贷款支付，就业后按收入偿还。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Australia",
+    "https://en.wikipedia.org/wiki/NAPLAN",
+    "https://en.wikipedia.org/wiki/Australian_Tertiary_Admission_Rank",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://en.wikipedia.org/wiki/Medicare_(Australia)",
+    "https://en.wikipedia.org/wiki/Superannuation_in_Australia",
+    "https://en.wikipedia.org/wiki/Higher_Education_Contribution_Scheme",
+    "https://en.wikipedia.org/wiki/Australian_diaspora",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "NZL": {
+   "name": "新西兰",
+   "region": "OCE",
+   "income_group": "HIC",
+   "currency": {
+    "code": "NZD",
+    "name": "新西兰元",
+    "symbol": "NZ$"
+   },
+   "school_start_age": 5,
+   "compulsory_years": 10,
+   "compulsory_note": "6-16 岁义务教育，多数儿童 5 岁生日后即入学。",
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "国家教育成就证书 NCEA 一级（2002 年起）"
+    },
+    {
+     "age": 16,
+     "name": "NCEA 二级"
+    },
+    {
+     "age": 17,
+     "name": "NCEA 三级 / 大学入学资格"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "义务兵役于 1972 年结束，军队为志愿兵制。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18,
+    "exception_min": 16,
+    "note": "16-17 岁须经家庭法院同意。"
+   },
+   "median_first_marriage_age": {
+    "male": 32,
+    "female": 30.5,
+    "year": 2006,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 65,
+     "note": "新西兰养老金（NZ Super）领取年龄 65 岁（1992-2001 年由 60 岁逐步提高）"
+    }
+   ],
+   "common_destinations": [
+    "AUS",
+    "GBR",
+    "CAN",
+    "USA"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "依跨塔斯曼旅行安排，新西兰公民可在澳大利亚居住和工作。",
+    "KiwiSaver 自愿性退休储蓄计划（2007 年起）。",
+    "意外事故补偿公司（ACC）提供无过错意外伤害保障。",
+    "《怀唐伊条约》在毛利人权益与公共政策中具有重要地位。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_New_Zealand",
+    "https://en.wikipedia.org/wiki/National_Certificate_of_Educational_Achievement",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://www.workandincome.govt.nz/products/a-z-benefits/nz-superannuation.html",
+    "https://en.wikipedia.org/wiki/New_Zealand_Superannuation",
+    "https://en.wikipedia.org/wiki/Trans-Tasman_Travel_Arrangement",
+    "https://en.wikipedia.org/wiki/KiwiSaver",
+    "https://en.wikipedia.org/wiki/Accident_Compensation_Corporation",
+    "https://en.wikipedia.org/wiki/Treaty_of_Waitangi",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "high"
+  },
+  "PNG": {
+   "name": "巴布亚新几内亚",
+   "region": "OCE",
+   "income_group": "LMC",
+   "currency": {
+    "code": "PGK",
+    "name": "基那",
+    "symbol": "K"
+   },
+   "school_start_age": 7,
+   "compulsory_years": null,
+   "compulsory_note": "UIS 未列义务教育年限，未实行全面义务教育。",
+   "key_exams": [],
+   "key_exams_note": "未找到可靠来源确认全国统一考试的名称与年级。",
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "无义务兵役。"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 16,
+    "without_parental_consent": 21,
+    "exception_min": {
+     "male": 16,
+     "female": 14
+    },
+    "note": "18-21 岁（女性 16-21 岁）须父母同意；更低年龄须法院批准。"
+   },
+   "median_first_marriage_age": {
+    "male": 26.2,
+    "female": 21.4,
+    "year": 2016,
+    "measure": "单身平均初婚年龄 SMAM（联合国《世界婚姻数据 2019》，经世界银行性别统计数据库）"
+   },
+   "retirement_age": null,
+   "retirement_note": "未找到可靠来源，引擎可使用中低收入组默认值。",
+   "common_destinations": [
+    "AUS"
+   ],
+   "destinations_basis": "联合国经社部《国际移民存量 2024》按出生国统计的海外移民主要居住国（经 Our World in Data），已剔除区域汇总及明显的统计口径问题",
+   "notes": [
+    "绝大部分土地为依习惯法由氏族集体所有的习惯土地。",
+    "新娘聘礼（bride price）习俗普遍。",
+    "全国有 800 多种语言。"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Education_in_Papua_New_Guinea",
+    "https://en.wikipedia.org/wiki/Military_service",
+    "https://en.wikipedia.org/wiki/Marriageable_age",
+    "https://en.wikipedia.org/wiki/Economy_of_Papua_New_Guinea",
+    "https://en.wikipedia.org/wiki/Bride_price",
+    "https://en.wikipedia.org/wiki/Languages_of_Papua_New_Guinea",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://www.un.org/development/desa/pd/node/3315",
+    "https://en.wikipedia.org/wiki/ISO_4217"
+   ],
+   "confidence": "medium"
+  }
+ },
+ "defaults_by_income_group": {
+  "LIC": {
+   "currency": null,
+   "school_start_age": 6,
+   "compulsory_years": 8,
+   "key_exams": [
+    {
+     "age": 12,
+     "name": "小学毕业考试"
+    },
+    {
+     "age": 15,
+     "name": "初中毕业考试"
+    },
+    {
+     "age": 18,
+     "name": "中学毕业考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "默认无义务兵役；各国差异大，应以国家数据为准"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18
+   },
+   "median_first_marriage_age": {
+    "male": 26.0,
+    "female": 20.9,
+    "year": null,
+    "measure": "SMAM 最新值的组内中位数（2000 年后数据；男 n=24，女 n=25）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "样本不足（维基百科表中仅 1 例），参照中低收入组；低收入国家正规养老金覆盖率低"
+    }
+   ],
+   "common_destinations": [
+    "TUR",
+    "IRN",
+    "SAU",
+    "PAK",
+    "JOR",
+    "DEU"
+   ],
+   "destinations_basis": "本文件所涵盖国家中该收入组来源国海外移民最常见的目的地（联合国经社部《国际移民存量 2024》）",
+   "notes": [
+    "多数劳动者在非正规部门就业，社会保险覆盖率低。",
+    "农业与家庭经营是主要生计来源。"
+   ],
+   "basis": "入学年龄与义务教育年限为世界银行/UNESCO UIS 数据组内中位数（入学年龄 n=25，义务教育 n=22，义务教育中位数 8.5 年取整）",
+   "sources": [
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+   ],
+   "confidence": "medium"
+  },
+  "LMC": {
+   "currency": null,
+   "school_start_age": 6,
+   "compulsory_years": 9,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中毕业考试"
+    },
+    {
+     "age": 18,
+     "name": "中学毕业 / 大学入学考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "默认无义务兵役；各国差异大，应以国家数据为准"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18
+   },
+   "median_first_marriage_age": {
+    "male": 26.4,
+    "female": 22.1,
+    "year": null,
+    "measure": "SMAM 最新值的组内中位数（2000 年后数据；男 n=47，女 n=47）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 60,
+     "female": 60,
+     "note": "维基百科“Retirement age”表中 14 个中低收入经济体的中位数"
+    }
+   ],
+   "common_destinations": [
+    "SAU",
+    "ARE",
+    "USA",
+    "KWT",
+    "GBR",
+    "OMN"
+   ],
+   "destinations_basis": "本文件所涵盖国家中该收入组来源国海外移民最常见的目的地（联合国经社部《国际移民存量 2024》）",
+   "notes": [
+    "正规部门就业比例较低，海外务工与侨汇对许多家庭很重要。",
+    "公立教育普及，但高中与高等教育入学竞争较强。"
+   ],
+   "basis": "入学年龄与义务教育年限为世界银行/UNESCO UIS 数据组内中位数（入学年龄 n=47，义务教育 n=42，义务教育中位数 9.0 年取整）",
+   "sources": [
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+   ],
+   "confidence": "medium"
+  },
+  "UMC": {
+   "currency": null,
+   "school_start_age": 6,
+   "compulsory_years": 10,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中毕业 / 高中入学考试"
+    },
+    {
+     "age": 18,
+     "name": "大学入学考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "默认无义务兵役；各国差异大，应以国家数据为准"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18
+   },
+   "median_first_marriage_age": {
+    "male": 27.3,
+    "female": 23.4,
+    "year": null,
+    "measure": "SMAM 最新值的组内中位数（2000 年后数据；男 n=51，女 n=56）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 63,
+     "female": 60,
+     "note": "维基百科“Retirement age”表中 32 个中高收入经济体的中位数"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "DEU",
+    "CAN",
+    "SGP",
+    "RUS",
+    "AUS",
+    "JPN"
+   ],
+   "destinations_basis": "本文件所涵盖国家中该收入组来源国海外移民最常见的目的地（联合国经社部《国际移民存量 2024》）",
+   "notes": [
+    "城镇职工通常有社会养老与医疗保险，农村与非正规就业者覆盖较弱。",
+    "高等教育快速扩张。"
+   ],
+   "basis": "入学年龄与义务教育年限为世界银行/UNESCO UIS 数据组内中位数（入学年龄 n=58，义务教育 n=56，义务教育中位数 10.0 年取整）",
+   "sources": [
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+   ],
+   "confidence": "medium"
+  },
+  "HIC": {
+   "currency": null,
+   "school_start_age": 6,
+   "compulsory_years": 11,
+   "key_exams": [
+    {
+     "age": 15,
+     "name": "初中阶段学业评估"
+    },
+    {
+     "age": 18,
+     "name": "高中毕业 / 大学入学考试"
+    }
+   ],
+   "conscription": {
+    "exists": false,
+    "sex": null,
+    "months": 0,
+    "since": null,
+    "until": null,
+    "note": "默认无义务兵役；各国差异大，应以国家数据为准"
+   },
+   "legal_marriage_age": {
+    "male": 18,
+    "female": 18
+   },
+   "median_first_marriage_age": {
+    "male": 31.8,
+    "female": 29.2,
+    "year": null,
+    "measure": "SMAM 最新值的组内中位数（2000 年后数据；男 n=77，女 n=79）"
+   },
+   "retirement_age": [
+    {
+     "from": 2000,
+     "male": 65,
+     "female": 65,
+     "note": "维基百科“Retirement age”表中 48 个高收入经济体的中位数；多国正逐步提高至 67 岁"
+    }
+   ],
+   "common_destinations": [
+    "USA",
+    "AUS",
+    "CAN",
+    "GBR",
+    "JPN",
+    "NZL"
+   ],
+   "destinations_basis": "本文件所涵盖国家中该收入组来源国海外移民最常见的目的地（联合国经社部《国际移民存量 2024》）",
+   "notes": [
+    "全民医疗保障与公共养老金制度较完善。",
+    "人口老龄化促使多国提高退休年龄。"
+   ],
+   "basis": "入学年龄与义务教育年限为世界银行/UNESCO UIS 数据组内中位数（入学年龄 n=80，义务教育 n=77，义务教育中位数 11 年取整）",
+   "sources": [
+    "https://data.worldbank.org/indicator/SE.PRM.AGES",
+    "https://data.worldbank.org/indicator/SE.COM.DURS",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.MA",
+    "https://data.worldbank.org/indicator/SP.DYN.SMAM.FE",
+    "https://www.un.org/development/desa/pd/data/world-marriage-data",
+    "https://en.wikipedia.org/wiki/Retirement_age",
+    "https://ourworldindata.org/grapher/migration-origin-destination",
+    "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+   ],
+   "confidence": "medium"
+  }
+ }
+}

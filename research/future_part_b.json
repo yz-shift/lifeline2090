@@ -1,0 +1,5862 @@
+{
+ "file": "future_part_b",
+ "as_of": "2026-10-24",
+ "scope_note": "LifeLine 2090 未来推演（第二部分）：科技、健康、地缘政治、太空与日常生活。2026-10-24 之后的内容均为推演，不代表事实；概率为游戏设定权重。",
+ "baseline_assumptions": [
+  {
+   "domain": "technology",
+   "statement": "据斯坦福《AI 指数报告 2026》，2025 年全球企业 AI 投资约 5817 亿美元，比 2024 年增长约 130%；其中私人投资约 3447 亿美元（增长 127.5%），生成式 AI 企业获得约 1709 亿美元。投资高度集中：美国私人 AI 投资约 2859 亿美元，是中国（约 124 亿美元）的 23 倍，但该口径低估了中国政府引导基金的投入（2000-2023 年估计约 1840 亿美元）。",
+   "numbers": {
+    "corporate_ai_investment_2025_usd_bn": 581.7,
+    "private_ai_investment_2025_usd_bn": 344.7,
+    "private_growth_pct": 127.5,
+    "genai_private_2025_usd_bn": 170.9,
+    "usa_private_2025_usd_bn": 285.9,
+    "chn_private_2025_usd_bn": 12.4,
+    "chn_guidance_funds_2000_2023_usd_bn": 184
+   },
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "AI 采用速度快于以往的通用技术：2025 年 88% 的受访组织使用 AI，70% 在至少一个业务职能中使用生成式 AI，但 AI 智能体在几乎所有职能中的部署率仍为个位数；生成式 AI 在面世三年内达到约 53% 的人口层面采用率，快于个人电脑和互联网，各国差异大（如阿联酋约 64%、新加坡约 61%）；美国消费者从生成式 AI 获得的消费者剩余估计在 2026 年初达到每年约 1720 亿美元。",
+   "numbers": {
+    "org_ai_adoption_2025_pct": 88,
+    "org_genai_adoption_2025_pct": 70,
+    "population_genai_adoption_3yrs_pct": 53,
+    "are_pct": 64,
+    "sgp_pct": 61,
+    "us_consumer_surplus_early2026_usd_bn": 172
+   },
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "AI 对就业的影响已在局部显现但尚未体现在总体就业数据中：美国 22-25 岁软件开发者就业较 2024 年下降近 20%；约三分之一受访组织预计未来一年因 AI 减员；在客服、软件开发和营销等结构化任务中，研究报告的生产率提升分别约为 14-15%、26% 和 50%，宏观层面证据仍然有限且不一致。",
+   "numbers": {
+    "young_software_dev_employment_change_pct": -20,
+    "orgs_expecting_cuts_share": 0.33,
+    "productivity_gain_customer_support_pct": [
+     14,
+     15
+    ],
+    "productivity_gain_software_pct": 26,
+    "productivity_gain_marketing_pct": 50
+   },
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "AI 暴露度估计：IMF（2024）认为全球约 40% 的就业暴露于 AI，发达经济体约 60%；ILO（2025）估计全球约四分之一就业岗位存在生成式 AI 暴露，其中仅 3.3% 处于最高暴露等级，高收入国家暴露比例（34%）约为低收入国家（11%）的三倍。暴露不等于失业，更多表现为工作内容转变。",
+   "numbers": {
+    "imf_global_exposed_pct": 40,
+    "imf_advanced_exposed_pct": 60,
+    "ilo_global_exposed_pct": 25,
+    "ilo_highest_gradient_pct": 3.3,
+    "ilo_hic_exposed_pct": 34,
+    "ilo_lic_exposed_pct": 11
+   },
+   "sources": [
+    "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+    "https://www.ilo.org/resource/news/one-four-jobs-risk-being-transformed-genai-new-ilo%E2%80%93nask-global-index-shows"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "自动化潜力估计：麦肯锡全球研究院（2025）认为现有技术在理论上可自动化约 57% 的美国工作时长（软件智能体约 44%，机器人约 13%），但这是技术潜力而非就业损失预测；麦肯锡（2023）估计当今一半工作活动可能在 2030-2060 年间被自动化，中点约 2045 年。世界经济论坛（2025）预计 2025-2030 年全球新增约 1.7 亿个岗位、减少约 9200 万个，劳动者约 39% 的核心技能将改变。",
+   "numbers": {
+    "us_hours_technically_automatable_pct": 57,
+    "agents_pct": 44,
+    "robots_pct": 13,
+    "half_activities_automated_midpoint_year": 2045,
+    "wef_jobs_created_2030_m": 170,
+    "wef_jobs_displaced_2030_m": 92,
+    "wef_skills_change_pct": 39
+   },
+   "sources": [
+    "https://www.mckinsey.com/~/media/mckinsey/mckinsey%20global%20institute/our%20research/agents%20robots%20and%20us%20skill%20partnerships%20in%20the%20age%20of%20ai/agents-robots-and-us-skill-partnerships-in-the-age-of-ai.pdf",
+    "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+    "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "专家预测：2023 年对 2778 名 AI 研究者的调查（Grace 等, 2024）给出「无辅助机器在所有任务上胜过人类」的 10% 概率时间为 2027 年、50% 概率为 2047 年（比 2022 年调查提前 13 年）；「所有职业可完全自动化」的 50% 概率时间为 2116 年。",
+   "numbers": {
+    "hlmi_10pct_year": 2027,
+    "hlmi_50pct_year": 2047,
+    "full_automation_50pct_year": 2116,
+    "respondents": 2778
+   },
+   "sources": [
+    "Grace, K. et al. (2024) Thousands of AI Authors on the Future of AI, https://arxiv.org/abs/2401.02843"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "能力增长趋势：Epoch AI 估计前沿 AI 模型训练算力每年增长约 4-5 倍；《国际 AI 安全报告 2026》指出 AI 智能体可无人监督完成的任务时长约每 7 个月翻一番，但安全保障的进展落后于能力进步。",
+   "numbers": {
+    "training_compute_growth_per_year_x": [
+     4,
+     5
+    ],
+    "agent_task_length_doubling_months": 7
+   },
+   "sources": [
+    "https://epoch.ai/blog/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year",
+    "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "energy",
+   "statement": "IEA 估计 2024 年全球数据中心用电约 415 太瓦时（约占全球用电 1.5%），美国占 45%、中国 25%、欧洲 15%；基准情景下 2030 年将增至约 945 太瓦时，2035 年约 1200 太瓦时，AI 是最主要的增长驱动。",
+   "numbers": {
+    "dc_twh_2024": 415,
+    "dc_share_2024_pct": 1.5,
+    "dc_twh_2030": 945,
+    "dc_twh_2035": 1200,
+    "share_usa_pct": 45,
+    "share_chn_pct": 25,
+    "share_europe_pct": 15
+   },
+   "sources": [
+    "https://www.iea.org/reports/energy-and-ai/executive-summary"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "工业机器人：2024 年全球新装工业机器人约 54.2 万台（与上年基本持平），在役存量约 466.4 万台（2023 年为 428.2 万台），中国占全球新装量的 54%。制造业机器人密度（每万名员工）：全球平均 132 台，韩国 1220 台、新加坡 818 台、德国 449 台、日本 446 台、美国 307 台、中国 166 台（中国按更新后的劳动力数据计算）。",
+   "numbers": {
+    "installs_2024": 542000,
+    "operational_stock_2024": 4664000,
+    "chn_share_installs_pct": 54,
+    "density_world": 132,
+    "density_kor": 1220,
+    "density_sgp": 818,
+    "density_deu": 449,
+    "density_jpn": 446,
+    "density_usa": 307,
+    "density_chn": 166
+   },
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "https://ifr.org/ifr-press-releases/news/robot-density-surges-in-europe-asia-and-americas"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "人形机器人仍处于起步阶段：Omdia 估计 2025 年全球出货约 1.3 万台，中国企业领先；宇树科技称 2025 年向终端客户交付超过 5500 台（高于 Omdia 此前约 4200 台的估计）；摩根士丹利预测人形机器人在 2030 年代后期加速普及，2050 年在用约 10 亿台。",
+   "numbers": {
+    "shipments_2025_omdia": 13000,
+    "unitree_2025": 5500,
+    "ms_units_2050": 1000000000
+   },
+   "sources": [
+    "https://investinchina.chinadaily.com.cn/s/202601/12/WS6964b698498e23165e06cba4/chinese-firms-lead-global-humanoid-robot-production-in-2025-report.html",
+    "https://en.jiemian.com/article/13924474.html",
+    "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/humanoid-robot-market-rising-adam-jonas-sheng-zhong"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "domain": "technology",
+   "statement": "无人驾驶出租车已进入规模化运营初期：Waymo 2026 年上半年在美国 10 个城市每周约 50 万次付费出行，车队约 3000-3500 辆、累计超过 2000 万次；百度萝卜快跑 2025 年第四季度周订单峰值超过 30 万单，截至 2026 年 2 月全球累计超过 2000 万次，覆盖 26 个城市。",
+   "numbers": {
+    "waymo_weekly_paid_rides_h1_2026": 500000,
+    "waymo_cities": 10,
+    "waymo_fleet_mid2026": [
+     3000,
+     3500
+    ],
+    "apollo_weekly_peak_q4_2025": 300000,
+    "apollo_cumulative_feb2026": 20000000,
+    "apollo_cities": 26
+   },
+   "sources": [
+    "https://electrek.co/2026/07/08/waymo-driverless-las-vegas-four-new-cities/",
+    "https://amp.claimsjournal.com/news/national/2026/02/12/335668.htm",
+    "https://cnevpost.com/2026/02/27/baidu-apollo-go-robotaxi-300000-weekly-rides-expands-to-south-korea/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "domain": "technology",
+   "statement": "电动车：IEA《全球电动汽车展望 2026》显示 2025 年全球电动车销量增长约 20%、超过 2000 万辆，约占新车销量四分之一；中国接近 55%，欧洲约 28%；在电动车销量增长的 100 多个国家中，约三分之一的占比达到 10% 以上。IEA 预计 2026 年销量约 2300 万辆、占比约 28%。",
+   "numbers": {
+    "ev_sales_2025_m": 20,
+    "ev_share_2025_pct": 25,
+    "chn_share_pct": 55,
+    "europe_share_pct": 28,
+    "ev_sales_2026_forecast_m": 23,
+    "ev_share_2026_forecast_pct": 28
+   },
+   "sources": [
+    "https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
+    "https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "technology",
+   "statement": "计算与神经技术：谷歌 2024 年 Willow 芯片（105 个量子比特）首次展示「低于阈值」的量子纠错；IBM 计划 2029 年建成约 200 个逻辑量子比特的容错量子计算机。中国国家药监局于 2026 年 3 月 13 日批准首个植入式脑机接口产品上市；Neuralink 截至 2026 年 1 月有 21 名受试者。",
+   "numbers": {
+    "willow_qubits": 105,
+    "ibm_starling_year": 2029,
+    "ibm_starling_logical_qubits": 200,
+    "neuralink_participants_jan2026": 21
+   },
+   "sources": [
+    "https://physics.aps.org/articles/v17/176",
+    "https://thequantuminsider.com/2025/06/10/ibm-offers-roadmap-toward-large-scale-fault-tolerant-quantum-computer/",
+    "https://www.bloomberg.com/news/articles/2026-03-13/china-approves-first-brain-implant-for-commercial-use",
+    "https://thedebrief.org/chinese-companies-are-accelerating-the-brain-interface-race-matching-neuralink-with-human-trials/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "domain": "society",
+   "statement": "国际电联估计 2025 年全球约 60 亿人上网（约占世界人口四分之三），仍有约 22 亿人未上网，绝大多数在中低收入国家；在约 60% 的中低收入国家，上网费用仍难以负担。",
+   "numbers": {
+    "internet_users_2025_bn": 6.0,
+    "offline_2025_bn": 2.2
+   },
+   "sources": [
+    "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "抗微生物药物耐药（AMR）：GBD 研究（《柳叶刀》2024）估计 2021 年细菌耐药直接导致约 114 万人死亡、相关死亡约 471 万；参考情景下 2050 年直接致死约 191 万、相关约 822 万，2025-2050 年累计直接致死约 3900 万。世界银行（2017）估计高耐药情景下 2050 年全球 GDP 可能减少 1.1%-3.8%。",
+   "numbers": {
+    "amr_attributable_2021_m": 1.14,
+    "amr_associated_2021_m": 4.71,
+    "amr_attributable_2050_m": 1.91,
+    "amr_associated_2050_m": 8.22,
+    "amr_attributable_cum_2025_2050_m": 39,
+    "gdp_loss_2050_pct": [
+     1.1,
+     3.8
+    ]
+   },
+   "sources": [
+    "GBD 2021 Antimicrobial Resistance Collaborators (2024) Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050. The Lancet 404:1199–1226, https://doi.org/10.1016/S0140-6736(24)01867-1",
+    "https://pharmaceutical-journal.com/article/news/almost-40-million-deaths-could-occur-from-amr-over-next-25-years-study-results-suggest",
+    "https://www.worldbank.org/en/topic/health/publication/drug-resistant-infections-a-threat-to-our-economic-future"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "GLP-1 类药物迅速普及：KFF 2025 年 11 月调查显示约 12% 的美国成年人正在使用 GLP-1 药物、18% 曾经使用；WHO 于 2025 年 12 月发布首个 GLP-1 治疗肥胖的全球指南（有条件推荐）；美国 FDA 于 2026 年 4 月 1 日批准口服小分子 GLP-1 药物 orforglipron；司美格鲁肽专利自 2026 年起在印度、中国、加拿大、巴西等国陆续到期，印度仿制药上市后月费降至约 1300-4200 卢比。",
+   "numbers": {
+    "us_adults_current_glp1_pct": 12,
+    "us_adults_ever_glp1_pct": 18,
+    "india_generic_monthly_inr": [
+     1300,
+     4200
+    ]
+   },
+   "sources": [
+    "https://www.kff.org/public-opinion/poll-1-in-8-adults-say-they-are-currently-taking-a-glp-1-drug-for-weight-loss-diabetes-or-another-condition-even-as-half-say-the-drugs-are-difficult-to-afford/",
+    "https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity",
+    "https://www.healio.com/news/endocrinology/20260401/fda-approves-orforglipron-an-oral-glp1-for-adults-with-obesity",
+    "https://www.medrxiv.org/content/10.64898/2026.03.04.26347508v1.full-text",
+    "https://theprint.in/india/rs-325-4200-month-dr-reddys-sun-pharma-glenmark-kick-off-generic-semaglutide-price-war/2885525/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "新型疗法进入临床：默沙东与 Moderna 于 2026 年 8 月宣布个体化 mRNA 肿瘤疫苗联合免疫治疗的 III 期试验（1137 名高风险黑色素瘤术后患者）达到无复发生存期主要终点，为首个 mRNA 癌症疗法的阳性 III 期结果；CRISPR 基因编辑疗法 Casgevy 自 2023 年起获批治疗镰状细胞病和β地中海贫血，2026 年 7 月美国适用年龄扩大至 2 岁以上；2025 年首例为单个患儿定制的体内碱基编辑治疗见刊。",
+   "numbers": {
+    "interpath001_patients": 1137
+   },
+   "sources": [
+    "https://ascopost.com/news/august-2026/interpath-001-trial-of-mrna-based-individualized-neoantigen-therapy-meets-primary-and-key-secondary-endpoints-in-patients-with-high-risk-resected-melanoma/",
+    "https://www.pharmacytimes.com/view/fda-expands-casgevy-approval-to-children-as-young-as-2-years-with-sickle-cell-disease-or-transfusion-dependent--thalassemia",
+    "Musunuru, K. et al. (2025) Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease. N Engl J Med, https://www.nejm.org/doi/full/10.1056/NEJMoa2504747"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "神经退行性疾病：WHO 估计 2021 年全球约 5700 万人患痴呆症，每年新增近 1000 万例，痴呆是全球第七大死因；WHO 2021 年报告预测 2030 年约 7800 万、2050 年约 1.39 亿。美国 FDA 已批准仑卡奈单抗（2023 年完全批准）和多奈单抗（2024 年），并于 2025 年批准首个辅助诊断阿尔茨海默病的血液检测。",
+   "numbers": {
+    "dementia_2021_m": 57,
+    "new_cases_per_year_m": 10,
+    "dementia_2030_m": 78,
+    "dementia_2050_m": 139
+   },
+   "sources": [
+    "https://www.who.int/news-room/fact-sheets/detail/dementia",
+    "WHO (2021) Global status report on the public health response to dementia, https://www.who.int/publications/i/item/9789240033245",
+    "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease",
+    "https://en.wikipedia.org/wiki/Lecanemab",
+    "https://en.wikipedia.org/wiki/Donanemab"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "传染病负担：WHO《世界疟疾报告 2025》估计 2024 年约 2.82 亿疟疾病例、61 万死亡，非洲区占病例 94%、死亡 95%，至少 8 个非洲国家确认或疑似出现抗疟药耐药；截至 2025 年 7 月 WHO 已认证 47 个国家和 1 个地区无疟疾。2024 年约 1070 万人患结核病、123 万人死亡。",
+   "numbers": {
+    "malaria_cases_2024_m": 282,
+    "malaria_deaths_2024": 610000,
+    "africa_share_deaths_pct": 95,
+    "certified_malaria_free_countries": 47,
+    "tb_cases_2024_m": 10.7,
+    "tb_deaths_2024_m": 1.23
+   },
+   "sources": [
+    "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2025",
+    "https://www.who.int/teams/global-malaria-programme/elimination/countries-and-territories-certified-malaria-free-by-who",
+    "https://www.aabb.org/news-resources/news/article/2025/07/25/who-certifies-timor-leste-certified-malaria-free",
+    "https://www.who.int/news-room/fact-sheets/detail/tuberculosis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "HIV 预防：WHO 于 2025 年将每年注射两次的长效药物来那帕韦纳入 HIV 暴露前预防指南；生产商与全球基金达成协议，在三年内为低收入和中低收入国家约 200 万人供药，首批药物于 2025 年 11 月运抵斯威士兰和赞比亚。",
+   "numbers": {
+    "global_fund_lenacapavir_people_m": 2
+   },
+   "sources": [
+    "https://www.gilead.com/news/news-details/2025/gilead-joins-partners-for-delivery-of-first-shipments-of-breakthrough-twice-yearly-lenacapavir-for-hiv-prevention-to-sub-saharan-africa"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "精神健康与社会联系：WHO 2025 年报告估计全球超过 10 亿人患有精神健康问题（约占 2021 年人口 14%），2021 年约 72.7 万人死于自杀，抑郁和焦虑每年造成约 1 万亿美元经济损失，各国政府精神卫生支出中位数约占卫生预算 2%；WHO 社会联系委员会估计约六分之一的人感到孤独，孤独每年与超过 87.1 万例死亡相关。",
+   "numbers": {
+    "mental_disorders_bn": 1.0,
+    "suicides_2021": 727000,
+    "depression_anxiety_cost_usd_tn": 1,
+    "loneliness_share": 0.167,
+    "loneliness_deaths_per_year": 871000
+   },
+   "sources": [
+    "https://www.paho.org/en/news/2-9-2025-over-billion-people-living-mental-health-conditions-services-require-urgent-scale",
+    "https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "大流行防范：WHO 成员国于 2025 年通过《大流行协定》，但其开放签署取决于「病原体获取与惠益分享」（PABS）附件；2026 年 5 月 1 日政府间工作组同意延长 PABS 谈判（需经世卫大会批准），成果将提交 2027 年 5 月第 80 届世卫大会或 2026 年世卫大会特别会议。H5N1 禽流感持续在动物中传播并造成散发人类病例，WHO 评估目前未见持续人传人，对公众风险较低；WHO 统计 2003 年 1 月至 2026 年 9 月 6 日全球共报告 1003 例人感染，其中 479 例死亡。",
+   "numbers": {
+    "h5n1_human_cases_2003_to_2026_09_06": 1003,
+    "h5n1_deaths_2003_to_2026_09_06": 479
+   },
+   "sources": [
+    "https://www.who.int/news/item/01-05-2026-who-member-states-agree-to-extend-negotiations-on-pathogen-access-and-benefit-sharing-annex",
+    "https://cdn.who.int/media/docs/default-source/wpro---documents/emergency/surveillance/avian-influenza/ai_20261002.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "health",
+   "statement": "大流行频率参考：Marani 等（2021）基于 1600 年以来的疫情数据估计，新冠级别强度的疫情平均重现期约 59 年（未校正），一生中遭遇的概率约 38%，若新发疾病出现速度加快可能翻倍；WHO 估计 2020-2021 年新冠大流行相关超额死亡约 1490 万。2009-2024 年 WHO 共宣布 8 次「国际关注的突发公共卫生事件」。",
+   "numbers": {
+    "covid_scale_recurrence_years": 59,
+    "lifetime_prob_pct": 38,
+    "covid_excess_deaths_2020_2021_m": 14.9,
+    "pheic_count_2009_2024": 8
+   },
+   "sources": [
+    "Marani, M. et al. (2021) Intensity and frequency of extreme novel epidemics. PNAS 118(35), https://pmc.ncbi.nlm.nih.gov/articles/PMC8536331",
+    "https://www.who.int/news/item/05-05-2022-14.9-million-excess-deaths-were-associated-with-the-covid-19-pandemic-in-2020-and-2021",
+    "https://en.wikipedia.org/wiki/Public_health_emergency_of_international_concern"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "geopolitics",
+   "statement": "乌普萨拉冲突数据项目（UCDP）：2025 年有组织暴力致死约 24.46 万人（2024 年约 18.7 万），为 1994 年以来第二高（仅次于 2022 年）；国家参与的武装冲突达 65 起，创 1946 年以来新高，分布在 35 个国家；国家间冲突连续两年翻倍（8 起）；针对平民的单方面暴力致死约 7.65 万人，为 1994 年以来最高，主要发生在苏丹。",
+   "numbers": {
+    "organized_violence_deaths_2025": 244600,
+    "organized_violence_deaths_2024": 187000,
+    "state_based_conflicts_2025": 65,
+    "conflict_countries_2025": 35,
+    "interstate_conflicts_2025": 8,
+    "state_based_deaths_2025": 153600,
+    "one_sided_deaths_2025": 76500
+   },
+   "sources": [
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "geopolitics",
+   "statement": "军费与军控：SIPRI 估计 2025 年全球军费约 2.89 万亿美元，实际增长 2.9%，连续第 11 年增长，占全球 GDP 约 2.5%（2009 年以来最高），欧洲增长 14% 至约 8640 亿美元。北约 2025 年海牙峰会承诺到 2035 年将 GDP 的 5% 用于国防及相关安全支出（核心国防 3.5%）。SIPRI 估计 2026 年 1 月全球核弹头约 12187 枚，军事库存约 9745 枚（比上年多约 130 枚）；美俄《新削减战略武器条约》于 2026 年 2 月 5 日到期，两国五十多年来首次没有具约束力的战略核力量上限。",
+   "numbers": {
+    "world_milex_2025_usd_tn": 2.89,
+    "milex_real_growth_pct": 2.9,
+    "milex_share_gdp_pct": 2.5,
+    "europe_milex_2025_usd_bn": 864,
+    "nato_target_pct_gdp_2035": 5,
+    "nato_core_pct": 3.5,
+    "nuclear_warheads_jan2026": 12187,
+    "military_stockpiles_jan2026": 9745
+   },
+   "sources": [
+    "https://www.defensenews.com/global/europe/2026/04/27/global-military-spending-surges-and-reaches-record-high/",
+    "https://www.osw.waw.pl/en/publikacje/osw-commentary/2025-06-26/nato-summit-hague-trumps-return-and-a-two-component-5-gdp",
+    "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf",
+    "https://www.aljazeera.com/news/2026/2/11/russia-says-it-will-stick-to-limits-of-expired-nuclear-treaty-if-us",
+    "https://www.chathamhouse.org/2026/01/us-and-russias-nuclear-weapons-treaty-set-expire-heres-whats-stake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "geopolitics",
+   "statement": "截至 2026 年 10 月仍在进行的主要冲突：俄乌战争（2022 年 2 月起）仍在持续，美国斡旋的俄乌和谈计划最早于 2026 年 11 月恢复，但尚无全面停火；2026 年 2 月 28 日美国与以色列对伊朗发动打击，伊朗随后打击海湾多国和以色列目标并实际关闭霍尔木兹海峡，4 月 7 日起实施两周停火、6 月 14 日经巴基斯坦调解达成临时谅解备忘录，但核计划、海峡航运与制裁等核心争端未解决，袭船事件持续；加沙 2025 年 10 月停火名义上维持但打击事件不断；苏丹内战（2023 年 4 月起）、缅甸内战（2021 年起）、刚果（金）东部冲突和萨赫勒地区武装冲突持续。2026 年 1 月美国还对委内瑞拉采取了军事行动。",
+   "numbers": {},
+   "sources": [
+    "https://www.abc.net.au/news/2026-10-24/ukraine-latest/107304160",
+    "https://en.sigmalive.com/putin-says-he-wants-final-ukraine-peace-deal-not-a-short-ceasefire/",
+    "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+    "https://www.cfr.org/global-conflict-tracker/conflict/israeli-palestinian-conflict",
+    "https://www.cfr.org/global-conflict-tracker/conflict/rohingya-crisis-myanmar",
+    "https://ipisresearch.be/publication/m23s-territorial-advances-in-june-a-long-path-to-peace-renewed-efforts-to-resolve-the-m23-conflict-in-eastern-congo/",
+    "https://www.cfr.org/global-conflict-tracker",
+    "https://www.opb.org/article/2026/01/03/photos-aftermath-of-strikes-in-venezuela"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "domain": "energy",
+   "statement": "能源咽喉：霍尔木兹海峡承载约五分之一的全球石油消费量。2026 年海峡实际关闭后，布伦特原油自 2022 年 8 月以来首次升破每桶 100 美元，IEA 成员国协调释放 4 亿桶战略石油储备（史上最大规模）。",
+   "numbers": {
+    "hormuz_share_world_oil_consumption": 0.2,
+    "iea_release_m_barrels": 400,
+    "brent_peak_usd_over": 100
+   },
+   "sources": [
+    "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints",
+    "https://www.aa.com.tr/en/energy/general/iea-countries-agree-to-release-historic-400m-barrels-from-strategic-reserves/55418",
+    "https://www.outlookbusiness.com/economy-and-policy/brent-crude-crosses-103-as-iea-taps-emergency-reserves-in-historic-move"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "geopolitics",
+   "statement": "冲突与碎片化的经济代价：世界银行等机构评估截至 2024 年底乌克兰未来十年重建与恢复需求约 5240 亿美元；联合国、欧盟与世界银行 2025 年评估加沙重建与恢复需求约 530 亿美元。IMF（2023）估计贸易碎片化的长期产出损失从全球 GDP 的 0.2% 到 7% 不等。",
+   "numbers": {
+    "ukraine_reconstruction_usd_bn": 524,
+    "gaza_reconstruction_usd_bn": 53,
+    "fragmentation_gdp_loss_pct": [
+     0.2,
+     7
+    ]
+   },
+   "sources": [
+    "https://www.worldbank.org/en/news/press-release/2025/02/25/updated-ukraine-recovery-and-reconstruction-needs-assessment-released",
+    "https://www.worldbank.org/en/news/press-release/2025/02/18/new-report-assesses-damages-losses-and-needs-in-gaza-and-the-west-bank",
+    "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2023/01/11/Geo-Economic-Fragmentation-and-the-Future-of-Multilateralism-527266"
+   ],
+   "confidence": "high"
+  },
+  {
+   "domain": "space",
+   "statement": "航天活动创纪录：2025 年全球进行约 324 次轨道发射尝试，其中 SpaceX 约 165 次；2026 年在轨星链卫星超过 1 万颗。",
+   "numbers": {
+    "orbital_launch_attempts_2025": 324,
+    "spacex_launches_2025": 165,
+    "starlink_in_orbit_2026_over": 10000
+   },
+   "sources": [
+    "https://aiaa.org/2026/01/05/spacex-and-china-power-record-breaking-year-for-orbital-launches/",
+    "https://planet4589.org/space/con/star/stats.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "domain": "space",
+   "statement": "重返月球：阿尔忒弥斯 2 号于 2026 年 4 月 1 日发射、4 月 10 日（美国当地时间）溅落，完成 50 多年来首次载人绕月飞行；NASA 2026 年将阿尔忒弥斯 3 号改为近地轨道交会对接测试（5 月将目标定为 2027 年末），计划由阿尔忒弥斯 4 号于 2028 年登月。中国计划 2030 年前实现载人登月，2026 年 2 月完成长征十号低空飞行和梦舟逃逸试验，计划 2035 年前建成国际月球科研站基本型，天问三号计划 2028 年发射、2031 年带回火星样本。印度计划首个空间站舱段 2028 年发射、2035 年建成空间站、2040 年前实现载人登月。",
+   "numbers": {
+    "artemis2_launch": "2026-04-01",
+    "artemis4_landing_target": 2028,
+    "china_landing_target": 2030,
+    "ilrs_basic_target": 2035,
+    "tianwen3_return": 2031,
+    "india_station_target": 2035,
+    "india_moon_target": 2040
+   },
+   "sources": [
+    "https://newspaceeconomy.ca/2026/04/10/artemis-ii-crew-completes-historic-lunar-flyby-with-successful-pacific-splashdown/",
+    "https://cislunarspace.cn/en/space-news/2026/05/2026-05-13-nasa-artemis-3-plans/",
+    "https://www.theregister.com/2026/05/01/artemis_iii_aims_for_late/",
+    "https://news.cgtn.com/news/2026-02-11/China-conducts-low-altitude-flight-test-for-Long-March-10-rocket-1KFK9b0VBiU/share_amp.html",
+    "https://english.henan.gov.cn/2026/02-27/3329140.html",
+    "https://www.leonarddavid.com/china-moon-base-plans-evolve/",
+    "https://www.universetoday.com/articles/china-plans-to-retrieve-mars-samples-by-2031",
+    "https://en.wikipedia.org/wiki/Bharatiya_Antariksh_Station"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "domain": "society",
+   "statement": "日常生活数字化：世界银行《全球普惠金融指数 2025》显示 2024 年全球 79% 的成年人拥有金融账户；美国 20-64 岁人群约四分之一的带薪工作日在家完成（2025 年）；Common Sense Media 2025 年调查显示近四分之三的美国青少年用过 AI 陪伴应用、约一半经常使用；澳大利亚自 2025 年 12 月 10 日起禁止 16 岁以下用户拥有主要社交媒体账户。",
+   "numbers": {
+    "adults_with_account_2024_pct": 79,
+    "us_wfh_share_paid_days_2025": 0.25,
+    "us_teens_used_ai_companions_share": 0.72,
+    "us_teens_regular_ai_companion_share": 0.5
+   },
+   "sources": [
+    "https://www.worldbank.org/en/publication/globalfindex",
+    "Buckman, Barrero, Bloom, Davis (2025) Measuring Work from Home, https://wfhresearch.com/wp-content/uploads/2025/02/NBERWP.pdf",
+    "https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions",
+    "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions"
+   ],
+   "confidence": "high"
+  }
+ ],
+ "dimensions": [
+  {
+   "id": "ai",
+   "title": "人工智能走向",
+   "description": "2026-2090 年 AI 能力与扩散速度的三种推演路径。概率为游戏设定的主观权重，参考专家调查、算力趋势与宏观经济研究。",
+   "branches": [
+    {
+     "id": "ai_gradual",
+     "title": "渐进普及",
+     "prob": 0.5,
+     "description": "推演：AI 像电力和互联网一样在 10-30 年间逐步渗透各行各业。办公、教育、医疗普遍使用 AI 助手，部分职业被重组，但多数人通过转岗与再培训适应；生产率增长温和提升，收益更多集中在资本与高技能人群。依据：高盛（2023）估计生成式 AI 可在十年内使全球 GDP 提高约 7%；麦肯锡（2023）估计一半工作活动的自动化中点约在 2045 年；Acemoglu（2024）则认为十年内对全要素生产率的提升有限。",
+     "modifiers": {
+      "gdp_growth_add": 0.4,
+      "unemployment_add": 0.5,
+      "inequality_add": 0.015,
+      "life_exp_add_by_2090": 0.8,
+      "education_years_add": 0.3,
+      "retirement_age_add": 1
+     },
+     "region_overrides": {
+      "NAM": {
+       "gdp_growth_add": 0.5
+      },
+      "EAS": {
+       "gdp_growth_add": 0.5
+      },
+      "SSA": {
+       "gdp_growth_add": 0.2,
+       "unemployment_add": 0.2
+      },
+      "SAS": {
+       "gdp_growth_add": 0.3,
+       "unemployment_add": 0.8
+      }
+     },
+     "sources": [
+      "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
+      "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "Acemoglu, D. (2024) The Simple Macroeconomics of AI, NBER Working Paper 32487, https://www.nber.org/papers/w32487",
+      "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379"
+     ]
+    },
+    {
+     "id": "ai_transformative",
+     "title": "变革性全面自动化",
+     "prob": 0.25,
+     "description": "推演：AI 能力按近年趋势持续高速增长，2030 年代中期在几乎所有认知任务上达到专家水平，机器人在 2040 年代大规模进入体力劳动。经济增长显著加快，但转型期失业与不平等上升，各国被迫重构税收、社会保障与教育制度。依据：Epoch AI 估计前沿训练算力每年增长 4-5 倍；智能体任务时长约每 7 个月翻一番；专家调查给出高级机器智能 10% 概率在 2027 年、50% 在 2047 年；麦肯锡（2025）估计现有技术理论上可自动化约 57% 的美国工作时长。",
+     "modifiers": {
+      "gdp_growth_add": 1.5,
+      "unemployment_add": 2.5,
+      "inequality_add": 0.05,
+      "life_exp_add_by_2090": 2.5,
+      "education_years_add": 0.5,
+      "happiness_add": -0.2
+     },
+     "region_overrides": {
+      "NAM": {
+       "gdp_growth_add": 2.0
+      },
+      "EAS": {
+       "gdp_growth_add": 1.8
+      },
+      "WEU": {
+       "gdp_growth_add": 1.5
+      },
+      "SAS": {
+       "gdp_growth_add": 0.9,
+       "unemployment_add": 3.0
+      },
+      "SSA": {
+       "gdp_growth_add": 0.6,
+       "unemployment_add": 1.0
+      },
+      "LAC": {
+       "gdp_growth_add": 0.8
+      }
+     },
+     "sources": [
+      "https://epoch.ai/blog/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year",
+      "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+      "Grace, K. et al. (2024) Thousands of AI Authors on the Future of AI, https://arxiv.org/abs/2401.02843",
+      "https://www.mckinsey.com/~/media/mckinsey/mckinsey%20global%20institute/our%20research/agents%20robots%20and%20us%20skill%20partnerships%20in%20the%20age%20of%20ai/agents-robots-and-us-skill-partnerships-in-the-age-of-ai.pdf",
+      "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+     ]
+    },
+    {
+     "id": "ai_plateau",
+     "title": "平台期与强监管",
+     "prob": 0.25,
+     "description": "推演：大模型能力提升在 2020 年代末放缓，算力、电力与数据成本难以被收入覆盖，AI 投资出现回调；事故、版权与就业争议推动各国实行严格许可与审计制度。AI 成为有用但不具颠覆性的工具，对增长与就业的影响都较小。依据：AI Index 2026 指出宏观生产率证据仍「早期且不一致」、投资高度集中；IEA 预计数据中心用电到 2030 年翻倍以上，电力可能成为约束；欧盟《人工智能法》已立法。",
+     "modifiers": {
+      "gdp_growth_add": 0.1,
+      "unemployment_add": 0.2,
+      "inequality_add": 0.005,
+      "life_exp_add_by_2090": 0.3
+     },
+     "region_overrides": {},
+     "sources": [
+      "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+      "https://www.iea.org/reports/energy-and-ai/executive-summary",
+      "Acemoglu, D. (2024) The Simple Macroeconomics of AI, NBER Working Paper 32487, https://www.nber.org/papers/w32487",
+      "https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "health_tech",
+   "title": "医疗健康技术走向",
+   "description": "长寿医学、传染病控制与抗微生物药物耐药的三种推演路径。寿命修正为相对于 UN WPP 基准趋势的附加值。",
+   "branches": [
+    {
+     "id": "health_longevity",
+     "title": "长寿医学突破",
+     "prob": 0.2,
+     "description": "推演：个体化 mRNA 肿瘤疫苗、基因编辑、阿尔茨海默病早筛与预防治疗、衰老干预药物相继成熟并降价普及；疟疾等传染病在新工具推动下接近消灭。高收入国家健康寿命明显延长，退休年龄随之推后；中低收入国家通过廉价药物与疫苗获得较大收益，但可及性差距仍存在。依据：2026 年 mRNA 肿瘤疫苗 III 期阳性；GLP-1 专利到期带来廉价仿制药；《柳叶刀》委员会认为 2050 年前消灭疟疾可实现。",
+     "modifiers": {
+      "life_exp_add_by_2090": 4.0,
+      "retirement_age_add": 2,
+      "gdp_growth_add": 0.1,
+      "happiness_add": 0.2,
+      "inequality_add": 0.01
+     },
+     "region_overrides": {
+      "SSA": {
+       "life_exp_add_by_2090": 5.0
+      },
+      "SAS": {
+       "life_exp_add_by_2090": 4.5
+      }
+     },
+     "sources": [
+      "https://ascopost.com/news/august-2026/interpath-001-trial-of-mrna-based-individualized-neoantigen-therapy-meets-primary-and-key-secondary-endpoints-in-patients-with-high-risk-resected-melanoma/",
+      "https://theprint.in/india/rs-325-4200-month-dr-reddys-sun-pharma-glenmark-kick-off-generic-semaglutide-price-war/2885525/",
+      "Feachem, R. G. A. et al. (2019) Malaria eradication within a generation: ambitious, achievable, and necessary. The Lancet 394:1056–1112, https://doi.org/10.1016/S0140-6736(19)31139-0",
+      "https://www.afar.org/tame-trial"
+     ]
+    },
+    {
+     "id": "health_steady",
+     "title": "稳步进展",
+     "prob": 0.55,
+     "description": "推演：新药与新疗法持续出现，但价格高、普及慢，主要惠及高收入国家；传染病负担缓慢下降，耐药问题大体得到控制但未逆转。寿命延续 UN WPP 中方案的缓慢上升趋势并略有上修。依据：WHO 2030 年疟疾、结核病目标进展偏离轨道；新疗法（如 Casgevy、抗淀粉样蛋白药物）获批但覆盖有限。",
+     "modifiers": {
+      "life_exp_add_by_2090": 1.0,
+      "retirement_age_add": 1
+     },
+     "region_overrides": {},
+     "sources": [
+      "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2025",
+      "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+      "https://www.pharmacytimes.com/view/fda-expands-casgevy-approval-to-children-as-young-as-2-years-with-sickle-cell-disease-or-transfusion-dependent--thalassemia",
+      "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease"
+     ]
+    },
+    {
+     "id": "health_stagnation_amr",
+     "title": "停滞与耐药危机",
+     "prob": 0.25,
+     "description": "推演：卫生援助削减、新抗生素研发停滞和抗生素滥用叠加，耐药感染使手术、化疗和分娩的风险上升；新发传染病更频繁，寿命改善低于基准预期，南亚与撒哈拉以南非洲受冲击最大。依据：GBD 预测参考情景下 2050 年耐药直接致死约 191 万人、2025-2050 年累计约 3900 万；世界银行估计高耐药情景下 2050 年全球 GDP 可能减少 3.8%。",
+     "modifiers": {
+      "life_exp_add_by_2090": -1.5,
+      "mortality_mult": 1.02,
+      "gdp_growth_add": -0.1,
+      "happiness_add": -0.1
+     },
+     "region_overrides": {
+      "SAS": {
+       "life_exp_add_by_2090": -2.5,
+       "mortality_mult": 1.04
+      },
+      "SSA": {
+       "life_exp_add_by_2090": -2.5,
+       "mortality_mult": 1.04
+      },
+      "LAC": {
+       "mortality_mult": 1.03
+      }
+     },
+     "sources": [
+      "GBD 2021 Antimicrobial Resistance Collaborators (2024) Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050. The Lancet 404:1199–1226, https://doi.org/10.1016/S0140-6736(24)01867-1",
+      "https://pharmaceutical-journal.com/article/news/almost-40-million-deaths-could-occur-from-amr-over-next-25-years-study-results-suggest",
+      "https://www.worldbank.org/en/topic/health/publication/drug-resistant-infections-a-threat-to-our-economic-future"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "geopolitics",
+   "title": "地缘政治格局",
+   "description": "以阵营与地区为单位描述的三种推演路径，不预测尚未处于战争状态的具体国家之间的战争。",
+   "branches": [
+    {
+     "id": "geo_managed",
+     "title": "有管理的竞争",
+     "prob": 0.3,
+     "description": "推演：大国竞争持续但保持在可控范围，2020 年代末主要热点冲突（东欧、中东、苏丹等）陆续通过谈判停火或达成安排；军控与公共卫生、AI 安全等领域出现有限合作；贸易与技术在部分领域分割，但全球化框架大体维持。",
+     "modifiers": {
+      "gdp_growth_add": 0.1,
+      "conflict_risk_add": -0.003,
+      "happiness_add": 0.1
+     },
+     "region_overrides": {
+      "EEU": {
+       "gdp_growth_add": 0.3
+      },
+      "WAS": {
+       "gdp_growth_add": 0.3
+      }
+     },
+     "sources": [
+      "https://www.abc.net.au/news/2026-10-24/ukraine-latest/107304160",
+      "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+      "https://www.who.int/news/item/01-05-2026-who-member-states-agree-to-extend-negotiations-on-pathogen-access-and-benefit-sharing-annex"
+     ]
+    },
+    {
+     "id": "geo_new_cold_war",
+     "title": "阵营分裂的「新冷战」",
+     "prob": 0.5,
+     "description": "推演：世界分化为若干相互竞争的阵营，芯片、AI、数据与能源供应链按阵营重组；军费与核武库持续增长，缺乏具约束力的军控条约；部分热点冲突冻结为长期对峙，代理冲突与海上通道风险上升。全球增长被碎片化拖累。依据：UCDP 记录 2025 年 65 起国家参与的冲突（历史新高）；SIPRI 记录全球军费连续 11 年增长；《新削减战略武器条约》2026 年到期；IMF 估计贸易碎片化长期损失可达全球 GDP 的 0.2%-7%。",
+     "modifiers": {
+      "gdp_growth_add": -0.25,
+      "conflict_risk_add": 0.004,
+      "inequality_add": 0.01,
+      "migration_push_add": 0.3
+     },
+     "region_overrides": {
+      "EEU": {
+       "conflict_risk_add": 0.008
+      },
+      "WAS": {
+       "conflict_risk_add": 0.008
+      },
+      "SSA": {
+       "conflict_risk_add": 0.006
+      },
+      "NAF": {
+       "conflict_risk_add": 0.006
+      }
+     },
+     "sources": [
+      "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+      "https://www.defensenews.com/global/europe/2026/04/27/global-military-spending-surges-and-reaches-record-high/",
+      "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf",
+      "https://www.aljazeera.com/news/2026/2/11/russia-says-it-will-stick-to-limits-of-expired-nuclear-treaty-if-us",
+      "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2023/01/11/Geo-Economic-Fragmentation-and-the-Future-of-Multilateralism-527266"
+     ]
+    },
+    {
+     "id": "geo_escalation",
+     "title": "冲突升级与多场地区大战",
+     "prob": 0.2,
+     "description": "推演：停火安排相继破裂，东欧、中东和非洲等地同时出现高强度战争，海上通道与能源设施屡遭冲击，难民与流离失所人数创新高，国际合作机制严重削弱。依据：UCDP 记录 2025 年国家间冲突连续两年翻倍、有组织暴力死亡为 1994 年以来第二高；2026 年中东冲突导致霍尔木兹海峡实际关闭和全球能源冲击。",
+     "modifiers": {
+      "gdp_growth_add": -0.7,
+      "conflict_risk_add": 0.012,
+      "mortality_mult": 1.01,
+      "migration_push_add": 1.0,
+      "happiness_add": -0.3,
+      "inequality_add": 0.015
+     },
+     "region_overrides": {
+      "WAS": {
+       "conflict_risk_add": 0.025,
+       "mortality_mult": 1.04,
+       "migration_push_add": 2.0
+      },
+      "EEU": {
+       "conflict_risk_add": 0.02,
+       "mortality_mult": 1.03,
+       "migration_push_add": 1.5
+      },
+      "SSA": {
+       "conflict_risk_add": 0.02,
+       "migration_push_add": 1.5
+      },
+      "NAF": {
+       "conflict_risk_add": 0.015,
+       "migration_push_add": 1.5
+      }
+     },
+     "sources": [
+      "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+      "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）",
+      "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+      "https://www.aa.com.tr/en/energy/general/iea-countries-agree-to-release-historic-400m-barrels-from-strategic-reserves/55418"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "space",
+   "title": "太空探索节奏",
+   "description": "载人深空探索与商业航天的三种推演路径，对经济影响很小，主要决定航天里程碑是否及何时出现。",
+   "branches": [
+    {
+     "id": "space_boom",
+     "title": "太空繁荣",
+     "prob": 0.3,
+     "description": "推演：可重复使用重型火箭成熟、发射成本大幅下降，月球南极在 2040 年代前后出现长期有人值守基地，人类在 2040 年前后首次登陆火星；商业空间站与太空旅游常态化。依据：2025 年全球轨道发射约 324 次、创纪录；中美均有 2030 年前后载人登月计划。",
+     "modifiers": {
+      "gdp_growth_add": 0.05,
+      "happiness_add": 0.1
+     },
+     "region_overrides": {},
+     "sources": [
+      "https://aiaa.org/2026/01/05/spacex-and-china-power-record-breaking-year-for-orbital-launches/",
+      "https://cislunarspace.cn/en/space-news/2026/05/2026-05-13-nasa-artemis-3-plans/",
+      "https://english.henan.gov.cn/2026/02-27/3329140.html",
+      "https://www.leonarddavid.com/china-moon-base-plans-evolve/"
+     ]
+    },
+    {
+     "id": "space_steady",
+     "title": "稳步推进",
+     "prob": 0.5,
+     "description": "推演：中美在 2030 年前后实现载人登月，月球基地建设缓慢推进，载人火星任务推迟到 2040 年代后期或更晚；卫星互联网普及是普通人感受最明显的太空成果。",
+     "modifiers": {
+      "gdp_growth_add": 0.02
+     },
+     "region_overrides": {},
+     "sources": [
+      "https://www.theregister.com/2026/05/01/artemis_iii_aims_for_late/",
+      "https://www.scientificamerican.com/article/how-china-could-still-win-the-new-moon-race",
+      "https://planet4589.org/space/con/star/stats.html"
+     ]
+    },
+    {
+     "id": "space_stall",
+     "title": "停滞与推迟",
+     "prob": 0.2,
+     "description": "推演：财政压力、技术挫折或事故导致载人登月之后的深空计划大幅推迟，太空活动以通信、导航与遥感卫星为主。依据：阿尔忒弥斯计划多次调整时间表，火星载人时间表被认为缺乏完整方案。",
+     "modifiers": {},
+     "region_overrides": {},
+     "sources": [
+      "https://www.theregister.com/2026/05/01/artemis_iii_aims_for_late/",
+      "https://www.scientificamerican.com/article/trump-wants-to-go-to-mars-thats-not-happening/"
+     ]
+    }
+   ]
+  }
+ ],
+ "milestones": [
+  {
+   "id": "ai_assistants_most_jobs",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2031
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN",
+    "GBR",
+    "DEU",
+    "JPN",
+    "KOR",
+    "IND",
+    "SGP"
+   ],
+   "category": "technology",
+   "title": "AI 助手进入多数工作岗位",
+   "summary": "推演：能自主完成多步骤任务的 AI 智能体从试点走向常规部署，多数大中型机构的文书、客服、编程、数据分析和设计流程中出现 AI 协作，「会用 AI」成为招聘中的基本要求。",
+   "personal_hooks": [
+    "上班第一件事可能是查看 AI 助手夜里整理好的待办事项和草稿。",
+    "简历上「熟练使用 AI 工具」可能和「熟练使用办公软件」一样普通。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "AI Index 2026：2025 年 88% 的受访组织使用 AI、70% 在至少一个职能中使用生成式 AI，但 AI 智能体部署在几乎所有职能中仍为个位数；《国际 AI 安全报告 2026》指出智能体可独立完成的任务时长约每 7 个月翻一番。据此推演智能体在 2-5 年内进入常规办公流程。",
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/",
+    "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+   ]
+  },
+  {
+   "id": "ai_entry_level_squeeze",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2032
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "SAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "economy",
+   "title": "初级白领岗位招聘明显收缩",
+   "summary": "推演：在软件开发、客服、文秘、翻译、基础法律与财务等高暴露职业中，企业减少招收初级员工；年轻求职者更多转向需要人际沟通、现场操作或 AI 监督能力的岗位。",
+   "personal_hooks": [
+    "刚毕业的人可能发现「入门岗位」变少，实习和项目经验更加重要。",
+    "一些人可能转向技工、护理等难以被自动化的职业。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "AI Index 2026：美国 22-25 岁软件开发者就业较 2024 年下降近 20%，约三分之一受访组织预计未来一年因 AI 减员；ILO（2025）估计高收入国家 34% 的就业存在生成式 AI 暴露，文书类职业暴露最高。",
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "https://www.ilo.org/resource/news/one-four-jobs-risk-being-transformed-genai-new-ilo%E2%80%93nask-global-index-shows"
+   ]
+  },
+  {
+   "id": "ai_tutors_schools",
+   "year": 2030,
+   "year_range": [
+    2028,
+    2034
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "AI 个性化辅导进入多数学校",
+   "summary": "推演：AI 辅导工具成为多数中高收入国家中小学的常规学习工具；各国同时出台使用年龄、作业诚信与学生数据保护规范，考试形式向口试、现场写作和项目评估调整。",
+   "personal_hooks": [
+    "学生可能每天用 AI 辅导员练口语、讲错题，老师更多负责引导和评估。",
+    "家长之间可能为「孩子该不该用 AI 写作业」争论不休。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "联合国教科文组织 2023 年发布生成式 AI 教育与研究应用指南，建议设定使用年龄与规范；AI Index 2026 显示生成式 AI 三年内达到约 53% 人口层面采用率，同时提示过度依赖 AI 可能带来长期学习损失。",
+   "sources": [
+    "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research",
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ]
+  },
+  {
+   "id": "ai_medical_routine",
+   "year": 2031,
+   "year_range": [
+    2028,
+    2035
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "AI 辅助诊断成为医院常规",
+   "summary": "推演：影像判读、病理筛查、病历书写和用药核对普遍使用经监管批准的 AI 工具；基层诊所借助 AI 远程筛查扩大服务能力，医疗差错与等待时间有所减少。",
+   "personal_hooks": [
+    "看病时医生可能先查看 AI 标注的影像和风险提示，再与你讨论。",
+    "偏远地区的诊所可能通过 AI 筛查更早发现眼病、结核或癌症。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "美国 FDA 持续更新已授权的 AI 医疗器械清单（2026 年仍有新批准）；AI Index 2026 记录了 AI 在结构化任务中可测量的生产率提升。",
+   "sources": [
+    "https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices",
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ]
+  },
+  {
+   "id": "ai_datacenter_power",
+   "year": 2030,
+   "year_range": [
+    2029,
+    2032
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "数据中心用电量升至 2024 年的两倍以上",
+   "summary": "推演：AI 推动全球数据中心用电升至约 945 太瓦时（约占全球用电 3%），多地出现电网扩容、电价和用地争议，部分地区限制新建数据中心。",
+   "personal_hooks": [
+    "一些地方的居民可能在新闻里看到「数据中心抢电」的争论。",
+    "数据中心集中的地区，电工和建筑工人更抢手。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "IEA《能源与 AI》基准情景：数据中心用电从 2024 年约 415 太瓦时（约 1.5%）增至 2030 年约 945 太瓦时、2035 年约 1200 太瓦时，美国在 2024 年占 45%、中国占 25%。",
+   "sources": [
+    "https://www.iea.org/reports/energy-and-ai/executive-summary"
+   ]
+  },
+  {
+   "id": "ai_science_acceleration",
+   "year": 2032,
+   "year_range": [
+    2029,
+    2038
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "AI 驱动的科研发现成为常态",
+   "summary": "推演：在蛋白质与药物设计、材料、天气与气候模拟等领域，大部分候选方案由 AI 提出和筛选，研发周期明显缩短，科研人员的工作重心转向提出问题与实验验证。",
+   "personal_hooks": [
+    "新闻里「由 AI 发现的新材料、新药」可能不再稀奇。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "《国际 AI 安全报告 2026》指出领先系统在国际数学奥林匹克题目上达到金牌水平、在部分研究生水平科学题目上正确率超过 80%；Epoch AI 估计前沿模型训练算力每年增长 4-5 倍。",
+   "sources": [
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/",
+    "https://epoch.ai/blog/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year"
+   ]
+  },
+  {
+   "id": "ai_expert_level_transformative",
+   "year": 2036,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "ai": [
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "technology",
+   "title": "AI 在几乎所有脑力任务上达到专家水平",
+   "summary": "推演（变革情景）：通用 AI 系统在绝大多数可远程完成的脑力工作上达到或超过人类专家水平；各国围绕安全、责任归属、知识产权与收益分配展开激烈的政策辩论。",
+   "personal_hooks": [
+    "许多职业的日常可能从「亲手做」变成「审核 AI 的方案并做决定」。",
+    "关于 AI 该不该拥有更多自主权的讨论可能进入饭桌话题。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 3
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "Grace 等（2024）对 2778 名 AI 研究者的调查：「无辅助机器在所有任务上胜过人类」的 10% 概率时间为 2027 年、50% 为 2047 年，比 2022 年调查提前 13 年；变革情景取分布较早一端。",
+   "sources": [
+    "Grace, K. et al. (2024) Thousands of AI Authors on the Future of AI, https://arxiv.org/abs/2401.02843",
+    "https://epoch.ai/blog/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+   ]
+  },
+  {
+   "id": "ai_expert_level_gradual",
+   "year": 2050,
+   "year_range": [
+    2042,
+    2065
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "technology",
+   "title": "AI 逐步在大多数脑力任务上接近专家水平",
+   "summary": "推演（渐进情景）：AI 能力持续提升，但受算力、能源、数据与监管约束，到本世纪中叶才在大多数认知任务上接近专家水平，人机分工逐步调整。",
+   "personal_hooks": [
+    "人们可能早已习惯遇到专业问题先问 AI，再请人类专家确认。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "Grace 等（2024）调查的中位预测为 2047 年；IEA 预计数据中心用电到 2035 年约 1200 太瓦时，能源与基础设施可能放慢扩张速度。",
+   "sources": [
+    "Grace, K. et al. (2024) Thousands of AI Authors on the Future of AI, https://arxiv.org/abs/2401.02843",
+    "https://www.iea.org/reports/energy-and-ai/executive-summary"
+   ]
+  },
+  {
+   "id": "ai_labor_restructuring",
+   "year": 2035,
+   "year_range": [
+    2031,
+    2040
+   ],
+   "requires": {
+    "ai": [
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE",
+    "SAS"
+   ],
+   "countries": [],
+   "category": "economy",
+   "title": "大规模岗位重组与失业冲击",
+   "summary": "推演（变革情景）：大量办公室、客服、编程与运输岗位被 AI 和机器人替代，转型期失业率上升；各国扩大再培训、失业保险与收入支持，劳动力市场的「中间层」岗位明显减少。",
+   "personal_hooks": [
+    "身边可能有人在四五十岁时被迫转行。",
+    "政府可能推出大规模的再培训补贴或新的收入支持计划。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": -2,
+    "safety": 0,
+    "education": 1,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "麦肯锡全球研究院（2025）估计现有技术在理论上可自动化约 57% 的美国工作时长；IMF（2024）估计发达经济体约 60% 的就业暴露于 AI。变革情景假设这些潜力在约十年内大部分兑现。",
+   "sources": [
+    "https://www.mckinsey.com/~/media/mckinsey/mckinsey%20global%20institute/our%20research/agents%20robots%20and%20us%20skill%20partnerships%20in%20the%20age%20of%20ai/agents-robots-and-us-skill-partnerships-in-the-age-of-ai.pdf",
+    "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379"
+   ]
+  },
+  {
+   "id": "ai_income_support",
+   "year": 2040,
+   "year_range": [
+    2034,
+    2050
+   ],
+   "requires": {
+    "ai": [
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "policy",
+   "title": "部分国家建立与自动化收益挂钩的收入保障",
+   "summary": "推演（变革情景）：部分高收入经济体试行或建立面向全民或特定群体的基本收入、缩短法定工时或「自动化红利」分配机制；具体形式取决于各国政治选择，差异很大。",
+   "personal_hooks": [
+    "有人可能每月收到一笔与工作无关的基础收入。",
+    "社会上可能热议「不需要全职工作」的人生该如何安排。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "英国 2022 年四天工作制试点中 61 家企业有 56 家在试点结束后继续实行，说明工时制度具有调整空间；变革情景下自动化带来的收入集中可能推动再分配政策，但推行与否高度不确定。",
+   "sources": [
+    "https://autonomy.work/portfolio/uk4dwpilotresults/",
+    "https://www.mckinsey.com/~/media/mckinsey/mckinsey%20global%20institute/our%20research/agents%20robots%20and%20us%20skill%20partnerships%20in%20the%20age%20of%20ai/agents-robots-and-us-skill-partnerships-in-the-age-of-ai.pdf"
+   ]
+  },
+  {
+   "id": "ai_full_automation_economy",
+   "year": 2055,
+   "year_range": [
+    2045,
+    2070
+   ],
+   "requires": {
+    "ai": [
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "economy",
+   "title": "AI 与机器人承担大部分可自动化劳动",
+   "summary": "推演（变革情景）：大部分体力与脑力劳动可由 AI 和机器人完成，人类工作更多集中在照护、创造、监督与人际服务；围绕收入分配、教育目的和人生意义的社会制度显著变化。",
+   "personal_hooks": [
+    "一个人的职业生涯可能包括多次长休和转行。",
+    "「做什么工作」在自我认同中的分量可能下降。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 3
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "Grace 等（2024）调查中「所有职业可完全自动化」的 10% 概率时间为 2037 年、50% 为 2116 年；变革情景大幅提前该进程，属于低概率、高影响推演。",
+   "sources": [
+    "Grace, K. et al. (2024) Thousands of AI Authors on the Future of AI, https://arxiv.org/abs/2401.02843",
+    "https://www.mckinsey.com/~/media/mckinsey/mckinsey%20global%20institute/our%20research/agents%20robots%20and%20us%20skill%20partnerships%20in%20the%20age%20of%20ai/agents-robots-and-us-skill-partnerships-in-the-age-of-ai.pdf"
+   ]
+  },
+  {
+   "id": "ai_plateau_correction",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2032
+   ],
+   "requires": {
+    "ai": [
+     "ai_plateau"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "economy",
+   "title": "AI 投资回调，能力进入平台期",
+   "summary": "推演（平台期情景）：大模型能力提升放缓，高昂的算力与电力成本难以被收入覆盖，AI 相关资产估值大幅回调，行业进入兼并整合期；AI 工具仍被广泛使用，但期待趋于务实。",
+   "personal_hooks": [
+    "科技公司裁员和股价下跌可能成为新闻焦点。",
+    "AI 工具仍然在手机和电脑里，只是没人再说它会「改变一切」。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "AI Index 2026：2025 年全球企业 AI 投资约 5817 亿美元、同比增长约 130%，但宏观生产率证据仍「早期且不一致」，投资高度集中于少数国家、公司和交易；Acemoglu（2024）估计 AI 在十年内对生产率的提升有限。",
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "Acemoglu, D. (2024) The Simple Macroeconomics of AI, NBER Working Paper 32487, https://www.nber.org/papers/w32487"
+   ]
+  },
+  {
+   "id": "eu_ai_act_high_risk",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2028
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [],
+   "category": "policy",
+   "title": "欧盟《人工智能法》高风险条款开始适用",
+   "summary": "按 2026 年 5 月欧盟机构达成、6 月经欧洲议会表决通过的修订，欧盟《人工智能法》对独立高风险 AI 系统（如招聘、信贷、教育评估）的义务推迟至 2027 年 12 月 2 日适用，嵌入受监管产品的高风险系统推迟至 2028 年 8 月 2 日。",
+   "personal_hooks": [
+    "在欧盟求职或申请贷款时，可能被告知材料经过 AI 系统评估，并有权要求解释。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "2026 年 5 月 7 日欧盟机构就推迟高风险义务达成临时协议，欧洲议会于 6 月 16 日表决通过，尚需理事会正式批准后生效；时间表未来仍可能调整。",
+   "sources": [
+    "https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/"
+   ]
+  },
+  {
+   "id": "ai_strict_licensing",
+   "year": 2032,
+   "year_range": [
+    2029,
+    2036
+   ],
+   "requires": {
+    "ai": [
+     "ai_plateau"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "policy",
+   "title": "多国建立严格的 AI 许可与审计制度",
+   "summary": "推演（平台期情景）：在 AI 事故、版权与就业争议推动下，主要经济体对高能力 AI 模型实行许可、审计与责任追究制度，新模型上市周期变长，AI 扩散速度放慢。",
+   "personal_hooks": [
+    "使用某些 AI 服务可能需要实名或年龄验证。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "欧盟《人工智能法》已立法并分阶段实施；《国际 AI 安全报告 2026》指出能力进步快于安全保障和科学证据的积累。",
+   "sources": [
+    "https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+   ]
+  },
+  {
+   "id": "ai_international_safety_accord",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2038
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed"
+    ],
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "policy",
+   "title": "主要国家就前沿 AI 安全达成国际协议",
+   "summary": "推演（有管理竞争情景）：主要 AI 研发国家就前沿模型的安全测试、事故通报和高风险用途限制达成国际协议，并设立联合评估机制。",
+   "personal_hooks": [
+    "新闻里可能出现类似「核不扩散」的 AI 安全条约签署仪式。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "《国际 AI 安全报告》由 100 多名专家撰写、多国政府支持，2026 年版强调能力进步快于安全保障，为国际协调提供了科学基础；能否形成具约束力的协议取决于大国关系。",
+   "sources": [
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/",
+    "https://tools.prnewswire.com/en-us/live/20823/release/20260203EN77099"
+   ]
+  },
+  {
+   "id": "military_ai_race",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "technology",
+   "title": "军事 AI 与无人系统竞赛加速",
+   "summary": "推演（阵营分裂/升级情景）：无人机、自主武器和 AI 指挥辅助系统在各阵营军队中大量部署，关于「致命性自主武器」的国际规则谈判进展缓慢。",
+   "personal_hooks": [
+    "征兵或入伍后，训练内容可能包括操控无人机。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "SIPRI：2025 年全球军费约 2.89 万亿美元、连续第 11 年增长；《国际 AI 安全报告 2026》记录了 AI 被用于网络攻击等恶意用途的案例。",
+   "sources": [
+    "https://www.defensenews.com/global/europe/2026/04/27/global-military-spending-surges-and-reaches-record-high/",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+   ]
+  },
+  {
+   "id": "robots_stock_10m",
+   "year": 2034,
+   "year_range": [
+    2031,
+    2037
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "CHN",
+    "JPN",
+    "KOR",
+    "DEU",
+    "USA"
+   ],
+   "category": "technology",
+   "title": "全球在役工业机器人突破 1000 万台",
+   "summary": "推演：按近年增速，全球在役工业机器人从 2024 年约 466 万台增长一倍以上，中国继续占新增装机的一半以上，协作机器人比例上升。",
+   "personal_hooks": [
+    "工厂车间里工人更少，更多人负责维护和编程机器人。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "IFR/AI Index 2026：2024 年新装 54.2 万台，在役存量 466.4 万台（2023 年 428.2 万台），中国占新装量 54%；按每年约 8-9% 的存量增速，约 9-10 年翻倍。",
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "https://ifr.org/ifr-press-releases/news/robot-density-surges-in-europe-asia-and-americas"
+   ]
+  },
+  {
+   "id": "humanoids_factories",
+   "year": 2030,
+   "year_range": [
+    2028,
+    2033
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "NAM",
+    "WEU"
+   ],
+   "countries": [
+    "CHN",
+    "USA",
+    "JPN",
+    "KOR",
+    "DEU"
+   ],
+   "category": "technology",
+   "title": "人形机器人在工厂和仓库批量上岗",
+   "summary": "推演：人形及通用移动机器人从每年数万台扩大到数十万台级，主要用于搬运、分拣、上下料和巡检等结构化任务。",
+   "personal_hooks": [
+    "物流仓库里可能出现与人并肩搬货的机器人。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "Omdia 估计 2025 年全球人形机器人出货约 1.3 万台，中国企业领先；宇树科技称 2025 年向终端客户交付超过 5500 台。推演按出货量每年成倍增长估算。",
+   "sources": [
+    "https://investinchina.chinadaily.com.cn/s/202601/12/WS6964b698498e23165e06cba4/chinese-firms-lead-global-humanoid-robot-production-in-2025-report.html",
+    "https://en.jiemian.com/article/13924474.html"
+   ]
+  },
+  {
+   "id": "humanoids_homes_rich",
+   "year": 2037,
+   "year_range": [
+    2033,
+    2045
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "家用机器人进入较富裕的家庭",
+   "summary": "推演：能做家务、陪伴和简单照护的家用机器人价格降到与一辆普通汽车相当，在高收入家庭中开始常见。",
+   "personal_hooks": [
+    "家里可能有一台会叠衣服、收拾桌子的机器人。",
+    "独居老人可能由机器人提醒吃药、在跌倒时呼叫帮助。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "摩根士丹利预测人形机器人在 2030 年代后期加速普及、2050 年在用约 10 亿台，且大部分用于工作场景，家庭普及相对较晚。",
+   "sources": [
+    "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/humanoid-robot-market-rising-adam-jonas-sheng-zhong",
+    "https://investinchina.chinadaily.com.cn/s/202601/12/WS6964b698498e23165e06cba4/chinese-firms-lead-global-humanoid-robot-production-in-2025-report.html"
+   ]
+  },
+  {
+   "id": "humanoids_everywhere",
+   "year": 2050,
+   "year_range": [
+    2042,
+    2060
+   ],
+   "requires": {
+    "ai": [
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "通用机器人在中等收入国家城市家庭普及",
+   "summary": "推演（变革情景）：通用机器人成为与洗衣机、汽车类似的耐用消费品，在中等收入国家的城市家庭中也较为常见。",
+   "personal_hooks": [
+    "孩子可能从小就习惯给机器人下指令。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 3
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "摩根士丹利预测 2050 年全球在用人形机器人约 10 亿台、相关市场约 5 万亿美元。",
+   "sources": [
+    "https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/humanoid-robot-market-rising-adam-jonas-sheng-zhong"
+   ]
+  },
+  {
+   "id": "care_robots_aging",
+   "year": 2035,
+   "year_range": [
+    2031,
+    2040
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "WEU"
+   ],
+   "countries": [
+    "JPN",
+    "KOR",
+    "CHN",
+    "DEU",
+    "ITA"
+   ],
+   "category": "society",
+   "title": "护理机器人在老龄化社会大量使用",
+   "summary": "推演：在护理人员短缺的老龄化社会，移乘、助行、监测和陪伴机器人成为养老院和居家养老的常规设备。",
+   "personal_hooks": [
+    "家里的长辈可能由人类护工和机器人共同照顾。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "WHO 预测全球痴呆症患者将从 2021 年约 5700 万增至 2030 年约 7800 万，照护需求快速上升；韩国、日本、德国等国制造业机器人密度居世界前列，具备产业基础。",
+   "sources": [
+    "WHO (2021) Global status report on the public health response to dementia, https://www.who.int/publications/i/item/9789240033245",
+    "https://ifr.org/ifr-press-releases/news/robot-density-surges-in-europe-asia-and-americas"
+   ]
+  },
+  {
+   "id": "robotaxi_common_big_cities",
+   "year": 2030,
+   "year_range": [
+    2028,
+    2033
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "EAS",
+    "WAS",
+    "WEU"
+   ],
+   "countries": [
+    "USA",
+    "CHN",
+    "ARE",
+    "KOR",
+    "GBR"
+   ],
+   "category": "technology",
+   "title": "无人驾驶出租车在许多大城市成为常见出行方式",
+   "summary": "推演：完全无人驾驶的网约车从十几个城市扩展到北美、东亚、海湾地区和部分欧洲大城市，夜间和机场线路尤为常见；出租车与网约车司机面临转岗压力。",
+   "personal_hooks": [
+    "叫车时可能默认来的是一辆没有司机的车。",
+    "以开车为生的亲友可能需要考虑转行。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "Waymo 2026 年上半年在美国 10 个城市每周约 50 万次付费出行，累计超过 2000 万次；百度萝卜快跑 2025 年第四季度周订单峰值超过 30 万单，截至 2026 年 2 月全球累计超过 2000 万次、覆盖 26 个城市，并在伦敦开展路测。",
+   "sources": [
+    "https://electrek.co/2026/07/08/waymo-driverless-las-vegas-four-new-cities/",
+    "https://amp.claimsjournal.com/news/national/2026/02/12/335668.htm",
+    "https://cnevpost.com/2026/02/27/baidu-apollo-go-robotaxi-300000-weekly-rides-expands-to-south-korea/",
+    "https://cnevpost.com/2026/07/28/baidu-apollo-go-robotaxi-road-tests-london/"
+   ]
+  },
+  {
+   "id": "robotaxi_mainstream",
+   "year": 2040,
+   "year_range": [
+    2035,
+    2047
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "technology",
+   "title": "自动驾驶成为多数特大城市的主流出行方式之一",
+   "summary": "推演：自动驾驶出租车、小巴和配送车在全球多数特大城市普及，大城市私家车拥有率下降，交通事故死亡人数明显减少。",
+   "personal_hooks": [
+    "年轻人可能不再急着考驾照。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "无人驾驶出租车 2025-2026 年已在中美多个城市规模化运营，并向海湾地区和欧洲扩展。",
+   "sources": [
+    "https://electrek.co/2026/07/08/waymo-driverless-las-vegas-four-new-cities/",
+    "https://cnevpost.com/2026/02/27/baidu-apollo-go-robotaxi-300000-weekly-rides-expands-to-south-korea/",
+    "https://cnevpost.com/2026/07/28/baidu-apollo-go-robotaxi-road-tests-london/"
+   ]
+  },
+  {
+   "id": "autonomous_trucks",
+   "year": 2032,
+   "year_range": [
+    2029,
+    2036
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "EAS"
+   ],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "干线无人驾驶卡车规模化运营",
+   "summary": "推演：高速公路干线物流中的无人驾驶重卡在美国、中国等地形成规模化运营，卡车司机岗位逐步转向两端短途配送与车队远程监控。",
+   "personal_hooks": [
+    "长途货车司机可能转做车队远程监控员或短途配送员。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "Aurora Innovation 于 2025 年在美国得克萨斯州达拉斯至休斯敦线路启动无人驾驶卡车商业运营。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aurora_Innovation"
+   ]
+  },
+  {
+   "id": "ev_majority_sales",
+   "year": 2032,
+   "year_range": [
+    2029,
+    2036
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "technology",
+   "title": "电动车占全球新车销量过半",
+   "summary": "推演：电动车（纯电和插电混动）在全球新车销量中的占比超过 50%，中国和欧洲领先，东南亚、南亚和拉美跟进；加油站逐步改造为充电站。",
+   "personal_hooks": [
+    "买车时燃油车可能已经是少数选择。",
+    "街角的加油站可能变成了充电站和便利店。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "IEA《全球电动汽车展望 2026》：2025 年全球电动车销量超过 2000 万辆、占新车销量约 25%，中国约 55%，欧洲约 28%；IEA 预计 2026 年约 2300 万辆、占比约 28%。",
+   "sources": [
+    "https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
+    "https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars"
+   ]
+  },
+  {
+   "id": "air_taxi_cities",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "WAS",
+    "NAM"
+   ],
+   "countries": [
+    "CHN",
+    "ARE",
+    "USA"
+   ],
+   "category": "technology",
+   "title": "电动垂直起降「空中出租车」在部分城市运营",
+   "summary": "推演：电动垂直起降飞行器在部分城市开展观光和机场接驳等商业航线，票价仍明显高于地面交通。",
+   "personal_hooks": [
+    "一些城市可能出现楼顶起降点，坐「飞的」去机场成为新鲜体验。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "亿航智能的 EH216-S 无人驾驶载人航空器于 2025 年获得中国民航局颁发的运营合格证，可开展载人观光飞行。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/EHang"
+   ]
+  },
+  {
+   "id": "quantum_fault_tolerant",
+   "year": 2030,
+   "year_range": [
+    2029,
+    2035
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "science",
+   "title": "首批容错量子计算机投入使用",
+   "summary": "推演：具备约 200 个逻辑量子比特、可纠错运行上亿次操作的量子计算机投入科研和工业使用，首先用于化学和材料模拟。",
+   "personal_hooks": [
+    "新闻可能报道第一个由量子计算机辅助设计的新催化剂或药物分子。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "IBM 路线图计划 2029 年建成容错量子计算机「Starling」（200 个逻辑比特、1 亿次量子操作）；谷歌 2024 年 Willow 芯片首次展示「低于阈值」的量子纠错。外界对时间表仍有疑虑。",
+   "sources": [
+    "https://thequantuminsider.com/2025/06/10/ibm-offers-roadmap-toward-large-scale-fault-tolerant-quantum-computer/",
+    "https://physics.aps.org/articles/v17/176"
+   ]
+  },
+  {
+   "id": "pqc_migration_done",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2036
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "technology",
+   "title": "主要信息系统完成后量子密码迁移",
+   "summary": "推演：银行、政府和互联网服务基本完成向抗量子密码算法的迁移，传统 RSA 与椭圆曲线算法在主要标准中被淘汰。",
+   "personal_hooks": [
+    "手机和网银可能多次提示「安全升级」，普通人几乎感觉不到变化。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "美国 NIST 于 2024 年 8 月发布首批三项后量子密码标准（FIPS 203/204/205），并在 NIST IR 8547 草案中提出 2030 年弃用、2035 年禁用量子脆弱算法的过渡时间表。",
+   "sources": [
+    "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+    "https://csrc.nist.gov/pubs/ir/8547/ipd"
+   ]
+  },
+  {
+   "id": "six_g_launch",
+   "year": 2030,
+   "year_range": [
+    2029,
+    2032
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "NAM",
+    "WEU"
+   ],
+   "countries": [
+    "CHN",
+    "KOR",
+    "JPN",
+    "USA"
+   ],
+   "category": "technology",
+   "title": "6G 移动通信开始商用",
+   "summary": "推演：符合国际电联 IMT-2030 框架的 6G 网络在部分国家开始商用，首先用于工业互联网、车联网和沉浸式通信。",
+   "personal_hooks": [
+    "换新手机时可能出现「6G」标识，但日常体验的变化有限。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "国际电联已发布 IMT-2030（6G）框架，相关标准化和频谱工作以 2030 年前后为目标。",
+   "sources": [
+    "https://www.itu.int/en/ITU-R/study-groups/rsg5/rwp5d/imt-2030/Pages/default.aspx"
+   ]
+  },
+  {
+   "id": "satellite_direct_to_phone",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "SSA",
+    "SAS",
+    "LAC",
+    "OCE",
+    "CAS"
+   ],
+   "countries": [],
+   "category": "technology",
+   "title": "卫星直连手机覆盖全球大部分陆地",
+   "summary": "推演：低轨卫星星座可直接为普通手机提供短信和基础数据服务，偏远地区和海上的「无信号」状况大幅减少。",
+   "personal_hooks": [
+    "在深山或海上，手机仍可能收到家人的消息。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "2026 年在轨星链卫星超过 1 万颗；国际电联估计 2025 年全球仍有约 22 亿人未上网，覆盖和费用是主要障碍。",
+   "sources": [
+    "https://planet4589.org/space/con/star/stats.html",
+    "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx"
+   ]
+  },
+  {
+   "id": "internet_over_90pct",
+   "year": 2040,
+   "year_range": [
+    2035,
+    2050
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "SSA",
+    "SAS"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "全球上网人口比例超过 90%",
+   "summary": "推演：随着卫星接入和廉价智能手机普及，全球未上网人口降至 10% 以下，但低收入国家在网速、资费和数字技能上仍落后。",
+   "personal_hooks": [
+    "最后一批没通网的村庄也连上了互联网。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "国际电联《事实与数字 2025》：2025 年约 60 亿人上网，未上网人口从 2024 年的约 23 亿（修订值）降至约 22 亿。",
+   "sources": [
+    "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx"
+   ]
+  },
+  {
+   "id": "bci_medical_therapy",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "NAM",
+    "WEU"
+   ],
+   "countries": [
+    "CHN",
+    "USA"
+   ],
+   "category": "science",
+   "title": "植入式脑机接口成为瘫痪患者的治疗选项",
+   "summary": "推演：多国批准植入式脑机接口用于脊髓损伤、渐冻症等患者的运动和交流功能重建，从临床试验走向有限的常规使用。",
+   "personal_hooks": [
+    "一位瘫痪患者可能通过「意念」控制机械手、打字或说话。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "中国国家药监局于 2026 年 3 月 13 日批准首个植入式脑机接口产品上市，用于颈髓损伤导致四肢瘫的成人；Neuralink 截至 2026 年 1 月有 21 名受试者。",
+   "sources": [
+    "https://www.bloomberg.com/news/articles/2026-03-13/china-approves-first-brain-implant-for-commercial-use",
+    "https://www.massdevice.com/neuracle-first-bci-approval-china/",
+    "https://thedebrief.org/chinese-companies-are-accelerating-the-brain-interface-race-matching-neuralink-with-human-trials/"
+   ]
+  },
+  {
+   "id": "bci_consumer",
+   "year": 2048,
+   "year_range": [
+    2040,
+    2060
+   ],
+   "requires": {
+    "ai": [
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "NAM",
+    "WEU"
+   ],
+   "countries": [],
+   "category": "technology",
+   "title": "非医疗用途的脑机接口进入消费市场",
+   "summary": "推演（变革情景）：低侵入或无创脑机接口用于游戏、办公和沟通，各国随之出台「神经数据隐私」相关法律。",
+   "personal_hooks": [
+    "有人可能戴着头环直接「想」出一条消息。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "目前获批的植入式产品仅用于严重瘫痪患者，消费化还面临安全、伦理和监管障碍，因此列为低概率推演。",
+   "sources": [
+    "https://www.bloomberg.com/news/articles/2026-03-13/china-approves-first-brain-implant-for-commercial-use",
+    "https://thedebrief.org/chinese-companies-are-accelerating-the-brain-interface-race-matching-neuralink-with-human-trials/"
+   ]
+  },
+  {
+   "id": "glp1_cheap_generics",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2032
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "IND",
+    "CHN",
+    "BRA",
+    "CAN"
+   ],
+   "category": "science",
+   "title": "廉价 GLP-1 减重药在许多国家普及",
+   "summary": "推演：司美格鲁肽专利在多国到期后仿制药价格大幅下降，口服 GLP-1 药物陆续上市，肥胖和 2 型糖尿病的治疗方式明显改变，但长期用药的安全性、停药反弹和医保负担仍有争议。",
+   "personal_hooks": [
+    "身边可能有不少人通过每周一针或每天一片药减重。",
+    "食品公司可能推出面向「用药人群」的小份量产品。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "司美格鲁肽专利自 2026 年起在印度、中国、加拿大、巴西等国陆续到期，印度仿制药上市后月费约 1300-4200 卢比；美国 FDA 于 2026 年 4 月 1 日批准口服小分子 GLP-1 药物 orforglipron；WHO 于 2025 年 12 月发布 GLP-1 治疗肥胖的全球指南（有条件推荐）；KFF 2025 年 11 月调查显示约 12% 的美国成年人正在使用。",
+   "sources": [
+    "https://www.medrxiv.org/content/10.64898/2026.03.04.26347508v1.full-text",
+    "https://theprint.in/india/rs-325-4200-month-dr-reddys-sun-pharma-glenmark-kick-off-generic-semaglutide-price-war/2885525/",
+    "https://www.healio.com/news/endocrinology/20260401/fda-approves-orforglipron-an-oral-glp1-for-adults-with-obesity",
+    "https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity",
+    "https://www.kff.org/public-opinion/poll-1-in-8-adults-say-they-are-currently-taking-a-glp-1-drug-for-weight-loss-diabetes-or-another-condition-even-as-half-say-the-drugs-are-difficult-to-afford/"
+   ]
+  },
+  {
+   "id": "obesity_rates_decline",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "OCE",
+    "WAS",
+    "LAC"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "部分国家成人肥胖率开始持续下降",
+   "summary": "推演：在药物普及和政策干预的共同作用下，部分高收入和中高收入国家的成人肥胖率结束长期上升趋势并开始下降，相关心血管病和糖尿病负担减轻。",
+   "personal_hooks": [
+    "体检报告上的「超重」提示可能变少了。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "KFF 调查显示美国成年人当前使用 GLP-1 药物的比例从 2024 年 5 月的约 6% 升至 2025 年 11 月的约 12%；WHO 已将 GLP-1 纳入肥胖治疗指南。人群层面的肥胖率能否持续下降仍需更长期数据。",
+   "sources": [
+    "https://www.kff.org/public-opinion/poll-1-in-8-adults-say-they-are-currently-taking-a-glp-1-drug-for-weight-loss-diabetes-or-another-condition-even-as-half-say-the-drugs-are-difficult-to-afford/",
+    "https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity"
+   ]
+  },
+  {
+   "id": "mrna_cancer_vaccine_approved",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2030
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "首个个体化 mRNA 癌症疫苗获批",
+   "summary": "推演：根据患者肿瘤基因定制的 mRNA 疫苗与免疫治疗联用，获批用于高复发风险黑色素瘤的术后辅助治疗，并扩展到肺癌等更多癌种的试验。",
+   "personal_hooks": [
+    "癌症患者术后可能拿到一支「专属于自己肿瘤」的疫苗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "默沙东与 Moderna 于 2026 年 8 月宣布 III 期 INTerpath-001 试验（1137 名高风险黑色素瘤术后患者）达到无复发生存期主要终点，是首个 mRNA 癌症疗法的阳性 III 期结果，数据将提交监管机构。",
+   "sources": [
+    "https://ascopost.com/news/august-2026/interpath-001-trial-of-mrna-based-individualized-neoantigen-therapy-meets-primary-and-key-secondary-endpoints-in-patients-with-high-risk-resected-melanoma/"
+   ]
+  },
+  {
+   "id": "cancer_vaccines_common",
+   "year": 2038,
+   "year_range": [
+    2033,
+    2045
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "个体化肿瘤疫苗成为多种癌症的常规治疗",
+   "summary": "推演（长寿突破情景）：个体化肿瘤疫苗与 AI 设计的靶向药覆盖肺癌、结直肠癌等常见癌种，部分晚期癌症转为可长期控制的慢性病。",
+   "personal_hooks": [
+    "确诊癌症后，「先做基因测序、再定制疫苗」可能成为标准流程。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 2,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "INTerpath-001 III 期阳性结果；此前的 IIb 期 KEYNOTE-942 五年随访显示联合治疗使复发或死亡风险降低约 49%。",
+   "sources": [
+    "https://ascopost.com/news/august-2026/interpath-001-trial-of-mrna-based-individualized-neoantigen-therapy-meets-primary-and-key-secondary-endpoints-in-patients-with-high-risk-resected-melanoma/"
+   ]
+  },
+  {
+   "id": "personalized_gene_editing",
+   "year": 2030,
+   "year_range": [
+    2028,
+    2034
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "为单个患者定制的基因编辑疗法形成标准流程",
+   "summary": "推演：针对罕见遗传病的「一人一药」基因编辑疗法建立快速审批与生产流程，从诊断到治疗的时间由数年缩短到数月。",
+   "personal_hooks": [
+    "罕见病患儿的家庭可能在确诊几个月后就获得定制疗法。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "2025 年《新英格兰医学杂志》报道首例为单个患儿定制的体内碱基编辑疗法，用于治疗 CPS1 缺乏症，从诊断到给药仅数月。",
+   "sources": [
+    "Musunuru, K. et al. (2025) Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease. N Engl J Med, https://www.nejm.org/doi/full/10.1056/NEJMoa2504747"
+   ]
+  },
+  {
+   "id": "gene_editing_common_disease",
+   "year": 2034,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "基因编辑疗法获批用于常见慢性病",
+   "summary": "推演：一次性体内基因编辑疗法获批用于高胆固醇血症等常见心血管风险因素，价格随规模化逐步下降。",
+   "personal_hooks": [
+    "有人可能选择「打一针、长期降血脂」，而不是每天吃药。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "CRISPR 疗法 Casgevy 自 2023 年起获批治疗镰状细胞病和β地中海贫血，2026 年 7 月美国将适用年龄扩大至 2 岁以上；2025 年体内碱基编辑首次用于个体化治疗。从罕见病扩展到常见病需要更高的安全性证据，故概率中等。",
+   "sources": [
+    "https://www.pharmacytimes.com/view/fda-expands-casgevy-approval-to-children-as-young-as-2-years-with-sickle-cell-disease-or-transfusion-dependent--thalassemia",
+    "Musunuru, K. et al. (2025) Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease. N Engl J Med, https://www.nejm.org/doi/full/10.1056/NEJMoa2504747"
+   ]
+  },
+  {
+   "id": "alzheimers_screening_routine",
+   "year": 2031,
+   "year_range": [
+    2028,
+    2035
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "阿尔茨海默病血检早筛和延缓药物普及",
+   "summary": "推演：血液检测成为中老年人筛查阿尔茨海默病的常规手段，使用更方便的抗淀粉样蛋白药物在早期患者中广泛应用，可在一定程度上延缓病程。",
+   "personal_hooks": [
+    "体检套餐里可能多了一项「阿尔茨海默病风险血检」。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "美国 FDA 于 2023 年完全批准仑卡奈单抗、2024 年批准多奈单抗，2025 年批准首个辅助诊断阿尔茨海默病的血液检测；WHO 估计 2021 年全球痴呆患者约 5700 万，每年新增近 1000 万。",
+   "sources": [
+    "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease",
+    "https://en.wikipedia.org/wiki/Lecanemab",
+    "https://en.wikipedia.org/wiki/Donanemab",
+    "https://www.who.int/news-room/fact-sheets/detail/dementia"
+   ]
+  },
+  {
+   "id": "dementia_78m",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2031
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "全球痴呆症患者预计达到约 7800 万",
+   "summary": "推演：人口老龄化使全球痴呆症患者从 2021 年约 5700 万增至 2030 年约 7800 万，家庭照护负担成为许多国家的重要社会议题。",
+   "personal_hooks": [
+    "许多家庭可能需要有人减少工作，照顾患痴呆的长辈。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "WHO 2021 年全球痴呆症报告预测 2030 年约 7800 万、2050 年约 1.39 亿；WHO 称痴呆症是全球第七大死因。",
+   "sources": [
+    "WHO (2021) Global status report on the public health response to dementia, https://www.who.int/publications/i/item/9789240033245",
+    "https://www.who.int/news-room/fact-sheets/detail/dementia"
+   ]
+  },
+  {
+   "id": "alzheimers_halted",
+   "year": 2042,
+   "year_range": [
+    2036,
+    2050
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "出现可显著阻止阿尔茨海默病进展的疗法",
+   "summary": "推演（长寿突破情景）：在症状出现前进行的预防性治疗，可使多数早期发现者长期不发展到痴呆阶段。",
+   "personal_hooks": [
+    "家族里有痴呆病史的人可能从五十岁起定期接受预防治疗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 2,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "现有抗淀粉样蛋白药物只能延缓病程；血液检测使大规模症状前筛查和干预成为可能，是研究的主要方向。",
+   "sources": [
+    "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease",
+    "https://www.who.int/news-room/fact-sheets/detail/dementia"
+   ]
+  },
+  {
+   "id": "xenotransplant_routine",
+   "year": 2036,
+   "year_range": [
+    2031,
+    2045
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "EAS",
+    "WEU"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "基因编辑猪器官移植进入临床常规",
+   "summary": "推演：经基因编辑的猪肾、猪心移植完成临床试验，成为缓解器官短缺的常规选择之一。",
+   "personal_hooks": [
+    "等待肾移植的病人可能不必再苦等好几年。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "2024 年 3 月美国麻省总医院完成全球首例将基因编辑猪肾移植给在世患者的手术，此后多例异种移植进入临床研究。",
+   "sources": [
+    "https://www.massgeneral.org/news/press-release/worlds-first-genetically-edited-pig-kidney-transplant-into-living-recipient",
+    "https://en.wikipedia.org/wiki/Xenotransplantation"
+   ]
+  },
+  {
+   "id": "aging_drug_approved",
+   "year": 2040,
+   "year_range": [
+    2034,
+    2050
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "首个以延缓衰老为目标的药物获批",
+   "summary": "推演（长寿突破情景）：监管机构首次接受「延缓多种衰老相关疾病」作为药物适应症，相关药物开始在中老年人中使用。",
+   "personal_hooks": [
+    "六十岁的人可能被医生建议开始服用一种「延缓衰老」的处方药。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 2,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "TAME 试验旨在检验二甲双胍能否延缓多种衰老相关疾病，以推动将衰老作为药物靶点；XPRIZE 设立 1.01 亿美元的「健康寿命」奖。目前尚无以衰老为适应症的获批药物。",
+   "sources": [
+    "https://www.afar.org/tame-trial",
+    "https://www.xprize.org/prizes/healthspan"
+   ]
+  },
+  {
+   "id": "healthspan_extended",
+   "year": 2060,
+   "year_range": [
+    2050,
+    2075
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "高收入国家健康寿命显著延长",
+   "summary": "推演（长寿突破情景）：癌症、心血管病和痴呆的控制改善叠加衰老干预，高收入国家 80 岁人群的健康状况普遍接近今天的 70 岁人群，退休和养老金制度随之再次调整。",
+   "personal_hooks": [
+    "八十岁还在工作或旅行可能很常见。",
+    "退休年龄和养老金规则可能再次改变。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 2,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "基于 mRNA 肿瘤疫苗、阿尔茨海默病早筛和衰老干预研究等现有进展的长期推演，不确定性很高。",
+   "sources": [
+    "https://ascopost.com/news/august-2026/interpath-001-trial-of-mrna-based-individualized-neoantigen-therapy-meets-primary-and-key-secondary-endpoints-in-patients-with-high-risk-resected-melanoma/",
+    "https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease",
+    "https://www.afar.org/tame-trial"
+   ]
+  },
+  {
+   "id": "cultivated_meat_shelves",
+   "year": 2033,
+   "year_range": [
+    2029,
+    2040
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "NAM",
+    "OCE",
+    "WEU",
+    "WAS"
+   ],
+   "countries": [
+    "SGP",
+    "USA",
+    "AUS",
+    "ISR"
+   ],
+   "category": "society",
+   "title": "细胞培养肉在部分国家超市常规销售",
+   "summary": "推演：细胞培养肉从餐厅限量供应走向部分国家超市常规销售，但价格仍高于普通肉类，一些地区立法禁止或限制销售。",
+   "personal_hooks": [
+    "超市冷柜里可能出现标注「细胞培养」的鸡肉。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "截至 2026 年，新加坡、美国、以色列、澳大利亚等国已批准若干款细胞培养肉或海产品，但均未实现规模化销售。",
+   "sources": [
+    "https://www.foodnavigator.com/Article/2026/02/18/cultivated-meat-regulation-where-countries-stand-in-2026/",
+    "https://gfi.org/cultivated-meat-regulation"
+   ]
+  },
+  {
+   "id": "cultivated_meat_parity",
+   "year": 2045,
+   "year_range": [
+    2038,
+    2060
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "细胞培养肉与传统肉类价格持平",
+   "summary": "推演：生物制造成本下降使培养肉与普通肉类价格相当，在部分国家占据可观的肉类消费份额。",
+   "personal_hooks": [
+    "买肉时可能要在「养殖的」和「培养的」之间做选择。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.35,
+   "basis": "目前获批产品均未规模化，成本是主要障碍；价格持平需要技术与规模的大幅进步，属于低概率推演。",
+   "sources": [
+    "https://www.foodnavigator.com/Article/2026/02/18/cultivated-meat-regulation-where-countries-stand-in-2026/"
+   ]
+  },
+  {
+   "id": "malaria_2030_target_missed",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2031
+   ],
+   "requires": {
+    "health_tech": [
+     "health_steady",
+     "health_stagnation_amr"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "UGA",
+    "ETH",
+    "MOZ"
+   ],
+   "category": "epidemic",
+   "title": "全球疟疾 2030 年目标大概率落空",
+   "summary": "推演：WHO 设定的「2030 年疟疾发病率和死亡率较 2015 年下降至少 90%」目标难以实现，非洲仍承担绝大部分负担，抗疟药耐药成为新的威胁。",
+   "personal_hooks": [
+    "在非洲许多地方，孩子发烧时父母首先担心的仍是疟疾。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "WHO《世界疟疾报告 2025》：2024 年约 2.82 亿病例、61 万死亡，非洲区占病例 94%、死亡 95%，降低死亡率的进展严重偏离轨道，至少 8 个非洲国家确认或疑似出现抗疟药耐药。",
+   "sources": [
+    "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2025",
+    "WHO Global technical strategy for malaria 2016–2030 (2021 update), https://www.who.int/publications/i/item/9789240031357"
+   ]
+  },
+  {
+   "id": "malaria_vaccines_scaled",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [],
+   "category": "epidemic",
+   "title": "疟疾疫苗覆盖非洲多数高负担国家",
+   "summary": "推演：RTS,S 和 R21 疟疾疫苗纳入非洲多数流行国家的常规免疫，配合新型蚊帐和药物，5 岁以下儿童疟疾死亡继续下降。",
+   "personal_hooks": [
+    "婴儿的疫苗接种本上可能多了一栏疟疾疫苗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "WHO 已推荐 RTS,S 和 R21 两种疟疾疫苗，并在多个非洲国家推广（《世界疟疾报告 2025》）。",
+   "sources": [
+    "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2025"
+   ]
+  },
+  {
+   "id": "malaria_eradicated",
+   "year": 2050,
+   "year_range": [
+    2045,
+    2060
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [],
+   "category": "epidemic",
+   "title": "全球消灭疟疾",
+   "summary": "推演（长寿突破情景）：在新疫苗、长效药物、基因驱动等工具和持续资金支持下，最后的流行国家实现消除，WHO 宣布全球消灭疟疾。",
+   "personal_hooks": [
+    "蚊帐可能从「救命必需品」变成普通的生活用品。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 2,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "《柳叶刀》疟疾消灭委员会（2019）认为在 2050 年前消灭疟疾「雄心勃勃但可以实现」；截至 2025 年 7 月，WHO 已认证 47 个国家和 1 个地区无疟疾，格鲁吉亚、苏里南、东帝汶均在 2025 年获认证。",
+   "sources": [
+    "Feachem, R. G. A. et al. (2019) Malaria eradication within a generation: ambitious, achievable, and necessary. The Lancet 394:1056–1112, https://doi.org/10.1016/S0140-6736(19)31139-0",
+    "https://www.who.int/teams/global-malaria-programme/elimination/countries-and-territories-certified-malaria-free-by-who",
+    "https://www.aabb.org/news-resources/news/article/2025/07/25/who-certifies-timor-leste-certified-malaria-free"
+   ]
+  },
+  {
+   "id": "polio_wild_interrupted",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "PAK",
+    "AFG"
+   ],
+   "category": "epidemic",
+   "title": "野生脊灰病毒传播被阻断",
+   "summary": "推演：野生脊灰病毒仅存的两个流行国实现传播阻断，全球进入认证消灭前的观察期。",
+   "personal_hooks": [
+    "车站和边境给孩子滴服脊灰疫苗的场景可能逐渐减少。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "全球消灭脊灰行动（GPEI）战略已延长至 2029 年；野生 1 型脊灰病毒目前仅在巴基斯坦和阿富汗流行。",
+   "sources": [
+    "https://polioeradication.org/",
+    "https://www.who.int/news-room/fact-sheets/detail/poliomyelitis"
+   ]
+  },
+  {
+   "id": "long_acting_prep_scale",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2035
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "ZAF",
+    "KEN",
+    "ZMB",
+    "SWZ",
+    "MOZ",
+    "NGA"
+   ],
+   "category": "epidemic",
+   "title": "长效艾滋病预防针在非洲大规模使用",
+   "summary": "推演：一年两针的来那帕韦预防用药在非洲高负担国家大规模推广，新发 HIV 感染显著下降。",
+   "personal_hooks": [
+    "年轻人可能每半年去诊所打一针来预防艾滋病。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "WHO 于 2025 年将来那帕韦纳入 HIV 预防指南；生产商与全球基金协议在三年内为约 200 万人供药，首批药物于 2025 年 11 月运抵斯威士兰和赞比亚。",
+   "sources": [
+    "https://www.gilead.com/news/news-details/2025/gilead-joins-partners-for-delivery-of-first-shipments-of-breakthrough-twice-yearly-lenacapavir-for-hiv-prevention-to-sub-saharan-africa"
+   ]
+  },
+  {
+   "id": "tb_end_target_assessment",
+   "year": 2035,
+   "year_range": [
+    2035,
+    2036
+   ],
+   "requires": {
+    "health_tech": [
+     "health_steady",
+     "health_stagnation_amr"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SAS",
+    "SSA",
+    "SEA"
+   ],
+   "countries": [
+    "IND",
+    "IDN",
+    "PHL",
+    "PAK",
+    "NGA"
+   ],
+   "category": "epidemic",
+   "title": "结核病 2035 年终止目标难以实现",
+   "summary": "推演：在资金缺口持续的情况下，WHO「终止结核病战略」的 2035 年目标难以全部实现，结核病仍是导致死亡最多的单一传染病之一。",
+   "personal_hooks": [
+    "在一些国家，长期咳嗽仍可能意味着一场需要服药半年以上的治疗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "WHO：2024 年约 1070 万人患结核病、123 万人死亡；2023 年结核病研究资金约 12 亿美元，远低于每年 50 亿美元的目标。",
+   "sources": [
+    "https://www.who.int/news-room/fact-sheets/detail/tuberculosis"
+   ]
+  },
+  {
+   "id": "amr_rising_deaths",
+   "year": 2040,
+   "year_range": [
+    2035,
+    2050
+   ],
+   "requires": {
+    "health_tech": [
+     "health_stagnation_amr"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "SAS",
+    "SSA",
+    "LAC"
+   ],
+   "countries": [],
+   "category": "epidemic",
+   "title": "耐药菌感染成为主要死因之一",
+   "summary": "推演（停滞与耐药情景）：新抗生素研发停滞、感染防控投入不足，常规手术、化疗和分娩的感染风险上升，耐药相关死亡持续增加，南亚与撒哈拉以南非洲受冲击最大。",
+   "personal_hooks": [
+    "一次普通手术后的感染可能变得难以治疗。",
+    "医生开抗生素会更谨慎，有时需要住院使用「最后一线」药物。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "GBD（《柳叶刀》2024）：2021 年细菌耐药直接导致约 114 万人死亡；参考情景下 2050 年直接致死约 191 万、相关约 822 万，2025-2050 年累计直接致死约 3900 万。世界银行估计高耐药情景下 2050 年全球 GDP 可能减少 3.8%。",
+   "sources": [
+    "GBD 2021 Antimicrobial Resistance Collaborators (2024) Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050. The Lancet 404:1199–1226, https://doi.org/10.1016/S0140-6736(24)01867-1",
+    "https://pharmaceutical-journal.com/article/news/almost-40-million-deaths-could-occur-from-amr-over-next-25-years-study-results-suggest",
+    "https://www.worldbank.org/en/topic/health/publication/drug-resistant-infections-a-threat-to-our-economic-future"
+   ]
+  },
+  {
+   "id": "amr_new_antibiotics",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "新类别抗生素与噬菌体疗法遏制耐药上升",
+   "summary": "推演：在新的研发激励机制和 AI 药物发现的推动下，针对多重耐药革兰氏阴性菌的新类别抗生素上市，耐药死亡的上升趋势得到遏制。",
+   "personal_hooks": [
+    "医院可能重新有「新药」可以对付以前束手无策的耐药菌。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "《柳叶刀》2024 年预测研究显示，革兰氏阴性菌新药研发情景可显著减少耐药死亡；2024 年联合国大会耐药问题高级别会议政治宣言提出到 2030 年将耐药相关死亡较 2019 年减少 10% 的目标。",
+   "sources": [
+    "GBD 2021 Antimicrobial Resistance Collaborators (2024) Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050. The Lancet 404:1199–1226, https://doi.org/10.1016/S0140-6736(24)01867-1",
+    "联合国大会抗微生物药物耐药性问题高级别会议政治宣言（2024 年 9 月 26 日，纽约）"
+   ]
+  },
+  {
+   "id": "pandemic_agreement_in_force",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed",
+     "geo_new_cold_war"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "policy",
+   "title": "WHO《大流行协定》生效",
+   "summary": "推演：PABS 附件谈判完成后，《大流行协定》开放签署并获足够国家批准生效，建立病原体共享和疫苗公平分配机制。",
+   "personal_hooks": [
+    "下一次疫情时，疫苗可能更早运到低收入国家。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "WHO 成员国于 2025 年通过《大流行协定》，但开放签署取决于 PABS 附件；2026 年 5 月 1 日政府间工作组同意延长谈判（需经世卫大会批准），成果将提交 2027 年第 80 届世卫大会或 2026 年世卫大会特别会议。",
+   "sources": [
+    "https://www.who.int/news/item/01-05-2026-who-member-states-agree-to-extend-negotiations-on-pathogen-access-and-benefit-sharing-annex"
+   ]
+  },
+  {
+   "id": "universal_flu_vaccine",
+   "year": 2036,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "广谱（通用）流感疫苗获批",
+   "summary": "推演：可覆盖多种流感亚型、保护期更长的广谱流感疫苗获批，降低禽流感等新型流感引发大流行的风险。",
+   "personal_hooks": [
+    "可能不用每年都打流感疫苗了。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "H5N1 禽流感持续在动物中传播并造成散发人类病例（WHO 统计 2003 年至 2026 年 9 月全球 1003 例、479 例死亡），WHO 评估目前未见持续人传人；广谱流感疫苗仍处于研发阶段。",
+   "sources": [
+    "https://cdn.who.int/media/docs/default-source/wpro---documents/emergency/surveillance/avian-influenza/ai_20261002.pdf"
+   ]
+  },
+  {
+   "id": "ai_mental_health_support",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "AI 心理支持工具大规模使用并受到监管",
+   "summary": "推演：聊天式 AI 心理支持在缺少心理医生的地区被大量使用；各国针对其安全性、未成年人使用和危机转介建立规范。",
+   "personal_hooks": [
+    "深夜情绪低落时，有人可能先向 AI 倾诉。",
+    "学校可能教学生分辨 AI 建议和专业帮助的区别。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "WHO 2025 年报告：超过 10 亿人患有精神健康问题，各国政府精神卫生支出中位数仅约占卫生预算 2%；Common Sense Media 2025 年调查显示近四分之三的美国青少年用过 AI 陪伴应用。",
+   "sources": [
+    "https://www.paho.org/en/news/2-9-2025-over-billion-people-living-mental-health-conditions-services-require-urgent-scale",
+    "https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions"
+   ]
+  },
+  {
+   "id": "youth_social_media_limits",
+   "year": 2028,
+   "year_range": [
+    2026,
+    2030
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "OCE",
+    "WEU"
+   ],
+   "countries": [
+    "AUS"
+   ],
+   "category": "policy",
+   "title": "多国实施未成年人社交媒体年龄限制",
+   "summary": "推演：继澳大利亚 2025 年 12 月起禁止 16 岁以下用户拥有主要社交媒体账户后，更多国家推出年龄验证或使用时长限制。",
+   "personal_hooks": [
+    "青少年可能需要通过年龄验证才能注册社交账号。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "澳大利亚社交媒体最低年龄规定于 2025 年 12 月 10 日生效；WHO 2025 年报告显示孤独感在青少年和年轻人中最高。",
+   "sources": [
+    "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
+    "https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death"
+   ]
+  },
+  {
+   "id": "psychedelic_therapy",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2038
+   ],
+   "requires": {
+    "health_tech": [
+     "health_longevity",
+     "health_steady"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "OCE"
+   ],
+   "countries": [],
+   "category": "science",
+   "title": "迷幻药物辅助心理治疗在更多国家获批",
+   "summary": "推演：裸盖菇素等药物辅助的心理治疗在更多国家获批用于难治性抑郁和创伤后应激障碍，但仍受严格管控。",
+   "personal_hooks": [
+    "难治性抑郁患者可能多了一种在医生陪同下进行的治疗选择。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "澳大利亚自 2023 年 7 月起允许经授权的精神科医生处方裸盖菇素和 MDMA；美国 FDA 于 2024 年 8 月未批准 MDMA 辅助疗法申请，显示监管仍不确定。",
+   "sources": [
+    "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists",
+    "https://en.wikipedia.org/wiki/MDMA-assisted_psychotherapy"
+   ]
+  },
+  {
+   "id": "loneliness_public_health",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "WEU",
+    "NAM"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "孤独问题成为主流公共卫生议题",
+   "summary": "推演：更多国家把社会孤立和孤独纳入公共卫生政策，社区食堂、跨代居住和「社交处方」等项目增多。",
+   "personal_hooks": [
+    "社区可能组织「邻里饭桌」，鼓励独居老人和年轻人一起吃饭。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "WHO 社会联系委员会 2025 年报告：全球约六分之一的人感到孤独，孤独每年与超过 87.1 万例死亡相关，低收入国家的孤独比例约为高收入国家的两倍。",
+   "sources": [
+    "https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death"
+   ]
+  },
+  {
+   "id": "ukraine_ceasefire_settlement",
+   "year": 2027,
+   "year_range": [
+    2026,
+    2029
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EEU"
+   ],
+   "countries": [
+    "UKR",
+    "RUS"
+   ],
+   "category": "war",
+   "title": "俄乌战争达成停火与停战安排",
+   "summary": "推演（有管理竞争情景）：经多轮谈判，俄罗斯与乌克兰达成全面停火和较持久的停战安排，附带安全保障和分阶段的制裁调整，但领土等核心争议可能长期悬而未决。",
+   "personal_hooks": [
+    "前线附近的居民可能开始返回家园，但仍需提防地雷和未爆弹药。",
+    "服役的家人可能分批复员回家。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "截至 2026 年 10 月战争仍在持续；美国斡旋的俄乌和谈计划最早于 2026 年 11 月恢复，各方对「先停火还是先达成最终协议」仍有分歧。UCDP 将其列为 2025 年最致命的冲突之一。",
+   "sources": [
+    "https://www.abc.net.au/news/2026-10-24/ukraine-latest/107304160",
+    "https://en.sigmalive.com/putin-says-he-wants-final-ukraine-peace-deal-not-a-short-ceasefire/",
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754"
+   ]
+  },
+  {
+   "id": "ukraine_frozen_conflict",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2031
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EEU"
+   ],
+   "countries": [
+    "UKR",
+    "RUS"
+   ],
+   "category": "conflict",
+   "title": "俄乌冲突冻结为长期军事对峙",
+   "summary": "推演（阵营分裂情景）：大规模战斗停止或明显减弱，但没有签署全面和平协议，沿停火线形成高度军事化的对峙地带，双方及各自阵营持续扩军。",
+   "personal_hooks": [
+    "边境附近的城镇可能长期处于半军事化状态。",
+    "防空演习和兵役登记可能成为生活的一部分。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "截至 2026 年 10 月谈判仍未取得突破；北约成员承诺到 2035 年将 GDP 的 5% 用于国防及相关支出，欧洲 2025 年军费增长 14%。",
+   "sources": [
+    "https://www.abc.net.au/news/2026-10-24/ukraine-latest/107304160",
+    "https://www.osw.waw.pl/en/publikacje/osw-commentary/2025-06-26/nato-summit-hague-trumps-return-and-a-two-component-5-gdp",
+    "https://www.defensenews.com/global/europe/2026/04/27/global-military-spending-surges-and-reaches-record-high/"
+   ]
+  },
+  {
+   "id": "ukraine_war_prolonged",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_escalation"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EEU"
+   ],
+   "countries": [
+    "UKR",
+    "RUS"
+   ],
+   "category": "war",
+   "title": "俄乌战争长期化并时有升级",
+   "summary": "推演（升级情景）：谈判破裂，战争延续到 2030 年代，周边地区的安全局势随之紧张。",
+   "personal_hooks": [
+    "更多家庭可能经历亲人参军、迁徙或长时间停电。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     18,
+     60
+    ]
+   },
+   "migration_push": 2,
+   "prob": 0.6,
+   "basis": "UCDP：2025 年有组织暴力致死约 24.46 万人，为 1994 年以来第二高，国家间冲突连续两年翻倍；PRIO 指出俄乌战争是近年战斗死亡的主要来源之一。",
+   "sources": [
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）"
+   ]
+  },
+  {
+   "id": "ukraine_reconstruction",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2040
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed",
+     "geo_new_cold_war"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EEU"
+   ],
+   "countries": [
+    "UKR"
+   ],
+   "category": "economy",
+   "title": "乌克兰进入大规模重建",
+   "summary": "推演：停火或冲突冻结后，国际资金支持的重建项目启动，涵盖住房、能源和交通基础设施，持续十年以上。",
+   "personal_hooks": [
+    "建筑工人和工程师可能在当地非常抢手。",
+    "部分在海外避难的家庭可能考虑回国。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "世界银行等机构的第四次快速损害与需求评估显示，截至 2024 年 12 月 31 日，乌克兰未来十年的重建与恢复需求约 5240 亿美元。",
+   "sources": [
+    "https://www.worldbank.org/en/news/press-release/2025/02/25/updated-ukraine-recovery-and-reconstruction-needs-assessment-released"
+   ]
+  },
+  {
+   "id": "mideast_settlement",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2031
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WAS"
+   ],
+   "countries": [
+    "IRN",
+    "ISR",
+    "PSE",
+    "LBN",
+    "IRQ",
+    "SYR",
+    "YEM",
+    "SAU",
+    "ARE",
+    "QAT",
+    "KWT",
+    "BHR",
+    "OMN",
+    "JOR"
+   ],
+   "category": "politics",
+   "title": "中东地区冲突达成较全面的安排",
+   "summary": "推演（有管理竞争情景）：围绕伊朗核计划、霍尔木兹海峡航运、黎巴嫩和加沙的问题，经多方调解达成一揽子或分阶段安排，海峡航运恢复正常，部分制裁松动。",
+   "personal_hooks": [
+    "海湾地区的航运和旅游可能逐步恢复。",
+    "油价回落后，各地的油费和取暖费可能下降。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "2026 年 2 月 28 日美国与以色列对伊朗发动打击，伊朗随后打击海湾多国和以色列目标并实际关闭霍尔木兹海峡；4 月达成两周停火，6 月 14 日经巴基斯坦调解达成临时谅解备忘录，但截至 2026 年 10 月核计划、海峡航运和制裁等核心争端仍未解决。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+    "https://www.aa.com.tr/en/energy/general/iea-countries-agree-to-release-historic-400m-barrels-from-strategic-reserves/55418"
+   ]
+  },
+  {
+   "id": "mideast_protracted_tension",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2032
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WAS"
+   ],
+   "countries": [
+    "IRN",
+    "ISR",
+    "PSE",
+    "LBN",
+    "IRQ",
+    "SYR",
+    "YEM",
+    "SAU",
+    "ARE",
+    "QAT",
+    "KWT",
+    "BHR",
+    "OMN",
+    "JOR"
+   ],
+   "category": "conflict",
+   "title": "中东冲突转为长期低烈度对抗",
+   "summary": "推演（阵营分裂情景）：没有再爆发大规模战争，但袭船、无人机与导弹袭击和制裁持续，霍尔木兹海峡航运时断时续，能源价格波动加剧。",
+   "personal_hooks": [
+    "海运保险和油价新闻可能频繁登上头条。",
+    "在海湾国家工作的外籍劳工可能考虑回国。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.6,
+   "basis": "2026 年 6 月临时谅解备忘录达成后，双方互指违约，袭船和水雷事件持续到 10 月；霍尔木兹海峡承载约五分之一的全球石油消费量。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+    "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints"
+   ]
+  },
+  {
+   "id": "mideast_major_war_renewed",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_escalation"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WAS",
+    "NAF"
+   ],
+   "countries": [
+    "IRN",
+    "ISR",
+    "PSE",
+    "LBN",
+    "IRQ",
+    "SYR",
+    "YEM",
+    "SAU",
+    "ARE",
+    "QAT",
+    "KWT",
+    "BHR",
+    "OMN",
+    "JOR"
+   ],
+   "category": "war",
+   "title": "中东再次爆发大规模地区战争",
+   "summary": "推演（升级情景）：停火安排破裂，多国卷入的大规模战争再次爆发，能源设施和航运受到严重冲击，全球出现新一轮能源危机。",
+   "personal_hooks": [
+    "战区附近的居民可能被迫撤离城市。",
+    "世界各地的油价和物价可能迅速上涨。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "prob": 0.5,
+   "basis": "2026 年冲突导致霍尔木兹海峡实际关闭，布伦特原油自 2022 年 8 月以来首次升破每桶 100 美元，IEA 成员国协调释放 4 亿桶战略储备；CFR 援引人权组织数据称伊朗境内平民死亡超过 1700 人，最多约 320 万人流离失所。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+    "https://www.aa.com.tr/en/energy/general/iea-countries-agree-to-release-historic-400m-barrels-from-strategic-reserves/55418",
+    "https://www.outlookbusiness.com/economy-and-policy/brent-crude-crosses-103-as-iea-taps-emergency-reserves-in-historic-move"
+   ]
+  },
+  {
+   "id": "gaza_reconstruction",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed",
+     "geo_new_cold_war"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "WAS"
+   ],
+   "countries": [
+    "PSE"
+   ],
+   "category": "economy",
+   "title": "加沙进入大规模重建阶段",
+   "summary": "推演：停火框架第二阶段落实后，国际资金支持的加沙重建大规模展开，但治理和安全安排仍有争议，进程可能反复。",
+   "personal_hooks": [
+    "许多加沙家庭可能仍在临时住所里等待新房。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "联合国、欧盟和世界银行 2025 年 2 月的临时评估显示，加沙重建与恢复需求约 530 亿美元；2025 年 10 月的停火名义上维持，但截至 2026 年 10 月仍不时发生打击事件，停火第二阶段尚未落实。",
+   "sources": [
+    "https://www.worldbank.org/en/news/press-release/2025/02/18/new-report-assesses-damages-losses-and-needs-in-gaza-and-the-west-bank",
+    "https://www.cfr.org/global-conflict-tracker/conflict/israeli-palestinian-conflict"
+   ]
+  },
+  {
+   "id": "sudan_ceasefire",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2032
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed",
+     "geo_new_cold_war"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "NAF"
+   ],
+   "countries": [
+    "SDN"
+   ],
+   "category": "war",
+   "title": "苏丹内战达成全国性停火",
+   "summary": "推演：在国际调解下，苏丹武装部队与快速支援部队达成全国性停火和过渡安排，人道援助得以全面进入，但地方性暴力仍可能持续。",
+   "personal_hooks": [
+    "逃到邻国的难民家庭可能开始考虑回乡。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 0,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "苏丹内战自 2023 年 4 月持续至今；快速支援部队 2025 年 11 月表示接受美国等调解方提出的人道停火，但武装部队提出附加条件，战斗仍在继续。PRIO 指出 2025 年针对平民的单方面暴力致死约 7.65 万人，为 1994 年以来最高，主要发生在苏丹。",
+   "sources": [
+    "https://www.africanews.com/amp/2025/11/06/sudanese-paramilitary-group-rsf-agrees-to-humanitarian-truce-proposed-by-us-led-mediator/",
+    "https://themedialine.org/mideast-daily-news/truce-on-paper-battles-on-the-ground-as-sudans-warring-sides-clash-again",
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）"
+   ]
+  },
+  {
+   "id": "sudan_protracted_division",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_escalation"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "NAF"
+   ],
+   "countries": [
+    "SDN"
+   ],
+   "category": "war",
+   "title": "苏丹陷入长期分裂与战争",
+   "summary": "推演（升级情景）：苏丹事实上分裂为不同武装控制区，饥荒和流离失所长期化，并波及周边国家。",
+   "personal_hooks": [
+    "一些家庭可能在难民营里度过好几年。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.15,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "prob": 0.55,
+   "basis": "UCDP 与 PRIO 将苏丹列为 2025 年暴力最严重的地区之一，单方面暴力致死创 1994 年以来新高。",
+   "sources": [
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）",
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754"
+   ]
+  },
+  {
+   "id": "myanmar_political_process",
+   "year": 2031,
+   "year_range": [
+    2027,
+    2036
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SEA"
+   ],
+   "countries": [
+    "MMR"
+   ],
+   "category": "politics",
+   "title": "缅甸冲突出现政治解决进程",
+   "summary": "推演（有管理竞争情景）：在区域调解下，缅甸军方与主要民族武装和反对派力量达成停火及政治对话框架，部分流离失所者返回家园。",
+   "personal_hooks": [
+    "在泰缅边境的难民营里，有人可能开始收拾行李回家。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "缅甸自 2021 年政变后陷入内战；军方于 2025 年 12 月至 2026 年 1 月分三阶段举行选举，许多分析人士认为选举不自由、不公正，2026 年初战斗仍在激烈进行；CFR 援引数据称超过 350 万人流离失所。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker/conflict/rohingya-crisis-myanmar",
+    "https://eastasiaforum.org/2026/02/17/myanmar-without-a-path-to-recovery/",
+    "https://www.aljazeera.com/video/newsfeed/2026/1/25/myanmar-holds-final-stage-of-disputed-election-as-rebels-continue-fighting"
+   ]
+  },
+  {
+   "id": "myanmar_fragmented",
+   "year": 2032,
+   "year_range": [
+    2027,
+    2038
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SEA"
+   ],
+   "countries": [
+    "MMR"
+   ],
+   "category": "war",
+   "title": "缅甸长期处于分裂割据状态",
+   "summary": "推演：缅甸各地分别由军方、民族武装和地方力量控制，冲突长期化，经济和公共服务严重受损。",
+   "personal_hooks": [
+    "一些年轻人可能为了躲避征兵或战乱而出国打工。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "prob": 0.6,
+   "basis": "截至 2026 年初，分析认为缅甸冲突仍高度激烈，且看不到明确的和平路径。",
+   "sources": [
+    "https://eastasiaforum.org/2026/02/17/myanmar-without-a-path-to-recovery/",
+    "https://www.cfr.org/global-conflict-tracker/conflict/rohingya-crisis-myanmar"
+   ]
+  },
+  {
+   "id": "drc_east_peace",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "COD"
+   ],
+   "category": "politics",
+   "title": "刚果（金）东部和平协议逐步落实",
+   "summary": "推演（有管理竞争情景）：在已有和平框架基础上，刚果（金）东部停火得到较好遵守，武装团体整编和流离失所者返乡开始。",
+   "personal_hooks": [
+    "北基伍省的农民可能重新回到自己的田地。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "2025 年 6 月刚果（金）与卢旺达在华盛顿签署协议，7 月刚果（金）与 M23 在多哈签署原则宣言、承诺永久停火，但此后北基伍省等地仍有激烈冲突，M23 表示不受华盛顿协议约束。",
+   "sources": [
+    "https://www.aljazeera.com/news/2025/7/19/dr-congo-m23-rebels-sign-deal-in-qatar-to-end-fighting-in-eastern-congo",
+    "https://ipisresearch.be/publication/m23s-territorial-advances-in-june-a-long-path-to-peace-renewed-efforts-to-resolve-the-m23-conflict-in-eastern-congo/"
+   ]
+  },
+  {
+   "id": "drc_east_conflict_persists",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "COD"
+   ],
+   "category": "conflict",
+   "title": "刚果（金）东部冲突长期持续",
+   "summary": "推演：和平框架未能落实，多支武装团体在刚果（金）东部持续争夺土地和矿产资源，人道危机反复。",
+   "personal_hooks": [
+    "一些家庭可能多次被迫离开村庄。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": 0,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.6,
+   "basis": "IPIS 等研究机构记录，2025 年停火协议签署后北基伍省仍有激烈冲突。",
+   "sources": [
+    "https://ipisresearch.be/publication/m23s-territorial-advances-in-june-a-long-path-to-peace-renewed-efforts-to-resolve-the-m23-conflict-in-eastern-congo/",
+    "https://www.cfr.org/global-conflict-tracker"
+   ]
+  },
+  {
+   "id": "sahel_violence_spreads",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "MLI",
+    "BFA",
+    "NER",
+    "BEN",
+    "TGO",
+    "NGA"
+   ],
+   "category": "conflict",
+   "title": "萨赫勒武装冲突向几内亚湾沿岸国家北部蔓延",
+   "summary": "推演：萨赫勒地区武装团体的暴力持续，并更多波及几内亚湾沿岸国家的北部边境地区，造成新的流离失所。",
+   "personal_hooks": [
+    "北部边境地区的学校可能因安全原因长期关闭。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.55,
+   "basis": "CFR 全球冲突追踪将萨赫勒暴力极端主义列为持续冲突；PRIO 指出 2025 年非洲有 34 起非国家冲突（其中尼日利亚 14 起），越来越多国家同时存在多场冲突。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker",
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）"
+   ]
+  },
+  {
+   "id": "tech_bloc_decoupling",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "economy",
+   "title": "芯片、AI 与数据按阵营分裂",
+   "summary": "推演（阵营分裂/升级情景）：主要经济体之间的出口管制、投资审查和数据本地化要求不断扩大，形成两套或多套互不兼容的技术标准和供应链。",
+   "personal_hooks": [
+    "买手机或电脑时可能要考虑它属于哪个「技术阵营」。",
+    "跨国公司的员工可能需要在不同系统之间来回切换。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "IMF（2023）估计贸易碎片化的长期产出损失从全球 GDP 的 0.2% 到 7% 不等，叠加技术脱钩时部分国家损失更大；AI Index 2026 显示 AI 投资高度集中于少数国家。",
+   "sources": [
+    "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2023/01/11/Geo-Economic-Fragmentation-and-the-Future-of-Multilateralism-527266",
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ]
+  },
+  {
+   "id": "nuclear_arms_race",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2038
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "politics",
+   "title": "核军备竞赛加剧，可用核弹头数量继续增加",
+   "summary": "推演：在缺乏具约束力的双边军控条约的情况下，有核国家扩充或更新核武库，多方核竞争取代冷战后期的双边框架。",
+   "personal_hooks": [
+    "新闻里关于核威慑和导弹试验的报道可能明显增多。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "SIPRI 年鉴 2026：2026 年 1 月全球核弹头约 12187 枚，军事库存约 9745 枚，比上年增加约 130 枚；美俄《新削减战略武器条约》于 2026 年 2 月 5 日到期。",
+   "sources": [
+    "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf",
+    "https://www.aljazeera.com/news/2026/2/11/russia-says-it-will-stick-to-limits-of-expired-nuclear-treaty-if-us",
+    "https://www.chathamhouse.org/2026/01/us-and-russias-nuclear-weapons-treaty-set-expire-heres-whats-stake"
+   ]
+  },
+  {
+   "id": "new_arms_control_framework",
+   "year": 2033,
+   "year_range": [
+    2028,
+    2040
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_managed"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "politics",
+   "title": "新的核军控框架达成",
+   "summary": "推演（有管理竞争情景）：主要有核国家达成新的数量限制或透明度安排（可能是多边条约或政治承诺），核风险有所下降。",
+   "personal_hooks": [
+    "报纸上可能出现「新军控条约签署」的头版标题。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "《新削减战略武器条约》到期后，俄方表示只要美方遵守，它也将遵守原条约限额，但尚无正式的后续安排。",
+   "sources": [
+    "https://www.aljazeera.com/news/2026/2/11/russia-says-it-will-stick-to-limits-of-expired-nuclear-treaty-if-us",
+    "https://www.chathamhouse.org/2026/01/us-and-russias-nuclear-weapons-treaty-set-expire-heres-whats-stake"
+   ]
+  },
+  {
+   "id": "europe_rearmament",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2035
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU",
+    "NAM"
+   ],
+   "countries": [],
+   "category": "policy",
+   "title": "欧洲大规模扩军，北约 5% 国防开支目标到期",
+   "summary": "推演：按 2025 年海牙峰会承诺，北约成员到 2035 年每年将 GDP 的 5% 用于国防及相关安全支出（其中核心国防 3.5%）；在阵营分裂或升级情景下多数成员接近目标，国防工业和兵役制度显著扩张。",
+   "personal_hooks": [
+    "欧洲一些国家的年轻人可能面临恢复或扩大的兵役制度。",
+    "军工企业可能成为当地的大雇主。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "SIPRI：2025 年欧洲军费增长 14% 至约 8640 亿美元；北约海牙峰会确定到 2035 年 GDP 5% 的目标（3.5% 核心国防 + 1.5% 相关安全支出）。",
+   "sources": [
+    "https://www.osw.waw.pl/en/publikacje/osw-commentary/2025-06-26/nato-summit-hague-trumps-return-and-a-two-component-5-gdp",
+    "https://www.defensenews.com/global/europe/2026/04/27/global-military-spending-surges-and-reaches-record-high/"
+   ]
+  },
+  {
+   "id": "multiple_regional_wars",
+   "year": 2035,
+   "year_range": [
+    2028,
+    2045
+   ],
+   "requires": {
+    "geopolitics": [
+     "geo_escalation"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WAS",
+    "EEU",
+    "SSA",
+    "NAF"
+   ],
+   "countries": [],
+   "category": "war",
+   "title": "多个地区同时陷入大规模战争",
+   "summary": "推演（升级情景）：东欧、中东和非洲等地同时存在多场高强度战争，全球流离失所人数和军费创历史新高，国际合作机制被严重削弱。",
+   "personal_hooks": [
+    "邻国涌来的难民可能改变一座城市的面貌。",
+    "全球物价和保险费用可能持续上涨。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -2,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.55,
+   "basis": "UCDP：2025 年国家参与的冲突达 65 起，创 1946 年以来新高，国家间冲突连续两年翻倍。",
+   "sources": [
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）"
+   ]
+  },
+  {
+   "id": "sdg_deadline_2030",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2030
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "policy",
+   "title": "联合国可持续发展目标到期",
+   "summary": "2030 年是联合国《2030 年可持续发展议程》的目标年。推演：多数具体目标未能如期实现，各国开始谈判 2030 年后的新全球发展框架。",
+   "personal_hooks": [
+    "新闻里可能出现「后 2030 发展议程」的讨论。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.95,
+   "basis": "联合国《可持续发展目标报告 2025》显示，只有约三分之一的具体目标进展正常或适度，近五分之一出现倒退。",
+   "sources": [
+    "https://unstats.un.org/sdgs/report/2025/"
+   ]
+  },
+  {
+   "id": "artemis3_orbit_test",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "science",
+   "title": "阿尔忒弥斯 3 号近地轨道对接测试",
+   "summary": "按 NASA 2026 年调整后的计划，阿尔忒弥斯 3 号改为在近地轨道测试猎户座飞船与两家商业登月着陆器的交会对接，计划于 2027 年（可能为年末）执行。",
+   "personal_hooks": [
+    "航天迷可能熬夜看直播，为下一次登月做准备。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "阿尔忒弥斯 2 号于 2026 年 4 月 1 日发射、4 月 10 日（美国当地时间）溅落，完成 50 多年来首次载人绕月飞行；NASA 随后调整了阿尔忒弥斯 3 号的任务。",
+   "sources": [
+    "https://newspaceeconomy.ca/2026/04/10/artemis-ii-crew-completes-historic-lunar-flyby-with-successful-pacific-splashdown/",
+    "https://www.theregister.com/2026/05/01/artemis_iii_aims_for_late/",
+    "https://cislunarspace.cn/en/space-news/2026/05/2026-05-13-nasa-artemis-3-plans/"
+   ]
+  },
+  {
+   "id": "us_crewed_lunar_return",
+   "year": 2028,
+   "year_range": [
+    2028,
+    2031
+   ],
+   "requires": {
+    "space": [
+     "space_boom",
+     "space_steady"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "science",
+   "title": "美国宇航员重返月球表面",
+   "summary": "推演：NASA 计划由阿尔忒弥斯 4 号在 2028 年实现阿波罗 17 号以来的首次载人登月，时间表存在推迟风险。",
+   "personal_hooks": [
+    "许多人可能第一次在直播里看到「真正的」登月。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "NASA 计划阿尔忒弥斯 4 号于 2028 年登月；媒体指出两家着陆器供应商能否按期就绪仍有疑问。",
+   "sources": [
+    "https://www.theregister.com/2026/05/01/artemis_iii_aims_for_late/",
+    "https://cislunarspace.cn/en/space-news/2026/05/2026-05-13-nasa-artemis-3-plans/"
+   ]
+  },
+  {
+   "id": "china_crewed_lunar_landing",
+   "year": 2029,
+   "year_range": [
+    2028,
+    2031
+   ],
+   "requires": {
+    "space": [
+     "space_boom",
+     "space_steady"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "science",
+   "title": "中国航天员首次登上月球",
+   "summary": "推演：中国计划在 2030 年前实现载人登月，由两枚长征十号火箭分别发射梦舟飞船和揽月着陆器，在月球轨道对接后登月。",
+   "personal_hooks": [
+    "孩子们可能把「航天员」写进作文里的理想职业。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "2026 年 2 月 11 日长征十号低空飞行试验和梦舟高速逃逸试验成功；中国载人航天工程官方表示主要飞行产品已完成方案研制、正开展初样生产与试验，2026 年计划进行长征十号技术验证飞行。",
+   "sources": [
+    "https://news.cgtn.com/news/2026-02-11/China-conducts-low-altitude-flight-test-for-Long-March-10-rocket-1KFK9b0VBiU/share_amp.html",
+    "https://english.henan.gov.cn/2026/02-27/3329140.html",
+    "https://www.scientificamerican.com/article/how-china-could-still-win-the-new-moon-race"
+   ]
+  },
+  {
+   "id": "iss_retirement",
+   "year": 2031,
+   "year_range": [
+    2030,
+    2032
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "RUS",
+    "JPN",
+    "CAN"
+   ],
+   "category": "science",
+   "title": "国际空间站退役并受控坠入大洋",
+   "summary": "推演：按 NASA 计划，国际空间站约在 2030 年底结束运行，由专用离轨飞行器推动受控再入，近地轨道的科研转由商业空间站和中国空间站等承担。",
+   "personal_hooks": [
+    "夜空中那颗熟悉的「移动亮星」可能从此消失。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "NASA 于 2024 年 6 月选定 SpaceX 研制国际空间站美国离轨飞行器。",
+   "sources": [
+    "https://www.nasa.gov/news-release/nasa-selects-international-space-station-us-deorbit-vehicle/"
+   ]
+  },
+  {
+   "id": "india_first_crewed_flight",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2030
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "science",
+   "title": "印度首次自主载人航天飞行",
+   "summary": "推演：印度「加加尼扬」计划完成首次载人飞行，使印度成为第四个独立将航天员送入太空的国家。",
+   "personal_hooks": [
+    "印度各地的学校可能组织学生观看发射直播。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "加加尼扬计划的首次无人试验飞行（G1）定于 2026 年，降落伞等鉴定试验 2026 年 7 月仍在进行；首次载人飞行目前计划在 2028 年前后，时间表曾多次推迟。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaganyaan"
+   ]
+  },
+  {
+   "id": "india_space_station",
+   "year": 2035,
+   "year_range": [
+    2033,
+    2040
+   ],
+   "requires": {
+    "space": [
+     "space_boom",
+     "space_steady"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "science",
+   "title": "印度空间站建成",
+   "summary": "推演：印度计划 2028 年发射首个舱段，2035 年前后建成印度空间站。",
+   "personal_hooks": [
+    "印度航天员可能在本国空间站里长期驻留。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "印度空间站计划以 2028 年发射首个舱段、2035 年建成为目标，并以 2040 年实现载人登月为长期目标。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bharatiya_Antariksh_Station"
+   ]
+  },
+  {
+   "id": "india_crewed_moon",
+   "year": 2040,
+   "year_range": [
+    2038,
+    2046
+   ],
+   "requires": {
+    "space": [
+     "space_boom",
+     "space_steady"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "science",
+   "title": "印度航天员登上月球",
+   "summary": "推演：印度实现以 2040 年为目标的载人登月。",
+   "personal_hooks": [
+    "印度的孩子们可能在电视上看到本国航天员在月面行走。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "印度空间研究组织的长期目标包括 2040 年实现载人登月。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bharatiya_Antariksh_Station"
+   ]
+  },
+  {
+   "id": "ilrs_basic_complete",
+   "year": 2035,
+   "year_range": [
+    2033,
+    2040
+   ],
+   "requires": {
+    "space": [
+     "space_boom",
+     "space_steady"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "science",
+   "title": "国际月球科研站基本型建成",
+   "summary": "推演：中国主导的国际月球科研站在月球南极地区建成基本型，具备月面、月球轨道和地面支持设施。",
+   "personal_hooks": [
+    "月球上的科研站可能首次传回长期观测数据。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "中国计划 2035 年前建成国际月球科研站基本型，已有 40 多个国际机构签署合作协议。",
+   "sources": [
+    "https://www.leonarddavid.com/china-moon-base-plans-evolve/"
+   ]
+  },
+  {
+   "id": "lunar_base_crewed",
+   "year": 2042,
+   "year_range": [
+    2036,
+    2050
+   ],
+   "requires": {
+    "space": [
+     "space_boom"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "science",
+   "title": "月球南极出现长期有人值守基地",
+   "summary": "推演（太空繁荣情景）：月球南极建成可供航天员连续驻留数月的基地，开展水冰开采和科学研究。",
+   "personal_hooks": [
+    "新闻里可能出现「月球基地轮换班组」的报道，像南极科考站一样。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "中美均有以 2030 年前后载人登月为起点的月球南极基地规划（阿尔忒弥斯计划与国际月球科研站）。",
+   "sources": [
+    "https://www.leonarddavid.com/china-moon-base-plans-evolve/",
+    "https://cislunarspace.cn/en/space-news/2026/05/2026-05-13-nasa-artemis-3-plans/"
+   ]
+  },
+  {
+   "id": "mars_sample_return",
+   "year": 2031,
+   "year_range": [
+    2031,
+    2034
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "science",
+   "title": "火星样本首次被送回地球",
+   "summary": "推演：中国天问三号计划 2028 年前后分两次发射，2031 年将火星样本带回地球，用于寻找可能的生命迹象。",
+   "personal_hooks": [
+    "博物馆里可能首次展出来自火星的岩石样本。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "天问三号计划于 2028 年分两次发射、2031 年 7 月前后返回地球；早期公开信息曾给出 2030 年前后发射，时间可能调整。",
+   "sources": [
+    "https://www.universetoday.com/articles/china-plans-to-retrieve-mars-samples-by-2031"
+   ]
+  },
+  {
+   "id": "starship_mars_uncrewed",
+   "year": 2029,
+   "year_range": [
+    2029,
+    2035
+   ],
+   "requires": {
+    "space": [
+     "space_boom",
+     "space_steady"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA"
+   ],
+   "category": "science",
+   "title": "商业重型飞船首次尝试无人登陆火星",
+   "summary": "推演：SpaceX 星舰在 2028 年底或之后的某个火星发射窗口（约每 26 个月一次）派出无人飞船尝试着陆火星，该计划依赖尚未完全验证的在轨推进剂加注技术。",
+   "personal_hooks": [
+    "网上可能直播一艘巨型飞船在火星着陆的画面。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "SpaceX 曾计划利用 2026 年底的发射窗口进行首次无人火星飞行，但据报道其于 2026 年 2 月告知投资者推迟火星任务、优先执行 NASA 登月任务；在轨推进剂加注尚未验证，《科学美国人》等认为现有时间表缺乏完整方案。",
+   "sources": [
+    "https://www.aa.com.tr/en/science-technology/elon-musks-spacex-postpones-mars-mission-to-prioritize-lunar-voyage-report/3823636",
+    "https://www.scientificamerican.com/article/trump-wants-to-go-to-mars-thats-not-happening/"
+   ]
+  },
+  {
+   "id": "crewed_mars_landing_boom",
+   "year": 2040,
+   "year_range": [
+    2035,
+    2048
+   ],
+   "requires": {
+    "space": [
+     "space_boom"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "人类首次登陆火星",
+   "summary": "推演（太空繁荣情景）：在重型可复用火箭和在轨加注技术成熟后，人类在 2040 年前后首次登陆火星。",
+   "personal_hooks": [
+    "全世界可能有数十亿人同时观看第一个人踏上火星。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "SpaceX 公开计划在无人着陆成功后安排载人任务，但 2026 年已将火星任务让位于登月任务；NASA 与中国均将载人火星列为长期目标，时间表普遍被认为不确定。",
+   "sources": [
+    "https://www.aa.com.tr/en/science-technology/elon-musks-spacex-postpones-mars-mission-to-prioritize-lunar-voyage-report/3823636",
+    "https://www.scientificamerican.com/article/trump-wants-to-go-to-mars-thats-not-happening/"
+   ]
+  },
+  {
+   "id": "crewed_mars_landing_steady",
+   "year": 2050,
+   "year_range": [
+    2042,
+    2060
+   ],
+   "requires": {
+    "space": [
+     "space_steady"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "人类首次登陆火星（稳步推进情景）",
+   "summary": "推演（稳步推进情景）：载人火星任务在月球基地经验积累后实施，首次登陆推迟到本世纪中叶前后。",
+   "personal_hooks": [
+    "很多人可能会说：「小时候就听说要去火星，终于实现了。」"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "现有载人火星时间表被普遍认为过于乐观，稳步推进情景下取较晚时间。",
+   "sources": [
+    "https://www.scientificamerican.com/article/trump-wants-to-go-to-mars-thats-not-happening/"
+   ]
+  },
+  {
+   "id": "deep_space_delays",
+   "year": 2032,
+   "year_range": [
+    2029,
+    2036
+   ],
+   "requires": {
+    "space": [
+     "space_stall"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "science",
+   "title": "载人深空计划因预算和事故大幅推迟",
+   "summary": "推演（太空停滞情景）：财政压力、技术挫折或事故导致月球基地和火星计划大幅推迟，太空活动以通信、导航和遥感卫星为主。",
+   "personal_hooks": [
+    "航天新闻可能更多关于卫星互联网，而不是登月和火星。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "阿尔忒弥斯 3 号任务在 2026 年由登月改为近地轨道测试，说明大型深空计划存在推迟风险。",
+   "sources": [
+    "https://www.theregister.com/2026/05/01/artemis_iii_aims_for_late/",
+    "https://www.scientificamerican.com/article/trump-wants-to-go-to-mars-thats-not-happening/"
+   ]
+  },
+  {
+   "id": "total_eclipse_2027",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2027
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "NAF",
+    "WAS",
+    "WEU"
+   ],
+   "countries": [
+    "ESP",
+    "MAR",
+    "DZA",
+    "TUN",
+    "LBY",
+    "EGY",
+    "SDN",
+    "SAU",
+    "YEM",
+    "SOM"
+   ],
+   "category": "culture",
+   "title": "横贯北非与中东的长时日全食",
+   "summary": "2027 年 8 月 2 日将发生一次日全食，全食带经过西班牙南部、北非、阿拉伯半岛和非洲之角，埃及卢克索附近全食持续超过 6 分钟，是本世纪陆地上可见时间最长的日全食之一。",
+   "personal_hooks": [
+    "许多人可能专程前往埃及或西班牙南部，看白天突然变成黑夜。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.99,
+   "basis": "NASA 日食预报。",
+   "sources": [
+    "https://eclipse.gsfc.nasa.gov/SEgoogle/SEgoogle2001/SE2027Aug02Tgoogle.html"
+   ]
+  },
+  {
+   "id": "apophis_flyby",
+   "year": 2029,
+   "year_range": [
+    2029,
+    2029
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "小行星阿波菲斯近距离掠过地球",
+   "summary": "2029 年 4 月 13 日，直径约 340 米的小行星阿波菲斯将从距地表约 3.2 万公里处掠过，比地球同步卫星轨道还近，在东半球部分地区肉眼可见。NASA 已排除其在至少未来 100 年内撞击地球的可能。",
+   "personal_hooks": [
+    "夜空中可能出现一个缓慢移动的光点，那是一颗小行星。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.99,
+   "basis": "NASA 行星防御资料。",
+   "sources": [
+    "https://science.nasa.gov/solar-system/asteroids/apophis/"
+   ]
+  },
+  {
+   "id": "halley_comet_return",
+   "year": 2061,
+   "year_range": [
+    2061,
+    2061
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "title": "哈雷彗星回归",
+   "summary": "哈雷彗星预计于 2061 年 7 月下旬过近日点，届时观测条件比 1986 年更好，肉眼可见。",
+   "personal_hooks": [
+    "年长的人可能对孙辈说：「这是我这辈子第二次看到它。」"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.99,
+   "basis": "哈雷彗星约每 76 年回归一次，上次过近日点为 1986 年。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Halley%27s_Comet"
+   ]
+  },
+  {
+   "id": "olympics_la_2028",
+   "year": 2028,
+   "year_range": [
+    2028,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "sport",
+   "title": "洛杉矶夏季奥运会",
+   "summary": "第 34 届夏季奥运会计划于 2028 年 7 月 14 日至 30 日在美国洛杉矶举行，洛杉矶第三次举办夏季奥运会。",
+   "personal_hooks": [
+    "全家人可能围在屏幕前为本国选手加油。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.97,
+   "basis": "国际奥委会已确定的赛事安排。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2028_Summer_Olympics"
+   ]
+  },
+  {
+   "id": "world_cup_2030",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2030
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WEU",
+    "NAF",
+    "LAC"
+   ],
+   "countries": [
+    "ESP",
+    "PRT",
+    "MAR",
+    "URY",
+    "ARG",
+    "PRY"
+   ],
+   "category": "sport",
+   "title": "世界杯百年庆典赛事",
+   "summary": "2030 年国际足联世界杯计划由西班牙、葡萄牙和摩洛哥联合举办，并在乌拉圭、阿根廷和巴拉圭举行三场百年纪念揭幕赛，横跨三大洲。",
+   "personal_hooks": [
+    "球迷可能在深夜聚在一起看比赛。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.95,
+   "basis": "国际足联已确定的主办安排。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup"
+   ]
+  },
+  {
+   "id": "olympics_brisbane_2032",
+   "year": 2032,
+   "year_range": [
+    2032,
+    2032
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "OCE"
+   ],
+   "countries": [
+    "AUS"
+   ],
+   "category": "sport",
+   "title": "布里斯班夏季奥运会",
+   "summary": "第 35 届夏季奥运会计划于 2032 年 7 月至 8 月在澳大利亚布里斯班举行。",
+   "personal_hooks": [
+    "许多人可能在电视上看到南半球冬季举办的奥运会。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.95,
+   "basis": "国际奥委会已确定的主办城市。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2032_Summer_Olympics"
+   ]
+  },
+  {
+   "id": "world_cup_2034",
+   "year": 2034,
+   "year_range": [
+    2034,
+    2034
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WAS"
+   ],
+   "countries": [
+    "SAU"
+   ],
+   "category": "sport",
+   "title": "沙特阿拉伯世界杯",
+   "summary": "2034 年国际足联世界杯计划由沙特阿拉伯主办。",
+   "personal_hooks": [
+    "球迷可能讨论比赛是否会因炎热天气调整到冬季举行。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.93,
+   "basis": "国际足联于 2024 年确定的主办安排。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2034_FIFA_World_Cup"
+   ]
+  },
+  {
+   "id": "cashless_daily_life",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "数字支付成为多数人的日常支付方式",
+   "summary": "推演：手机支付、实时转账和数字身份在中低收入国家快速普及，现金使用在多数国家明显减少，但各国仍保留现金以照顾老人和偏远地区居民。",
+   "personal_hooks": [
+    "出门不带钱包可能成为常态。",
+    "教长辈用手机付款可能成了家里的新话题。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "世界银行《全球普惠金融指数 2025》：2024 年全球 79% 的成年人拥有金融账户。",
+   "sources": [
+    "https://www.worldbank.org/en/publication/globalfindex"
+   ]
+  },
+  {
+   "id": "hybrid_work_norm",
+   "year": 2028,
+   "year_range": [
+    2026,
+    2032
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "OCE",
+    "EAS"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "混合办公在知识型岗位中长期化",
+   "summary": "推演：在高收入国家，约四分之一的工作日在家完成成为稳定常态，通勤高峰、写字楼需求和城市布局相应调整。",
+   "personal_hooks": [
+    "每周可能有一两天不用挤地铁上班。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "Buckman、Barrero、Bloom、Davis（2025）估计 2025 年美国 20-64 岁人群约四分之一的带薪工作日在家完成。",
+   "sources": [
+    "Buckman, Barrero, Bloom, Davis (2025) Measuring Work from Home, https://wfhresearch.com/wp-content/uploads/2025/02/NBERWP.pdf"
+   ]
+  },
+  {
+   "id": "four_day_week_spreads",
+   "year": 2036,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "OCE",
+    "EAS",
+    "NAM"
+   ],
+   "countries": [],
+   "category": "society",
+   "title": "四天工作制在部分国家和行业推广",
+   "summary": "推演：在 AI 提高生产率的背景下，部分国家和行业推广每周四天工作制或更灵活的工时安排。",
+   "personal_hooks": [
+    "周末可能从两天变成三天。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "英国 2022 年四天工作制试点中 61 家企业有 56 家在试点后继续实行；AI Index 2026 记录了 AI 在多类任务中的生产率提升。",
+   "sources": [
+    "https://autonomy.work/portfolio/uk4dwpilotresults/",
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+   ]
+  },
+  {
+   "id": "midcareer_retraining",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2036
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "职业中途再培训成为普遍经历",
+   "summary": "推演：多数劳动者在职业生涯中至少经历一次系统性的再培训，政府和企业资助的技能账户与短期证书课程普及。",
+   "personal_hooks": [
+    "三十多岁回到课堂学新技能可能再平常不过。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "世界经济论坛《2025 年未来就业报告》预计 2025-2030 年全球新增约 1.7 亿个岗位、减少约 9200 万个，劳动者约 39% 的核心技能将发生变化。",
+   "sources": [
+    "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/"
+   ]
+  },
+  {
+   "id": "ai_companions_mainstream",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "AI 陪伴成为普遍现象",
+   "summary": "推演：以聊天、语音和虚拟形象为载体的 AI 陪伴服务被各年龄层广泛使用，引发关于情感依赖、未成年人保护和孤独问题的社会讨论。",
+   "personal_hooks": [
+    "有人和 AI 伙伴聊天的时间可能比和家人聊天还多。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "Common Sense Media 2025 年调查显示近四分之三的美国青少年用过 AI 陪伴应用、约一半经常使用；WHO 估计全球约六分之一的人感到孤独。",
+   "sources": [
+    "https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions",
+    "https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death"
+   ]
+  },
+  {
+   "id": "realtime_translation",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2032
+   ],
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "title": "实时 AI 翻译大幅降低语言障碍",
+   "summary": "推演：耳机、眼镜和手机上的实时语音翻译足够准确流畅，出国旅行、跨国工作和移民生活中的语言门槛明显降低。",
+   "personal_hooks": [
+    "出国旅游时，戴上耳机就可能和当地人聊上天。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "AI Index 2026：生成式 AI 在三年内达到约 53% 的人口层面采用率；《国际 AI 安全报告 2026》记录了语言和推理能力的快速进步。",
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+   ]
+  }
+ ],
+ "random_shocks": [
+  {
+   "id": "pandemic_covid_scale",
+   "title": "新的全球大流行（新冠级别）",
+   "annual_prob": 0.015,
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "category": "epidemic",
+   "summary": "一种新的呼吸道病原体在全球传播，各国出现封控、停课、医疗挤兑和经济衰退，疫苗在约一年内问世。",
+   "personal_hooks": [
+    "学校可能改为网课，家人分隔两地无法团聚。",
+    "部分行业停摆，有人失业，有人转行做线上工作。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     50,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "duration_years": 2,
+   "basis": "Marani 等（2021）估计新冠级别强度疫情的平均重现期约 59 年（年概率约 1.7%），一生遭遇概率约 38%，若新发疾病出现加快可能翻倍；考虑到 mRNA 等快速疫苗平台，取略低的 1.5%/年。WHO 估计新冠在 2020-2021 年造成约 1490 万超额死亡，据此设定老年人死亡率倍数。引擎可在「停滞与耐药」分支下适当上调。",
+   "sources": [
+    "Marani, M. et al. (2021) Intensity and frequency of extreme novel epidemics. PNAS 118(35), https://pmc.ncbi.nlm.nih.gov/articles/PMC8536331",
+    "https://www.who.int/news/item/05-05-2022-14.9-million-excess-deaths-were-associated-with-the-covid-19-pandemic-in-2020-and-2021"
+   ]
+  },
+  {
+   "id": "pandemic_severe",
+   "title": "严重大流行（1918 年流感级别）",
+   "annual_prob": 0.0025,
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "category": "epidemic",
+   "summary": "一种传播力强、致死率高的新病原体引发的大流行，各年龄段死亡率明显上升，社会和经济受到长期冲击。",
+   "personal_hooks": [
+    "几乎每个家庭都可能有亲友患病或去世。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -2,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.3,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "duration_years": 2,
+   "basis": "Marani 等（2021）基于 1600 年以来的数据估计，西班牙流感强度事件的年概率在 0.27%-1.9% 之间波动，按当前发生率平均重现期约 400 年（约 0.25%/年），若新发疾病出现速度提高三倍可缩短至约 127 年；取 0.25%/年。",
+   "sources": [
+    "Marani, M. et al. (2021) Intensity and frequency of extreme novel epidemics. PNAS 118(35), https://pmc.ncbi.nlm.nih.gov/articles/PMC8536331"
+   ]
+  },
+  {
+   "id": "regional_epidemic",
+   "title": "地区性重大疫情",
+   "annual_prob": 0.06,
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "SAS",
+    "SEA",
+    "LAC",
+    "NAF",
+    "WAS"
+   ],
+   "category": "epidemic",
+   "summary": "埃博拉、猴痘、霍乱、登革热或新型流感等疫情在所在地区暴发，WHO 可能宣布「国际关注的突发公共卫生事件」。",
+   "personal_hooks": [
+    "当地可能要求在公共场所洗手、测体温，部分学校短期停课。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.01,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "2009-2024 年 WHO 共宣布 8 次国际关注的突发公共卫生事件，平均约每两年一次，通常集中影响部分地区；对单个地区取 6%/年。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Public_health_emergency_of_international_concern"
+   ]
+  },
+  {
+   "id": "ai_systemic_incident",
+   "title": "重大 AI 相关事故或滥用事件",
+   "annual_prob": 0.03,
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_transformative"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "category": "technology",
+   "summary": "AI 系统引发的大规模事故或滥用事件，例如 AI 辅助的网络攻击、大规模深度伪造诈骗或自动化交易引发的市场闪崩，促使各国紧急收紧监管。",
+   "personal_hooks": [
+    "身边可能有人接到以假乱真的「亲人求救电话」被骗。",
+    "一些 AI 服务可能被暂停或要求重新审核。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "《国际 AI 安全报告 2026》记录了 AI 被用于诈骗、网络攻击和舆论操纵的案例，并指出安全保障落后于能力进步；2010 年美股「闪电崩盘」说明自动化系统可在几分钟内引发市场剧烈波动。概率为基于先例的游戏设定估计。",
+   "sources": [
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/",
+    "https://en.wikipedia.org/wiki/2010_flash_crash"
+   ]
+  },
+  {
+   "id": "ai_investment_bust",
+   "title": "AI 投资泡沫破裂",
+   "annual_prob": 0.04,
+   "requires": {
+    "ai": [
+     "ai_gradual",
+     "ai_plateau"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "category": "economy",
+   "summary": "AI 相关公司收入增长不及预期，科技股和数据中心资产价格暴跌，引发企业裁员和投资收缩。",
+   "personal_hooks": [
+    "持有科技股或基金的人可能看到账户大幅缩水。",
+    "科技行业可能出现一波裁员潮。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "duration_years": 2,
+   "basis": "AI Index 2026：2025 年全球企业 AI 投资约 5817 亿美元、同比增长约 130%，但宏观生产率证据仍不一致；2000-2002 年互联网泡沫破裂是同类先例。",
+   "sources": [
+    "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+    "https://en.wikipedia.org/wiki/Dot-com_bubble"
+   ]
+  },
+  {
+   "id": "cyber_infrastructure_attack",
+   "title": "大规模网络攻击导致关键基础设施瘫痪",
+   "annual_prob": 0.03,
+   "requires": {},
+   "scope": "countries",
+   "regions": [],
+   "category": "technology",
+   "summary": "针对电网、医院、油气管道或支付系统的网络攻击（或大规模系统故障）导致所在国家部分服务中断数天。",
+   "personal_hooks": [
+    "可能遇到停电、加油站排长队或医院系统暂停挂号。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "先例包括 2017 年 NotPetya 恶意软件攻击、2021 年美国 Colonial 输油管道勒索软件攻击，以及 2024 年因软件更新错误导致的全球大规模 IT 故障；《国际 AI 安全报告 2026》指出 AI 正被用于网络攻击。按单个国家每年约 3% 设定。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2017_Ukraine_ransomware_attacks",
+    "https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack",
+    "https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages",
+    "International AI Safety Report 2026（2026-02-03 发布）, https://internationalaisafetyreport.org/"
+   ]
+  },
+  {
+   "id": "extreme_solar_storm",
+   "title": "卡林顿级极端太阳风暴",
+   "annual_prob": 0.004,
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "category": "disaster",
+   "summary": "一次极端地磁暴损坏部分卫星、变压器和通信设施，多地出现停电、导航和通信中断。",
+   "personal_hooks": [
+    "夜空中可能出现罕见的极光，第二天却发现停电、手机没信号。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": -2
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "Moriña 等（2019）估计未来十年发生卡林顿级或更强地磁暴的概率为 0.46%-1.88%，Riley（2012）的早期估计约为每十年 12%；取 0.4%/年。2024 年 5 月发生 2003 年以来最强的地磁暴。",
+   "sources": [
+    "Moriña, D., Serra, I., Puig, P., Corral, Á. (2019) Probability estimation of a Carrington-like geomagnetic storm. Scientific Reports, https://diposit.ub.edu/dspace/handle/2445/171594",
+    "Riley, P. (2012) On the probability of occurrence of extreme space weather events. Space Weather 10, S02012",
+    "https://en.wikipedia.org/wiki/May_2024_solar_storms"
+   ]
+  },
+  {
+   "id": "maritime_chokepoint_crisis",
+   "title": "关键海峡航运中断引发能源危机",
+   "annual_prob": 0.03,
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "category": "economy",
+   "summary": "地区冲突导致重要海峡或航道的航运中断，油气价格飙升，全球物价和运费上涨。",
+   "personal_hooks": [
+    "加油、取暖和网购运费可能突然变贵。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "2026 年霍尔木兹海峡实际关闭后，布伦特原油升破每桶 100 美元，IEA 成员国协调释放 4 亿桶战略储备；该海峡承载约五分之一的全球石油消费量。在阵营分裂和升级情景下设定为 3%/年。",
+   "sources": [
+    "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints",
+    "https://www.aa.com.tr/en/energy/general/iea-countries-agree-to-release-historic-400m-barrels-from-strategic-reserves/55418",
+    "https://www.outlookbusiness.com/economy-and-policy/brent-crude-crosses-103-as-iea-taps-emergency-reserves-in-historic-move"
+   ]
+  },
+  {
+   "id": "great_power_standoff",
+   "title": "大国军事对峙危机",
+   "annual_prob": 0.02,
+   "requires": {
+    "geopolitics": [
+     "geo_new_cold_war",
+     "geo_escalation"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "category": "politics",
+   "summary": "两个阵营之间出现严重的军事对峙（如封锁、拦截或核力量戒备升级），持续数周，全球市场剧烈波动，最终以谈判或降级收场。",
+   "personal_hooks": [
+    "新闻可能连续几周报道局势，很多人囤积生活物资。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "SIPRI 记录全球军费连续 11 年增长、可用核弹头数量回升，美俄《新削减战略武器条约》2026 年到期；UCDP 记录国家间冲突连续两年翻倍。概率为游戏设定估计。",
+   "sources": [
+    "https://www.defensenews.com/global/europe/2026/04/27/global-military-spending-surges-and-reaches-record-high/",
+    "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf",
+    "https://www.aljazeera.com/news/2026/2/11/russia-says-it-will-stick-to-limits-of-expired-nuclear-treaty-if-us",
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754"
+   ]
+  },
+  {
+   "id": "war_onset_west_asia_north_africa",
+   "title": "西亚北非地区爆发新的战争",
+   "annual_prob": 0.02,
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "WAS",
+    "NAF"
+   ],
+   "category": "war",
+   "summary": "所在国家或邻近地区爆发新的武装冲突，部分城市遭到空袭或交战，大量居民被迫迁移。",
+   "personal_hooks": [
+    "家人可能需要决定是留下还是逃往其他城市或国家。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "duration_years": 3,
+   "basis": "UCDP：2025 年国家参与的冲突达 65 起、创历史新高，西亚北非是冲突最集中的地区之一（以色列同时卷入 2 起国内和 3 起国际冲突）；2026 年又爆发了美以与伊朗的战争。按单个国家每年约 2% 设定，地缘政治分支的 conflict_risk_add 在此基础上叠加。",
+   "sources": [
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）",
+    "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran"
+   ]
+  },
+  {
+   "id": "war_onset_sub_saharan_africa",
+   "title": "撒哈拉以南非洲爆发新的武装冲突",
+   "annual_prob": 0.02,
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "category": "war",
+   "summary": "所在国家爆发新的内战、叛乱或跨境冲突，农业和学校受到严重影响。",
+   "personal_hooks": [
+    "村里的学校可能停课，家人可能前往难民营或城市避难。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "duration_years": 3,
+   "basis": "PRIO 指出 2025 年非洲有 34 起非国家冲突，CFR 追踪的撒哈拉以南非洲持续冲突包括苏丹、埃塞俄比亚、刚果（金）、索马里、南苏丹、中非共和国和萨赫勒地区。按单个国家每年约 2% 设定。",
+   "sources": [
+    "Rustad, S. A. (2026) Conflict Trends: A Global Overview 1946–2025, PRIO（转载: https://www.transcend.org/tms/2026/06/conflict-trends-a-global-overview-1946-2025/）",
+    "https://www.cfr.org/global-conflict-tracker"
+   ]
+  },
+  {
+   "id": "war_onset_europe_eurasia",
+   "title": "东欧与中亚地区爆发新的武装冲突",
+   "annual_prob": 0.005,
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EEU",
+    "CAS"
+   ],
+   "category": "war",
+   "summary": "所在地区爆发新的武装冲突或现有冲突大幅扩大，引发动员、难民潮和能源供应中断。",
+   "personal_hooks": [
+    "可能接到动员或兵役通知，也可能需要收拾行李离开家乡。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -2,
+    "safety": -3,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.06,
+    "ages": [
+     15,
+     65
+    ]
+   },
+   "migration_push": 2,
+   "duration_years": 3,
+   "basis": "2022 年起的俄乌战争是近年欧洲最大规模的战争；CFR 将亚美尼亚与阿塞拜疆紧张局势列为持续关注的冲突。该地区新冲突的基础概率低于中东和非洲，取 0.5%/年，并由地缘政治分支修正。",
+   "sources": [
+    "https://academic.oup.com/jpr/advance-article/doi/10.1093/jopres/xjag046/8703754",
+    "https://www.cfr.org/global-conflict-tracker"
+   ]
+  },
+  {
+   "id": "war_onset_asia",
+   "title": "亚洲地区爆发武装冲突",
+   "annual_prob": 0.004,
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SAS",
+    "EAS",
+    "SEA"
+   ],
+   "category": "war",
+   "summary": "所在地区发生边境武装冲突或国内武装冲突升级，通常持续数天到数月，部分地区实行戒严或撤离。",
+   "personal_hooks": [
+    "边境地区的居民可能听到防空警报，被要求进入避难所。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.02,
+    "ages": [
+     15,
+     65
+    ]
+   },
+   "migration_push": 1,
+   "duration_years": 1,
+   "basis": "CFR 全球冲突追踪在亚洲列出多项持续冲突或对峙（包括缅甸内战等）；按单个国家每年约 0.4% 设定，仅为地区层面的基础概率，不针对任何具体国家。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker",
+    "https://www.cfr.org/global-conflict-tracker/conflict/rohingya-crisis-myanmar"
+   ]
+  },
+  {
+   "id": "crisis_latin_america",
+   "title": "拉美地区严重武装暴力或国家危机",
+   "annual_prob": 0.006,
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "LAC"
+   ],
+   "category": "conflict",
+   "summary": "所在国家出现严重的有组织犯罪暴力升级、外部军事行动或政治危机，部分地区实行紧急状态。",
+   "personal_hooks": [
+    "晚上出门可能要格外小心，一些亲友可能考虑移民。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     15,
+     50
+    ]
+   },
+   "migration_push": 2,
+   "duration_years": 2,
+   "basis": "CFR 追踪的拉美持续冲突包括海地与墨西哥的有组织犯罪暴力和委内瑞拉局势；2026 年 1 月美国对委内瑞拉采取了军事行动。按单个国家每年约 0.6% 设定。",
+   "sources": [
+    "https://www.cfr.org/global-conflict-tracker",
+    "https://www.opb.org/article/2026/01/03/photos-aftermath-of-strikes-in-venezuela"
+   ]
+  },
+  {
+   "id": "orbital_debris_crisis",
+   "title": "重大在轨碰撞引发太空碎片危机",
+   "annual_prob": 0.004,
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "category": "technology",
+   "summary": "卫星碰撞或反卫星试验产生大量碎片，引发连锁碰撞，部分通信、导航和遥感卫星失效，卫星互联网服务中断。",
+   "personal_hooks": [
+    "卫星导航和卫星电视可能出现长时间故障。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "duration_years": 2,
+   "basis": "2009 年铱星 33 号与宇宙 2251 号卫星相撞产生大量碎片；2026 年在轨星链卫星已超过 1 万颗，2025 年全球轨道发射约 324 次，轨道日益拥挤（凯斯勒效应风险）。概率为游戏设定估计。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2009_satellite_collision",
+    "https://en.wikipedia.org/wiki/Kessler_syndrome",
+    "https://planet4589.org/space/con/star/stats.html",
+    "https://aiaa.org/2026/01/05/spacex-and-china-power-record-breaking-year-for-orbital-launches/"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5687 @@
+{
+ "file": "history_global_2000_2012",
+ "events": [
+  {
+   "id": "second_congo_war_2000",
+   "start": "1998-08-02",
+   "end": "2003-07-18",
+   "year": 2000,
+   "end_year": 2003,
+   "scope": "countries",
+   "countries": [
+    "COD"
+   ],
+   "category": "war",
+   "title": "第二次刚果战争",
+   "summary": "第二次刚果战争始于1998年，先后卷入九个非洲国家和约25个武装团体，是二战后死亡人数最多的冲突之一。2002年各方签署和平协议，2003年7月过渡政府成立，战争正式结束，但东部地区的武装冲突此后持续多年。国际救援委员会估计这场战争及其后果造成约540万人超额死亡，多数死于疾病和营养不良，该估计在学界存在争议。",
+   "personal_hooks": [
+    "东部农村家庭可能多次逃离村庄，失去农田和牲畜。",
+    "医疗和学校服务在许多地区中断，儿童容易死于疟疾和腹泻等可防治疾病。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -2,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.2,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Congo_War",
+    "https://en.wikipedia.org/wiki/International_Rescue_Committee",
+    "https://en.wikipedia.org/wiki/Human_Security_Report_Project"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "angola_war_end_2002",
+   "start": "2000",
+   "end": "2002-04-04",
+   "year": 2000,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "AGO"
+   ],
+   "category": "war",
+   "title": "安哥拉内战结束",
+   "summary": "安哥拉内战自1975年独立后断续进行，1998年后再度激化。2002年2月争取安哥拉彻底独立全国联盟（安盟）领导人萨文比阵亡，同年4月双方签署停火协议，长达27年的内战结束。战后安哥拉凭借石油出口实现高速增长，但遍布的地雷和大量流离失所者问题长期存在。",
+   "personal_hooks": [
+    "战争结束后，许多家庭从城市周边的难民聚居区返回农村。",
+    "农民耕种时需要警惕战争遗留的地雷。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -1,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Angolan_Civil_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "broadband_internet_2000s",
+   "start": "2000",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "KOR",
+    "JPN",
+    "USA",
+    "SWE",
+    "NLD",
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "宽带互联网普及",
+   "summary": "2000年代，ADSL、有线电视网络和光纤等宽带接入方式逐步取代拨号上网，韩国、日本和北欧国家率先普及高速宽带。全球互联网用户从2000年的不到5亿增至2012年的20多亿，但城乡之间以及富国与穷国之间的「数字鸿沟」依然明显。",
+   "personal_hooks": [
+    "家里不再需要占用电话线拨号上网，看视频、玩网络游戏变得流畅。",
+    "网吧成为许多年轻人上网和娱乐的场所。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+    "https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx",
+    "https://en.wikipedia.org/wiki/Internet_in_South_Korea"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_internet_growth",
+   "start": "2000",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "中国互联网快速普及",
+   "summary": "据中国互联网络信息中心（CNNIC）统计，中国网民从2000年底的约2,250万人增至2012年底的5.64亿人，2008年起中国成为全球网民最多的国家。即时通讯、搜索引擎、网络游戏和网络购物等本土互联网服务逐步融入日常生活，网吧一度是许多年轻人上网的主要场所。",
+   "personal_hooks": [
+    "许多人在网吧或学校机房第一次上网，申请了自己的第一个聊天账号。",
+    "到2012年，越来越多的人主要通过手机上网。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Internet_in_China",
+    "中国互联网络信息中心（CNNIC）：《第31次中国互联网络发展状况统计报告》，2013年1月",
+    "https://data.worldbank.org/indicator/IT.NET.USER.ZS"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_urbanization_2000s",
+   "start": "2000",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "title": "中国快速城镇化与农民工大潮",
+   "summary": "2000年代，数以亿计的农村劳动力进入城市和沿海地区务工，中国城镇化率快速上升，2011年城镇人口首次超过总人口的一半。据国家统计局数据，2012年全国农民工总量约2.6亿人。由于户籍制度的限制，许多农民工在子女入学、医疗和社会保障等方面难以享受与城镇户籍居民相同的待遇，大量儿童成为农村留守儿童。",
+   "personal_hooks": [
+    "每年春节前后，大批外出务工人员挤火车、坐长途汽车返乡和返城。",
+    "许多孩子由祖父母在农村抚养，父母一年只回家一两次。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://zh.wikipedia.org/wiki/中华人民共和国城市化",
+    "https://zh.wikipedia.org/wiki/民工",
+    "https://en.wikipedia.org/wiki/Urbanization_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hallyu_korean_wave_2000s",
+   "start": "2000",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "SEA"
+   ],
+   "countries": [
+    "KOR",
+    "CHN",
+    "JPN",
+    "VNM",
+    "THA"
+   ],
+   "category": "culture",
+   "title": "「韩流」兴起",
+   "summary": "1990年代末起，韩国电视剧、流行音乐和电影在东亚和东南亚广受欢迎，被中文媒体称为「韩流」，2000年代进一步扩展到南亚、中东和东欧等地；2008年韩国文化产品出口首次超过进口。2012年，韩国歌手PSY的《江南Style》风靡全球，于当年12月21日成为YouTube上首个播放量突破10亿次的视频。",
+   "personal_hooks": [
+    "许多年轻人追看韩剧、模仿韩国明星的发型和穿搭，也有人因此开始学韩语。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Korean_Wave",
+    "https://en.wikipedia.org/wiki/Gangnam_Style"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "liberia_war_end_2003",
+   "start": "2000",
+   "end": "2003-08-18",
+   "year": 2000,
+   "end_year": 2003,
+   "scope": "countries",
+   "countries": [
+    "LBR"
+   ],
+   "category": "war",
+   "title": "第二次利比里亚内战",
+   "summary": "利比里亚第二次内战始于1999年，2003年反政府武装逼近首都蒙罗维亚，总统查尔斯·泰勒于8月辞职出走，交战各方随后签署《阿克拉全面和平协议》。战争造成5万余人死亡。2005年大选中埃伦·约翰逊·瑟利夫当选总统，成为非洲首位民选女性国家元首。",
+   "personal_hooks": [
+    "首都居民在围城期间面临严重的食物和饮水短缺。",
+    "战后许多学校和医院需要从零开始重建。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.15,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Liberian_Civil_War",
+    "https://en.wikipedia.org/wiki/Ellen_Johnson_Sirleaf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mobile_phones_developing_2000s",
+   "start": "2000",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "SAS",
+    "SEA",
+    "LAC"
+   ],
+   "countries": [
+    "IND",
+    "NGA",
+    "BGD",
+    "PAK",
+    "KEN",
+    "IDN",
+    "PHL"
+   ],
+   "category": "technology",
+   "title": "手机在发展中国家普及",
+   "summary": "2000年代，手机在发展中国家迅速普及。按国际电信联盟统计，全球移动电话用户从2000年的约7亿增至2012年的60多亿，非洲、南亚等地许多家庭第一次拥有电话。预付费话卡和廉价手机让农民、小商贩能够及时了解行情，与外出务工的家人保持联系。",
+   "personal_hooks": [
+    "村里第一次有了手机信号，人们不必再走很远去打公用电话。",
+    "在外打工的子女可以随时给家里打电话。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx",
+    "https://en.wikipedia.org/wiki/Mobile_phone"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "northern_uganda_lra_2000",
+   "start": "2000",
+   "end": "2006-08",
+   "year": 2000,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "UGA"
+   ],
+   "category": "conflict",
+   "title": "乌干达北部「圣灵抵抗军」冲突",
+   "summary": "乌干达北部的「圣灵抵抗军」武装叛乱自1980年代末持续多年，该组织绑架了大量儿童，到2000年代中期，北部近200万平民被迫离开家园，大多生活在拥挤的营地中。2006年8月双方签署停止敌对行动协议，此后该组织转移至周边国家活动，北部居民逐步返乡。",
+   "personal_hooks": [
+    "北部农村的孩子可能每晚步行进城过夜，以躲避绑架。",
+    "许多家庭在拥挤的营地中生活多年，依靠救济粮度日。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lord's_Resistance_Army_insurgency",
+    "https://en.wikipedia.org/wiki/Lord's_Resistance_Army"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "zimbabwe_land_reform_2000",
+   "start": "2000",
+   "year": 2000,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "ZWE"
+   ],
+   "category": "policy",
+   "title": "津巴布韦快速土地改革",
+   "summary": "2000年起，津巴布韦政府推行「快速通道」土地改革，强制征收白人商业农场并重新分配。改革过程伴随暴力冲突和产权纠纷，农业生产和出口大幅下滑，对2000年代的津巴布韦经济造成严重负面影响。",
+   "personal_hooks": [
+    "农场雇工可能失去工作和住处，农村家庭的生计变得不稳定。",
+    "城市居民可能遭遇粮食短缺和物价上涨。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Land_reform_in_Zimbabwe"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gavi_vaccines_2000",
+   "start": "2000-01",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "SAS"
+   ],
+   "countries": [
+    "NGA",
+    "ETH",
+    "COD",
+    "PAK",
+    "BGD",
+    "KEN",
+    "TZA",
+    "UGA"
+   ],
+   "category": "policy",
+   "title": "全球疫苗免疫联盟成立",
+   "summary": "2000年1月，全球疫苗免疫联盟（Gavi）成立，联合各国政府、世界卫生组织、联合国儿童基金会、世界银行和盖茨基金会等，为低收入国家儿童提供乙肝、b型流感嗜血杆菌、肺炎球菌、轮状病毒等疫苗资助，受资助国家的儿童疫苗接种率在此后明显提高。",
+   "personal_hooks": [
+    "在低收入国家，越来越多的婴儿可以在附近诊所免费接种新疫苗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/GAVI"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "y2k_2000",
+   "start": "2000-01-01",
+   "year": 2000,
+   "end_year": 2000,
+   "scope": "global",
+   "countries": [],
+   "category": "technology",
+   "title": "「千年虫」问题平稳过渡",
+   "summary": "为防范计算机程序以两位数字表示年份可能在2000年1月1日引发的「千年虫」问题，各国政府和企业在1990年代后期投入大量资金检查和修改系统。2000年到来时只出现了少量故障，未发生大范围事故。",
+   "personal_hooks": [
+    "跨年夜，一些人担心银行、电力或交通系统出问题，提前取现或囤积物资。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Year_2000_problem"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "dotcom_bust_2000",
+   "start": "2000-03-10",
+   "end": "2002-10",
+   "year": 2000,
+   "end_year": 2002,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "DEU",
+    "JPN",
+    "CAN"
+   ],
+   "category": "economy",
+   "title": "互联网泡沫破裂",
+   "summary": "美国纳斯达克综合指数于2000年3月10日见顶，到2002年10月较峰值下跌约78%，大批互联网初创公司倒闭，一些大型科技公司市值大幅缩水。美国经济于2001年陷入衰退，科技行业裁员明显。",
+   "personal_hooks": [
+    "在科技公司或互联网初创企业工作的人可能遭遇裁员，手中的股票期权大幅贬值。",
+    "把积蓄投入科技股的家庭可能在两三年内损失大半。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dot-com_bubble",
+    "https://en.wikipedia.org/wiki/Early_2000s_recession"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "putin_russia_2000",
+   "start": "2000-03-26",
+   "year": 2000,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "RUS"
+   ],
+   "category": "politics",
+   "title": "普京执政与俄罗斯经济复苏",
+   "summary": "2000年3月，自1999年底起任代总统的弗拉基米尔·普京当选俄罗斯总统。在经济改革和油气价格大幅上涨的带动下，俄罗斯经济在其第一个总统任期内年均增长约7%，居民收入在1990年代的动荡之后明显回升，政治权力则日益向联邦中央集中。2008年梅德韦杰夫接任总统、普京改任总理，2012年普京再次就任总统。",
+   "personal_hooks": [
+    "经历过1990年代拖欠工资的家庭，开始感到收入更有保障。",
+    "城市里的超市、私家车和出国度假逐渐进入中产家庭的生活。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Russia_under_Vladimir_Putin",
+    "https://en.wikipedia.org/wiki/2000_Russian_presidential_election",
+    "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=RU"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ethiopia_eritrea_war_end_2000",
+   "start": "2000-05",
+   "end": "2000-12-12",
+   "year": 2000,
+   "end_year": 2000,
+   "scope": "countries",
+   "countries": [
+    "ETH",
+    "ERI"
+   ],
+   "category": "war",
+   "title": "厄立特里亚—埃塞俄比亚战争结束",
+   "summary": "埃塞俄比亚与厄立特里亚自1998年起因边界争端爆发战争，2000年5月埃方发动大规模攻势，6月双方停火，12月签署《阿尔及尔协议》。整场战争的死亡人数估计在7万至30万之间，约60万人流离失所，两国边境此后近二十年处于紧张对峙状态。",
+   "personal_hooks": [
+    "边境地区的家庭可能被迫离开村庄，前往难民营或亲戚家避难。",
+    "许多年轻男子被征召入伍，家庭失去主要劳动力。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Eritrean–Ethiopian_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sierra_leone_war_end_2002",
+   "start": "2000-05",
+   "end": "2002-01-18",
+   "year": 2000,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "SLE"
+   ],
+   "category": "war",
+   "title": "塞拉利昂内战结束",
+   "summary": "塞拉利昂内战始于1991年。2000年联合国维和行动扩大并有英国军事介入，叛军逐步解除武装，2002年1月政府宣布内战结束。整场战争造成5万至7万人死亡，约250万人流离失所。",
+   "personal_hooks": [
+    "战后许多前儿童兵和流离失所者需要重新融入社区。",
+    "农村家庭陆续返回家园，重建房屋和农田。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sierra_Leone_Civil_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gps_civilian_2000",
+   "start": "2000-05-02",
+   "year": 2000,
+   "end_year": 2000,
+   "scope": "global",
+   "countries": [],
+   "category": "technology",
+   "title": "GPS民用精度大幅提高",
+   "summary": "2000年5月，美国关闭了对全球定位系统（GPS）民用信号人为降低精度的「选择可用性」措施，民用定位误差从数十米乃至上百米大幅缩小，为此后车载导航、手机地图和各类位置服务的普及奠定了基础。",
+   "personal_hooks": [
+    "几年后，开车的人逐渐用上了导航仪，不再完全依赖纸质地图。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System",
+    "https://en.wikipedia.org/wiki/Global_Positioning_System"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mdgs_2000",
+   "start": "2000-09-08",
+   "year": 2000,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "NGA",
+    "ETH",
+    "COD",
+    "IND",
+    "BGD",
+    "TZA",
+    "UGA",
+    "MOZ",
+    "MWI",
+    "AFG"
+   ],
+   "category": "policy",
+   "title": "联合国千年发展目标",
+   "summary": "2000年9月，联合国千年首脑会议通过《联合国千年宣言》，随后形成以2015年为期限的八项千年发展目标，包括消除极端贫困和饥饿、普及初等教育、降低儿童死亡率、改善孕产妇健康以及防治艾滋病和疟疾等。据联合国《2012年千年发展目标报告》，全球极端贫困人口比例减半的目标已于2010年提前实现，但各地区进展很不均衡。",
+   "personal_hooks": [
+    "在一些低收入国家，更多孩子有机会免费读完小学。",
+    "村里开始出现由国际援助支持的疫苗接种和蚊帐发放活动。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Millennium_Development_Goals",
+    "https://www.un.org/millenniumgoals/",
+    "https://www.un.org/millenniumgoals/pdf/MDG%20Report%202012.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "second_intifada_2000",
+   "start": "2000-09-28",
+   "end": "2005-02",
+   "year": 2000,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "PSE",
+    "ISR"
+   ],
+   "category": "conflict",
+   "title": "第二次巴勒斯坦大起义",
+   "summary": "2000年9月起，巴勒斯坦人与以色列之间爆发大规模冲突，被称为第二次因提法达（阿克萨起义），期间发生多起自杀式爆炸袭击和以色列军事行动，造成数千人死亡，其中多数为巴勒斯坦人。2002年起以色列在约旦河西岸修建隔离墙，2005年沙姆沙伊赫峰会后冲突基本平息。",
+   "personal_hooks": [
+    "在约旦河西岸和加沙，出行经常受到检查站和封锁的限制，许多人因此失去工作。",
+    "在以色列城市，乘坐公交车或去市场可能令人担心安全。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Second_Intifada",
+    "https://en.wikipedia.org/wiki/West_Bank_barrier"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "australia_millennium_drought",
+   "start": "2001",
+   "end": "2010",
+   "year": 2001,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "AUS"
+   ],
+   "category": "disaster",
+   "title": "澳大利亚「千年干旱」",
+   "summary": "2000年代澳大利亚东南部遭遇有记录以来最严重的干旱之一，墨累—达令流域农业减产，多座大城市实行严格限水并兴建海水淡化厂。2009年2月维多利亚州「黑色星期六」山火造成173人死亡。2010年拉尼娜现象带来降雨后干旱结束。",
+   "personal_hooks": [
+    "城市居民需要遵守限水规定，不能随意浇花洗车。",
+    "一些农户因连年歉收而负债离开土地。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2000s_Australian_drought",
+    "https://en.wikipedia.org/wiki/Black_Saturday_bushfires"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "thailand_universal_coverage_2001",
+   "start": "2001",
+   "year": 2001,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "THA"
+   ],
+   "category": "policy",
+   "title": "泰国全民医保「30泰铢计划」",
+   "summary": "泰国于2001年启动全民健康覆盖改革，2002年起在全国推行全民覆盖计划，最初每次就诊只需支付30泰铢，因此俗称「30泰铢计划」，后来这笔共付费用被取消。该计划覆盖了公务员和正式部门雇员以外的绝大多数国民，使泰国成为少数实现全民医保的中低收入国家之一。",
+   "personal_hooks": [
+    "农民和非正式就业者看病住院只需支付很少的费用，因病致贫的风险降低。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 2,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Healthcare_in_Thailand"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "wikipedia_2001",
+   "start": "2001-01-15",
+   "year": 2001,
+   "end_year": 2001,
+   "scope": "global",
+   "countries": [],
+   "category": "technology",
+   "title": "维基百科上线",
+   "summary": "2001年1月15日，任何人都可以编辑的网络百科全书维基百科上线，此后迅速发展为全球规模最大、访问量最高的参考网站之一，拥有数百种语言版本，改变了人们查找资料和获取知识的方式。",
+   "personal_hooks": [
+    "学生写作业时开始先在网上搜索百科词条。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wikipedia"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gujarat_earthquake_2001",
+   "start": "2001-01-26",
+   "year": 2001,
+   "end_year": 2001,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "disaster",
+   "title": "印度古吉拉特地震",
+   "summary": "2001年1月26日印度共和国日当天，古吉拉特邦卡奇地区发生矩震级7.6级地震，造成约2万人死亡、16.6万人受伤，约40万座建筑损毁，卡奇县受灾最重。",
+   "personal_hooks": [
+    "受灾地区的家庭可能在帐篷中度过数月，等待房屋重建。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2001_Gujarat_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "turkey_crisis_2001",
+   "start": "2001-02",
+   "end": "2001-12",
+   "year": 2001,
+   "end_year": 2001,
+   "scope": "countries",
+   "countries": [
+    "TUR"
+   ],
+   "category": "economy",
+   "title": "土耳其金融危机",
+   "summary": "2001年2月土耳其爆发金融危机，政府放弃里拉的固定汇率安排后里拉大幅贬值，股市暴跌，多家银行陷入困境，经济当年显著收缩并伴随大规模失业。此后土耳其在国际货币基金组织支持下推行银行业整顿和财政改革。",
+   "personal_hooks": [
+    "工薪家庭可能发现工资购买力骤降，进口商品价格快速上涨。",
+    "一些中小企业主因贷款成本飙升而被迫歇业。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2001_Turkish_economic_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sept11_2001",
+   "start": "2001-09-11",
+   "year": 2001,
+   "end_year": 2001,
+   "scope": "global",
+   "countries": [
+    "USA"
+   ],
+   "category": "conflict",
+   "title": "九一一袭击事件",
+   "summary": "2001年9月11日，基地组织成员劫持四架民航客机，撞击纽约世界贸易中心双塔和华盛顿五角大楼，另一架坠毁于宾夕法尼亚州，共造成2,977名遇难者死亡。事件促使美国发动「反恐战争」，全球航空安检和反恐措施随之大幅收紧。",
+   "personal_hooks": [
+    "人们通过电视直播目睹了这一事件，许多人多年后仍记得当时身在何处。",
+    "此后乘坐飞机需要接受更严格的安检，液体和随身物品受到限制。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -2,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/September_11_attacks"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mobile_3g_4g_2001",
+   "start": "2001-10-01",
+   "year": 2001,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "JPN",
+    "KOR",
+    "USA",
+    "GBR",
+    "SWE",
+    "DEU"
+   ],
+   "category": "technology",
+   "title": "3G与4G移动网络",
+   "summary": "2001年10月，日本NTT DoCoMo推出全球首个商用3G移动通信服务FOMA，此后欧洲、韩国、美国等地陆续部署3G网络，手机开始能够较快地上网、收发多媒体信息和进行视频通话。2009年12月，北欧运营商TeliaSonera在斯德哥尔摩和奥斯陆开通首个商用LTE（4G）网络，移动宽带进一步提速。",
+   "personal_hooks": [
+    "人们开始用手机看新闻、收邮件，而不只是打电话和发短信。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Freedom_of_Mobile_Multimedia_Access",
+    "https://en.wikipedia.org/wiki/3G",
+    "https://en.wikipedia.org/wiki/LTE_(telecommunication)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "afghanistan_war_2001",
+   "start": "2001-10-07",
+   "year": 2001,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "AFG"
+   ],
+   "category": "war",
+   "title": "阿富汗战争",
+   "summary": "九一一事件后，美国及其盟友于2001年10月7日对阿富汗发动军事行动，塔利班政权于同年年底垮台，新政府随后建立，北约领导的国际安全援助部队长期驻扎。2000年代中期起塔利班武装重新活跃，冲突持续，平民伤亡逐年上升；2011年5月本·拉登在巴基斯坦被美军击毙。在此期间学校和医疗服务覆盖有所扩大，数百万难民从巴基斯坦和伊朗返回。",
+   "personal_hooks": [
+    "女孩重新获得上学机会，但在冲突地区上学路途仍有危险。",
+    "许多家庭在多年流亡后回到家乡，却面临工作机会稀缺和安全威胁。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": 1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/War_in_Afghanistan_(2001–2021)",
+    "https://en.wikipedia.org/wiki/Civilian_casualties_in_the_war_in_Afghanistan_(2001–2021)",
+    "https://en.wikipedia.org/wiki/International_Security_Assistance_Force",
+    "https://en.wikipedia.org/wiki/Killing_of_Osama_bin_Laden"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "argentina_crisis_2001",
+   "start": "2001-12",
+   "end": "2002-12",
+   "year": 2001,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "ARG"
+   ],
+   "category": "economy",
+   "title": "阿根廷经济危机与债务违约",
+   "summary": "阿根廷自1998年起陷入长期衰退，2001年12月政府限制银行取款（俗称「小围栏」），随后爆发大规模抗议，总统辞职，政府宣布主权债务违约；2002年初比索与美元脱钩并大幅贬值。1998—2002年经济累计萎缩约28%，2002年超过一半人口生活在官方贫困线以下，经济自2003年起较快恢复。",
+   "personal_hooks": [
+    "储户可能发现银行存款被冻结，只能按周限额取现。",
+    "许多中产家庭陷入贫困，一些人选择移居西班牙、意大利等国。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/1998–2002_Argentine_great_depression",
+    "https://en.wikipedia.org/wiki/Corralito"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_wto_2001",
+   "start": "2001-12-11",
+   "year": 2001,
+   "end_year": 2008,
+   "scope": "global",
+   "countries": [
+    "CHN"
+   ],
+   "category": "economy",
+   "title": "中国加入世界贸易组织",
+   "summary": "2001年12月11日，中国正式成为世界贸易组织成员。此后中国对外贸易和制造业快速扩张，外资大量流入，大量农村劳动力进入沿海工厂务工，中国逐步成为「世界工厂」，同时也加剧了部分国家制造业岗位的竞争。",
+   "personal_hooks": [
+    "许多农村青年离开家乡，到广东、浙江、江苏等地的工厂打工。",
+    "商店里的进口商品变多了，国产商品也大量出口到世界各地。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/China_and_the_World_Trade_Organization",
+    "https://www.wto.org/english/news_e/pres01_e/pr252_e.htm",
+    "https://zh.wikipedia.org/wiki/中国与世界贸易组织"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "euro_cash_2002",
+   "start": "2002-01-01",
+   "year": 2002,
+   "end_year": 2002,
+   "scope": "regions",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "DEU",
+    "FRA",
+    "ITA",
+    "ESP",
+    "NLD",
+    "BEL",
+    "AUT",
+    "PRT",
+    "GRC",
+    "IRL",
+    "FIN",
+    "LUX"
+   ],
+   "category": "economy",
+   "title": "欧元现金开始流通",
+   "summary": "2002年1月1日，欧元纸币和硬币在12个欧元区国家开始流通，约两个月内取代了德国马克、法国法郎、意大利里拉等原有货币。欧元此前已于1999年作为记账货币启用。",
+   "personal_hooks": [
+    "人们需要把家里的旧货币拿到银行兑换，并适应用欧元计算物价。",
+    "在欧元区内跨境旅行时不再需要兑换货币，价格也更容易比较。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Euro_banknotes",
+    "https://en.wikipedia.org/wiki/Euro",
+    "https://www.ecb.europa.eu/euro/intro/html/index.en.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gujarat_violence_2002",
+   "start": "2002-02-28",
+   "end": "2002-05",
+   "year": 2002,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "conflict",
+   "title": "2002年古吉拉特邦教派暴力",
+   "summary": "2002年2月27日，印度古吉拉特邦戈特拉一列火车起火，造成从阿约提亚返回的58名印度教朝圣者和志愿者死亡；次日起邦内爆发大规模教派暴力，艾哈迈达巴德等地的冲突持续约三个月。据官方统计，暴力造成1,044人死亡、223人失踪、约2,500人受伤，死者多数为穆斯林，另有一些估计认为死亡人数更多。",
+   "personal_hooks": [
+    "冲突地区的许多家庭被迫离开住所，暂住在临时救济营地。",
+    "此后一段时间里，不同宗教社区之间的往来明显减少。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2002_Gujarat_violence",
+    "https://en.wikipedia.org/wiki/Godhra_train_burning"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "timor_leste_independence_2002",
+   "start": "2002-05-20",
+   "year": 2002,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "TLS"
+   ],
+   "category": "politics",
+   "title": "东帝汶独立",
+   "summary": "1999年，东帝汶在联合国主持下举行全民公投，选择脱离印度尼西亚，随后经历约两年半的联合国过渡行政管理。2002年5月20日，东帝汶民主共和国正式独立，成为21世纪第一个新的主权国家，并于同年加入联合国。",
+   "personal_hooks": [
+    "人们参加独立庆典的同时，许多家庭仍在重建1999年动荡中被毁的房屋。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 2,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Timor-Leste",
+    "https://en.wikipedia.org/wiki/United_Nations_Transitional_Administration_in_East_Timor"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "world_cup_2002",
+   "start": "2002-05-31",
+   "end": "2002-06-30",
+   "year": 2002,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "KOR",
+    "JPN"
+   ],
+   "category": "sport",
+   "title": "韩日世界杯",
+   "summary": "2002年5月31日至6月30日，第17届国际足联世界杯由韩国和日本联合举办，这是世界杯首次在亚洲举行，也是首次由两个国家合办。韩国队打进半决赛，中国队首次参加世界杯决赛圈，巴西队在横滨举行的决赛中以2比0战胜德国队，第五次夺冠。",
+   "personal_hooks": [
+    "许多人在街头、广场和酒吧集体观看比赛，为本国球队加油。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2002_FIFA_World_Cup"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "colombia_security_2002",
+   "start": "2002-08",
+   "year": 2002,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "COL"
+   ],
+   "category": "conflict",
+   "title": "哥伦比亚安全形势好转",
+   "summary": "哥伦比亚长期受到左翼游击队、右翼准军事组织和贩毒集团之间冲突的困扰。在美国「哥伦比亚计划」支持下，2002年起政府大幅加强军队和警察力量，2000年代凶杀和绑架案件明显减少，经济增长加快，但强迫流离失所问题依然严重。",
+   "personal_hooks": [
+    "城市之间的公路旅行比过去安全，人们开始重新驾车出游。",
+    "农村地区仍有家庭因武装冲突被迫迁往城市。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Plan_Colombia",
+    "https://en.wikipedia.org/wiki/Colombian_conflict"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cote_divoire_war_2002",
+   "start": "2002-09-19",
+   "end": "2007-03-04",
+   "year": 2002,
+   "end_year": 2007,
+   "scope": "countries",
+   "countries": [
+    "CIV"
+   ],
+   "category": "war",
+   "title": "第一次科特迪瓦内战",
+   "summary": "2002年9月科特迪瓦发生军事叛乱，国家陷入南北分裂，北部由反政府武装「新生力量」控制，联合国和法国部署维和部队。2007年3月双方签署《瓦加杜古和平协议》。冲突重创了这个西非主要经济体，大量人口流离失所。",
+   "personal_hooks": [
+    "南北分界线两侧的家庭往来和贸易受到严重阻碍。",
+    "来自邻国的移民劳工可能遭受歧视，被迫离开。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/First_Ivorian_Civil_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bali_bombings_2002",
+   "start": "2002-10-12",
+   "year": 2002,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "IDN",
+    "AUS"
+   ],
+   "category": "conflict",
+   "title": "巴厘岛爆炸案",
+   "summary": "2002年10月12日，印度尼西亚巴厘岛库塔旅游区发生连环爆炸袭击，造成202人死亡，其中包括88名澳大利亚人。袭击由伊斯兰祈祷团成员策划，对巴厘岛旅游业造成严重打击。",
+   "personal_hooks": [
+    "依赖旅游业的巴厘岛居民收入骤减。",
+    "去东南亚度假的游客开始更加关注安全提示。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2002_Bali_bombings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "moscow_theater_siege_2002",
+   "start": "2002-10-23",
+   "end": "2002-10-26",
+   "year": 2002,
+   "end_year": 2002,
+   "scope": "countries",
+   "countries": [
+    "RUS"
+   ],
+   "category": "conflict",
+   "title": "莫斯科剧院人质事件",
+   "summary": "2002年10月23日，车臣武装分子在莫斯科杜布罗夫卡剧院劫持约900名观众和演职人员，要求俄军撤出车臣。10月26日俄罗斯安全部队向剧院释放麻醉气体后发起突袭，40名武装分子全部被击毙，132名人质死亡，多数死于气体的影响。",
+   "personal_hooks": [
+    "此后剧院、音乐厅等公共场所的安检明显加强。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Moscow_theater_hostage_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sars_2003",
+   "start": "2002-11",
+   "end": "2003-07-05",
+   "year": 2003,
+   "end_year": 2003,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "HKG",
+    "TWN",
+    "SGP",
+    "CAN",
+    "VNM"
+   ],
+   "category": "epidemic",
+   "title": "非典型肺炎（SARS）疫情",
+   "summary": "2002年11月广东佛山出现首例严重急性呼吸综合征（SARS，俗称「非典」）病例，2003年春疫情扩散至中国内地多个省市及中国香港、中国台湾、新加坡、加拿大、越南等地，全球累计报告病例8,000余例，死亡774人。各地采取隔离、停课、体温检测等措施，旅游和服务业受到重创。世界卫生组织于2003年7月5日宣布疫情得到控制。",
+   "personal_hooks": [
+    "部分学校停课，人们出门戴口罩、测体温，进出公共场所需要登记或检测。",
+    "餐馆和商场冷清，一些服务业从业者收入骤减。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2002–2004_SARS_outbreak",
+    "https://www.who.int/publications/m/item/summary-of-probable-sars-cases-with-onset-of-illness-from-1-november-2002-to-31-july-2003"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_social_insurance_2003",
+   "start": "2003",
+   "year": 2003,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国城乡医保与养老保险扩面",
+   "summary": "2003年起，中国在农村试点由政府补贴和个人缴费共同筹资的新型农村合作医疗（新农合），2008年基本覆盖全国农村。2009年启动新一轮医药卫生体制改革，同年9月开始试点新型农村社会养老保险，此后又推出城镇居民社会养老保险。到2011年，超过95%的人口拥有基本医疗保险，但自付费用和医疗质量的城乡差距仍然明显。",
+   "personal_hooks": [
+    "农村居民每年交少量费用参加新农合，住院时可以报销一部分医药费。",
+    "年满60岁的农村老人开始按月领取一笔基础养老金。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://zh.wikipedia.org/wiki/新型农村合作医疗",
+    "https://en.wikipedia.org/wiki/Healthcare_in_China",
+    "https://www.gov.cn/zwgk/2009-09/04/content_1409216.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "commodity_boom_2003",
+   "start": "2003",
+   "end": "2011",
+   "year": 2003,
+   "end_year": 2011,
+   "scope": "global",
+   "countries": [
+    "SAU",
+    "RUS",
+    "BRA",
+    "AUS",
+    "CHL",
+    "PER",
+    "NGA",
+    "AGO",
+    "KAZ",
+    "ZMB",
+    "VEN",
+    "IDN"
+   ],
+   "category": "economy",
+   "title": "大宗商品繁荣",
+   "summary": "受中国等新兴经济体需求快速增长推动，石油、金属、粮食等大宗商品价格在2000年代持续上涨，国际油价在2008年7月一度接近每桶150美元，2008年底随金融危机暴跌后又于2009—2011年回升。资源出口国的收入和财政大幅改善，资源进口国则面临能源和原材料成本上升。",
+   "personal_hooks": [
+    "在矿业、石油出口国，矿工和相关行业从业者收入明显提高。",
+    "在能源进口国，人们可能感到加油和取暖费用不断上涨。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2000s_commodities_boom",
+    "https://en.wikipedia.org/wiki/2000s_energy_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hiv_art_scaleup_2003",
+   "start": "2003",
+   "year": 2003,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "ZAF",
+    "NGA",
+    "KEN",
+    "UGA",
+    "MOZ",
+    "ZWE",
+    "ZMB",
+    "MWI",
+    "TZA",
+    "BWA",
+    "LSO",
+    "SWZ",
+    "NAM"
+   ],
+   "category": "epidemic",
+   "title": "艾滋病治疗的大规模推广",
+   "summary": "2000年代初，撒哈拉以南非洲是艾滋病流行最严重的地区，南部非洲多国成年人感染率超过两成，预期寿命大幅下降。2002年全球抗击艾滋病、结核病和疟疾基金开始运作，2003年美国启动「总统防治艾滋病紧急救援计划」，世界卫生组织提出「3×5」倡议，抗逆转录病毒药物价格大幅下降。中低收入国家接受抗病毒治疗的人数从2003年的不足百万增至2012年底的约970万，艾滋病相关死亡人数在2000年代中期见顶后持续下降。",
+   "personal_hooks": [
+    "感染艾滋病病毒的父母可以在当地诊所免费领取药物，得以继续工作并抚养孩子。",
+    "此前许多家庭因艾滋病失去青壮年成员，祖父母独自抚养孙辈的情况十分常见。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 2,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/HIV/AIDS_in_Africa",
+    "https://en.wikipedia.org/wiki/President's_Emergency_Plan_for_AIDS_Relief",
+    "https://en.wikipedia.org/wiki/The_Global_Fund_to_Fight_AIDS,_Tuberculosis_and_Malaria",
+    "https://en.wikipedia.org/wiki/3_by_5_Initiative",
+    "https://www.unaids.org/en/resources/documents/2013/20130923_UNAIDS_Global_Report_2013"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_growth_boom_2003",
+   "start": "2003",
+   "year": 2003,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "economy",
+   "title": "印度经济高速增长",
+   "summary": "据世界银行数据，2003年至2007年印度国内生产总值年均实际增长约8%，2008年受全球金融危机影响放缓至约3%，2009—2010年再度回升。信息技术与业务外包、电信等行业快速发展，城市中产阶层扩大，但农村贫困和就业不足问题依然突出。",
+   "personal_hooks": [
+    "不少大学毕业生涌向班加罗尔、海得拉巴等地的软件和外包公司。",
+    "许多家庭第一次买了手机、摩托车或电视机。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=IN",
+    "https://en.wikipedia.org/wiki/Economy_of_India",
+    "https://en.wikipedia.org/wiki/Information_technology_in_India"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "darfur_war_2003",
+   "start": "2003-02",
+   "year": 2003,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "SDN"
+   ],
+   "category": "war",
+   "title": "达尔富尔冲突",
+   "summary": "2003年2月，苏丹西部达尔富尔地区的反政府武装与政府军及其支持的民兵爆发冲突，大量村庄遭袭，平民伤亡惨重。联合国2008年估计约30万人死于战乱及随之而来的疾病和饥荒，超过200万人流离失所，许多人逃往乍得。2009年国际刑事法院对时任苏丹总统巴希尔发出逮捕令。",
+   "personal_hooks": [
+    "许多家庭失去村庄和牲畜，长期生活在难民营中，依靠援助粮食维生。",
+    "在营地外取水、拾柴可能面临危险。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/War_in_Darfur",
+    "http://news.bbc.co.uk/2/hi/africa/7361979.stm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iraq_war_2003",
+   "start": "2003-03-20",
+   "end": "2011-12-18",
+   "year": 2003,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "IRQ"
+   ],
+   "category": "war",
+   "title": "伊拉克战争",
+   "summary": "2003年3月20日，以美国为首的联军以伊拉克拥有大规模杀伤性武器等为由入侵伊拉克，4月攻占巴格达，萨达姆·侯赛因政权被推翻，此后联军并未在伊拉克找到大规模杀伤性武器库存。随后伊拉克爆发持续的武装叛乱和教派冲突，美军于2011年12月全部撤出。各方对战争死亡人数的估计差异极大，仅伊拉克遇难统计项目就记录了十余万名平民暴力死亡。",
+   "personal_hooks": [
+    "停电、缺水和燃料短缺成为许多伊拉克家庭的日常。",
+    "许多医生、教师等专业人员为躲避暴力而移居国外。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iraq_War",
+    "https://en.wikipedia.org/wiki/2003_invasion_of_Iraq",
+    "https://en.wikipedia.org/wiki/Iraq_Survey_Group",
+    "https://en.wikipedia.org/wiki/Casualties_of_the_Iraq_War",
+    "https://en.wikipedia.org/wiki/Withdrawal_of_United_States_troops_from_Iraq_(2007–2011)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "human_genome_2003",
+   "start": "2003-04-14",
+   "year": 2003,
+   "end_year": 2003,
+   "scope": "global",
+   "countries": [],
+   "category": "science",
+   "title": "人类基因组计划完成",
+   "summary": "2003年4月，由多国合作、历时13年的人类基因组计划宣布完成，测定了人类基因组的绝大部分序列。此后基因测序成本快速下降，为基因诊断和精准医学奠定了基础。",
+   "personal_hooks": [
+    "生物课本和新闻中开始频繁出现「基因」与「DNA测序」等词汇。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Human_Genome_Project",
+    "https://www.genome.gov/human-genome-project"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "taobao_alipay_2003",
+   "start": "2003-05",
+   "year": 2003,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "淘宝、支付宝与网购兴起",
+   "summary": "2003年5月阿里巴巴推出购物网站淘宝网，2004年推出第三方支付工具支付宝，以担保交易解决了网购中的信任问题。2009年起，每年11月11日的网购促销（「双十一」）逐渐发展为规模巨大的购物节，网络购物和快递业改变了中国人的消费方式。",
+   "personal_hooks": [
+    "年轻人开始在网上买衣服、电器和日用品，快递员成为常见的新职业。",
+    "一些人在网上开店，成为个体网商。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Taobao",
+    "https://en.wikipedia.org/wiki/Alipay",
+    "https://en.wikipedia.org/wiki/Singles'_Day"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hk_macau_cepa_2003",
+   "start": "2003-06-29",
+   "year": 2003,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "HKG",
+    "MAC"
+   ],
+   "category": "economy",
+   "title": "CEPA与内地居民赴港澳「个人游」",
+   "summary": "2003年中国香港经历SARS疫情冲击后，同年6月29日内地与香港签署《内地与香港关于建立更紧密经贸关系的安排》（CEPA），10月与澳门签署类似安排；7月28日起内地部分城市居民可以个人身份赴港澳旅游，此后开放范围逐步扩大，访港澳旅客大增，零售、餐饮和酒店业随之兴旺。澳门在2001—2002年结束博彩专营、开放赌权，博彩业迅速扩张，2007年前后博彩收入已超过美国拉斯维加斯大道。",
+   "personal_hooks": [
+    "香港的店员和导游发现内地游客越来越多，生意明显回暖。",
+    "澳门许多年轻人进入新开的赌场和度假酒店工作，收入提高。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mainland_and_Hong_Kong_Closer_Economic_Partnership_Arrangement",
+    "https://en.wikipedia.org/wiki/Individual_Visit_Scheme",
+    "https://en.wikipedia.org/wiki/Gambling_in_Macau"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "europe_heatwave_2003",
+   "start": "2003-07",
+   "end": "2003-08",
+   "year": 2003,
+   "end_year": 2003,
+   "scope": "countries",
+   "countries": [
+    "FRA",
+    "ITA",
+    "ESP",
+    "PRT"
+   ],
+   "category": "disaster",
+   "title": "2003年欧洲热浪",
+   "summary": "2003年夏季欧洲经历了有记录以来最炎热的夏天之一，7—8月持续高温，法国、意大利、西班牙等国受灾尤重，并伴随干旱和农作物减产。全欧洲因热浪导致的超额死亡估计超过7万人，以老年人居多，此后法国等国建立了高温预警和老年人探访制度。",
+   "personal_hooks": [
+    "独居老人在没有空调的公寓中面临很大风险，许多家庭开始定期探望年迈的亲人。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     70,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2003_European_heatwave"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bolsa_familia_2003",
+   "start": "2003-10",
+   "year": 2003,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "BRA"
+   ],
+   "category": "policy",
+   "title": "巴西「家庭补助金」计划",
+   "summary": "2003年，巴西政府整合多项原有补贴，推出有条件现金转移支付计划「家庭补助金」（Bolsa Família）：贫困家庭按月领取现金，条件是孩子按时上学并接种疫苗。该计划成为当时世界上规模最大的有条件现金转移项目，被认为是2000年代巴西贫困率显著下降的因素之一。",
+   "personal_hooks": [
+    "贫困家庭每月可领取一笔补助，用来给孩子买食物和文具，但孩子缺课太多就会被停发。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "shenzhou5_2003",
+   "start": "2003-10-15",
+   "year": 2003,
+   "end_year": 2003,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "science",
+   "title": "神舟五号载人航天",
+   "summary": "2003年10月15日，神舟五号载人飞船发射成功，航天员杨利伟成为中国第一位进入太空的航天员，中国成为继苏联和美国之后第三个独立实现载人航天的国家。此后中国于2007年发射首颗探月卫星嫦娥一号，2012年神舟九号与天宫一号实现首次载人交会对接。",
+   "personal_hooks": [
+    "许多孩子通过电视直播看到发射，「当航天员」成为热门理想。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shenzhou_5",
+    "https://en.wikipedia.org/wiki/Chang'e_1",
+    "https://en.wikipedia.org/wiki/Shenzhou_9"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "color_revolutions_2003",
+   "start": "2003-11",
+   "end": "2005-04",
+   "year": 2003,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "GEO",
+    "UKR",
+    "KGZ"
+   ],
+   "category": "politics",
+   "title": "格鲁吉亚、乌克兰和吉尔吉斯斯坦的「颜色革命」",
+   "summary": "2003年至2005年，格鲁吉亚（2003年11月「玫瑰革命」）、乌克兰（2004年底「橙色革命」）和吉尔吉斯斯坦（2005年3月「郁金香革命」）先后因选举争议爆发大规模抗议，最终导致政府更迭或选举重新举行。这些事件被统称为「颜色革命」，各方对其起因和外部影响看法不一。",
+   "personal_hooks": [
+    "许多人聚集到首都广场，连续多日关注选举争议的结果。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Colour_revolution",
+    "https://en.wikipedia.org/wiki/Rose_Revolution",
+    "https://en.wikipedia.org/wiki/Orange_Revolution",
+    "https://en.wikipedia.org/wiki/Tulip_Revolution"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bam_earthquake_2003",
+   "start": "2003-12-26",
+   "year": 2003,
+   "end_year": 2003,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "disaster",
+   "title": "伊朗巴姆地震",
+   "summary": "2003年12月26日凌晨，伊朗东南部克尔曼省巴姆市发生矩震级6.6级地震，以土坯建造的古城和民房大面积倒塌，死亡人数约2.6万至3.4万（不同统计），约20万人受伤。",
+   "personal_hooks": [
+    "巴姆的幸存者可能失去多位家人，长期住在临时板房中。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2003_Bam_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "h5n1_avian_flu_2004",
+   "start": "2003-12",
+   "end": "2006",
+   "year": 2004,
+   "end_year": 2006,
+   "scope": "regions",
+   "regions": [
+    "SEA",
+    "EAS"
+   ],
+   "countries": [
+    "VNM",
+    "THA",
+    "IDN",
+    "CHN",
+    "EGY",
+    "TUR"
+   ],
+   "category": "epidemic",
+   "title": "H5N1禽流感扩散",
+   "summary": "2003年底至2004年，高致病性H5N1禽流感在越南、泰国、印度尼西亚、中国等亚洲国家的家禽中大规模暴发，2005—2006年扩散至欧洲、中东和非洲。各国扑杀了数以亿计的家禽，并出现数百例人类感染病例，病死率很高，引发全球对流感大流行的防范。",
+   "personal_hooks": [
+    "养鸡户的家禽可能被全部扑杀，收入大幅减少。",
+    "活禽市场受到管控，人们一度不敢吃鸡肉和鸡蛋。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Global_spread_of_H5N1",
+    "https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "drc_east_conflict_2004",
+   "start": "2004",
+   "year": 2004,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "COD"
+   ],
+   "category": "conflict",
+   "title": "刚果（金）东部基伍冲突",
+   "summary": "第二次刚果战争结束后，刚果民主共和国东部北基伍、南基伍和伊图里等地的武装冲突持续不断，政府军与多支武装团体交战，大量平民流离失所，联合国维和部队长期驻扎。2012年5月新成立的「3月23日运动」（M23）发动叛乱，同年11月20日一度攻占北基伍省会戈马，随后在地区斡旋下撤出。",
+   "personal_hooks": [
+    "东部村庄的居民多次因战事逃往营地或亲戚家，农田无法耕种。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kivu_conflict",
+    "https://en.wikipedia.org/wiki/March_23_Movement",
+    "https://en.wikipedia.org/wiki/Human_Security_Report_Project",
+    "https://en.wikipedia.org/wiki/International_Rescue_Committee"
+   ],
+   "confidence": "high",
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   }
+  },
+  {
+   "id": "social_media_facebook_2004",
+   "start": "2004-02-04",
+   "year": 2004,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "IND",
+    "BRA",
+    "IDN"
+   ],
+   "category": "technology",
+   "title": "社交媒体兴起",
+   "summary": "2004年2月，Facebook在美国哈佛大学创立，2006年向公众开放注册，2012年10月月活跃用户突破10亿。与2006年上线的Twitter等平台一起，社交媒体改变了人们交友、获取新闻和组织公共活动的方式。",
+   "personal_hooks": [
+    "人们开始在网上分享照片和近况，与老同学重新取得联系。",
+    "新闻和传言在社交网络上传播得比以往快得多。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Facebook",
+    "https://en.wikipedia.org/wiki/History_of_Facebook",
+    "https://en.wikipedia.org/wiki/X_(social_network)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "madrid_bombings_2004",
+   "start": "2004-03-11",
+   "year": 2004,
+   "end_year": 2004,
+   "scope": "countries",
+   "countries": [
+    "ESP"
+   ],
+   "category": "conflict",
+   "title": "马德里火车爆炸案",
+   "summary": "2004年3月11日，西班牙马德里的通勤列车遭连环炸弹袭击，造成193人死亡、2,000多人受伤，是西班牙历史上伤亡最重的恐怖袭击，事件发生在西班牙大选前三天。",
+   "personal_hooks": [
+    "每天乘坐通勤火车上下班的人可能在很长时间里心有余悸。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2004_Madrid_train_bombings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "eu_enlargement_2004",
+   "start": "2004-05-01",
+   "year": 2004,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "POL",
+    "CZE",
+    "HUN",
+    "SVK",
+    "SVN",
+    "EST",
+    "LVA",
+    "LTU",
+    "CYP",
+    "MLT"
+   ],
+   "category": "politics",
+   "title": "欧盟东扩：十国同时入盟",
+   "summary": "2004年5月1日，波兰、捷克、匈牙利、斯洛伐克、斯洛文尼亚、爱沙尼亚、拉脱维亚、立陶宛、塞浦路斯和马耳他同时加入欧盟，这是欧盟规模最大的一次扩大。英国、爱尔兰和瑞典随即向新成员国公民开放劳动力市场，数以十万计的中东欧劳动者前往西欧就业。2007年底，其中九国加入申根区，斯洛文尼亚等国此后也陆续采用欧元。",
+   "personal_hooks": [
+    "一些年轻人前往英国或爱尔兰打工，定期往家里汇款。",
+    "新成员国的农户和地方政府开始获得欧盟资金，道路和基础设施逐步改善。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union",
+    "https://en.wikipedia.org/wiki/Enlargement_of_the_European_Union",
+    "https://en.wikipedia.org/wiki/Schengen_Area"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "beslan_siege_2004",
+   "start": "2004-09-01",
+   "end": "2004-09-03",
+   "year": 2004,
+   "end_year": 2004,
+   "scope": "countries",
+   "countries": [
+    "RUS"
+   ],
+   "category": "conflict",
+   "title": "别斯兰人质事件",
+   "summary": "2004年9月1日开学日，武装分子在俄罗斯北奥塞梯共和国别斯兰市第一中学劫持一千余名人质，9月3日事件结束，共334名人质遇难，其中儿童186名。此后俄罗斯加强了反恐措施，并取消了地方行政长官直接选举。",
+   "personal_hooks": [
+    "学校开学典礼的安保在此后明显加强。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Beslan_school_siege"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "indian_ocean_tsunami_2004",
+   "start": "2004-12-26",
+   "year": 2004,
+   "end_year": 2004,
+   "scope": "countries",
+   "countries": [
+    "IDN",
+    "LKA",
+    "MDV",
+    "THA",
+    "IND"
+   ],
+   "category": "disaster",
+   "title": "印度洋地震海啸",
+   "summary": "2004年12月26日，印度尼西亚苏门答腊岛西北海域发生矩震级9.1至9.3级特大地震并引发印度洋海啸，波及14个国家，约22.8万人死亡，是有记录以来死亡人数最多的海啸。印度尼西亚亚齐省、斯里兰卡、印度泰米尔纳德邦和泰国考拉克等地受灾最重，数十万人失去家园。灾后国际社会提供了大规模援助，并推动建立印度洋海啸预警系统。",
+   "personal_hooks": [
+    "沿海渔村的家庭可能失去亲人、房屋和渔船，需要在安置营地中生活很长时间。",
+    "海啸后，人们学会了地震后远离海岸、往高处疏散的常识。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.0,
+    "ages": [
+     0,
+     120
+    ],
+    "years": [
+     2004
+    ],
+    "by_country": {
+     "IDN": 1.1,
+     "LKA": 1.25,
+     "MDV": 1.08
+    },
+    "note": "仅对印度尼西亚、斯里兰卡、马尔代夫施加死亡率乘数（约等于1+灾害死亡/基线年死亡，取保守值）；泰国和印度的死亡人数相对全国基线较小，不施加。"
+   },
+   "migration_push": 1,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami",
+    "https://en.wikipedia.org/wiki/Indian_Ocean_Tsunami_Warning_System"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "malaria_control_scaleup_2005",
+   "start": "2005",
+   "year": 2005,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "UGA",
+    "TZA",
+    "MOZ",
+    "KEN",
+    "ETH",
+    "MWI",
+    "ZMB",
+    "GHA",
+    "MLI",
+    "BFA"
+   ],
+   "category": "epidemic",
+   "title": "疟疾防治大规模扩展",
+   "summary": "2000年代中期起，长效驱虫蚊帐、室内滞留喷洒杀虫剂和以青蒿素为基础的联合疗法在疟疾流行国家大规模推广，全球基金和2005年启动的美国总统疟疾倡议等提供了大量资金。世界卫生组织《2012年世界疟疾报告》显示，2000年以来全球疟疾死亡率下降逾25%，非洲区域下降约三分之一。",
+   "personal_hooks": [
+    "家里的孩子开始睡在免费发放的驱蚊蚊帐里。",
+    "发烧的孩子在村诊所就能做快速检测并拿到有效药物。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://www.who.int/publications/i/item/9789241564533",
+    "https://en.wikipedia.org/wiki/President's_Malaria_Initiative",
+    "https://en.wikipedia.org/wiki/Mosquito_net"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "niger_food_crisis_2005",
+   "start": "2005",
+   "end": "2006",
+   "year": 2005,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "NER"
+   ],
+   "category": "disaster",
+   "title": "尼日尔粮食危机",
+   "summary": "2004年雨季提前结束和蝗灾导致尼日尔粮食歉收，加之粮价上涨和长期贫困，2005年尼日尔南部多个地区发生严重粮食危机，约240万人粮食安全高度脆弱，儿童营养不良问题尤为突出。",
+   "personal_hooks": [
+    "农村家庭可能卖掉牲畜换粮，或让家中男子外出打工以减少吃饭的人口。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 1,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2005–2006_Niger_food_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sudan_cpa_2005",
+   "start": "2005-01-09",
+   "year": 2005,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "SSD",
+    "SDN"
+   ],
+   "category": "politics",
+   "title": "苏丹《全面和平协议》",
+   "summary": "2005年1月9日，苏丹政府与苏丹人民解放运动签署《全面和平协议》，结束了自1983年起持续二十多年的第二次苏丹内战，南部获得自治，并约定在六年后举行独立公投。",
+   "personal_hooks": [
+    "南部的流亡者和难民开始陆续返回家园。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Comprehensive_Peace_Agreement",
+    "https://en.wikipedia.org/wiki/Second_Sudanese_Civil_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "youtube_2005",
+   "start": "2005-02-14",
+   "year": 2005,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [],
+   "category": "technology",
+   "title": "YouTube与网络视频",
+   "summary": "2005年视频分享网站YouTube创立，2006年被谷歌以16.5亿美元收购。普通人可以免费上传和观看视频，网络视频开始改变娱乐、教育和新闻传播方式，也催生了以制作视频为职业的创作者。",
+   "personal_hooks": [
+    "人们开始在网上看教学视频自学各种技能，也会上传自己拍摄的视频。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/YouTube"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kyoto_protocol_2005",
+   "start": "2005-02-16",
+   "year": 2005,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "JPN",
+    "DEU",
+    "GBR",
+    "FRA",
+    "ITA",
+    "RUS",
+    "CAN"
+   ],
+   "category": "policy",
+   "title": "《京都议定书》生效",
+   "summary": "1997年通过的《京都议定书》于2005年2月16日生效，要求发达国家在2008—2012年第一承诺期内减少温室气体排放，体现「共同但有区别的责任」原则，发展中国家不承担强制减排义务。美国没有批准该议定书，加拿大于2012年12月退出。",
+   "personal_hooks": [
+    "新闻里越来越多地讨论全球变暖、碳排放和节能减排。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kyoto_Protocol",
+    "https://unfccc.int/kyoto_protocol"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "who_fctc_2005",
+   "start": "2005-02-27",
+   "year": 2005,
+   "end_year": 2005,
+   "scope": "global",
+   "countries": [],
+   "category": "policy",
+   "title": "《烟草控制框架公约》生效",
+   "summary": "2003年5月世界卫生大会通过《世界卫生组织烟草控制框架公约》，2005年2月27日公约生效，这是世卫组织主持制定的第一部国际条约。缔约国此后陆续推行公共场所禁烟、限制烟草广告、包装健康警示和提高烟草税等措施。",
+   "personal_hooks": [
+    "餐厅、办公室和公共交通工具上逐渐不再允许吸烟。",
+    "烟盒上开始印有醒目的健康警示。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/WHO_Framework_Convention_on_Tobacco_Control"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hipc_debt_relief_2005",
+   "start": "2005-07",
+   "end": "2006",
+   "year": 2005,
+   "end_year": 2006,
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "ETH",
+    "TZA",
+    "UGA",
+    "MOZ",
+    "ZMB",
+    "GHA",
+    "MLI",
+    "BFA",
+    "NER",
+    "SEN",
+    "RWA",
+    "MWI",
+    "MDG",
+    "BEN",
+    "BOL",
+    "HND",
+    "NIC"
+   ],
+   "category": "policy",
+   "title": "重债穷国债务减免",
+   "summary": "2005年7月八国集团格伦伊格尔斯峰会同意，免除符合条件的重债穷国欠国际货币基金组织、世界银行国际开发协会和非洲开发基金的债务（多边债务减免倡议），2006年起实施。连同此前的重债穷国倡议，数十个低收入国家（多数在撒哈拉以南非洲）的外债负担大幅下降，部分节省的资金转向教育和卫生支出。",
+   "personal_hooks": [
+    "政府有更多预算用于修建学校和诊所，一些国家借此减免了学费。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Multilateral_Debt_Relief_Initiative",
+    "https://en.wikipedia.org/wiki/Heavily_indebted_poor_countries",
+    "https://en.wikipedia.org/wiki/31st_G8_summit"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "london_bombings_2005",
+   "start": "2005-07-07",
+   "year": 2005,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "GBR"
+   ],
+   "category": "conflict",
+   "title": "伦敦七七爆炸案",
+   "summary": "2005年7月7日早高峰，伦敦三列地铁和一辆公共汽车先后遭自杀式炸弹袭击，造成52名乘客死亡、700余人受伤。",
+   "personal_hooks": [
+    "伦敦市民此后乘坐地铁时会更加留意可疑物品，公共交通的安保措施加强。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/7_July_2005_London_bombings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "rmb_reform_2005",
+   "start": "2005-07-21",
+   "year": 2005,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "人民币汇率形成机制改革",
+   "summary": "2005年7月21日，中国人民银行宣布人民币不再单一盯住美元，改为参考一篮子货币进行调节、有管理的浮动汇率制度，人民币对美元当日升值约2%。此后至2012年底，人民币对美元累计升值约三成。",
+   "personal_hooks": [
+    "出国留学和旅游的费用折合人民币逐渐变便宜。",
+    "一些出口企业因人民币升值而利润承压。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Renminbi",
+    "https://zh.wikipedia.org/wiki/人民币汇率"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hurricane_katrina_2005",
+   "start": "2005-08-29",
+   "year": 2005,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "disaster",
+   "title": "卡特里娜飓风",
+   "summary": "2005年8月下旬，飓风卡特里娜袭击美国墨西哥湾沿岸，新奥尔良防洪堤多处溃决，城市约八成被淹，约1,400人死亡，经济损失约1,250亿美元，是美国损失最大的热带气旋之一。灾后救援迟缓引发广泛批评，大量居民长期迁居外地。",
+   "personal_hooks": [
+    "新奥尔良的许多家庭被疏散到休斯敦等城市，部分人再也没有回去。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hurricane_Katrina"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kashmir_earthquake_2005",
+   "start": "2005-10-08",
+   "year": 2005,
+   "end_year": 2005,
+   "scope": "countries",
+   "countries": [
+    "PAK"
+   ],
+   "category": "disaster",
+   "title": "克什米尔地震",
+   "summary": "2005年10月8日，巴控克什米尔地区发生矩震级7.6级地震，巴基斯坦境内至少8.7万人死亡、20万人受伤，印控克什米尔约1,360人死亡；大量校舍倒塌，约1.9万名师生遇难，逾350万人无家可归，山区居民在严冬前面临严重的人道主义危机。",
+   "personal_hooks": [
+    "山区村庄的家庭可能在冬季来临前仍住在帐篷里。",
+    "很多孩子因学校倒塌而失去同学和老师。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2005_Kashmir_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_free_compulsory_education_2006",
+   "start": "2006",
+   "end": "2008-09",
+   "year": 2006,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国义务教育免除学杂费",
+   "summary": "2006年修订的《中华人民共和国义务教育法》规定实施义务教育不收学费、杂费。2006年起西部农村地区率先免除义务教育阶段学杂费，2007年推广到全国农村，2008年秋季城市也全面免除。对农村家庭经济困难学生还实行免杂费、免书本费、补助寄宿生生活费的「两免一补」政策，2007年约有5,000万学生受益。",
+   "personal_hooks": [
+    "农村家庭送孩子上小学和初中不必再交学杂费，家里的负担轻了不少。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 2,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://zh.wikipedia.org/wiki/中华人民共和国义务教育法",
+    "https://zh.wikipedia.org/wiki/两免一补"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_agri_tax_abolition_2006",
+   "start": "2006-01-01",
+   "year": 2006,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国全面取消农业税",
+   "summary": "在2000年代初农村税费改革和逐步减免农业税的基础上，2005年12月29日全国人大常委会决定废止《农业税条例》，农业税自2006年1月1日起在全国取消，结束了在中国延续两千多年的农业税。同期政府推行种粮农民直接补贴、良种补贴和农机购置补贴等措施，农民负担明显减轻。",
+   "personal_hooks": [
+    "种地的农户不再需要缴纳农业税和各种摊派费用，还能领到种粮补贴。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://zh.wikipedia.org/wiki/中国农业税"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_nrega_2006",
+   "start": "2006-02-02",
+   "year": 2006,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "policy",
+   "title": "印度农村就业保障法实施",
+   "summary": "印度于2005年8月通过《全国农村就业保障法》（后更名为《圣雄甘地全国农村就业保障法》），2006年2月起在部分地区实施，2008年推广到全国农村。该法保障每个农村家庭每年至少获得100天有薪的非技术性公共工程就业，例如修路、挖渠和修建蓄水池。",
+   "personal_hooks": [
+    "农闲时节，村民可以到附近的公共工程工地干活，挣一份法定最低工资。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mahatma_Gandhi_National_Rural_Employment_Guarantee_Act,_2005"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iraq_sectarian_2006",
+   "start": "2006-02-22",
+   "end": "2007-12",
+   "year": 2006,
+   "end_year": 2007,
+   "scope": "countries",
+   "countries": [
+    "IRQ"
+   ],
+   "category": "war",
+   "title": "伊拉克教派暴力高峰",
+   "summary": "2006年2月萨迈拉阿斯卡里清真寺遇袭后，伊拉克什叶派与逊尼派武装之间的教派暴力急剧升级，巴格达等地绑架和报复性杀戮频发，大量居民逃往叙利亚、约旦等邻国或在国内流离失所。2007年美国增兵及逊尼派部落「觉醒运动」兴起后，暴力在2008年明显下降。",
+   "personal_hooks": [
+    "一些混居街区的家庭因教派身份被迫搬离住了多年的房子。",
+    "家人外出上班或上学时，留在家里的人往往提心吊胆。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iraqi_civil_war_(2006–2008)",
+    "https://en.wikipedia.org/wiki/2006_al-Askari_mosque_bombing",
+    "https://en.wikipedia.org/wiki/Casualties_of_the_Iraq_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "yogyakarta_earthquake_2006",
+   "start": "2006-05-27",
+   "year": 2006,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "IDN"
+   ],
+   "category": "disaster",
+   "title": "印度尼西亚日惹地震",
+   "summary": "2006年5月27日清晨，印度尼西亚爪哇岛日惹地区发生矩震级6.4级地震，由于震源浅、地基松软和大量未加固的砖石房屋倒塌，造成5,700余人死亡、数万人受伤，经济损失约31亿美元，普兰巴南神庙群也受到损坏。",
+   "personal_hooks": [
+    "房屋倒塌的家庭可能在临时帐篷里生活数月，等待重建。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 1,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2006_Yogyakarta_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "lebanon_war_2006",
+   "start": "2006-07-12",
+   "end": "2006-08-14",
+   "year": 2006,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "LBN",
+    "ISR"
+   ],
+   "category": "war",
+   "title": "2006年黎巴嫩战争",
+   "summary": "2006年7月12日，黎巴嫩真主党越境袭击以色列士兵后，以色列对黎巴嫩发动大规模空袭和地面行动，真主党向以色列北部发射了约4,000枚火箭弹。8月14日，联合国安理会第1701号决议促成的停火生效。冲突造成约1,200名黎巴嫩人和165名以色列人死亡，黎巴嫩基础设施严重受损，两国均有大量居民一度逃离家园。",
+   "personal_hooks": [
+    "黎巴嫩南部和以色列北部的居民可能被迫暂时撤离家园。",
+    "道路、桥梁和机场受损，出行和物资供应中断数周。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2006_Lebanon_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "thailand_political_crisis_2006",
+   "start": "2006-09-19",
+   "end": "2010-05",
+   "year": 2006,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "THA"
+   ],
+   "category": "politics",
+   "title": "泰国政治危机与2006年政变",
+   "summary": "2006年9月19日，泰国军方发动政变，推翻他信·西那瓦领导的看守政府。此后支持和反对他信的两大阵营（俗称「红衫军」与「黄衫军」）长期对立：2008年底反政府示威者一度占领曼谷机场；2010年4月至5月曼谷大规模示威遭军队清场，共造成80多人死亡、2,000多人受伤。",
+   "personal_hooks": [
+    "机场被占领期间，大批旅客滞留，旅游业收入受到影响。",
+    "一些家庭和同事之间因政治立场不同而产生隔阂。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2006_Thai_coup_d%27%C3%A9tat",
+    "https://en.wikipedia.org/wiki/2008_Thai_political_crisis",
+    "https://en.wikipedia.org/wiki/2010_Thai_military_crackdown"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "north_korea_nuclear_test_2006",
+   "start": "2006-10-09",
+   "year": 2006,
+   "end_year": 2006,
+   "scope": "countries",
+   "countries": [
+    "PRK",
+    "KOR",
+    "JPN"
+   ],
+   "category": "politics",
+   "title": "朝鲜首次核试验",
+   "summary": "2006年10月9日，朝鲜进行首次地下核试验，联合国安理会随后通过第1718号决议对朝鲜实施制裁。朝鲜于2009年再次进行核试验，朝鲜半岛局势持续紧张。",
+   "personal_hooks": [
+    "韩国和日本的新闻频繁讨论半岛安全局势。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2006_North_Korean_nuclear_test",
+    "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_1718"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "nepal_peace_2006",
+   "start": "2006-11-21",
+   "end": "2008-05-28",
+   "year": 2006,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "NPL"
+   ],
+   "category": "politics",
+   "title": "尼泊尔内战结束与君主制废除",
+   "summary": "尼泊尔政府与尼泊尔共产党（毛主义）之间的武装冲突自1996年起持续约十年，造成1.7万余人死亡。2006年4月大规模民众运动后，双方于同年11月签署《全面和平协定》。2008年5月，新选出的制宪会议宣布废除君主制，尼泊尔成为联邦民主共和国。",
+   "personal_hooks": [
+    "农村地区的居民不再担心被武装双方征粮或征兵。",
+    "许多年轻人仍选择前往海湾国家、马来西亚等地务工。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nepalese_Civil_War",
+    "https://en.wikipedia.org/wiki/Comprehensive_Peace_Accord"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "somalia_conflict_2006",
+   "start": "2006-12",
+   "year": 2006,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "SOM"
+   ],
+   "category": "war",
+   "title": "索马里战乱与「青年党」叛乱",
+   "summary": "2006年伊斯兰法院联盟控制了索马里南部大部，同年12月埃塞俄比亚军队进入索马里支持过渡联邦政府并攻占摩加迪沙。此后「青年党」等武装发动持续叛乱，非盟驻索马里特派团于2007年部署，2011年8月青年党撤出摩加迪沙，冲突在此后多年持续。",
+   "personal_hooks": [
+    "摩加迪沙居民可能多次举家逃离战火，前往城郊营地或邻国。",
+    "海外索马里侨民的汇款是许多家庭的重要生活来源。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/War_in_Somalia_(2006–2009)",
+    "https://en.wikipedia.org/wiki/Somali_Civil_War",
+    "https://en.wikipedia.org/wiki/Al-Shabaab_(militant_group)",
+    "https://en.wikipedia.org/wiki/African_Union_Mission_to_Somalia"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mexico_drug_war_2006",
+   "start": "2006-12-11",
+   "year": 2006,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "MEX"
+   ],
+   "category": "conflict",
+   "title": "墨西哥禁毒战争",
+   "summary": "2006年12月墨西哥政府出动军队和联邦警察打击贩毒集团，贩毒集团随后分裂并相互争夺地盘，暴力急剧上升。至2012年卡尔德龙政府任期结束时，官方统计的相关死亡人数至少6万人，北部部分城市凶杀率一度位居世界前列。",
+   "personal_hooks": [
+    "北部边境城市的居民夜间出行减少，一些商户因被勒索而歇业。",
+    "一些家庭为躲避暴力而搬往其他城市或美国。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.08,
+    "ages": [
+     15,
+     49
+    ]
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mexican_drug_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "food_price_crisis_2007",
+   "start": "2007",
+   "end": "2008-06",
+   "year": 2007,
+   "end_year": 2008,
+   "scope": "global",
+   "countries": [
+    "HTI",
+    "EGY",
+    "BGD",
+    "PHL",
+    "CMR",
+    "BFA",
+    "SEN",
+    "MRT",
+    "YEM",
+    "ETH",
+    "CIV",
+    "MOZ"
+   ],
+   "category": "economy",
+   "title": "全球粮食价格危机",
+   "summary": "2007年至2008年上半年，国际粮食价格急剧上涨，小麦、大米、玉米等主粮价格大幅攀升。干旱减产、油价上涨、生物燃料需求增加和市场投机等因素被认为共同推高了粮价。海地、埃及、孟加拉国、喀麦隆等多个国家发生与食品价格相关的抗议或骚乱。",
+   "personal_hooks": [
+    "在低收入国家，家庭可能不得不把大部分收入用于买粮，减少餐数或改吃更便宜的食物。",
+    "城市居民可能需要排长队购买政府补贴的面包或大米。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2007–2008_world_food_price_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_subprime_2007",
+   "start": "2007",
+   "end": "2010",
+   "year": 2007,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "economy",
+   "title": "美国次贷危机",
+   "summary": "美国房价在2006年前后见顶回落，次级抵押贷款违约率飙升，2007年起多家抵押贷款机构倒闭，银行和投资基金因相关证券出现巨额亏损。大量家庭因无力偿还房贷而失去住房，危机于2008年演变为全球金融危机。",
+   "personal_hooks": [
+    "一些以浮动利率贷款买房的家庭发现月供突然上涨，房子最终被银行收回。",
+    "房价下跌使许多家庭最主要的财富——房产——严重缩水。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Subprime_mortgage_crisis",
+    "https://en.wikipedia.org/wiki/2000s_United_States_housing_bubble"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "eu_enlargement_2007",
+   "start": "2007-01-01",
+   "year": 2007,
+   "end_year": 2007,
+   "scope": "countries",
+   "countries": [
+    "ROU",
+    "BGR"
+   ],
+   "category": "politics",
+   "title": "罗马尼亚和保加利亚加入欧盟",
+   "summary": "2007年1月1日，罗马尼亚和保加利亚加入欧盟，完成了始于2004年的第五轮扩大。入盟前后两国大量劳动者赴意大利、西班牙等国工作，侨汇成为许多家庭的重要收入来源，人口外流也加剧了两国的人口减少。",
+   "personal_hooks": [
+    "许多家庭中父母一方或双方出国务工，孩子由祖父母照看。",
+    "凭本国护照前往其他欧盟国家旅行、求学和工作变得更方便。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2007_enlargement_of_the_European_Union",
+    "https://en.wikipedia.org/wiki/Romanian_diaspora"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iphone_smartphone_2007",
+   "start": "2007-01-09",
+   "year": 2007,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "USA"
+   ],
+   "category": "technology",
+   "title": "iPhone与智能手机时代",
+   "summary": "2007年1月苹果公司发布第一代iPhone，6月在美国上市。以大尺寸触摸屏和完整网页浏览为特征的智能手机由此开始普及，2008年7月苹果推出App Store应用商店，移动应用生态迅速形成，手机逐渐成为人们上网、拍照、导航和社交的主要工具。",
+   "personal_hooks": [
+    "人们开始用手机地图找路、用应用程序聊天和购物。",
+    "低头看手机逐渐成为日常生活中的常见场景。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/IPhone_(1st_generation)",
+    "https://en.wikipedia.org/wiki/App_Store_(Apple)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "zimbabwe_hyperinflation_2007",
+   "start": "2007-02",
+   "end": "2009-04",
+   "year": 2007,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "ZWE"
+   ],
+   "category": "economy",
+   "title": "津巴布韦恶性通货膨胀",
+   "summary": "2007年起津巴布韦陷入恶性通货膨胀，2008年物价几乎每天都在上涨，政府最终发行面额高达100万亿津元的纸币。2008—2009年又暴发大规模霍乱疫情。2009年4月津巴布韦停止印制本币，改用美元等外币流通。大量居民前往南非等邻国谋生。",
+   "personal_hooks": [
+    "工资和储蓄在几周内几乎化为乌有，人们领到钱后会立即去买东西。",
+    "商店货架经常空空如也，许多家庭依靠在国外务工亲属的汇款生活。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -2,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe",
+    "https://en.wikipedia.org/wiki/Zimbabwean_dollar"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mpesa_2007",
+   "start": "2007-03",
+   "year": 2007,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "KEN",
+    "TZA"
+   ],
+   "category": "technology",
+   "title": "M-Pesa手机支付",
+   "summary": "2007年，肯尼亚移动运营商Safaricom与沃达丰推出手机转账服务M-Pesa，用户无需银行账户即可通过短信存取现金、汇款和付款。到2012年肯尼亚已有约1,700万个M-Pesa账户，该服务成为发展中国家移动金融的代表。",
+   "personal_hooks": [
+    "在城里打工的人可以随时把钱通过手机汇给农村的家人，不必再托人带现金。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/M-Pesa"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gaza_split_blockade_2007",
+   "start": "2007-06",
+   "year": 2007,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "PSE"
+   ],
+   "category": "conflict",
+   "title": "哈马斯控制加沙与加沙封锁",
+   "summary": "2007年6月，哈马斯与法塔赫在加沙地带爆发武装冲突，哈马斯控制加沙，巴勒斯坦形成约旦河西岸与加沙分治的局面。以色列和埃及随后对加沙实施严格封锁，限制人员和货物进出，加沙经济和民生长期困难。",
+   "personal_hooks": [
+    "加沙居民外出求学、就医或探亲需要申请许可，往往难以成行。",
+    "建材和许多日用品短缺，失业率居高不下。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Battle_of_Gaza_(2007)",
+    "https://en.wikipedia.org/wiki/Blockade_of_the_Gaza_Strip"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pakistan_militancy_2007",
+   "start": "2007-07",
+   "year": 2007,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "PAK"
+   ],
+   "category": "conflict",
+   "title": "巴基斯坦西北部武装冲突",
+   "summary": "2007年起巴基斯坦西北部的武装叛乱显著升级，各地爆炸袭击频发；2007年12月前总理贝娜齐尔·布托在拉瓦尔品第遇袭身亡。2009年巴基斯坦军队在斯瓦特等地开展大规模军事行动，期间数百万居民临时撤离。",
+   "personal_hooks": [
+    "市场、清真寺和学校周边的安保明显加强，人们出门更加谨慎。",
+    "西北部的一些家庭被迫暂时迁往亲戚家或安置营地。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Insurgency_in_Khyber_Pakhtunkhwa",
+    "https://en.wikipedia.org/wiki/Assassination_of_Benazir_Bhutto",
+    "https://en.wikipedia.org/wiki/Second_Battle_of_Swat"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_stock_bubble_2007",
+   "start": "2007-10-16",
+   "end": "2008-10",
+   "year": 2007,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "economy",
+   "title": "中国A股牛市与暴跌",
+   "summary": "2006—2007年中国A股大幅上涨，大量个人投资者开户入市，上证综指于2007年10月升至6100点左右的历史高位，随后在2008年持续下跌，至2008年10月跌去约七成。",
+   "personal_hooks": [
+    "身边很多人谈论炒股，一些人把储蓄甚至借款投入股市。",
+    "股市暴跌后，不少散户账户亏损过半。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chinese_stock_bubble_of_2007",
+    "https://zh.wikipedia.org/wiki/2007年中国股市泡沫"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cyclone_sidr_2007",
+   "start": "2007-11-15",
+   "year": 2007,
+   "end_year": 2007,
+   "scope": "countries",
+   "countries": [
+    "BGD"
+   ],
+   "category": "disaster",
+   "title": "强热带气旋「锡德」袭击孟加拉国",
+   "summary": "2007年11月15日，强热带气旋「锡德」在孟加拉国西南沿海登陆，造成至少3,447人死亡（部分机构估计可达1.5万人），大量房屋、农田和红树林受损，经济损失约23亿美元。登陆前的预警和大规模疏散被认为减少了伤亡，死亡人数远低于1970年和1991年孟加拉湾的特大气旋灾害。",
+   "personal_hooks": [
+    "沿海村民在预警后躲进气旋避难所，回家时发现房屋和稻田已被摧毁。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cyclone_Sidr"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kenya_post_election_2007",
+   "start": "2007-12-30",
+   "end": "2008-02-28",
+   "year": 2007,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "KEN"
+   ],
+   "category": "conflict",
+   "title": "肯尼亚大选后暴力冲突",
+   "summary": "2007年12月肯尼亚大选结果公布后，反对派指控选举舞弊，各地爆发大规模抗议和族群暴力，1,000余人死亡，多达60万人流离失所。2008年2月，在前联合国秘书长安南的调解下，双方达成权力分享协议。",
+   "personal_hooks": [
+    "裂谷省等地的一些家庭因族群身份被迫离开家园，暂住在警察局或教堂。",
+    "交通中断导致物价上涨，商店和学校一度关闭。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2007–2008_Kenyan_crisis",
+    "https://en.wikipedia.org/wiki/2007_Kenyan_general_election"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "baltic_crisis_2008",
+   "start": "2008",
+   "end": "2010",
+   "year": 2008,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "LVA",
+    "LTU",
+    "EST"
+   ],
+   "category": "economy",
+   "title": "波罗的海国家经济危机",
+   "summary": "全球金融危机冲击下，此前依赖信贷和房地产繁荣的拉脱维亚、立陶宛和爱沙尼亚经济在2008—2009年急剧收缩，失业率大幅上升。拉脱维亚接受国际货币基金组织和欧盟援助，推行大幅削减公共部门工资和开支的紧缩政策，大量劳动力移居英国、爱尔兰等西欧国家。",
+   "personal_hooks": [
+    "公务员和教师可能面临大幅减薪。",
+    "许多年轻人选择出国打工，家庭成员分居两地。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": 0,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Latvian_financial_crisis",
+    "https://en.wikipedia.org/wiki/Great_Recession_in_Europe"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_labour_contract_law_2008",
+   "start": "2008-01-01",
+   "year": 2008,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "《劳动合同法》施行",
+   "summary": "《中华人民共和国劳动合同法》于2008年1月1日起施行，要求用人单位与劳动者订立书面劳动合同，并对试用期、经济补偿、无固定期限劳动合同等作出规定，加强了对劳动者权益的保护，也增加了部分企业的用工成本。",
+   "personal_hooks": [
+    "进厂或入职时，越来越多的工人要求签订书面劳动合同。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Labour_Contract_Law_of_the_People%27s_Republic_of_China",
+    "https://zh.wikipedia.org/wiki/中华人民共和国劳动合同法"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_winter_storms_2008",
+   "start": "2008-01-25",
+   "end": "2008-02-06",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "2008年中国南方雨雪冰冻灾害",
+   "summary": "2008年1月下旬至2月初，中国南方和中部地区遭遇半个世纪以来最严重的低温雨雪冰冻天气，适逢春运高峰，铁路、公路和电网大面积中断，大量旅客滞留在广州等地车站，至少129人死亡。",
+   "personal_hooks": [
+    "回家过年的农民工可能在火车站滞留数天，最终未能赶回家乡。",
+    "一些地区停电停水，居民在严寒中度过春节。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Chinese_winter_storms",
+    "https://zh.wikipedia.org/wiki/2008年中国雪灾"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cyclone_nargis_2008",
+   "start": "2008-05-02",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "MMR"
+   ],
+   "category": "disaster",
+   "title": "强热带风暴纳尔吉斯",
+   "summary": "2008年5月2日，强热带风暴纳尔吉斯在缅甸伊洛瓦底江三角洲登陆，风暴潮深入内陆约40公里，造成至少13.8万人死亡，是缅甸有记录以来最严重的自然灾害。灾后初期外国救援人员入境受到限制，救援物资难以及时送达。",
+   "personal_hooks": [
+    "三角洲稻农可能失去家人、房屋和耕牛，稻田被海水浸泡无法耕种。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.25,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cyclone_Nargis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sichuan_earthquake_2008",
+   "start": "2008-05-12",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "汶川大地震",
+   "summary": "2008年5月12日14时28分，四川汶川发生8.0级地震，造成约6.9万人遇难、1.8万人失踪、37万余人受伤，数百万人无家可归，大量中小学校舍倒塌。全国开展大规模救援，各省市对口支援灾区重建，5月19日至21日为全国哀悼日。",
+   "personal_hooks": [
+    "全国各地的人们通过捐款、献血和志愿服务支援灾区。",
+    "灾区的孩子可能在板房学校里继续上课。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Sichuan_earthquake",
+    "https://zh.wikipedia.org/wiki/汶川大地震"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cross_strait_links_2008",
+   "start": "2008-07-04",
+   "year": 2008,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "TWN"
+   ],
+   "category": "politics",
+   "title": "两岸实现直接「三通」",
+   "summary": "2008年7月起，海峡两岸开通周末包机并开放大陆居民赴台团体旅游；同年12月15日，两岸直接通航、通邮和通商正式实现，此前人员和货物往来大多需经中国香港、中国澳门等地中转。2010年6月29日，两岸签署《海峡两岸经济合作框架协议》（ECFA），此后陆续降低部分商品关税。",
+   "personal_hooks": [
+    "往返两岸探亲、经商的人不必再绕道第三地转机，单程时间大大缩短。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Three_Links",
+    "https://zh.wikipedia.org/wiki/海峡两岸经济合作框架协议",
+    "https://zh.wikipedia.org/wiki/大陆居民赴台旅游"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "zimbabwe_cholera_2008",
+   "start": "2008-08",
+   "end": "2009-06",
+   "year": 2008,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "ZWE"
+   ],
+   "category": "epidemic",
+   "title": "津巴布韦霍乱疫情",
+   "summary": "2008年8月至2009年6月，津巴布韦暴发该国有记录以来规模最大的霍乱疫情，全国10个省份均出现病例，共报告98,596例、死亡4,369人。疫情与供水和环卫系统失修、医疗体系瘫痪密切相关，并蔓延至南非等邻国。",
+   "personal_hooks": [
+    "城市居民可能需要自己打井取水或把水烧开后再喝。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 1,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Zimbabwean_cholera_outbreak"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_hsr_2008",
+   "start": "2008-08-01",
+   "year": 2008,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "中国高速铁路网建设",
+   "summary": "2008年8月1日，京津城际铁路开通，成为中国首条设计时速350公里的高速铁路。此后武广（2009年）、京沪（2011年）等高铁相继通车，到2011年初中国高铁运营里程已居世界首位。2011年7月23日甬台温铁路发生动车追尾事故，造成40人死亡，引发对高铁安全的广泛讨论。",
+   "personal_hooks": [
+    "城市之间的出行时间大幅缩短，周末往返探亲变得更方便。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/High-speed_rail_in_China",
+    "https://en.wikipedia.org/wiki/Wenzhou_train_collision"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "georgia_war_2008",
+   "start": "2008-08-07",
+   "end": "2008-08-16",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "GEO"
+   ],
+   "category": "war",
+   "title": "俄格战争",
+   "summary": "2008年8月，格鲁吉亚与俄罗斯之间围绕南奥塞梯地区爆发为期约五天的战争，数百人死亡，约19万人一度流离失所。战后俄罗斯宣布承认南奥塞梯和阿布哈兹为独立国家，国际社会绝大多数国家未予承认。",
+   "personal_hooks": [
+    "冲突地区附近的家庭被迫逃离，一些人此后长期住在安置村。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Russo-Georgian_War"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "beijing_olympics_2008",
+   "start": "2008-08-08",
+   "end": "2008-08-24",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "sport",
+   "title": "北京奥运会",
+   "summary": "2008年8月8日至24日，第29届夏季奥林匹克运动会在北京举行，来自204个国家和地区奥委会的约1.1万名运动员参赛，这是中国首次举办奥运会，中国代表团首次位居金牌榜首位。为筹办奥运会，北京新建和改造了大批场馆、地铁线路和机场设施。",
+   "personal_hooks": [
+    "许多家庭围在电视前观看开幕式，学校和社区也组织集体观看。",
+    "奥运期间，北京实行机动车单双号限行。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Summer_Olympics",
+    "https://zh.wikipedia.org/wiki/2008年夏季奥林匹克运动会"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "melamine_milk_2008",
+   "start": "2008-09",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "title": "三聚氰胺奶粉事件",
+   "summary": "2008年9月，三鹿集团等企业生产的婴幼儿奶粉被发现添加三聚氰胺，导致大量婴幼儿患肾结石。据官方统计约30万名儿童受影响，5.4万人住院治疗，6名婴儿死亡。多名责任人被追究刑事责任，国产奶粉信誉受到严重打击，2009年《食品安全法》出台。",
+   "personal_hooks": [
+    "家长们带孩子去医院做筛查，此后许多家庭转而购买进口奶粉。",
+    "一些人托亲友从中国香港或国外代购奶粉。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Chinese_milk_scandal",
+    "https://zh.wikipedia.org/wiki/2008年中国奶制品污染事件"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gfc_2008",
+   "start": "2008-09-15",
+   "end": "2009-06",
+   "year": 2008,
+   "end_year": 2009,
+   "scope": "global",
+   "countries": [
+    "USA",
+    "GBR",
+    "ISL",
+    "IRL",
+    "ESP",
+    "LVA",
+    "UKR",
+    "RUS",
+    "MEX",
+    "JPN",
+    "DEU",
+    "HUN"
+   ],
+   "category": "economy",
+   "title": "全球金融危机",
+   "summary": "2008年9月15日美国投资银行雷曼兄弟申请破产，信贷市场冻结，危机迅速蔓延至全球金融体系。各国政府和央行通过救助银行、大幅降息和财政刺激稳定局势。2009年全球经济总量出现萎缩，国际贸易急剧下降，许多国家失业率大幅上升。",
+   "personal_hooks": [
+    "出口工厂订单骤减，许多工人被裁员或被迫放无薪假。",
+    "养老金和股票账户价值大幅缩水，一些人推迟了退休或购房计划。",
+    "刚毕业的年轻人发现工作机会明显减少。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 5,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_financial_crisis",
+    "https://en.wikipedia.org/wiki/Bankruptcy_of_Lehman_Brothers",
+    "https://en.wikipedia.org/wiki/Great_Recession"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iceland_crisis_2008",
+   "start": "2008-10",
+   "end": "2010",
+   "year": 2008,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "ISL"
+   ],
+   "category": "economy",
+   "title": "冰岛银行业崩溃",
+   "summary": "2008年10月，冰岛三大商业银行相继倒闭，相对于经济规模而言是历史上最严重的银行业崩溃。冰岛克朗大幅贬值，经济陷入严重衰退，政府寻求国际货币基金组织援助，并于2009年初在民众抗议中更迭。",
+   "personal_hooks": [
+    "以外币计价的房贷和车贷因本币贬值而骤增。",
+    "一些人失业后选择前往挪威等北欧国家谋生。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": 0,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008–2011_Icelandic_financial_crisis",
+    "https://en.wikipedia.org/wiki/2009_Icelandic_financial_crisis_protests"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "android_2008",
+   "start": "2008-10-22",
+   "year": 2008,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [
+    "CHN",
+    "IND",
+    "IDN",
+    "BRA"
+   ],
+   "category": "technology",
+   "title": "Android系统与平价智能手机",
+   "summary": "2008年10月，首款搭载谷歌Android操作系统的手机HTC Dream上市。Android向众多手机厂商开放，推动智能手机价格持续下降，2010年代初中国、印度等新兴市场出现大量低价安卓手机，使数以亿计的人第一次通过手机接入互联网。",
+   "personal_hooks": [
+    "很多人用价格低廉的安卓手机第一次体验到移动互联网。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Android_(operating_system)",
+    "https://en.wikipedia.org/wiki/HTC_Dream"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "obama_2008",
+   "start": "2008-11-04",
+   "year": 2008,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "politics",
+   "title": "奥巴马当选美国总统",
+   "summary": "2008年11月4日，巴拉克·奥巴马当选美国第44任总统，2009年1月就职，成为首位非洲裔美国总统。其任期始于金融危机后的经济衰退，政府于2009年2月推出大规模经济刺激法案，2010年3月签署《患者保护与平价医疗法案》以扩大医疗保险覆盖面；2012年奥巴马获得连任。",
+   "personal_hooks": [
+    "许多人守在电视前观看选举结果和就职典礼。",
+    "没有工作单位医保的年轻人可以继续参加父母的医疗保险，直到26岁。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Barack_Obama",
+    "https://en.wikipedia.org/wiki/2008_United_States_presidential_election",
+    "https://en.wikipedia.org/wiki/American_Recovery_and_Reinvestment_Act_of_2009",
+    "https://en.wikipedia.org/wiki/Affordable_Care_Act"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_stimulus_2008",
+   "start": "2008-11-09",
+   "end": "2010-12",
+   "year": 2008,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "title": "中国「四万亿」经济刺激计划",
+   "summary": "2008年11月，中国国务院公布总额约4万亿元人民币的扩大内需刺激计划，重点投向铁路公路等基础设施、保障性住房、农村民生和灾后重建等领域。中国经济增速在2009年较快回升，但地方政府和企业债务随后明显增加。",
+   "personal_hooks": [
+    "沿海出口工厂一度停工，部分农民工提前返乡，之后又随基建项目增加找到新工作。",
+    "许多城市在这几年开工建设地铁、高铁和公路。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chinese_economic_stimulus_program",
+    "https://zh.wikipedia.org/wiki/四万亿投资计划"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mumbai_attacks_2008",
+   "start": "2008-11-26",
+   "end": "2008-11-29",
+   "year": 2008,
+   "end_year": 2008,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "conflict",
+   "title": "孟买恐怖袭击",
+   "summary": "2008年11月26日至29日，10名武装分子从海上潜入印度孟买，袭击火车站、酒店、餐馆和犹太中心等多处地点，共造成166名平民和安全人员死亡、300余人受伤。印巴关系随之急剧紧张。",
+   "personal_hooks": [
+    "此后印度大城市的车站、酒店和商场普遍加装了安检设施。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2008_Mumbai_attacks"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gaza_war_2008",
+   "start": "2008-12-27",
+   "end": "2009-01-18",
+   "year": 2008,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "PSE"
+   ],
+   "category": "war",
+   "title": "加沙战争（2008—2009）",
+   "summary": "2008年12月27日至2009年1月18日，以色列对加沙地带发动代号「铸铅行动」的军事行动，宣称目标是阻止火箭弹袭击。冲突造成1,166至1,417名巴勒斯坦人和13名以色列人死亡，加沙大量房屋和基础设施被毁或受损，许多居民无家可归。",
+   "personal_hooks": [
+    "加沙居民在空袭和地面行动期间几乎无处可逃，许多家庭失去房屋。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.04,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaza_War_(2008–2009)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sri_lanka_war_end_2009",
+   "start": "2009-01",
+   "end": "2009-05-18",
+   "year": 2009,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "LKA"
+   ],
+   "category": "war",
+   "title": "斯里兰卡内战结束",
+   "summary": "2006年斯里兰卡政府与泰米尔伊拉姆猛虎解放组织重燃战火，2009年政府军攻入猛虎组织最后控制区，5月宣布击败该组织，持续26年的内战结束。最后阶段大量平民被困战区，联合国秘书长专家小组2011年报告称可能有多达4万名平民死亡（该数字存在争议），战后约28万人被安置在临时营地。",
+   "personal_hooks": [
+    "北部的泰米尔家庭可能在营地中等待数月才能返乡，许多人寻找失散的亲人。",
+    "南部居民不再担心公共场所发生爆炸袭击。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.1,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sri_Lankan_civil_war",
+    "https://en.wikipedia.org/wiki/Eelam_War_IV",
+    "https://en.wikipedia.org/wiki/Internally_displaced_persons_in_Sri_Lanka"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "russia_ukraine_gas_2009",
+   "start": "2009-01-01",
+   "end": "2009-01-20",
+   "year": 2009,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "UKR",
+    "BGR",
+    "SVK",
+    "SRB",
+    "BIH",
+    "MDA"
+   ],
+   "category": "economy",
+   "title": "俄乌天然气争端致欧洲断气",
+   "summary": "2009年1月，俄罗斯天然气工业公司与乌克兰石油天然气公司因供气合同和欠款发生争执，1月7日起经乌克兰输往欧洲的俄罗斯天然气全部中断约13天，高度依赖俄气的东南欧国家供应完全中断，部分工厂停产，一些城市的集中供暖受到影响。1月18日两国总理达成新合同后恢复供气。",
+   "personal_hooks": [
+    "寒冬里，一些家庭的暖气停了，只能靠电暖器或柴火取暖。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2009_Russia%E2%80%93Ukraine_gas_dispute"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bitcoin_2009",
+   "start": "2009-01-03",
+   "year": 2009,
+   "end_year": 2009,
+   "scope": "global",
+   "countries": [],
+   "category": "technology",
+   "title": "比特币诞生",
+   "summary": "2008年10月，化名中本聪的作者发布比特币白皮书，2009年1月3日比特币网络开始运行，成为第一种去中心化的加密货币。2010年5月出现首笔用比特币购买实物（两份比萨饼）的交易，此后其价格剧烈波动，加密货币逐渐进入大众视野。",
+   "personal_hooks": [
+    "当时极少有人听说过比特币，只有少数技术爱好者在电脑上挖矿。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bitcoin",
+    "https://en.wikipedia.org/wiki/History_of_bitcoin"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_3g_2009",
+   "start": "2009-01-07",
+   "year": 2009,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "中国发放3G牌照",
+   "summary": "2009年1月7日，工业和信息化部向中国移动、中国电信和中国联通发放第三代移动通信（3G）牌照，分别采用TD-SCDMA、CDMA2000和WCDMA标准。3G网络与随后普及的智能手机共同推动了中国移动互联网的快速增长。",
+   "personal_hooks": [
+    "人们开始用手机看视频、刷微博，流量套餐成为新的开支项目。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/UMTS",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "h1n1_pandemic_2009",
+   "start": "2009-04",
+   "end": "2010-08-10",
+   "year": 2009,
+   "end_year": 2010,
+   "scope": "global",
+   "countries": [
+    "MEX",
+    "USA"
+   ],
+   "category": "epidemic",
+   "title": "甲型H1N1流感大流行",
+   "summary": "2009年4月，一种新型甲型H1N1流感病毒在墨西哥和美国被发现并迅速传播到全球，世界卫生组织于6月11日宣布进入流感大流行，2010年8月宣布结束。与季节性流感不同，该病毒对儿童和中青年的影响相对较大。美国疾病控制与预防中心研究人员估计大流行第一年全球约15万至57.5万人死亡。各国开展了疫苗接种，部分地区学校停课。",
+   "personal_hooks": [
+    "学校和机场开始测量体温，出现发热症状的学生可能被要求居家隔离。",
+    "许多人第一次排队接种流感疫苗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2009_swine_flu_pandemic",
+    "Dawood FS, et al. Estimated global mortality associated with the first 12 months of 2009 pandemic influenza A H1N1 virus circulation: a modelling study. Lancet Infect Dis. 2012;12(9):687-695."
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iran_election_protests_2009",
+   "start": "2009-06-12",
+   "end": "2010-02",
+   "year": 2009,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "politics",
+   "title": "伊朗2009年总统选举抗议",
+   "summary": "2009年6月伊朗总统选举公布内贾德连任后，反对派候选人穆萨维等人质疑计票结果，德黑兰等大城市爆发大规模抗议，支持者称之为「绿色运动」。当局出动警察和巴斯基民兵驱散示威并逮捕大量人员，抗议活动持续到2010年初逐渐平息。",
+   "personal_hooks": [
+    "许多年轻人通过手机短信和社交网站交流消息，网络和通讯时常受到限制。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2009_Iranian_presidential_election_protests"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "boko_haram_2009",
+   "start": "2009-07",
+   "year": 2009,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "NGA"
+   ],
+   "category": "conflict",
+   "title": "「博科圣地」叛乱",
+   "summary": "2009年7月，尼日利亚东北部激进组织「博科圣地」发动武装叛乱，其创始人穆罕默德·优素福在被警方羁押期间死亡。此后该组织以爆炸和袭击学校、教堂、清真寺及政府机构等方式持续发动攻击，2011年还袭击了首都阿布贾的联合国办公楼，东北部安全形势不断恶化。",
+   "personal_hooks": [
+    "东北部的一些学校因安全原因关闭，孩子们被迫中断学业。",
+    "人们去教堂、清真寺或市场时会担心遭到袭击。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Boko_Haram_insurgency"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "seacom_cable_2009",
+   "start": "2009-07-23",
+   "year": 2009,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "KEN",
+    "TZA",
+    "UGA",
+    "MOZ",
+    "DJI",
+    "ZAF"
+   ],
+   "category": "technology",
+   "title": "东非接入海底光缆",
+   "summary": "2009年7月23日，SEACOM海底光缆投入运营，将南非、莫桑比克、坦桑尼亚、肯尼亚和吉布提与欧洲和亚洲相连。东非此前主要依赖昂贵的卫星链路接入国际互联网，随着SEACOM及随后的TEAMS、EASSy等海缆开通，国际带宽价格明显下降，互联网服务开始较快普及。",
+   "personal_hooks": [
+    "内罗毕等城市的网吧和办公室网速明显变快，上网费用下降。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 1,
+   "sources": [
+    "https://en.wikipedia.org/wiki/SEACOM_(African_cable_system)",
+    "https://en.wikipedia.org/wiki/TEAMS_(cable_system)",
+    "https://en.wikipedia.org/wiki/EASSy"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "typhoon_morakot_2009",
+   "start": "2009-08-07",
+   "end": "2009-08-10",
+   "year": 2009,
+   "end_year": 2009,
+   "scope": "countries",
+   "countries": [
+    "TWN"
+   ],
+   "category": "disaster",
+   "title": "莫拉克台风（八八水灾）",
+   "summary": "2009年8月上旬，台风莫拉克在中国台湾带来创纪录的强降雨，局部累计雨量高达2,777毫米，南部地区发生严重洪水和泥石流，高雄县小林村几乎被泥石流整体掩埋。灾害造成约700人死亡，是有记录以来对中国台湾造成死亡最多的台风。",
+   "personal_hooks": [
+    "南部山区的家庭可能失去房屋和亲人，被安置到异地重建的住房。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Typhoon_Morakot"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "weibo_2009",
+   "start": "2009-08-14",
+   "year": 2009,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "新浪微博上线",
+   "summary": "2009年8月新浪微博上线，迅速成为中国最有影响力的社交媒体平台之一，许多社会新闻和公共讨论通过微博快速传播。",
+   "personal_hooks": [
+    "人们开始在微博上关注明星、媒体和朋友，转发热点新闻。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Weibo",
+    "https://zh.wikipedia.org/wiki/新浪微博"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_second_economy_2010",
+   "start": "2010",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "CHN",
+    "JPN"
+   ],
+   "category": "economy",
+   "title": "中国成为世界第二大经济体",
+   "summary": "按2010年数据计算，中国国内生产总值超过日本，成为仅次于美国的世界第二大经济体，日本保持了四十余年的第二位置由此改变。按人均计算，中国当时仍属中等收入国家。",
+   "personal_hooks": [
+    "新闻中经常讨论中国经济总量排名的变化。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://www.bbc.com/news/business-12427321",
+    "https://en.wikipedia.org/wiki/Economy_of_China"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "haiti_earthquake_2010",
+   "start": "2010-01-12",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "HTI"
+   ],
+   "category": "disaster",
+   "title": "海地大地震",
+   "summary": "2010年1月12日，海地首都太子港附近发生矩震级7.0级地震，约300万人受到影响。死亡人数估计从约10万到16万不等，海地政府的估计为22万至31.6万人。约25万处住宅损毁，总统府、议会大厦等建筑倒塌，联合国海地稳定特派团总部也在地震中倒塌。",
+   "personal_hooks": [
+    "幸存者可能在帐篷营地中生活一两年以上。",
+    "学校、医院和政府机构大面积停摆，许多孩子失学。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -2,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.8,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_Haiti_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "chile_earthquake_2010",
+   "start": "2010-02-27",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "CHL"
+   ],
+   "category": "disaster",
+   "title": "智利大地震",
+   "summary": "2010年2月27日，智利中南部马乌莱大区近海发生矩震级8.8级地震并引发海啸，造成525人死亡、约37万所房屋受损，全国约93%的人口一度停电，经济损失估计为150亿至300亿美元。",
+   "personal_hooks": [
+    "沿海小镇的居民在地震后迅速往高处疏散以躲避海啸。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_Chile_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "korea_cheonan_yeonpyeong_2010",
+   "start": "2010-03-26",
+   "end": "2010-11-23",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "KOR",
+    "PRK"
+   ],
+   "category": "conflict",
+   "title": "「天安」号沉没与延坪岛炮击",
+   "summary": "2010年3月26日，韩国海军「天安」号护卫舰在黄海白翎岛附近沉没，46名水兵死亡；韩国主导、多国专家参与的调查认定该舰被朝鲜鱼雷击沉，朝鲜否认与此有关。同年11月23日，朝鲜炮击延坪岛，韩方随即还击，岛上2名韩国军人和2名平民死亡，朝鲜半岛局势急剧紧张。",
+   "personal_hooks": [
+    "延坪岛居民一度撤离到大陆避难。",
+    "韩国新闻持续关注半岛局势，一些家庭担心正在服兵役的子女。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sinking_of_ROKS_Cheonan",
+    "https://en.wikipedia.org/wiki/Bombardment_of_Yeonpyeong"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_rte_2010",
+   "start": "2010-04-01",
+   "year": 2010,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "policy",
+   "title": "印度《儿童免费义务教育权利法》生效",
+   "summary": "2009年8月印度议会通过《儿童免费义务教育权利法》，该法于2010年4月1日生效，规定6至14岁儿童享有接受免费义务教育的基本权利，并要求私立学校将入学年级25%的名额留给弱势家庭的儿童。",
+   "personal_hooks": [
+    "一些低收入家庭的孩子通过预留名额进入附近的私立学校免费就读。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Right_of_Children_to_Free_and_Compulsory_Education_Act,_2009"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kyrgyzstan_unrest_2010",
+   "start": "2010-04-07",
+   "end": "2010-06",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "KGZ"
+   ],
+   "category": "conflict",
+   "title": "吉尔吉斯斯坦政权更迭与南部冲突",
+   "summary": "2010年4月吉尔吉斯斯坦爆发反政府示威，总统巴基耶夫被迫出走。同年6月南部奥什、贾拉拉巴德等地爆发吉尔吉斯族与乌兹别克族之间的冲突，约420人死亡，大量居民逃离家园，部分人一度越境进入乌兹别克斯坦。",
+   "personal_hooks": [
+    "南部城市的商铺和住宅遭到破坏，许多家庭需要在亲友家暂住。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 1,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_Kyrgyz_Revolution",
+    "https://en.wikipedia.org/wiki/2010_South_Kyrgyzstan_ethnic_clashes"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "eyjafjallajokull_2010",
+   "start": "2010-04-14",
+   "end": "2010-05",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "regions",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "ISL",
+    "GBR",
+    "IRL",
+    "DEU",
+    "FRA",
+    "NLD",
+    "BEL",
+    "DNK",
+    "NOR",
+    "SWE",
+    "FIN",
+    "POL"
+   ],
+   "category": "disaster",
+   "title": "冰岛火山灰致欧洲大面积停飞",
+   "summary": "2010年4月14日起，冰岛埃亚菲亚德拉冰盖火山喷发产生的火山灰云飘向欧洲，4月15日至20日前后约20个国家关闭领空，欧洲大部分航班被取消，约1,000万名旅客受影响，是二战以来最严重的航空中断。5月间部分地区仍间歇性停飞。",
+   "personal_hooks": [
+    "出差或度假的人被困在机场或异国他乡，只好改乘火车、长途汽车或渡轮回家。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_eruptions_of_Eyjafjallaj%C3%B6kull",
+    "https://en.wikipedia.org/wiki/Air_travel_disruption_after_the_2010_Eyjafjallaj%C3%B6kull_eruption"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "yushu_earthquake_2010",
+   "start": "2010-04-14",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "disaster",
+   "title": "青海玉树地震",
+   "summary": "2010年4月14日，青海省玉树藏族自治州玉树县发生7.1级地震（矩震级6.9级），据新华社报道，地震造成2,698人遇难、270人失踪、1.2万余人受伤，结古镇大量房屋倒塌，高原缺氧和寒冷给救援带来很大困难。",
+   "personal_hooks": [
+    "灾区居民在高原寒冷天气中住进帐篷，等待房屋重建。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 1,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_Yushu_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "deepwater_horizon_2010",
+   "start": "2010-04-20",
+   "end": "2010-09-19",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "USA"
+   ],
+   "category": "disaster",
+   "title": "墨西哥湾「深水地平线」漏油事故",
+   "summary": "2010年4月20日，英国石油公司在墨西哥湾作业的「深水地平线」钻井平台发生爆炸，11名工人死亡，随后海底油井持续漏油近三个月，美国联邦政府估计共泄漏约490万桶原油，至9月19日油井才被宣布彻底封堵。这是石油工业史上最大的海上漏油事故，对墨西哥湾沿岸的海洋生态、渔业和旅游业造成严重影响。",
+   "personal_hooks": [
+    "墨西哥湾沿岸的渔民一度被禁止出海，海滩游客明显减少。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "euro_debt_crisis_2010",
+   "start": "2010-05",
+   "year": 2010,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "GRC",
+    "IRL",
+    "PRT",
+    "ESP",
+    "ITA",
+    "CYP"
+   ],
+   "category": "economy",
+   "title": "欧债危机",
+   "summary": "2009年底希腊财政赤字数据被大幅上修后，市场对部分欧元区国家的偿债能力失去信心。2010年5月希腊获得欧盟和国际货币基金组织首轮救助，爱尔兰（2010年）、葡萄牙（2011年）相继求援，2012年希腊进行私人债务重组，西班牙获得银行业救助。受援国推行严厉紧缩政策，经济长期衰退，希腊和西班牙失业率在2012—2013年升至25%以上，大批年轻人出国谋职；希腊危机此后又延续多年。",
+   "personal_hooks": [
+    "公务员工资和养老金被削减，税负加重。",
+    "大学毕业生难以找到工作，许多人前往德国、英国等地谋生。",
+    "街头抗议和罢工在受援国频繁发生。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Eurozone_crisis",
+    "https://en.wikipedia.org/wiki/Greek_government-debt_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "shanghai_expo_2010",
+   "start": "2010-05-01",
+   "end": "2010-10-31",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "culture",
+   "title": "上海世博会",
+   "summary": "2010年5月1日至10月31日，以「城市，让生活更美好」为主题的世界博览会在上海黄浦江两岸举行，共有246个国家和国际组织参展，累计参观人数超过7,300万人次，创世博会历史纪录。",
+   "personal_hooks": [
+    "许多人专程到上海，排长队参观各国展馆。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Expo_2010"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "world_cup_2010",
+   "start": "2010-06-11",
+   "end": "2010-07-11",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "ZAF"
+   ],
+   "category": "sport",
+   "title": "南非世界杯",
+   "summary": "2010年6月11日至7月11日，第19届国际足联世界杯在南非举行，这是世界杯首次在非洲举办。西班牙在决赛中加时以1比0战胜荷兰，首次夺得世界杯冠军。南非为此新建和改造了多座球场以及机场、道路等交通设施。",
+   "personal_hooks": [
+    "球迷们吹着呜呜祖拉观看比赛，这种长喇叭的声音成为这届世界杯的标志。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup",
+    "https://en.wikipedia.org/wiki/Vuvuzela"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pakistan_floods_2010",
+   "start": "2010-07",
+   "end": "2010-09",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "PAK"
+   ],
+   "category": "disaster",
+   "title": "巴基斯坦特大洪灾",
+   "summary": "2010年7月下旬起，季风暴雨引发巴基斯坦印度河流域特大洪灾，约五分之一国土被淹，1,985人死亡，约2,000万人直接受灾，农田、道路和房屋大量损毁，世界卫生组织称约1,000万人被迫饮用不安全的水。",
+   "personal_hooks": [
+    "农村家庭可能失去当季的庄稼、存粮和牲畜，被迫迁往路边或学校里的临时营地。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_Pakistan_floods"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "russia_heatwave_2010",
+   "start": "2010-07",
+   "end": "2010-09",
+   "year": 2010,
+   "end_year": 2010,
+   "scope": "countries",
+   "countries": [
+    "RUS"
+   ],
+   "category": "disaster",
+   "title": "2010年俄罗斯热浪与山火",
+   "summary": "2010年夏季俄罗斯经历了有记录以来最热的夏天，西部地区持续高温干旱并引发数百起山林火灾，莫斯科被烟雾笼罩。慕尼黑再保险公司估计高温和烟雾共造成约5.6万人死亡。粮食严重减产后，俄罗斯宣布暂停谷物出口。",
+   "personal_hooks": [
+    "莫斯科居民在烟雾中出门需要戴口罩，有条件的家庭离开城市避暑。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     65,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010_Russian_wildfires",
+    "https://en.wikipedia.org/wiki/2010_Northern_Hemisphere_heat_waves"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "haiti_cholera_2010",
+   "start": "2010-10",
+   "year": 2010,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "HTI"
+   ],
+   "category": "epidemic",
+   "title": "海地霍乱疫情",
+   "summary": "2010年10月，地震后的海地暴发霍乱疫情并迅速蔓延全国，联合国数据显示到2019年疫情结束时共约82万人感染、近1万人死亡。调查普遍认为病菌由来自尼泊尔的联合国维和人员营地传入，联合国秘书长于2016年就联合国在疫情中的角色公开道歉。",
+   "personal_hooks": [
+    "居民需要用净水片处理饮用水，许多人在临时治疗中心接受补液治疗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010s_Haiti_cholera_outbreak"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "cote_divoire_crisis_2010",
+   "start": "2010-11-28",
+   "end": "2011-04-11",
+   "year": 2010,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "CIV"
+   ],
+   "category": "war",
+   "title": "科特迪瓦选举后危机",
+   "summary": "2010年11月科特迪瓦总统选举第二轮后，时任总统巴博与反对派候选人瓦塔拉均宣布获胜，国家陷入政治危机并演变为武装冲突。2011年4月巴博在阿比让被瓦塔拉一方部队逮捕，危机结束。冲突造成约3,000人死亡，数十万人逃离家园。",
+   "personal_hooks": [
+    "阿比让居民在激烈交火期间可能连续多日无法出门购买食物。",
+    "西部地区的一些家庭逃往利比里亚等邻国避难。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2010–2011_Ivorian_crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "tunisia_revolution_2010",
+   "start": "2010-12-17",
+   "end": "2011-01-14",
+   "year": 2010,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "TUN"
+   ],
+   "category": "politics",
+   "title": "突尼斯革命",
+   "summary": "2010年12月17日，突尼斯小贩布瓦齐齐自焚引发全国性抗议，2011年1月14日执政23年的总统本·阿里出走沙特阿拉伯。突尼斯革命成为「阿拉伯之春」的开端，同年10月突尼斯举行了制宪议会选举。",
+   "personal_hooks": [
+    "许多失业的年轻人走上街头，表达对就业和生活状况的不满。",
+    "政局变动期间旅游业下滑，一些人乘船前往意大利寻找工作。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tunisian_revolution",
+    "https://en.wikipedia.org/wiki/Mohamed_Bouazizi"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "arab_spring_2011",
+   "start": "2011-01",
+   "end": "2012-12",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "regions",
+   "regions": [
+    "NAF",
+    "WAS"
+   ],
+   "countries": [
+    "BHR",
+    "JOR",
+    "MAR",
+    "DZA",
+    "OMN"
+   ],
+   "category": "politics",
+   "title": "阿拉伯之春",
+   "summary": "2011年，受突尼斯革命影响，抗议浪潮席卷中东和北非多国：突尼斯、埃及、利比亚、也门的长期执政者相继下台，叙利亚陷入内战，巴林、约旦、摩洛哥、阿尔及利亚、阿曼等国也出现规模不等的抗议，一些国家进行了宪法或政府改组。这一系列事件被统称为「阿拉伯之春」。",
+   "personal_hooks": [
+    "人们通过卫星电视、手机和社交媒体密切关注邻国局势。",
+    "政局动荡使部分国家的旅游业和外国投资明显下降。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Arab_Spring",
+    "https://en.wikipedia.org/wiki/2011_Bahraini_uprising"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_polio_free_2011",
+   "start": "2011-01-13",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "IND"
+   ],
+   "category": "epidemic",
+   "title": "印度阻断脊髓灰质炎传播",
+   "summary": "2011年1月13日，印度报告了最后一例野生脊髓灰质炎（小儿麻痹症）病例。依靠以「脉冲式」大规模口服疫苗接种为核心的长期免疫运动，印度此后再无新病例，2012年2月被世界卫生组织移出脊灰流行国家名单，2014年3月获认证为无脊灰国家。",
+   "personal_hooks": [
+    "每逢全国免疫日，志愿者挨家挨户给5岁以下儿童滴服脊灰疫苗。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pulse_Polio",
+    "https://en.wikipedia.org/wiki/Polio_eradication"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "wechat_2011",
+   "start": "2011-01-21",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "technology",
+   "title": "微信与移动即时通讯",
+   "summary": "2011年1月腾讯推出手机即时通讯应用微信，支持语音消息、朋友圈等功能，用户数快速增长，此后又加入移动支付等服务，逐步成为中国人日常生活中的「超级应用」。同一时期，WhatsApp、KakaoTalk、LINE等移动通讯应用也在世界各地普及。",
+   "personal_hooks": [
+    "家人之间开始用语音消息和视频聊天代替打电话、发短信。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 2
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/WeChat",
+    "https://en.wikipedia.org/wiki/WhatsApp",
+    "https://en.wikipedia.org/wiki/KakaoTalk",
+    "https://en.wikipedia.org/wiki/Line_(software)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "egypt_revolution_2011",
+   "start": "2011-01-25",
+   "end": "2012-06",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "EGY"
+   ],
+   "category": "politics",
+   "title": "埃及革命",
+   "summary": "2011年1月25日起，埃及各地爆发大规模抗议，开罗解放广场成为集会中心。2月11日执政近30年的总统穆巴拉克辞职，由军方过渡管理。2012年6月，穆斯林兄弟会出身的穆尔西当选总统。政局动荡令旅游业和经济明显受挫。",
+   "personal_hooks": [
+    "许多城市居民第一次参加大规模集会或投票。",
+    "依赖旅游业的家庭收入锐减，物价上涨带来生活压力。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_Egyptian_revolution",
+    "https://en.wikipedia.org/wiki/Hosni_Mubarak"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "yemen_uprising_2011",
+   "start": "2011-01-27",
+   "end": "2012-02-27",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "YEM"
+   ],
+   "category": "conflict",
+   "title": "也门政局动荡",
+   "summary": "2011年1月起也门爆发大规模反政府抗议，并伴随武装冲突。同年11月总统萨利赫签署海湾阿拉伯国家合作委员会斡旋的权力移交协议，2012年2月副总统哈迪经选举接任总统。动荡加剧了也门本已严重的贫困和人道主义困境。",
+   "personal_hooks": [
+    "燃料和电力供应时断时续，食品价格上涨。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Yemeni_revolution"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "libya_war_2011",
+   "start": "2011-02-15",
+   "end": "2011-10-23",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "LBY"
+   ],
+   "category": "war",
+   "title": "利比亚内战",
+   "summary": "2011年2月利比亚东部城市班加西爆发抗议，并迅速演变为内战。3月联合国安理会第1973号决议授权设立禁飞区，北约随后实施空袭。8月反对派攻占的黎波里，10月卡扎菲在苏尔特被打死，内战结束。冲突死亡人数估计从数千到约3万不等，数十万外籍劳工撤离。",
+   "personal_hooks": [
+    "许多家庭因战事被迫离开城市，或长时间缺乏电力、燃料和药品。",
+    "在利比亚工作的外国劳工紧急撤离，失去了收入来源。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.25,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Libyan_civil_war_(2011)",
+    "https://en.wikipedia.org/wiki/2011_military_intervention_in_Libya"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "christchurch_earthquake_2011",
+   "start": "2011-02-22",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "NZL"
+   ],
+   "category": "disaster",
+   "title": "新西兰基督城地震",
+   "summary": "2011年2月22日，新西兰南岛基督城附近发生矩震级6.2级浅源地震，此前已被2010年9月坎特伯雷地震损坏的市中心建筑大量倒塌，东部郊区出现严重的土壤液化，共造成185人死亡。2010—2011年坎特伯雷系列地震是新西兰损失最大的自然灾害。",
+   "personal_hooks": [
+    "许多基督城居民的房屋无法居住，一些家庭迁往其他城市。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_Christchurch_earthquake"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "myanmar_reforms_2011",
+   "start": "2011-03",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "MMR"
+   ],
+   "category": "politics",
+   "title": "缅甸政治与经济改革",
+   "summary": "2010年11月缅甸举行大选，昂山素季随后结束软禁；2011年3月吴登盛领导的新政府上台，推行释放政治犯、放宽新闻审查、允许成立工会和改革汇率制度等一系列改革。2012年4月补选中，全国民主联盟赢得绝大多数改选议席，昂山素季当选议员，西方国家随后逐步放松对缅甸的制裁。",
+   "personal_hooks": [
+    "新闻审查放宽后，人们能在报摊上读到更多不同观点的报刊。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011%E2%80%932015_Myanmar_political_reforms"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "fukushima_nuclear_2011",
+   "start": "2011-03-11",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "JPN"
+   ],
+   "category": "disaster",
+   "title": "福岛第一核电站事故",
+   "summary": "海啸导致福岛第一核电站失去电源和冷却能力，三座反应堆堆芯熔毁并向环境释放放射性物质，事故被定为国际核事件分级表最高的7级，联合国原子辐射效应科学委员会认为这是切尔诺贝利以来最严重的核事故。周边至少16.4万居民撤离或自愿迁离。事故后日本核电站长期停运，德国决定在2022年底前关闭全部核电站，多国重新审视核电政策。",
+   "personal_hooks": [
+    "福岛县部分居民被迫离开家园，许多年无法返回。",
+    "人们开始关注食品产地和辐射检测结果。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fukushima_nuclear_accident",
+    "https://en.wikipedia.org/wiki/Nuclear_power_phase-out"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "tohoku_earthquake_2011",
+   "start": "2011-03-11",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "JPN"
+   ],
+   "category": "disaster",
+   "title": "东日本大地震",
+   "summary": "2011年3月11日，日本东北地区近海发生矩震级9.0至9.1级特大地震，引发巨大海啸，岩手、宫城、福岛等县沿海城镇遭受毁灭性破坏。据2021年官方统计，死亡（含灾害关联死亡）19,759人，失踪2,553人，数十万人一度避难。地震海啸还引发了福岛第一核电站事故。",
+   "personal_hooks": [
+    "东北沿海的居民可能失去家园，在临时住宅中生活多年。",
+    "首都圈一度实行轮流停电，交通中断，许多人步行数小时回家。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -2,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_Tōhoku_earthquake_and_tsunami"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "syria_uprising_2011",
+   "start": "2011-03-15",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "SYR"
+   ],
+   "category": "conflict",
+   "title": "叙利亚抗议与冲突升级",
+   "summary": "2011年3月，叙利亚南部德拉等地爆发反政府抗议并蔓延至全国。安全部队的镇压与反对派的武装化使冲突不断升级，年内出现「自由叙利亚军」等武装组织。11月阿拉伯国家联盟暂停了叙利亚的成员资格。",
+   "personal_hooks": [
+    "一些城市实行宵禁，检查站增多，人们减少外出。",
+    "局势不明朗，一些家庭开始考虑把孩子送到国外亲戚处。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -2,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.05,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Syrian_civil_war",
+    "https://en.wikipedia.org/wiki/Free_Syrian_Army"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bin_laden_killed_2011",
+   "start": "2011-05-02",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "PAK",
+    "AFG"
+   ],
+   "category": "conflict",
+   "title": "本·拉登在巴基斯坦被击毙",
+   "summary": "2011年5月2日，美国特种部队在巴基斯坦阿伯塔巴德的一处住所击毙「基地」组织创建者奥萨马·本·拉登，他被认为是九一一袭击的策划者。行动事先未通知巴基斯坦政府，此后美巴关系一度紧张。",
+   "personal_hooks": [
+    "许多人通过新闻快讯得知这一消息，九一一遇难者家属再次成为媒体关注的焦点。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Killing_of_Osama_bin_Laden"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "east_africa_drought_2011",
+   "start": "2011-07",
+   "end": "2012-06",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "ETH",
+    "KEN",
+    "DJI"
+   ],
+   "category": "disaster",
+   "title": "东非大旱",
+   "summary": "2011年东非遭遇被称为约60年来最严重的干旱，索马里、吉布提、埃塞俄比亚和肯尼亚约950万人的生计受到威胁。大量索马里难民涌入肯尼亚达达阿布和埃塞俄比亚的难民营，营地拥挤，营养不良问题严重。",
+   "personal_hooks": [
+    "牧民家庭可能失去大部分牲畜，只能依靠救济粮维生。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_East_Africa_drought"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "thailand_floods_2011",
+   "start": "2011-07",
+   "end": "2012-01",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "THA"
+   ],
+   "category": "disaster",
+   "title": "泰国大洪灾",
+   "summary": "2011年7月底至2012年1月，泰国北部、东北部和中部发生严重洪灾，曼谷部分地区被淹，815人死亡，1,360万人受影响。七个大型工业园区被淹，导致全球汽车和硬盘供应链中断，世界银行估计经济损失约465亿美元。",
+   "personal_hooks": [
+    "工业园区的工人可能因工厂被淹而停工数月。",
+    "曼谷市民在家门口堆起沙袋，储备食物和饮用水。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_Thailand_floods"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "south_sudan_independence_2011",
+   "start": "2011-07-09",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "SSD",
+    "SDN"
+   ],
+   "category": "politics",
+   "title": "南苏丹独立",
+   "summary": "根据2005年《全面和平协议》，南苏丹于2011年1月举行独立公投，98.83%的选票支持独立。2011年7月9日南苏丹共和国宣告独立，同月成为联合国第193个会员国。2012年1月，南苏丹因与苏丹的石油过境费争端停止全部石油生产，财政收入锐减、食品价格大涨，两国同年还在黑格里格等边境产油区发生武装冲突。",
+   "personal_hooks": [
+    "许多南方人在独立日走上街头庆祝，一些长期住在北方的南方人举家迁回南方。",
+    "失去大部分石油收入后，两国物价都明显上涨。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_South_Sudanese_independence_referendum",
+    "https://en.wikipedia.org/wiki/South_Sudan",
+    "https://en.wikipedia.org/wiki/Heglig_Crisis"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "somalia_famine_2011",
+   "start": "2011-07-20",
+   "end": "2012-02",
+   "year": 2011,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "SOM"
+   ],
+   "category": "disaster",
+   "title": "索马里饥荒",
+   "summary": "2011年7月20日，联合国宣布索马里南部部分地区出现饥荒，这是该地区近30年来首次由联合国宣布饥荒。干旱叠加武装冲突和援助受阻，联合国粮农组织与美国饥荒预警系统网络2013年的报告估计，约26万人在这场饥荒中死亡，其中一半是5岁以下儿童。",
+   "personal_hooks": [
+    "许多家庭步行多日前往摩加迪沙或邻国的难民营寻求救济。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.4,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 3,
+   "sources": [
+    "https://www.bbc.com/news/world-africa-22380352",
+    "https://en.wikipedia.org/wiki/2011_East_Africa_drought"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "world_population_7bn_2011",
+   "start": "2011-10-31",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "global",
+   "countries": [],
+   "category": "society",
+   "title": "世界人口达到70亿",
+   "summary": "联合国人口基金将2011年10月31日定为世界人口达到70亿的象征性日期。世界人口从1999年的约60亿增至70亿用了约12年，新增人口主要来自南亚和撒哈拉以南非洲；与此同时，许多东亚和欧洲国家的生育率已低于更替水平，人口老龄化加快。",
+   "personal_hooks": [
+    "新闻里出现了关于「第70亿个婴儿」的报道，人们开始讨论人口与资源的话题。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Day_of_Seven_Billion",
+    "https://en.wikipedia.org/wiki/World_population",
+    "https://population.un.org/wpp/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kim_jong_il_death_2011",
+   "start": "2011-12-17",
+   "year": 2011,
+   "end_year": 2011,
+   "scope": "countries",
+   "countries": [
+    "PRK",
+    "KOR"
+   ],
+   "category": "politics",
+   "title": "金正日去世，金正恩接任",
+   "summary": "2011年12月17日，朝鲜最高领导人金正日去世，朝鲜官方媒体在宣布消息时称其三子金正恩为接班人。12月28日平壤举行葬礼，此后金正恩陆续出任朝鲜党、政、军最高职务。",
+   "personal_hooks": [
+    "朝鲜民众参加了大规模的悼念活动，周边国家密切关注朝鲜政局的变化。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Kim_Jong_Il",
+    "https://en.wikipedia.org/wiki/Kim_Jong_Un"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sahel_food_crisis_2012",
+   "start": "2012",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "NER",
+    "MLI",
+    "TCD",
+    "BFA",
+    "MRT",
+    "SEN"
+   ],
+   "category": "disaster",
+   "title": "萨赫勒粮食危机",
+   "summary": "2012年萨赫勒地区遭遇严重干旱和歉收，加之粮价上涨，引发大范围粮食危机。联合国人道主义事务负责人表示，西非和萨赫勒地区逾1,500万人受到营养不良威胁，马里北部冲突使局势进一步恶化。",
+   "personal_hooks": [
+    "农牧民家庭可能减少每日餐数，母亲们带孩子前往营养救治中心。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2012_Sahel_drought"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "syria_civil_war_2012",
+   "start": "2012",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "SYR"
+   ],
+   "category": "war",
+   "title": "叙利亚内战全面爆发",
+   "summary": "2012年叙利亚冲突演变为全面内战，战火蔓延至大马士革和阿勒颇等主要城市，联合国斡旋的停火计划未能落实。至2012年底死亡人数已达数万，数十万人逃往土耳其、黎巴嫩、约旦等邻国，国内流离失所者超过百万。这场战争此后又持续多年，成为21世纪最严重的人道主义危机之一。",
+   "personal_hooks": [
+    "许多家庭的房屋在炮火中被毁，不得不辗转多地避难。",
+    "学校停课，医院和药品严重短缺。",
+    "一些家庭冒险越境前往邻国难民营。"
+   ],
+   "effects": {
+    "economy": -3,
+    "health": -3,
+    "happiness": -3,
+    "safety": -3,
+    "education": -2,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.4,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 3,
+   "importance": 4,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Syrian_civil_war",
+    "https://en.wikipedia.org/wiki/Refugees_of_the_Syrian_civil_war",
+    "https://en.wikipedia.org/wiki/Casualties_of_the_Syrian_civil_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "iran_sanctions_2012",
+   "start": "2012-01",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "IRN"
+   ],
+   "category": "economy",
+   "title": "对伊朗制裁加码与里亚尔贬值",
+   "summary": "围绕伊朗核计划的国际制裁在2010年后不断加码，2012年欧盟对伊朗实施石油禁运，美欧限制与伊朗中央银行的金融往来。伊朗石油出口锐减，里亚尔在2012年大幅贬值，物价快速上涨，民众生活成本明显增加。",
+   "personal_hooks": [
+    "进口药品和日用品价格上涨，部分商品一度难以买到。",
+    "人们纷纷把储蓄换成美元或黄金以求保值。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/International_sanctions_against_Iran",
+    "https://en.wikipedia.org/wiki/Iranian_rial"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "mali_crisis_2012",
+   "start": "2012-01-17",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "MLI"
+   ],
+   "category": "war",
+   "title": "马里北部危机与军事政变",
+   "summary": "2012年1月马里北部图阿雷格武装发动叛乱，3月首都巴马科发生军事政变，随后北部大片地区先后被图阿雷格武装和伊斯兰激进组织控制，数十万人流离失所或逃往邻国。2013年1月法国应马里政府请求出兵干预。",
+   "personal_hooks": [
+    "北部城市的居民可能被迫逃往南部或毛里塔尼亚、尼日尔等邻国的难民营。",
+    "北部的学校和医院大面积停摆。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -3,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mali_War",
+    "https://en.wikipedia.org/wiki/2012_Malian_coup_d'état",
+    "https://en.wikipedia.org/wiki/Tuareg_rebellion_(2012)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "higgs_boson_2012",
+   "start": "2012-07-04",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [],
+   "category": "science",
+   "title": "希格斯玻色子的发现",
+   "summary": "2012年7月4日，欧洲核子研究中心宣布大型强子对撞机的ATLAS和CMS实验发现了一种与希格斯玻色子相符的新粒子，补上了粒子物理标准模型预言的最后一种基本粒子。彼得·希格斯和弗朗索瓦·恩格勒因此获得2013年诺贝尔物理学奖。",
+   "personal_hooks": [
+    "「上帝粒子」一度成为新闻热词。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Higgs_boson",
+    "https://home.cern/science/physics/higgs-boson"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "london_olympics_2012",
+   "start": "2012-07-27",
+   "end": "2012-08-12",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "GBR"
+   ],
+   "category": "sport",
+   "title": "伦敦奥运会",
+   "summary": "2012年7月27日至8月12日，第30届夏季奥林匹克运动会在伦敦举行，来自206个国家和地区奥委会的10,518名运动员参赛，伦敦成为首个三次举办现代奥运会的城市。美国位居金牌榜首位，中国第二，东道主英国第三。为筹办奥运会，伦敦东部斯特拉特福德的旧工业区被改造为奥林匹克公园。",
+   "personal_hooks": [
+    "许多英国家庭第一次在本国现场观看奥运比赛，伦敦东区的街道和交通焕然一新。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/2012_Summer_Olympics"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "alexnet_deep_learning_2012",
+   "start": "2012-09-30",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "global",
+   "countries": [],
+   "category": "science",
+   "title": "深度学习突破（AlexNet）",
+   "summary": "2012年，多伦多大学团队开发的深度卷积神经网络AlexNet在ImageNet图像识别竞赛中以明显优势夺冠，前五错误率为15.3%，比第二名低10个多百分点。这一成果被普遍视为深度学习兴起的标志，利用GPU训练神经网络随后成为人工智能研究的主流方法。",
+   "personal_hooks": [
+    "当时普通人很少注意到这条消息，但此后几年手机拍照识别、语音助手等功能迅速进步。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/AlexNet",
+    "https://en.wikipedia.org/wiki/ImageNet"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hurricane_sandy_2012",
+   "start": "2012-10-22",
+   "end": "2012-11-02",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "USA",
+    "HTI",
+    "CUB",
+    "JAM",
+    "BHS"
+   ],
+   "category": "disaster",
+   "title": "飓风桑迪",
+   "summary": "2012年10月下旬，飓风桑迪先后袭击牙买加、古巴、巴哈马等加勒比国家，10月29日在美国新泽西州沿海登陆，纽约等地发生严重风暴潮和大面积停电。桑迪是有记录以来直径最大的大西洋飓风，在8个国家共造成254人死亡，损失近700亿美元。",
+   "personal_hooks": [
+    "美国东北部沿海的许多家庭停电数日甚至数周，部分住房被海水淹没。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hurricane_Sandy"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_leadership_2012",
+   "start": "2012-11-08",
+   "end": "2012-11-15",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "CHN"
+   ],
+   "category": "politics",
+   "title": "中共十八大与领导层换届",
+   "summary": "2012年11月8日至14日，中国共产党第十八次全国代表大会在北京召开，会后习近平接替胡锦涛任中共中央总书记。胡锦涛自2002年中共十六大起担任总书记，其任内提出「科学发展观」和构建「和谐社会」等方针。",
+   "personal_hooks": [
+    "人们通过电视新闻关注新一届中央领导集体的亮相。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 3,
+   "sources": [
+    "https://en.wikipedia.org/wiki/18th_National_Congress_of_the_Chinese_Communist_Party",
+    "https://en.wikipedia.org/wiki/16th_National_Congress_of_the_Chinese_Communist_Party",
+    "https://en.wikipedia.org/wiki/Scientific_Outlook_on_Development"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "typhoon_bopha_2012",
+   "start": "2012-12-03",
+   "end": "2012-12-09",
+   "year": 2012,
+   "end_year": 2012,
+   "scope": "countries",
+   "countries": [
+    "PHL"
+   ],
+   "category": "disaster",
+   "title": "台风宝霞袭击棉兰老岛",
+   "summary": "2012年12月3日，超强台风宝霞（菲律宾称「巴布洛」）以五级强度登陆菲律宾棉兰老岛，是有记录以来影响该岛最强的热带气旋，引发洪水和山体滑坡，造成1,901人死亡、数千人无家可归，17万余人进入疏散中心。",
+   "personal_hooks": [
+    "棉兰老岛东部的农户可能失去果园和庄稼，多年难以恢复收入。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "importance": 2,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Typhoon_Bopha"
+   ],
+   "confidence": "high"
+  }
+ ]
+}

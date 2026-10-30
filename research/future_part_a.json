@@ -1,0 +1,6763 @@
+{
+ "file": "future_part_a",
+ "domains": [
+  "demography",
+  "economy",
+  "climate",
+  "energy",
+  "society"
+ ],
+ "as_of": "2026-10-24",
+ "note": "2026—2090 年为基于当前趋势的推演，不是事实。baseline_assumptions 为截至 2026-10-24 的已发表数据与机构预测；dimensions 各分支概率之和为 1；milestones 的 requires 引用分支 id（省略即任意分支）；random_shocks 的 annual_prob 为基础年概率，可按 branch_prob_mult 与 region_annual_prob 调整。",
+ "baseline_assumptions": [
+  {
+   "id": "ba_world_pop",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：世界人口 2024 年约 81.6 亿，预计约在 2084 年达到约 102.9 亿的峰值，2100 年回落至约 101.8 亿；人口在本世纪内见顶的概率约 80%。",
+   "numbers": {
+    "pop_2024_bn": 8.16,
+    "pop_2050_bn": 9.66,
+    "pop_2090_bn": 10.27,
+    "peak_year": 2084,
+    "peak_bn": 10.29,
+    "pop_2100_bn": 10.18,
+    "prob_peak_this_century": 0.8
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://news.un.org/en/story/2024/07/1151971",
+    "https://www.un.org/development/desa/pd/node/4324"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_fertility",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：全球总和生育率 2024 年约 2.25，预计 2050 年前后降至更替水平 2.1 以下，2090 年约 1.88；超过一半国家和地区已低于 2.1，近五分之一低于 1.4（「超低生育率」）。",
+   "numbers": {
+    "tfr_world_2024": 2.25,
+    "tfr_world_2050": 2.1,
+    "tfr_world_2090": 1.88,
+    "year_world_below_2_1": 2050,
+    "tfr_eastern_asia_2024": 1.03,
+    "tfr_europe_2024": 1.4,
+    "tfr_ssa_2024": 4.26,
+    "tfr_ssa_2050": 2.87,
+    "tfr_ssa_2090": 2.12
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://news.un.org/en/story/2024/07/1151971"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_life_expectancy",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：全球出生时预期寿命 2024 年为 73.3 岁，预计 2050 年约 77.0 岁、2090 年约 80.9 岁；撒哈拉以南非洲从 62.3 岁升至 2090 年约 72.5 岁，东亚从 79.0 岁升至约 88.9 岁。",
+   "numbers": {
+    "le_world_2024": 73.3,
+    "le_world_2050": 77.0,
+    "le_world_2090": 80.9,
+    "le_ssa_2024": 62.3,
+    "le_ssa_2090": 72.5,
+    "le_eastern_asia_2024": 79.0,
+    "le_eastern_asia_2090": 88.9
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://data.worldpop.org/repo/prj/Resources/WorldPop_10_year_anniversary/Gerland_20241009_Future%20Population_Trends_and_Their_Measurement.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_global_aging",
+   "domain": "society",
+   "statement": "基于 UN WPP 2024 中方案：全球 65 岁及以上人口占比将从 2024 年的约 10.2%（约 8.3 亿人）升至 2050 年约 16.3%（约 15.8 亿人）和 2090 年约 23.1%；80 岁以上人口从约 1.6 亿增至 2050 年约 4.5 亿；65 岁以上人口预计在 2070 年代后期超过 18 岁以下人口。",
+   "numbers": {
+    "share_65plus_2024": 10.2,
+    "share_65plus_2050": 16.3,
+    "share_65plus_2090": 23.1,
+    "pop_65plus_2024_m": 833,
+    "pop_65plus_2050_m": 1578,
+    "pop_80plus_2024_m": 164,
+    "pop_80plus_2050_m": 446,
+    "year_65plus_exceeds_under18": 2078,
+    "median_age_2024": 30.6,
+    "median_age_2050": 36.1,
+    "median_age_2090": 41.2
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz",
+    "https://news.un.org/en/story/2024/07/1151971"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_east_asia_decline",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：东亚人口已于 2020 年前后见顶，预计从 2024 年约 16.6 亿降至 2090 年约 8.9 亿；中国人口预计 2050 年约 12.6 亿、2090 年约 7.4 亿、2100 年约 6.3 亿，65 岁以上占比 2050 年约 31%；韩国 2090 年约 2540 万，日本约 8060 万。",
+   "numbers": {
+    "eas_2024_m": 1656,
+    "eas_2090_m": 892,
+    "chn_2024_m": 1419,
+    "chn_2050_m": 1260,
+    "chn_2070_m": 999,
+    "chn_2090_m": 745,
+    "chn_2100_m": 633,
+    "chn_65plus_share_2050": 30.9,
+    "kor_2024_m": 51.7,
+    "kor_2050_m": 45.1,
+    "kor_2090_m": 25.4,
+    "jpn_2024_m": 123.8,
+    "jpn_2050_m": 105.1,
+    "jpn_2090_m": 80.6,
+    "twn_2090_m": 11.3
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://www.socsci.uci.edu/newsevents/news/2024/2024-10-29-wang-feng-new-geography.php"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_east_asia_recent",
+   "domain": "demography",
+   "statement": "最新统计：中国 2025 年出生人口约 792 万、死亡约 1131 万，年末总人口约 14.05 亿，连续第四年下降，60 岁以上约占 23%；韩国 2025 年出生约 25.4 万人，总和生育率回升至约 0.80；日本 2025 年日本国籍新生儿 671,236 人，总和生育率 1.14，均为有记录以来最低。",
+   "numbers": {
+    "chn_births_2025_m": 7.92,
+    "chn_deaths_2025_m": 11.31,
+    "chn_pop_end2025_bn": 1.405,
+    "kor_births_2025": 254300,
+    "kor_tfr_2025": 0.8,
+    "jpn_births_2025": 671236,
+    "jpn_tfr_2025": 1.14
+   },
+   "sources": [
+    "https://www.caixinglobal.com/2026-01-19/chinas-population-decline-accelerates-as-births-hit-modern-era-low-in-2025-102405521.html",
+    "https://koreatimes.co.kr/southkorea/society/20260826/koreas-births-rise-67-to-254300-in-2025",
+    "https://www.nippon.com/en/news/yjj2026060300610/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_japan_ipss",
+   "domain": "demography",
+   "statement": "日本国立社会保障与人口问题研究所（IPSS）2023 年推计（中位）：日本总人口将在 2056 年跌破 1 亿，2070 年约 8700 万（约为 2020 年的 69%），65 岁以上占比从 2020 年 28.6% 升至 2070 年 38.7%；推计假设外国人年净迁入到 2040 年约 16.4 万人。",
+   "numbers": {
+    "year_below_100m": 2056,
+    "pop_2070_m": 87,
+    "share_65plus_2070": 38.7,
+    "tfr_2070_assumed": 1.36,
+    "net_foreign_migration_2040": 164000
+   },
+   "sources": [
+    "https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_south_asia",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：印度人口 2024 年约 14.5 亿，预计约在 2061 年达到约 17.0 亿的峰值；60 岁以上占比 2050 年约 20.6%（约 3.46 亿人）。巴基斯坦人口预计从约 2.51 亿增至 2050 年约 3.72 亿、2090 年约 4.99 亿；孟加拉国约在 2071 年见顶（约 2.26 亿）。",
+   "numbers": {
+    "ind_2024_m": 1451,
+    "ind_peak_year": 2061,
+    "ind_peak_m": 1701,
+    "ind_60plus_share_2050": 20.6,
+    "ind_60plus_2050_m": 346,
+    "pak_2024_m": 251,
+    "pak_2050_m": 372,
+    "pak_2090_m": 499,
+    "bgd_peak_year": 2071,
+    "bgd_peak_m": 226,
+    "southern_asia_peak_year": 2072
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_africa_growth",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：撒哈拉以南非洲人口预计从 2024 年约 12.4 亿增至 2050 年约 20.9 亿、2090 年约 31.9 亿，占世界人口比重从 15.2% 升至 2090 年约 31%；其出生人口占全球比重从约 31% 升至约 43%。尼日利亚预计从约 2.33 亿增至 2050 年约 3.59 亿、2090 年约 4.72 亿；刚果（金）从约 1.09 亿增至 2090 年约 3.99 亿。",
+   "numbers": {
+    "ssa_2024_m": 1243,
+    "ssa_2050_m": 2094,
+    "ssa_2090_m": 3192,
+    "ssa_share_2024": 15.2,
+    "ssa_share_2050": 21.7,
+    "ssa_share_2090": 31.1,
+    "ssa_births_share_2024": 30.8,
+    "ssa_births_share_2090": 42.7,
+    "nga_2024_m": 233,
+    "nga_2050_m": 359,
+    "nga_2090_m": 472,
+    "cod_2024_m": 109,
+    "cod_2090_m": 399,
+    "eth_2024_m": 132,
+    "eth_2090_m": 348
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://news.un.org/en/story/2024/07/1151971"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_europe_americas",
+   "domain": "demography",
+   "statement": "基于 UN WPP 2024 中方案：欧洲人口已于 2020 年前后见顶（约 7.5 亿），预计 2050 年约 7.03 亿、2090 年约 6.09 亿；美国人口预计从约 3.45 亿增至 2090 年约 4.15 亿，增长主要来自国际移民（2024 年估计净迁入约 129 万，自然增长约 61 万），自然增长预计在 2040 年代初转负；拉美与加勒比约在 2053 年见顶（约 7.31 亿）。",
+   "numbers": {
+    "europe_2050_m": 703,
+    "europe_2090_m": 609,
+    "usa_2024_m": 345,
+    "usa_2050_m": 381,
+    "usa_2090_m": 415,
+    "usa_net_migration_2024_k": 1286,
+    "usa_natural_change_2024_k": 608,
+    "usa_natural_decrease_year": 2042,
+    "lac_peak_year": 2053,
+    "lac_peak_m": 731
+   },
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_migration",
+   "domain": "society",
+   "statement": "联合国经社部估计 2024 年年中全球国际移民约 3.04 亿人，约占世界人口 3.7%（1990 年约 1.54 亿）；联合国难民署统计 2025 年底全球被迫流离失所者约 1.178 亿人，为十年来首次下降（2024 年为 1.232 亿）。",
+   "numbers": {
+    "intl_migrants_2024_m": 304,
+    "share_of_world_pop": 3.7,
+    "intl_migrants_1990_m": 153.9,
+    "forcibly_displaced_end2025_m": 117.8,
+    "forcibly_displaced_end2024_m": 123.2
+   },
+   "sources": [
+    "https://www.migrationpolicy.org/article/top-statistics-global-migration-migrants",
+    "https://www.destatis.de/EN/Themes/Countries-Regions/International-Statistics/Data-Topic/Population-Labour-Social-Issues/DemographyMigration/Migrants.html",
+    "https://africanews.com/2026/06/12/unhcr-number-of-displaced-people-worldwide-falls-for-first-time-in-a-decade"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_urbanisation",
+   "domain": "society",
+   "statement": "联合国《世界城镇化展望 2025》（采用新的统一地理空间口径）：全球约 45% 的人口居住在城市；千万人口以上特大城市从 1975 年的 8 个增至 2025 年的 33 个，其中 19 个在亚洲；雅加达（约 4200 万）为当前人口最多的城市，预计达卡将在 2050 年前后成为全球最大城市。按旧口径（WUP 2018），2050 年城镇人口占比预计约 68%，印度、中国、尼日利亚三国将贡献 2018—2050 年城镇人口增量的约 35%。",
+   "numbers": {
+    "city_share_2025": 45,
+    "megacities_1975": 8,
+    "megacities_2025": 33,
+    "megacities_in_asia_2025": 19,
+    "jakarta_2025_m": 42,
+    "urban_share_2050_wup2018": 68,
+    "urban_growth_2018_2050_ind_m": 416,
+    "urban_growth_2018_2050_chn_m": 255,
+    "urban_growth_2018_2050_nga_m": 189
+   },
+   "sources": [
+    "https://www.un.org/sustainabledevelopment/blog/2025/11/press-release-wup2025/",
+    "https://www.upi.com/Top_News/World-News/2025/11/25/jakarta-worlds-biggest-city/6671764099677/",
+    "https://www.un.org/development/desa/en/news/population/2018-revision-of-world-urbanization-prospects.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_imf_outlook",
+   "domain": "economy",
+   "statement": "IMF《世界经济展望》（2026 年 10 月）：全球经济增长 2025 年约 3.5%，预计 2026 年 3.1%、2027 年 3.4%；发达经济体 2026 年 2.1%、2027 年 1.8%，新兴市场和发展中经济体 2026 年 3.7%、2027 年 4.4%；全球通胀预计从 2025 年 4.1% 升至 2026 年 4.7%，主要受中东冲突引发的能源价格冲击影响；美国 2026 年约 2.3%，中国约 4.5%（2027 年 4.0%），印度约 7.0%。",
+   "numbers": {
+    "world_growth_2025": 3.5,
+    "world_growth_2026": 3.1,
+    "world_growth_2027": 3.4,
+    "ae_growth_2026": 2.1,
+    "ae_growth_2027": 1.8,
+    "emde_growth_2026": 3.7,
+    "emde_growth_2027": 4.4,
+    "world_inflation_2026": 4.7,
+    "usa_growth_2026": 2.3,
+    "chn_growth_2026": 4.5,
+    "chn_growth_2027": 4.0,
+    "ind_growth_2026": 7.0
+   },
+   "sources": [
+    "https://news.cgtn.com/news/2026-10-13/IMF-raises-2026-global-growth-forecast-to-3-1--1RcEPm28WWI/share_amp.html",
+    "https://tradingeconomics.com/world/full-year-gdp-growth/news/591413",
+    "https://ddindia.co.in/2026/10/imf-raises-indias-growth-forecast-to-7-for-2026-keeps-it-among-fastest-growing-major-economies/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_long_run_growth",
+   "domain": "economy",
+   "statement": "长期增长趋缓：世界银行《长期增长前景下滑》报告估计 2022—2030 年全球潜在增长率年均约 2.2%，为三十年来最低，发展中经济体从 2000—2010 年的约 6% 降至约 4%；OECD 2018 年长期情景基线中，全球实际 GDP 增速可能从约 3.5% 逐步降至 2060 年约 2%。",
+   "numbers": {
+    "wb_potential_growth_2022_2030": 2.2,
+    "wb_emde_potential_2000_2010": 6.0,
+    "wb_emde_potential_2022_2030": 4.0,
+    "oecd_world_growth_2018": 3.5,
+    "oecd_world_growth_2060": 2.0
+   },
+   "sources": [
+    "https://www.thedailystar.net/business/news/global-economys-speed-limit-set-fall-three-decade-low-3282821",
+    "https://www.developmentaid.org/news-stream/post/159454/global-economys-fall-to-three-decade-low",
+    "https://www.oecd-ilibrary.org/economics/the-long-view_b4f4e03e-en",
+    "https://www.drishtiias.com/current-affairs-news-analysis-editorials/news-analysis/25-08-2018/print/manual"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ba_rankings_2075",
+   "domain": "economy",
+   "statement": "高盛 2022 年《通往 2075 之路》长期预测：全球增长将放缓但新兴市场追赶仍将持续；中国、美国、印度可能仍为前三大经济体，印度尼西亚、尼日利亚、巴基斯坦、埃及等人口大国可能跻身前列；IMF（2026 年 10 月亚太地区展望）预计印度名义 GDP 将在 2027 年超过日本，成为全球第四大经济体。",
+   "numbers": {
+    "gs_projection_year": 2075,
+    "ind_overtakes_jpn_nominal": 2027,
+    "ind_gdp_2027_usd_tn": 4.52
+   },
+   "sources": [
+    "https://www.tbsnews.net/node/547202",
+    "https://propakistani.pk/2022/12/07/pakistan-projected-to-become-worlds-6th-largest-economy-by-2075-goldman-sachs/",
+    "https://www.businesstoday.in/latest/economy/story/india-to-overtake-japan-as-worlds-fourth-largest-economy-in-2027-imf-projections-562181-2026-10-16"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ba_public_debt",
+   "domain": "economy",
+   "statement": "债务压力：IMF《财政监测报告》称全球公共债务 2025 年约为 GDP 的 94%，预计到 2029 年接近 100%；美国国会预算办公室（CBO）2026 年初发布的长期预测显示，美国联邦公众持有债务将从 2025 财年约 99% 升至 2030 年 108%、2040 年 129%、2056 年约 175%，净利息支出约在 2047 年超过社会保障支出。",
+   "numbers": {
+    "global_public_debt_2025_pct_gdp": 94,
+    "global_public_debt_2029_pct_gdp": 100,
+    "us_debt_fy2025": 99,
+    "us_debt_2030": 108,
+    "us_debt_2040": 129,
+    "us_debt_2056": 175,
+    "us_interest_exceeds_ss_year": 2047
+   },
+   "sources": [
+    "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
+    "https://www.pattayamail.com/thailandnews/imf-warns-in-bangkok-global-public-debt-could-hit-100-of-gdp-by-2029-568416",
+    "https://www.pgpf.org/article/national-debt-projected-to-hit-175-gdp-interest-totals-99-trillion/",
+    "https://www.crfb.org/blogs/debt-rises-175-gdp-under-cbos-long-term-outlook"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_us_social_security",
+   "domain": "society",
+   "statement": "美国社会保障 2026 年受托人报告：老年与遗属保险（OASI）信托基金预计在 2032 年第四季度耗尽，届时持续收入约可支付计划待遇的 78%；OASI 与残障保险合并计算约在 2034 年第三季度耗尽，可支付约 83%；75 年精算赤字为应税工资的 4.42%。",
+   "numbers": {
+    "oasi_depletion": "2032-Q4",
+    "oasi_payable_pct": 78,
+    "oasdi_depletion": "2034-Q3",
+    "oasdi_payable_pct": 83,
+    "actuarial_deficit_pct_payroll": 4.42
+   },
+   "sources": [
+    "https://www.everycrsreport.com/reports/IF13256.html",
+    "https://budgetmodel.wharton.upenn.edu/p/2026-06-11-social-security-outlook-june-2026/",
+    "https://www.ssa.gov/news/en/press/releases/2026-06-09.html",
+    "https://www.ssa.gov/OACT/TR/2026/II_D_project.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_poverty",
+   "domain": "society",
+   "statement": "贫困：世界银行 2025 年把国际极端贫困线上调至每天 3.00 美元（2021 年购买力平价），据此估计 2025 年约 8.08 亿人（9.9%）处于极端贫困，撒哈拉以南非洲所占比例预计由约 69% 升至约 73%；按此前 2.15 美元口径，世界银行 2024 年报告预计 2030 年仍有约 6.22 亿人（7.3%）处于极端贫困，2030 年消除极端贫困的目标几无可能实现。",
+   "numbers": {
+    "poverty_line_usd_2021ppp": 3.0,
+    "extreme_poor_2025_m": 808,
+    "extreme_poor_2025_pct": 9.9,
+    "ssa_share_of_extreme_poor_2025": 73,
+    "extreme_poor_2030_m_at_2_15": 622,
+    "extreme_poor_2030_pct_at_2_15": 7.3
+   },
+   "sources": [
+    "https://pip.worldbank.org/",
+    "https://eastleighvoice.co.ke/poverty%20line/163334/world-bank-raises-poverty-line-to-3-a-day-pushing-millions-into-extreme-poverty-category",
+    "https://www.worldbank.org/en/news/press-release/2024/10/15/ending-poverty-for-half-the-world-could-take-more-than-a-century"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ba_inequality",
+   "domain": "society",
+   "statement": "不平等：《世界不平等报告 2026》显示，全球收入最高的 10% 人口获得约 53% 的收入、拥有约四分之三的财富，最低的 50% 仅获得约 8% 的收入、拥有约 2% 的财富。",
+   "numbers": {
+    "top10_income_share": 53,
+    "top10_wealth_share": 75,
+    "bottom50_income_share": 8,
+    "bottom50_wealth_share": 2
+   },
+   "sources": [
+    "https://www.storyboard18.com/how-it-works/worlds-richest-10-take-over-half-of-global-income-says-world-inequality-report-87155.htm",
+    "https://visionias.in/current-affairs/monthly-magazine/2025-12-23/economy/world-inequality-report-2026",
+    "https://wid.world/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ba_labour",
+   "domain": "society",
+   "statement": "就业：国际劳工组织《就业和社会趋势 2026》预计 2026 年全球失业率约 4.9%（约 1.86 亿人），非正规就业者约 21 亿人，非洲和南亚的非正规就业比例最高；就业质量改善停滞。",
+   "numbers": {
+    "unemployment_rate_2026": 4.9,
+    "unemployed_2026_m": 186,
+    "informal_workers_bn": 2.1
+   },
+   "sources": [
+    "https://www.ilo.org/resource/news/global-job-quality-stagnates-despite-resilient-growth",
+    "https://ilo.org/publications/flagship-reports/employment-and-social-trends-2026"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_working_age",
+   "domain": "economy",
+   "statement": "劳动年龄人口格局转移：世界银行估计到 2050 年撒哈拉以南非洲将新增约 6.25 亿劳动年龄人口，超过全球增量的四分之三，而东亚太平洋地区将减少逾 2 亿；IMF 估计到 2030 年全球新进入劳动力市场者约一半来自撒哈拉以南非洲，该地区每年可能需要新增最多约 1500 万个就业岗位。",
+   "numbers": {
+    "ssa_working_age_add_2050_m": 625,
+    "ssa_share_of_global_wa_growth": 0.75,
+    "eap_working_age_change_2050_m": -200,
+    "ssa_jobs_needed_per_year_m": 15
+   },
+   "sources": [
+    "https://blogs.worldbank.org/en/opendata/what-four-charts-reveal-about-the-global-jobs-challenge",
+    "https://www.imf.org/en/blogs/articles/2024/11/12/the-clock-is-ticking-on-sub-saharan-africas-urgent-job-creation-challenge"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_retirement_trend",
+   "domain": "society",
+   "statement": "退休年龄普遍上调：中国自 2025 年 1 月起用 15 年时间将男职工法定退休年龄从 60 岁逐步延至 63 岁、女职工从 50/55 岁延至 55/58 岁，2030 年起养老金最低缴费年限从 15 年每年提高半年至 20 年；丹麦 2025 年立法将领取国家养老金年龄于 2030 年升至 68 岁、2035 年 69 岁、2040 年 70 岁；新加坡 2026 年 7 月将法定退休/重新雇用年龄提至 64/69 岁，计划 2030 年达到 65/70 岁；越南男性 2028 年达 62 岁、女性 2035 年达 60 岁；德国法定退休年龄 2031 年升至 67 岁。",
+   "numbers": {
+    "chn_male_target": 63,
+    "chn_female_targets": [
+     55,
+     58
+    ],
+    "chn_min_contrib_years_from_2030": "15→20",
+    "dnk_2030": 68,
+    "dnk_2035": 69,
+    "dnk_2040": 70,
+    "sgp_2026": [
+     64,
+     69
+    ],
+    "sgp_2030": [
+     65,
+     70
+    ],
+    "vnm_male_2028": 62,
+    "vnm_female_2035": 60,
+    "deu_2031": 67
+   },
+   "sources": [
+    "https://www.jurist.org/news/2024/09/china-approves-retirement-age-increase-amid-demographic-challenges/",
+    "https://www.sixthtone.com/news/1015876",
+    "https://www.thelocal.dk/20250522/denmark-formally-raises-retirement-age-to-70-in-2040",
+    "https://www.singaporelawwatch.sg/Headlines/singapore-to-raise-retirement-age-to-64-and-re-employment-age-to-69-on-july-1-tan-see-leng",
+    "https://lawnet.vn/thong-tin-phap-luat/en/tu-van-luat/details-of-the-roadmap-to-increase-the-retirement-age-for-employees-over-the-years-in-vietnam-142377.html",
+    "https://en.wikipedia.org/wiki/Pensions_in_Germany"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_pension_reforms",
+   "domain": "society",
+   "statement": "养老金改革进展：韩国 2025 年修订《国民年金法》，自 2026 年起缴费率每年提高 0.5 个百分点、由 9% 升至 2033 年 13%，名义替代率定为 43%，基金耗尽时间预计由 2056 年推迟至 2064 年（乐观假设下 2071 年）；法国 2026 年社会保障融资法将 2023 年改革中的退休年龄上调暂停至 2028 年；英国国家养老金领取年龄 2026—2028 年由 66 岁升至 67 岁；俄罗斯 2028 年完成男 65 岁、女 60 岁的过渡。",
+   "numbers": {
+    "kor_contrib_2025": 9,
+    "kor_contrib_2033": 13,
+    "kor_replacement": 43,
+    "kor_fund_depletion_range": [
+     2064,
+     2071
+    ],
+    "fra_suspension_until": 2028,
+    "gbr_spa_2028": 67,
+    "rus_2028": [
+     65,
+     60
+    ]
+   },
+   "sources": [
+    "https://www.ssa.gov/policy/docs/progdesc/intl_update/2025-04/index.html",
+    "https://www.service-public.gouv.fr/particuliers/actualites/A18825?lang=en",
+    "https://www.gov.uk/state-pension-age",
+    "https://en.wikipedia.org/wiki/Retirement_age"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_observed_warming",
+   "domain": "climate",
+   "statement": "观测：世界气象组织（WMO）报告 2024 年为有记录以来最暖年份，全球平均气温比工业化前（1850—1900 年）高约 1.55°C，单年首次超过 1.5°C；2025 年约高 1.43°C，为第二或第三暖年；2015—2025 年是有记录以来最暖的 11 年。",
+   "numbers": {
+    "anomaly_2024_c": 1.55,
+    "anomaly_2025_c": 1.43,
+    "warmest_years": "2015-2025"
+   },
+   "sources": [
+    "https://wmo.int/news/media-centre/2025-set-be-second-or-third-warmest-year-record-continuing-exceptionally-high-warming-trend",
+    "https://www.rmets.org/metmatters/state-global-climate-2025",
+    "https://allafrica.com/stories/202603230089.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_wmo_decadal",
+   "domain": "climate",
+   "statement": "WMO 与英国气象局 2026 年 5 月年度至十年气候预测：2026—2030 年中至少有一年全球气温超过工业化前 1.5°C 的可能性约 91%，五年平均值超过 1.5°C 的可能性约 75%，至少有一年超过 2024 年纪录的可能性约 86%；年均气温预计在高于工业化前 1.3—1.9°C 之间。",
+   "numbers": {
+    "p_one_year_above_1_5": 0.91,
+    "p_5yr_mean_above_1_5": 0.75,
+    "p_new_record": 0.86,
+    "annual_range_c": [
+     1.3,
+     1.9
+    ]
+   },
+   "sources": [
+    "https://wmo.int/node/38645",
+    "https://www.preventionweb.net/publication/documents-and-publications/wmo-global-annual-decadal-climate-update-2026-2035"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_warming_paths",
+   "domain": "climate",
+   "statement": "升温路径：联合国环境署《排放差距报告 2025》估计，按现行政策本世纪升温约 2.8°C，全面落实国家自主贡献约 2.3—2.5°C，再加上全部净零承诺约 1.9°C；国际能源署《世界能源展望 2025》中现行政策情景到 2100 年升温接近 3°C，既定政策情景约 2.5°C，净零情景升温约在 2050 年前后以约 1.65°C 见顶。",
+   "numbers": {
+    "unep_current_policies_c": 2.8,
+    "unep_ndc_c": [
+     2.3,
+     2.5
+    ],
+    "unep_all_pledges_c": 1.9,
+    "iea_cps_2100_c": 3.0,
+    "iea_steps_2100_c": 2.5,
+    "iea_nze_peak_c": 1.65
+   },
+   "sources": [
+    "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+    "https://www.pbl.nl/en/publications/unep-emissions-gap-report-2025",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_ipcc_ssp",
+   "domain": "climate",
+   "statement": "IPCC 第六次评估报告：2081—2100 年相对 1850—1900 年的升温最佳估计（很可能范围）为 SSP1-1.9 约 1.4°C（1.0—1.8）、SSP1-2.6 约 1.8°C（1.3—2.4）、SSP2-4.5 约 2.7°C（2.1—3.5）、SSP3-7.0 约 3.6°C（2.8—4.6）、SSP5-8.5 约 4.4°C（3.3—5.7）；近期（2021—2040 年）即使在极低排放情景（SSP1-1.9）下，升温达到 1.5°C 的可能性也超过一半，在中高排放情景下可能或很可能超过 1.5°C。",
+   "numbers": {
+    "ssp119": 1.4,
+    "ssp126": 1.8,
+    "ssp245": 2.7,
+    "ssp370": 3.6,
+    "ssp585": 4.4
+   },
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://www.ipcc.ch/report/ar6/syr/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_sea_level",
+   "domain": "climate",
+   "statement": "IPCC 第六次评估报告：相对 1995—2014 年，全球平均海平面到 2050 年可能上升 0.15—0.30 米；到 2100 年 SSP1-2.6 可能上升 0.32—0.62 米、SSP2-4.5 为 0.44—0.76 米、SSP5-8.5 为 0.63—1.01 米，冰盖过程不确定，高排放下接近 2 米的情况不能排除；到 2100 年，过去百年一遇的极端海平面事件在半数以上验潮站可能每年都会发生。",
+   "numbers": {
+    "gmsl_2050_m": [
+     0.15,
+     0.3
+    ],
+    "gmsl_2100_ssp126_m": [
+     0.32,
+     0.62
+    ],
+    "gmsl_2100_ssp245_m": [
+     0.44,
+     0.76
+    ],
+    "gmsl_2100_ssp585_m": [
+     0.63,
+     1.01
+    ]
+   },
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_coastal_exposure",
+   "domain": "climate",
+   "statement": "沿海暴露：Kulp 与 Strauss（2019）基于新高程数据估计，目前约 1.1 亿人居住在低于现有高潮线的土地上；低排放情景下到 2100 年约 1.9 亿人居住地低于预计高潮线；高排放情景下本世纪中叶最多约 3.4 亿人、2100 年最多约 6.3 亿人居住地低于年度洪水水位。世界银行《Groundswell》报告估计，若不采取行动，到 2050 年六个地区可能出现最多约 2.16 亿气候相关的国内迁移者。",
+   "numbers": {
+    "below_high_tide_now_m": 110,
+    "below_high_tide_2100_low_m": 190,
+    "below_annual_flood_2050_high_m": 340,
+    "below_annual_flood_2100_high_m": 630,
+    "groundswell_2050_m": 216,
+    "groundswell_ssa_m": 86,
+    "groundswell_eap_m": 49,
+    "groundswell_sas_m": 40,
+    "groundswell_naf_m": 19,
+    "groundswell_lac_m": 17,
+    "groundswell_eeca_m": 5
+   },
+   "sources": [
+    "https://doi.org/10.1038/s41467-019-12808-z",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6820795/",
+    "https://www.worldbank.org/en/news/feature/2021/09/13/millions-on-the-move-in-their-own-countries-the-human-face-of-climate-change"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_heat_health_work",
+   "domain": "climate",
+   "statement": "高温对健康与劳动的影响：《柳叶刀倒计时》2025 年报告估计 2012—2021 年全球年均约 54.6 万人死于与高温相关的原因，比 1990 年代增加约 63%；国际劳工组织 2024 年报告估计全球约 24 亿劳动者（约 71%）在工作中暴露于过度高温，每年约 2285 万起工伤、约 1.9 万人死亡与此有关，非洲和阿拉伯国家暴露比例最高。",
+   "numbers": {
+    "heat_deaths_per_year_2012_2021": 546000,
+    "increase_since_1990s_pct": 63,
+    "workers_exposed_bn": 2.4,
+    "share_exposed_pct": 71,
+    "injuries_per_year_m": 22.85,
+    "deaths_per_year": 19000
+   },
+   "sources": [
+    "https://www.who.int/news/item/29-10-2025-climate-inaction-is-claiming-millions-of-lives-every-year--warns-new-lancet-countdown-report",
+    "https://www.lshtm.ac.uk/newsevents/news/2025/climate-change-inaction-costs-millions-lives-each-year-report-warns",
+    "https://www.unognewsroom.org/story/en/2145/ilo-press-conference-impacts-of-climate-on-occupational-safety-and-health-22-april-2024/6474"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_extremes_ecosystems",
+   "domain": "climate",
+   "statement": "极端事件与生态：IPCC 评估认为过去五十年一遇的极端高温在升温 1.5°C 时频率约为工业化前的 8.6 倍、2°C 时约 13.9 倍、4°C 时约 39.2 倍；《全球临界点报告 2025》认为暖水珊瑚礁已越过热临界点（中心估计约 1.2°C）；IPCC 特别报告估计升温 1.5°C 时珊瑚礁减少 70%—90%，2°C 时减少 99% 以上；Jägermeyr 等（2021）估计高排放情景下本世纪末全球玉米单产可能下降约 24%，影响或在 2030 年前后显现。",
+   "numbers": {
+    "hot50_freq_1_5c": 8.6,
+    "hot50_freq_2c": 13.9,
+    "hot50_freq_4c": 39.2,
+    "coral_tipping_central_c": 1.2,
+    "coral_loss_1_5c_pct": [
+     70,
+     90
+    ],
+    "coral_loss_2c_pct": 99,
+    "maize_yield_change_late_century_pct": -24
+   },
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://www.ipcc.ch/sr15/chapter/spm/",
+    "https://www.noc.ac.uk/news/global-tipping-points-report-2025-reveals-first-earth-system-tipping-point-reached",
+    "https://climate.nasa.gov/news/3124/global-climate-change-impact-on-crops-expected-within-10-years-nasa-study-finds",
+    "https://doi.org/10.1038/s43016-021-00400-y"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_iea_weo2025",
+   "domain": "energy",
+   "statement": "国际能源署《世界能源展望 2025》：在恢复使用的现行政策情景中，石油和天然气需求持续增长到本世纪中叶，2050 年石油需求约 1.13 亿桶/日，煤炭在 2030 年前开始下降；在既定政策情景中石油需求约在 2030 年前后趋平；全球约 7.3 亿人仍无电可用，近 20 亿人依赖污染性炊事方式；既定政策情景下到 2035 年峰值电力需求增长约 40%，主要来自制冷；数据中心与人工智能约占全球电力需求增量的不到 10%。",
+   "numbers": {
+    "cps_oil_2050_mbd": 113,
+    "steps_oil_plateau": 2030,
+    "no_electricity_m": 730,
+    "no_clean_cooking_bn": 2.0,
+    "peak_power_demand_growth_2035_pct": 40
+   },
+   "sources": [
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    "https://gcaptain.com/world-oil-and-gas-demand-could-grow-until-2050-iea-says/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_power_transition",
+   "domain": "energy",
+   "statement": "电力转型：Ember《全球电力评论 2026》显示，2025 年可再生能源发电占全球 33.8%，首次超过煤电（33.0%）；太阳能发电约 2778 太瓦时，同比增长约 30%，太阳能与风能满足了几乎全部新增用电需求，化石燃料发电量出现 2020 年以来首次未增长；中国和印度化石燃料发电量均下降，中国风光发电占比约 22%。",
+   "numbers": {
+    "renewables_share_2025": 33.8,
+    "coal_share_2025": 33.0,
+    "solar_twh_2025": 2778,
+    "solar_growth_pct": 30,
+    "chn_wind_solar_share": 22
+   },
+   "sources": [
+    "https://ember-energy.org/latest-insights/global-electricity-review-2026/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_ev_renewables",
+   "domain": "energy",
+   "statement": "国际能源署：2025 年全球电动汽车销量超过 2000 万辆，约占全球新车销量 25%，在中国新车销量中的占比接近 55%；预计 2026 年约 2300 万辆、约占 28%，部分原因是能源危机下的消费与政策反应。《可再生能源 2025》预计 2025—2030 年全球新增可再生能源装机约 4600 吉瓦（约为 2019—2024 年的两倍），其中约 80% 为太阳能，但仍低于 COP28 提出的 2030 年装机三倍目标。",
+   "numbers": {
+    "ev_sales_2025_m": 20,
+    "ev_share_2025": 25,
+    "ev_share_chn_2025": 55,
+    "ev_sales_2026_m": 23,
+    "ev_share_2026": 28,
+    "re_additions_2025_2030_gw": 4600,
+    "solar_share_of_additions": 80
+   },
+   "sources": [
+    "https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
+    "https://www.iea.org/news/close-to-30-of-cars-sold-this-year-are-set-to-be-electric-as-countries-and-consumers-respond-to-energy-crisis",
+    "https://www.argusmedia.com/news-and-insights/latest-market-news/2739526-global-renewable-power-capacity-to-double-by-2030-iea",
+    "https://ember-energy.org/chapter/tracking-progress-towards-a-global-tripling-of-renewables/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ba_energy_shock_2026",
+   "domain": "energy",
+   "statement": "2026 年能源冲击：2026 年 2 月底中东爆发涉及伊朗的军事冲突，霍尔木兹海峡自 3 月 4 日起航运严重受阻，此后虽在 4 月停火期间一度宣布开放，但经海峡的出口到 8 月仍持续受阻；布伦特油价一度超过每桶 110 美元；国际能源署称这是石油市场史上最大的供应中断，其 8 月报告预计 2026 年全球石油需求下降约 156 万桶/日至约 1.033 亿桶/日、供应下降约 430 万桶/日。",
+   "numbers": {
+    "hormuz_disruption_start": "2026-03-04",
+    "brent_peak_usd_approx": 118,
+    "iea_2026_demand_change_mbd": -1.56,
+    "iea_2026_demand_mbd": 103.29,
+    "iea_2026_supply_change_mbd": -4.3
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
+    "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2864083-iea-sees-greater-oil-demand-fall-in-2026",
+    "https://www.miningweekly.com/article/global-oil-supply-to-plunge-below-demand-this-year-on-iran-war-iea-says-2026-05-13"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "ba_climate_policy",
+   "domain": "energy",
+   "statement": "气候政策现状：欧盟 2026 年 3 月正式通过 2040 年温室气体净排放较 1990 年减少 90% 的法定目标（2036 年起最多 5 个百分点可用国际碳信用），并将覆盖建筑与道路交通燃料的第二碳市场（ETS2）推迟至 2028 年启动；中国 2035 年国家自主贡献提出全经济范围温室气体净排放比峰值下降 7%—10%、非化石能源占能源消费 30%，全国碳市场计划自 2027 年起对部分行业实行总量控制；美国已退出《巴黎协定》，并于 2026 年 1 月宣布退出《联合国气候变化框架公约》；COP30 呼吁到 2035 年至少将适应资金增至三倍。",
+   "numbers": {
+    "eu_2040_target_pct": 90,
+    "eu_intl_credits_max_pp": 5,
+    "eu_ets2_start": 2028,
+    "chn_2035_cut_from_peak_pct": [
+     7,
+     10
+    ],
+    "chn_2035_nonfossil_share": 30,
+    "chn_ets_absolute_caps_from": 2027
+   },
+   "sources": [
+    "https://www.electrive.com/2026/03/06/eu-council-approves-2040-climate-target-with-90-ghg-reduction/",
+    "https://icapcarbonaction.com/en/news/eu-reaches-agreement-2040-climate-target-postpones-ets-2-one-year",
+    "https://climateactiontracker.org/countries/china/2035-ndc/",
+    "https://hydrocarbonprocessing.com/news/2025/08/chinas-carbon-market-to-introduce-absolute-emissions-caps-from-2027/",
+    "https://www.wri.org/news/statement-united-states-withdraws-unfccc",
+    "https://www.kcl.ac.uk/your-quick-guide-to-the-outcomes-of-cop30"
+   ],
+   "confidence": "high"
+  }
+ ],
+ "dimensions": [
+  {
+   "id": "climate",
+   "title": "气候路径",
+   "domain": "climate",
+   "description": "本世纪末（约 2081—2100 年）相对工业化前的全球升温路径。游戏时间截至 2090 年，届时升温略低于各路径的 2100 年数值。三条路径都会在 2030 年前后经历 1.5°C 被突破。",
+   "notes": "region_overrides 中的同名键替换该分支的全局值；heat_risk、sea_level_risk 为 0—3 的风险等级；sea_level_risk 仅作用于沿海国家。",
+   "correlation_hints": [
+    {
+     "if": {
+      "energy": "energy_fast"
+     },
+     "weight_mult": {
+      "climate_low": 1.8,
+      "climate_mid": 0.9,
+      "climate_high": 0.4
+     }
+    },
+    {
+     "if": {
+      "energy": "energy_lockin"
+     },
+     "weight_mult": {
+      "climate_low": 0.3,
+      "climate_mid": 0.9,
+      "climate_high": 1.9
+     }
+    }
+   ],
+   "branches": [
+    {
+     "id": "climate_low",
+     "title": "约 1.8°C：强力减排",
+     "prob": 0.2,
+     "description": "据推演，主要排放国在 2030 年代显著加快减排，全球排放在 2030 年代明显下降，本世纪末升温约 1.6—1.9°C，接近 IPCC SSP1-2.6 及联合国环境署「全部承诺兑现」情景（约 1.9°C）。升温仍会暂时突破 1.5°C，但在本世纪中叶后趋于稳定，极端高温与海平面上升仍会继续，只是幅度较小。",
+     "modifiers": {
+      "gdp_growth_add": -0.05,
+      "heat_risk": 1,
+      "sea_level_risk": 1,
+      "mortality_mult": 1.0,
+      "life_exp_add_by_2090": 0.0,
+      "migration_push_add": 0,
+      "happiness_add": 0.1
+     },
+     "region_overrides": {
+      "SAS": {
+       "heat_risk": 2
+      },
+      "WAS": {
+       "heat_risk": 2
+      },
+      "NAF": {
+       "heat_risk": 2
+      },
+      "SSA": {
+       "heat_risk": 2
+      },
+      "SEA": {
+       "sea_level_risk": 2
+      },
+      "OCE": {
+       "sea_level_risk": 2
+      }
+     },
+     "basis": "联合国环境署《排放差距报告 2025》：条件性国家自主贡献加全部净零承诺对应约 1.9°C；IPCC AR6 SSP1-2.6 的 2081—2100 年最佳估计为 1.8°C。实现此路径需要承诺普遍兑现，按当前政策进展看可能性较低。"
+    },
+    {
+     "id": "climate_mid",
+     "title": "约 2.7°C：现行政策延续",
+     "prob": 0.55,
+     "description": "据推演，各国大体延续现行政策并部分兑现承诺，可再生能源继续扩张但化石燃料退出缓慢，本世纪末升温约 2.5—2.9°C，接近 IPCC SSP2-4.5、国际能源署既定政策情景（约 2.5°C）与联合国环境署现行政策估计（约 2.8°C）。2°C 可能在 2040 年代后期至 2050 年代被越过，热浪、强降水和沿海洪水明显增多，热带和干旱地区受影响最重。",
+     "modifiers": {
+      "gdp_growth_add": -0.2,
+      "heat_risk": 2,
+      "sea_level_risk": 1,
+      "mortality_mult": 1.01,
+      "life_exp_add_by_2090": -0.3,
+      "migration_push_add": 0.3,
+      "happiness_add": -0.1
+     },
+     "region_overrides": {
+      "SAS": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.45,
+       "mortality_mult": 1.03,
+       "migration_push_add": 0.8
+      },
+      "SSA": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.45,
+       "mortality_mult": 1.03,
+       "migration_push_add": 0.8
+      },
+      "WAS": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.35
+      },
+      "NAF": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.35,
+       "migration_push_add": 0.6
+      },
+      "SEA": {
+       "sea_level_risk": 2,
+       "gdp_growth_add": -0.3
+      },
+      "OCE": {
+       "sea_level_risk": 2
+      },
+      "LAC": {
+       "gdp_growth_add": -0.25
+      },
+      "WEU": {
+       "gdp_growth_add": -0.1
+      },
+      "NAM": {
+       "gdp_growth_add": -0.1
+      },
+      "EEU": {
+       "gdp_growth_add": -0.05
+      }
+     },
+     "basis": "联合国环境署 2025 年估计现行政策下升温约 2.8°C；国际能源署《世界能源展望 2025》既定政策情景约 2.5°C；IPCC AR6 SSP2-4.5 为 2.7°C（2.1—3.5）。IPCC 第二工作组评估认为，热带、低收入和依赖农业的地区所受损失最大。"
+    },
+    {
+     "id": "climate_high",
+     "title": "约 3.5°C 以上：高排放",
+     "prob": 0.25,
+     "description": "据推演，地缘分裂与能源安全优先导致化石燃料长期维持高位，减排承诺大面积落空，本世纪末升温约 3.2—4°C，接近 IPCC SSP3-7.0（约 3.6°C）或国际能源署现行政策情景（接近 3°C）的偏高一端。2°C 可能在 2040 年代越过，南亚、波斯湾、萨赫勒等地极端湿热天气频繁出现，海平面上升加速，粮食产量与户外劳动受到明显影响。",
+     "modifiers": {
+      "gdp_growth_add": -0.4,
+      "heat_risk": 2,
+      "sea_level_risk": 2,
+      "mortality_mult": 1.03,
+      "life_exp_add_by_2090": -1.0,
+      "migration_push_add": 0.8,
+      "happiness_add": -0.3,
+      "conflict_risk_add": 0.002
+     },
+     "region_overrides": {
+      "SAS": {
+       "heat_risk": 3,
+       "sea_level_risk": 3,
+       "gdp_growth_add": -0.8,
+       "mortality_mult": 1.06,
+       "life_exp_add_by_2090": -2.0,
+       "migration_push_add": 1.5,
+       "conflict_risk_add": 0.004
+      },
+      "SSA": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.8,
+       "mortality_mult": 1.06,
+       "life_exp_add_by_2090": -2.0,
+       "migration_push_add": 1.5,
+       "conflict_risk_add": 0.005
+      },
+      "WAS": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.6,
+       "mortality_mult": 1.04,
+       "migration_push_add": 1.0,
+       "conflict_risk_add": 0.004
+      },
+      "NAF": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.6,
+       "migration_push_add": 1.2,
+       "conflict_risk_add": 0.004
+      },
+      "SEA": {
+       "heat_risk": 3,
+       "sea_level_risk": 3,
+       "gdp_growth_add": -0.6,
+       "mortality_mult": 1.04
+      },
+      "OCE": {
+       "sea_level_risk": 3
+      },
+      "LAC": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.5,
+       "migration_push_add": 1.0
+      },
+      "EAS": {
+       "gdp_growth_add": -0.3
+      },
+      "WEU": {
+       "gdp_growth_add": -0.2
+      },
+      "NAM": {
+       "gdp_growth_add": -0.25
+      },
+      "EEU": {
+       "gdp_growth_add": -0.1
+      },
+      "CAS": {
+       "heat_risk": 3,
+       "gdp_growth_add": -0.4
+      }
+     },
+     "basis": "IPCC AR6 SSP3-7.0 的 2081—2100 年最佳估计为 3.6°C（2.8—4.6）；国际能源署 2025 年现行政策情景接近 3°C；Kulp 与 Strauss（2019）显示高排放下沿海洪水暴露人口大幅增加；Jägermeyr 等（2021）显示高排放下玉米单产到本世纪末可能下降约 24%。"
+    }
+   ],
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://www.ipcc.ch/report/ar6/wg2/chapter/summary-for-policymakers/",
+    "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    "https://doi.org/10.1038/s41467-019-12808-z",
+    "https://doi.org/10.1038/s43016-021-00400-y"
+   ]
+  },
+  {
+   "id": "economy",
+   "title": "世界经济格局",
+   "domain": "economy",
+   "description": "2026—2090 年全球增长与分配的主线。三种情景都以世界银行、OECD 对长期增长放缓的判断为起点，区别在于新兴经济体追赶速度、贸易与金融是否分裂、以及高债务能否平稳化解。",
+   "notes": "region_overrides 中的同名键替换该分支的全局值。",
+   "branches": [
+    {
+     "id": "econ_convergence",
+     "title": "追赶与融合",
+     "prob": 0.25,
+     "description": "据推演，贸易与技术扩散大体保持开放，印度、东南亚和部分非洲国家实现较快追赶，非洲的人口红利部分兑现；发达经济体增长平缓但稳定，全球贫困率持续下降，收入差距在国家之间缩小。",
+     "modifiers": {
+      "gdp_growth_add": 0.3,
+      "unemployment_add": -0.5,
+      "inequality_add": -0.01,
+      "life_exp_add_by_2090": 0.8,
+      "happiness_add": 0.2,
+      "education_years_add": 0.5
+     },
+     "region_overrides": {
+      "SSA": {
+       "gdp_growth_add": 0.9,
+       "education_years_add": 1.2,
+       "life_exp_add_by_2090": 1.5
+      },
+      "SAS": {
+       "gdp_growth_add": 0.8,
+       "education_years_add": 1.0,
+       "life_exp_add_by_2090": 1.2
+      },
+      "SEA": {
+       "gdp_growth_add": 0.6
+      },
+      "NAF": {
+       "gdp_growth_add": 0.5
+      },
+      "LAC": {
+       "gdp_growth_add": 0.4
+      }
+     },
+     "basis": "高盛《通往 2075 之路》认为新兴市场追赶仍将持续，人口大国经济规模上升；世界银行指出，提高生产率、劳动供给与投资的政策可以扭转潜在增长下滑。"
+    },
+    {
+     "id": "econ_fragmented",
+     "title": "碎片化低增长",
+     "prob": 0.55,
+     "description": "据推演，贸易与技术壁垒长期存在，供应链按地缘阵营重组，全球增长维持在约 2.5%—3% 的偏低水平并逐步下滑；发达经济体受老龄化和高债务拖累，许多低收入国家追赶停滞，极端贫困越来越集中于撒哈拉以南非洲和脆弱国家。",
+     "modifiers": {
+      "gdp_growth_add": -0.3,
+      "unemployment_add": 0.5,
+      "inequality_add": 0.01,
+      "life_exp_add_by_2090": 0.0,
+      "happiness_add": -0.1,
+      "migration_push_add": 0.2
+     },
+     "region_overrides": {
+      "SSA": {
+       "gdp_growth_add": -0.4,
+       "unemployment_add": 1.0,
+       "migration_push_add": 0.5
+      },
+      "LAC": {
+       "gdp_growth_add": -0.4
+      },
+      "EAS": {
+       "gdp_growth_add": -0.4
+      }
+     },
+     "basis": "世界银行估计 2022—2030 年全球潜在增长率仅约 2.2%，为三十年来最低；IMF 工作人员讨论文件（2023）估计长期贸易碎片化的成本可达全球产出的约 0.2%—7%；IMF 2026 年 10 月预测 2026 年全球增长 3.1%。"
+    },
+    {
+     "id": "econ_debt_crisis",
+     "title": "债务危机年代",
+     "prob": 0.2,
+     "description": "据推演，高利率与高债务叠加，在 2030—2040 年代引发一连串主权债务和银行危机：部分前沿市场违约，个别发达经济体出现国债市场动荡并被迫削减支出；失业率上升、养老与公共服务紧缩，不平等加剧，移民压力上升。",
+     "modifiers": {
+      "gdp_growth_add": -0.8,
+      "unemployment_add": 1.5,
+      "inequality_add": 0.03,
+      "life_exp_add_by_2090": -0.5,
+      "happiness_add": -0.4,
+      "migration_push_add": 0.6
+     },
+     "region_overrides": {
+      "LAC": {
+       "gdp_growth_add": -1.2,
+       "unemployment_add": 2.5,
+       "migration_push_add": 1.0
+      },
+      "SSA": {
+       "gdp_growth_add": -1.2,
+       "unemployment_add": 2.0,
+       "migration_push_add": 1.0
+      },
+      "NAF": {
+       "gdp_growth_add": -1.0,
+       "migration_push_add": 1.0
+      },
+      "SAS": {
+       "gdp_growth_add": -1.0
+      },
+      "NAM": {
+       "gdp_growth_add": -0.6
+      },
+      "WEU": {
+       "gdp_growth_add": -0.6
+      },
+      "EAS": {
+       "gdp_growth_add": -0.7
+      }
+     },
+     "basis": "IMF 预计全球公共债务到 2029 年接近 GDP 的 100%；美国 CBO 预计联邦债务 2056 年达 GDP 的约 175%；Laeven 与 Valencia（2018）统计 1970—2017 年全球发生 151 次系统性银行危机、74 次主权债务危机，并发现主权债务危机和货币危机往往与银行危机同时或随后发生。"
+    }
+   ],
+   "sources": [
+    "https://www.thedailystar.net/business/news/global-economys-speed-limit-set-fall-three-decade-low-3282821",
+    "https://www.tbsnews.net/node/547202",
+    "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2023/01/11/Geo-Economic-Fragmentation-and-the-Future-of-Multilateralism-527266",
+    "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
+    "https://www.pgpf.org/article/national-debt-projected-to-hit-175-gdp-interest-totals-99-trillion/",
+    "https://www.imf.org/-/media/Files/Publications/WP/2018/wp18206.ashx",
+    "https://news.cgtn.com/news/2026-10-13/IMF-raises-2026-global-growth-forecast-to-3-1--1RcEPm28WWI/share_amp.html"
+   ]
+  },
+  {
+   "id": "demography_policy",
+   "title": "人口政策走向",
+   "domain": "demography",
+   "description": "低生育率社会如何应对人口减少与老龄化：鼓励生育、接受持续低生育、或以移民补充劳动力。高生育率地区（撒哈拉以南非洲、部分南亚和西亚）在各分支下都按 UN WPP 中方案逐步下降。",
+   "notes": "region_overrides 中的同名键替换该分支的全局值；migration_push_add 在来源地区表示外出移民机会与压力。",
+   "branches": [
+    {
+     "id": "demo_pronatal",
+     "title": "鼓励生育见效",
+     "prob": 0.15,
+     "description": "据推演，东亚和欧洲多国在住房、托育、育儿补贴和工作时间方面持续投入，结婚和生育出现一定回升（如韩国总和生育率从 2023 年的 0.72 回升到 2025 年约 0.80 的势头得以延续），但仍低于更替水平；人口减少速度放缓，劳动力短缺压力略有缓解。",
+     "modifiers": {
+      "gdp_growth_add": 0.05,
+      "happiness_add": 0.1,
+      "inequality_add": -0.005,
+      "education_years_add": 0.2
+     },
+     "region_overrides": {
+      "EAS": {
+       "gdp_growth_add": 0.1,
+       "happiness_add": 0.2
+      },
+      "WEU": {
+       "gdp_growth_add": 0.05
+      }
+     },
+     "basis": "韩国 2025 年出生人数增长 6.7%、总和生育率约 0.80；中国 2025 年起对 3 岁以下婴幼儿发放育儿补贴（每孩每年 3600 元）；但国际经验显示鼓励生育政策通常只能带来有限回升，故赋予较低概率。"
+    },
+    {
+     "id": "demo_low_fertility",
+     "title": "持续低生育",
+     "prob": 0.6,
+     "description": "据推演，低生育率在东亚、南欧、东欧和拉美长期维持，人口按 UN WPP 中方案或更快减少；劳动力减少拖累增长，养老和医疗负担加重，地方小城镇和农村人口外流加剧。",
+     "modifiers": {
+      "gdp_growth_add": -0.15,
+      "happiness_add": -0.1,
+      "inequality_add": 0.01
+     },
+     "region_overrides": {
+      "EAS": {
+       "gdp_growth_add": -0.35
+      },
+      "EEU": {
+       "gdp_growth_add": -0.25
+      },
+      "WEU": {
+       "gdp_growth_add": -0.2
+      },
+      "LAC": {
+       "gdp_growth_add": -0.15
+      }
+     },
+     "basis": "UN WPP 2024 中方案中东亚总和生育率 2050 年仍仅约 1.2；日本 2025 年总和生育率 1.14、出生数创新低，官方称下降速度比推计快约 15 年；中国 2025 年出生人口约 792 万。"
+    },
+    {
+     "id": "demo_migration_led",
+     "title": "移民主导",
+     "prob": 0.25,
+     "description": "据推演，多数高收入老龄化国家（北美、西欧、大洋洲以及部分东亚国家）大幅扩大劳动移民和定居通道，以移民补充护理、建筑、制造等行业劳动力；来源国侨汇增加但也面临人才外流，移民融合成为长期社会议题。",
+     "modifiers": {
+      "gdp_growth_add": 0.05,
+      "inequality_add": 0.005,
+      "migration_push_add": 0.3
+     },
+     "region_overrides": {
+      "NAM": {
+       "gdp_growth_add": 0.2
+      },
+      "WEU": {
+       "gdp_growth_add": 0.2
+      },
+      "OCE": {
+       "gdp_growth_add": 0.2
+      },
+      "EAS": {
+       "gdp_growth_add": 0.05
+      },
+      "SSA": {
+       "migration_push_add": 0.8
+      },
+      "SAS": {
+       "migration_push_add": 0.8
+      },
+      "SEA": {
+       "migration_push_add": 0.5
+      },
+      "LAC": {
+       "migration_push_add": 0.6
+      },
+      "NAF": {
+       "migration_push_add": 0.6
+      }
+     },
+     "basis": "全球国际移民 2024 年达约 3.04 亿；UN WPP 2024 显示美国人口增长主要来自移民；日本 IPSS 2023 年推计已把外国人年净迁入上调至 2040 年约 16.4 万人；世界银行估计到 2050 年撒哈拉以南非洲贡献全球劳动年龄人口增量的四分之三以上。"
+    }
+   ],
+   "sources": [
+    "https://koreatimes.co.kr/southkorea/society/20260826/koreas-births-rise-67-to-254300-in-2025",
+    "中共中央办公厅、国务院办公厅《育儿补贴制度实施方案》，2025 年 7 月 28 日公布（新华社）",
+    "https://www.nippon.com/en/news/yjj2026060300610/",
+    "https://www.caixinglobal.com/2026-01-19/chinas-population-decline-accelerates-as-births-hit-modern-era-low-in-2025-102405521.html",
+    "https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf",
+    "https://www.migrationpolicy.org/article/top-statistics-global-migration-migrants",
+    "https://blogs.worldbank.org/en/opendata/what-four-charts-reveal-about-the-global-jobs-challenge"
+   ]
+  },
+  {
+   "id": "energy",
+   "title": "能源转型",
+   "domain": "energy",
+   "description": "全球能源体系的转型速度。2025 年可再生能源发电已首次超过煤电，2026 年中东冲突引发的能源冲击同时推高了对能源安全和电气化的重视。",
+   "notes": "region_overrides 中的同名键替换该分支的全局值。化石燃料出口国在快速转型下面临收入下降，在化石锁定下短期受益。",
+   "branches": [
+    {
+     "id": "energy_fast",
+     "title": "快速转型",
+     "prob": 0.3,
+     "description": "据推演，太阳能、风能、储能和电动汽车成本继续下降，能源安全考量加速电气化；全球电动车销量在 2030 年代初过半，石油需求在 2020 年代末见顶后下降，煤电在 2030 年代快速退出；空气污染减轻带来健康收益，但油气出口国财政承压，需要加快经济多元化。",
+     "modifiers": {
+      "gdp_growth_add": 0.1,
+      "mortality_mult": 0.98,
+      "life_exp_add_by_2090": 0.5,
+      "happiness_add": 0.1
+     },
+     "region_overrides": {
+      "WAS": {
+       "gdp_growth_add": -0.4
+      },
+      "EEU": {
+       "gdp_growth_add": -0.1
+      },
+      "NAF": {
+       "gdp_growth_add": -0.2
+      },
+      "CAS": {
+       "gdp_growth_add": -0.2
+      },
+      "EAS": {
+       "life_exp_add_by_2090": 0.8,
+       "mortality_mult": 0.97
+      },
+      "SAS": {
+       "life_exp_add_by_2090": 1.0,
+       "mortality_mult": 0.97
+      }
+     },
+     "basis": "Ember：2025 年可再生能源发电占比 33.8% 超过煤电；国际能源署：2025 年电动车占新车销量约 25%，2026 年接近 30%；世卫组织估计室外与家庭空气污染每年共造成约 670 万例过早死亡，减少化石燃料燃烧可带来健康收益。"
+    },
+    {
+     "id": "energy_mixed",
+     "title": "混合过渡",
+     "prob": 0.5,
+     "description": "据推演，可再生能源继续快速增长并满足大部分新增电力需求，但石油和天然气需求在 2030—2040 年代维持高位平台，煤电退出速度因国而异；转型在中国、欧洲较快，在部分新兴经济体和资源出口国较慢。",
+     "modifiers": {
+      "gdp_growth_add": 0.0,
+      "mortality_mult": 1.0,
+      "life_exp_add_by_2090": 0.0
+     },
+     "region_overrides": {
+      "WAS": {
+       "gdp_growth_add": -0.1
+      }
+     },
+     "basis": "国际能源署《世界能源展望 2025》既定政策情景：石油需求约在 2030 年前后趋平，天然气需求增长延续到 2030 年代；《可再生能源 2025》预计 2025—2030 年新增装机约为过去五年的两倍，但低于三倍目标。"
+    },
+    {
+     "id": "energy_lockin",
+     "title": "化石锁定",
+     "prob": 0.2,
+     "description": "据推演，能源安全担忧、地缘竞争与电网建设滞后使各国延长煤电和油气设施寿命，石油和天然气需求增长到本世纪中叶；能源价格波动频繁，空气污染和气候风险偏高，油气出口国在中期获得较高收入。",
+     "modifiers": {
+      "gdp_growth_add": -0.1,
+      "mortality_mult": 1.02,
+      "life_exp_add_by_2090": -0.4,
+      "happiness_add": -0.1
+     },
+     "region_overrides": {
+      "WAS": {
+       "gdp_growth_add": 0.3
+      },
+      "EEU": {
+       "gdp_growth_add": 0.1
+      },
+      "CAS": {
+       "gdp_growth_add": 0.1
+      },
+      "SAS": {
+       "mortality_mult": 1.03,
+       "life_exp_add_by_2090": -0.8
+      },
+      "EAS": {
+       "mortality_mult": 1.02
+      }
+     },
+     "basis": "国际能源署《世界能源展望 2025》现行政策情景：石油需求 2050 年约 1.13 亿桶/日、天然气需求增长至本世纪中叶，2100 年升温接近 3°C；2026 年霍尔木兹海峡供应中断显示油气依赖带来的价格冲击风险。"
+    }
+   ],
+   "sources": [
+    "https://ember-energy.org/latest-insights/global-electricity-review-2026/",
+    "https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    "https://www.argusmedia.com/news-and-insights/latest-market-news/2739526-global-renewable-power-capacity-to-double-by-2030-iea",
+    "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+    "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+   ]
+  },
+  {
+   "id": "pension",
+   "title": "养老与社会保障",
+   "domain": "society",
+   "description": "老龄化社会如何调整养老金与退休制度。各国已立法的退休年龄时间表（如中国 2025—2040 年渐进延迟、丹麦 2040 年 70 岁）由国家制度数据单独给出，本维度的 retirement_age_add 表示在已立法安排之外、到 2060 年的额外上调年数。",
+   "notes": "region_overrides 中的同名键替换该分支的全局值；正规养老金覆盖率低的地区（撒哈拉以南非洲、南亚）退休年龄调整对多数人影响较小。",
+   "branches": [
+    {
+     "id": "pension_reform",
+     "title": "渐进改革平稳",
+     "prob": 0.35,
+     "description": "据推演，各国较早启动参数改革：退休年龄与预期寿命挂钩、缴费率小幅上调、加强个人养老储蓄和老年就业支持；养老金体系保持可持续，代际矛盾可控。",
+     "modifiers": {
+      "retirement_age_add": 1.0,
+      "happiness_add": 0.1,
+      "inequality_add": -0.01
+     },
+     "region_overrides": {
+      "EAS": {
+       "retirement_age_add": 2.0
+      },
+      "SSA": {
+       "retirement_age_add": 0.5
+      },
+      "SAS": {
+       "retirement_age_add": 0.5
+      }
+     },
+     "basis": "OECD《养老金概览 2023》显示多国已将退休年龄与预期寿命挂钩；韩国 2025 年改革把缴费率由 9% 逐步提高到 13%；新加坡、丹麦等已立法分阶段上调退休年龄。"
+    },
+    {
+     "id": "pension_patchwork",
+     "title": "修修补补",
+     "prob": 0.45,
+     "description": "据推演，改革往往在基金接近耗尽时才临时通过，靠财政转移和小幅延迟退休应对；退休年龄逐步上调、待遇实际增长放缓，社会对养老前景的信心偏低。",
+     "modifiers": {
+      "retirement_age_add": 2.0,
+      "happiness_add": -0.1,
+      "inequality_add": 0.01
+     },
+     "region_overrides": {
+      "EAS": {
+       "retirement_age_add": 3.0
+      },
+      "SSA": {
+       "retirement_age_add": 0.5
+      },
+      "SAS": {
+       "retirement_age_add": 1.0
+      }
+     },
+     "basis": "美国社会保障 OASI 信托基金预计 2032 年底耗尽；法国 2023 年退休改革在 2025—2026 年被暂停至 2028 年，显示改革在政治上反复；2025 年韩国民调显示过半受访者不信任国民年金。"
+    },
+    {
+     "id": "pension_austerity",
+     "title": "福利紧缩",
+     "prob": 0.2,
+     "description": "据推演，在高债务与低增长压力下，部分国家出现养老基金耗尽后的自动削减或大幅紧缩：待遇下调、领取年龄大幅推迟，老年贫困上升，更多人工作到 70 岁以后。",
+     "modifiers": {
+      "retirement_age_add": 3.5,
+      "happiness_add": -0.4,
+      "inequality_add": 0.03,
+      "unemployment_add": 0.3,
+      "life_exp_add_by_2090": -0.3
+     },
+     "region_overrides": {
+      "EAS": {
+       "retirement_age_add": 4.5
+      },
+      "SSA": {
+       "retirement_age_add": 1.0
+      },
+      "SAS": {
+       "retirement_age_add": 1.5
+      }
+     },
+     "basis": "美国社会保障 2026 年受托人报告：若国会不采取行动，OASI 基金耗尽后只能支付约 78% 的计划待遇；美国 CBO 2026 年长期预测显示净利息支出约在 2047 年超过社会保障支出。"
+    }
+   ],
+   "sources": [
+    "https://www.oecd.org/en/publications/pensions-at-a-glance-2023_678055dd-en.html",
+    "https://www.ssa.gov/policy/docs/progdesc/intl_update/2025-04/index.html",
+    "https://www.everycrsreport.com/reports/IF13256.html",
+    "https://www.service-public.gouv.fr/particuliers/actualites/A18825?lang=en",
+    "https://www.koreatimes.co.kr/amp/economy/others/20251106/more-than-half-of-koreans-distrust-national-pension-amid-backlash-over-premium-hike-plan",
+    "https://www.pgpf.org/article/national-debt-projected-to-hit-175-gdp-interest-totals-99-trillion/"
+   ]
+  }
+ ],
+ "milestones": [
+  {
+   "id": "bangladesh_ldc_graduation",
+   "year": 2027,
+   "year_range": [
+    2026,
+    2029
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "BGD"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "孟加拉国可能脱离最不发达国家行列",
+   "summary": "孟加拉国原定于 2026 年 11 月 24 日脱离联合国最不发达国家类别，2026 年 2 月政府以连续经济冲击为由申请推迟三年。据推演，无论按期还是推迟，孟加拉国都将在 2020 年代末前后脱离该类别，此后逐步失去部分贸易优惠，成衣出口业需要提升竞争力。",
+   "personal_hooks": [
+    "在成衣厂工作的亲戚担心关税优惠取消后订单减少。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "孟加拉国仍满足全部三项毕业标准，但已向联合国发展政策委员会申请延长准备期至 2029 年。",
+   "sources": [
+    "https://www.newsonair.gov.in/bangladesh-seeks-3-year-delay-in-ldc-graduation",
+    "https://cpd.org.bd/deferring-bangladeshs-ldc-graduation-and-the-road-ahead/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_ets_absolute_caps",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "中国碳市场可能开始实行总量控制",
+   "summary": "按国务院 2025 年 8 月的意见，全国碳排放权交易市场到 2027 年基本覆盖主要排放行业，并首先对排放较稳定的行业实行配额总量控制；到 2030 年建成以总量控制为主、免费与有偿分配相结合的市场。",
+   "personal_hooks": [
+    "你所在的钢铁或化工企业设立了专门的碳资产管理岗位。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "国务院关于推进全国碳市场建设的意见（2025 年 8 月）。",
+   "sources": [
+    "https://hydrocarbonprocessing.com/news/2025/08/chinas-carbon-market-to-introduce-absolute-emissions-caps-from-2027/",
+    "https://www.eco-business.com/news/chinas-carbon-market-set-to-introduce-absolute-emissions-caps-by-2027/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "energy_security_push",
+   "year": 2027,
+   "year_range": [
+    2026,
+    2029
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "EAS",
+    "SAS",
+    "WEU",
+    "SEA"
+   ],
+   "countries": [
+    "CHN",
+    "JPN",
+    "KOR",
+    "IND",
+    "DEU"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "能源冲击后各国加速能源安全与电气化",
+   "summary": "据推演，2026 年霍尔木兹海峡航运中断导致油气价格剧烈波动后，能源进口国扩大战略储备、加快可再生能源和电网建设、鼓励电动汽车，以减少对海运油气的依赖。",
+   "personal_hooks": [
+    "加油站排起长队的那段时间，让你下决心换一辆电动车。",
+    "政府发放能源补贴，同时鼓励家庭安装屋顶光伏。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "国际能源署称 2026 年为石油市场史上最大供应中断，并预计 2026 年电动车销量占比接近 30%，部分源于各国对能源危机的反应。",
+   "sources": [
+    "https://www.iea.org/news/close-to-30-of-cars-sold-this-year-are-set-to-be-electric-as-countries-and-consumers-respond-to-energy-crisis",
+    "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "india_4th_economy",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "EAS"
+   ],
+   "countries": [
+    "IND",
+    "JPN"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "印度可能成为全球第四大经济体",
+   "summary": "IMF 2026 年 10 月预测，印度名义 GDP 将在 2027 年达到约 4.52 万亿美元，超过日本成为全球第四大经济体，日本可能同时被英国超过而降至第六；按人均计算印度仍属中低收入国家。",
+   "personal_hooks": [
+    "新闻头条宣布印度经济总量超过日本。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "IMF 2026 年 10 月亚太地区经济展望；名义排名受汇率影响，存在推迟的可能。",
+   "sources": [
+    "https://www.businesstoday.in/latest/economy/story/india-to-overtake-japan-as-worlds-fourth-largest-economy-in-2027-imf-projections-562181-2026-10-16",
+    "https://timesofoman.com/article/178021-india-set-to-overtake-japan-as-worlds-fourth-largest-economy-by-2027-imf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_census_2027",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2027
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "印度完成新一轮人口普查",
+   "summary": "按官方日程，原定 2021 年、因新冠疫情推迟的印度人口普查在 2026 年完成住房登记后，于 2027 年 2 月进行人口登记，并自 1931 年以来首次全面登记种姓信息。普查结果可能影响此后的议席划分与福利政策。",
+   "personal_hooks": [
+    "普查员上门登记家庭成员信息，或在网上自行填报。",
+    "报纸连续数月讨论普查结果对各邦议席的可能影响。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "印度政府已公布普查日程，住房登记阶段于 2026 年 4—9 月开展，人口登记定于 2027 年 2 月 9—28 日。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2027_census_of_India"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "japan_new_skills_visa",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "JPN"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "日本以新制度取代外国人技能实习制度",
+   "summary": "按 2024 年通过的法律修正，日本预定于 2027 年前后以「育成就劳」制度取代饱受批评的技能实习制度，允许外国劳动者在一定条件下转换雇主，并与特定技能签证衔接，以便长期吸纳劳动力。",
+   "personal_hooks": [
+    "工厂和护理机构开始按新制度招聘来自越南、印度尼西亚等国的员工。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "日本国会 2024 年 6 月通过《出入国管理及难民认定法》等修正案，设立新的培养就业制度，预定 3 年内施行；日本 IPSS 推计已上调外国人净迁入假设。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Technical_Intern_Training_Program",
+    "https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "record_warm_year_late2020s",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2030
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "全球气温可能再创纪录",
+   "summary": "据世界气象组织 2026 年预测，2026—2030 年至少有一年超过 2024 年纪录的可能性约 86%，WMO 预计 2026 年底可能出现厄尔尼诺，使 2027 年成为新纪录年份的可能性上升；届时多地可能出现破纪录热浪与干旱。",
+   "personal_hooks": [
+    "夏天空调和电扇一刻也不能停，电费账单创下新高。",
+    "新闻滚动报道各地气温打破历史纪录。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "WMO《全球年度至十年气候预测 2026—2030》：至少一年超过 2024 年纪录的可能性约 86%，年均气温约高于工业化前 1.3—1.9°C；预计 2026 年底出现厄尔尼诺，2027、2028 年偏向厄尔尼诺状态。",
+   "sources": [
+    "https://wmo.int/node/38645",
+    "https://www.outlookbusiness.com/news/global-temperatures-record-highs-2026-2030-wmo-report"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "us_fra_67",
+   "year": 2027,
+   "year_range": [
+    2027,
+    2027
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "美国全额退休年龄完成向 67 岁的过渡",
+   "summary": "按 1983 年社会保障修正案确定的时间表，1960 年及以后出生者的全额领取社会保障退休金年龄为 67 岁，1960 年出生的一代于 2027 年年满 67 岁，标志着这一延续数十年的过渡完成。",
+   "personal_hooks": [
+    "长辈计算提前在 62 岁领取会少拿多少退休金。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.97,
+   "basis": "美国社会保障署公布的全额退休年龄表：1960 年及以后出生者为 67 岁。",
+   "sources": [
+    "https://www.ssa.gov/benefits/retirement/planner/agereduction.html",
+    "https://en.wikipedia.org/wiki/Retirement_age"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "eu_ets2_launch",
+   "year": 2028,
+   "year_range": [
+    2028,
+    2029
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [
+    "DEU",
+    "FRA",
+    "ITA",
+    "ESP",
+    "POL",
+    "NLD"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "欧盟第二碳市场可能启动，覆盖取暖和交通燃料",
+   "summary": "欧盟原定 2027 年启动、后推迟一年的第二排放交易体系（ETS2）预计 2028 年起对建筑供暖和道路交通燃料征收碳价，部分收入通过社会气候基金补贴低收入家庭。",
+   "personal_hooks": [
+    "汽油和天然气账单中开始体现碳价成本。",
+    "你申请了政府补贴更换热泵。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "欧盟 2025—2026 年就 2040 年气候目标达成的协议中将 ETS2 推迟至 2028 年。",
+   "sources": [
+    "https://icapcarbonaction.com/en/news/eu-reaches-agreement-2040-climate-target-postpones-ets-2-one-year",
+    "https://www.electrive.com/2026/03/06/eu-council-approves-2040-climate-target-with-90-ghg-reduction/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "france_pension_decision",
+   "year": 2028,
+   "year_range": [
+    2027,
+    2029
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "FRA"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "法国退休改革暂停期结束，去留需重新决定",
+   "summary": "法国 2023 年将法定退休年龄由 62 岁逐步提高到 64 岁的改革，被 2026 年社会保障融资法暂停至 2028 年。据推演，2027 年总统选举后的新政府需要决定恢复、修改或放弃这项改革。",
+   "personal_hooks": [
+    "工会与雇主组织再次就退休年龄展开谈判，街头出现抗议活动。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "法国政府信息服务网站说明：2023 年改革中法定年龄和缴费期的上调暂停至 2028 年。",
+   "sources": [
+    "https://www.service-public.gouv.fr/particuliers/actualites/A18825?lang=en",
+    "https://www.jurist.org/news/2025/11/france-votes-to-suspend-pension-reform-law"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "russia_ret_age_final",
+   "year": 2028,
+   "year_range": [
+    2028,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EEU"
+   ],
+   "countries": [
+    "RUS"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "俄罗斯退休年龄完成上调至男 65 岁、女 60 岁",
+   "summary": "按 2018 年通过的养老金改革，俄罗斯退休年龄自 2019 年起逐步上调，到 2028 年达到男性 65 岁、女性 60 岁。",
+   "personal_hooks": [
+    "长辈比预期晚几年才开始领取养老金。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "俄罗斯现行养老金法的过渡安排。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Retirement_age"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "uk_spa_67",
+   "year": 2028,
+   "year_range": [
+    2028,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "GBR"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "英国国家养老金领取年龄升至 67 岁",
+   "summary": "按现行立法，英国国家养老金领取年龄在 2026—2028 年间由 66 岁逐步升至 67 岁；现行时间表还规定 2044—2046 年升至 68 岁，第三次领取年龄评估可能建议提前。",
+   "personal_hooks": [
+    "父母发现自己要比预想的多工作几个月才能领取国家养老金。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.95,
+   "basis": "英国《2014 年养老金法》确定的时间表；2025 年 7 月启动第三次国家养老金年龄评估。",
+   "sources": [
+    "https://www.gov.uk/state-pension-age",
+    "https://ifamagazine.com/could-the-state-pension-age-increase-to-68-in-the-2030s/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "vietnam_ret_men_62",
+   "year": 2028,
+   "year_range": [
+    2028,
+    2028
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SEA"
+   ],
+   "countries": [
+    "VNM"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "越南男性退休年龄达到 62 岁",
+   "summary": "按越南 2019 年《劳动法》第 169 条及第 135/2020 号议定书，男性正常工作条件下的退休年龄自 2021 年起每年延长 3 个月，2028 年达到 62 岁；女性每年延长 4 个月，2035 年达到 60 岁。",
+   "personal_hooks": [
+    "父亲的退休时间按新规定推迟了一年多。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "越南已立法的退休年龄路线图。",
+   "sources": [
+    "https://lawnet.vn/thong-tin-phap-luat/en/tu-van-luat/details-of-the-roadmap-to-increase-the-retirement-age-for-employees-over-the-years-in-vietnam-142377.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "global_debt_100pct",
+   "year": 2029,
+   "year_range": [
+    2028,
+    2031
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN",
+    "JPN",
+    "FRA",
+    "ITA",
+    "GBR"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "全球公共债务可能达到 GDP 的 100%",
+   "summary": "据 IMF 预测，全球公共债务将在 2029 年前后接近或达到 GDP 的 100%，为二战以来最高水平之一；国防、社会福利、能源补贴和利息支出上升，许多国家的财政回旋余地缩小。",
+   "personal_hooks": [
+    "政府宣布削减部分补贴并提高一些税费。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "IMF《财政监测报告》（2026 年 4 月、10 月）：全球公共债务 2025 年约为 GDP 的 94%。",
+   "sources": [
+    "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026",
+    "https://www.pattayamail.com/thailandnews/imf-warns-in-bangkok-global-public-debt-could-hit-100-of-gdp-by-2029-568416",
+    "https://news.bgov.com/capital-markets/global-public-debt-set-to-top-post-wwii-levels-by-2029-imf-says"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pop_rank_reshuffle_2030",
+   "year": 2029,
+   "year_range": [
+    2027,
+    2033
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "NAF",
+    "SSA",
+    "SEA",
+    "EAS",
+    "EEU"
+   ],
+   "countries": [
+    "EGY",
+    "COD",
+    "PHL",
+    "ETH",
+    "JPN",
+    "RUS"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "人口排名重排：非洲与东南亚国家超过日本、俄罗斯",
+   "summary": "据 UN WPP 2024 中方案推演，埃及（约 2027 年）、刚果（金）（约 2028 年）、菲律宾（约 2029 年）人口将先后超过持续减少的日本；埃塞俄比亚（约 2028 年）和刚果（金）（约 2033 年）人口将超过俄罗斯。",
+   "personal_hooks": [
+    "新闻节目用图表展示世界人口大国排名的变化。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "UN WPP 2024 中方案：日本人口从 2024 年约 1.24 亿持续下降，埃及、菲律宾、刚果（金）、埃塞俄比亚人口持续增长。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "usa_65_20pct",
+   "year": 2029,
+   "year_range": [
+    2028,
+    2031
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "美国 65 岁以上人口占比可能达到 20%",
+   "summary": "据 UN WPP 2024 中方案推演，随着「婴儿潮」一代全部进入老年，美国 65 岁以上人口占比约在 2029 年达到 20%，联邦医疗保险和社会保障支出继续上升。",
+   "personal_hooks": [
+    "父母一代陆续退休，家庭讨论医疗保险和养老安排。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "UN WPP 2024 中方案分年龄数据：美国 65 岁以上占比 2024 年约 17.9%、2030 年约 20.4%。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_emissions_peak",
+   "year": 2030,
+   "year_range": [
+    2026,
+    2030
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "中国碳排放可能在 2030 年前达峰",
+   "summary": "中国承诺二氧化碳排放在 2030 年前达峰，并在 2035 年国家自主贡献中提出净排放比峰值下降 7%—10%。2025 年中国化石燃料发电量出现 2015 年以来首次下降，据推演排放可能已处于或接近峰值平台。",
+   "personal_hooks": [
+    "家乡的老煤电厂改成了调峰备用电源。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "Ember《全球电力评论 2026》：2025 年中国化石燃料发电下降约 0.9%；中国 2035 年国家自主贡献。",
+   "sources": [
+    "https://ember-energy.org/latest-insights/global-electricity-review-2026/",
+    "https://climateactiontracker.org/countries/china/2035-ndc/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_min_contribution",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2039
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "中国养老金最低缴费年限开始从 15 年延长",
+   "summary": "按 2024 年通过的渐进式延迟退休决定，自 2030 年起，按月领取基本养老金的最低缴费年限由 15 年每年提高 6 个月，逐步提高到 20 年（约 2039 年完成）。",
+   "personal_hooks": [
+    "灵活就业的亲戚开始补缴社保，以免达不到最低缴费年限。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "全国人大常委会 2024 年 9 月通过的关于实施渐进式延迟法定退休年龄的决定。",
+   "sources": [
+    "https://www.jurist.org/news/2024/09/china-approves-retirement-age-increase-amid-demographic-challenges/",
+    "https://www.sixthtone.com/news/1015876"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_pronatal_expansion",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {
+    "demography_policy": [
+     "demo_pronatal"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "demography",
+   "title": "中国生育支持政策可能大幅扩展",
+   "summary": "据推演，在 2025 年起向 3 岁以下婴幼儿发放育儿补贴的基础上，中国可能进一步扩大托育供给、延长补贴年龄、加强住房和就业支持，出生人数在 2030 年代止跌企稳。",
+   "personal_hooks": [
+    "年轻夫妇领取育儿补贴，并排队申请社区普惠托育名额。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "中国 2025 年 7 月公布育儿补贴制度（每孩每年 3600 元，至 3 周岁）；2025 年出生人数仍降至约 792 万，政策加码压力上升。",
+   "sources": [
+    "中共中央办公厅、国务院办公厅《育儿补贴制度实施方案》，2025 年 7 月 28 日公布（新华社）",
+    "https://www.caixinglobal.com/2026-01-19/chinas-population-decline-accelerates-as-births-hit-modern-era-low-in-2025-102405521.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "denmark_68",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2030
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "DNK"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "丹麦国家养老金领取年龄升至 68 岁",
+   "summary": "按丹麦与预期寿命挂钩的制度及 2025 年立法，国家养老金领取年龄 2030 年升至 68 岁、2035 年 69 岁、2040 年 70 岁。",
+   "personal_hooks": [
+    "体力劳动者讨论能否申请提前退休。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.95,
+   "basis": "丹麦议会 2025 年 5 月以 81 票对 21 票通过的法律。",
+   "sources": [
+    "https://www.thelocal.dk/20250522/denmark-formally-raises-retirement-age-to-70-in-2040"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "heat_labour_loss",
+   "year": 2030,
+   "year_range": [
+    2028,
+    2035
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SAS",
+    "SSA",
+    "SEA",
+    "WAS"
+   ],
+   "countries": [
+    "IND",
+    "PAK",
+    "BGD",
+    "NGA",
+    "IDN"
+   ],
+   "category": "economy",
+   "domain": "climate",
+   "title": "高温导致的劳动时间损失可能显著上升",
+   "summary": "国际劳工组织 2019 年估计，到 2030 年高温可能使全球总工作时间损失约 2.2%，相当于约 8000 万个全职岗位，南亚和西非受影响最重。据推演，农业和建筑业劳动者被迫调整作息，收入受损。",
+   "personal_hooks": [
+    "工地在正午最热的几小时停工，工人改为清晨和傍晚上班。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "国际劳工组织《在变暖的星球上工作》（2019）；国际劳工组织 2024 年估计全球约 24 亿劳动者暴露于过度高温。",
+   "sources": [
+    "International Labour Organization (2019). Working on a warmer planet: The impact of heat stress on labour productivity and decent work. Geneva: ILO.",
+    "https://www.unognewsroom.org/story/en/2145/ilo-press-conference-impacts-of-climate-on-occupational-safety-and-health-22-april-2024/6474"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_3rd_economy",
+   "year": 2030,
+   "year_range": [
+    2028,
+    2034
+   ],
+   "requires": {
+    "economy": [
+     "econ_convergence",
+     "econ_fragmented"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "WEU"
+   ],
+   "countries": [
+    "IND",
+    "DEU"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "印度可能超过德国成为全球第三大经济体",
+   "summary": "据推演，若印度保持约 6%—7% 的实际增长，其名义 GDP 可能在 2030 年前后超过德国，位列美国、中国之后。印度政府曾表示这一目标可能在两三年内实现。",
+   "personal_hooks": [
+    "印度的跨国公司在全球招聘越来越多员工。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "IMF 2026 年 10 月预测印度 2026、2027 年增长均约 7.0%；德国增长长期低于 1.5%。",
+   "sources": [
+    "https://www.scmp.com/news/asia/south-asia/article/3338156/india-overtakes-japan-worlds-4th-largest-economy-eyes-top-3-2026",
+    "https://ddindia.co.in/2026/10/imf-raises-indias-growth-forecast-to-7-for-2026-keeps-it-among-fastest-growing-major-economies/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "korea_ret_age_65",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2036
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "KOR"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "韩国法定退休年龄可能开始从 60 岁上调",
+   "summary": "韩国法定退休年龄目前为 60 岁，而国民年金领取年龄将在 2033 年升至 65 岁，二者之间存在收入空档。2026 年韩国国会与政府正在讨论把法定退休年龄延长至 65 岁，方案包括一次性上调或按年金领取年龄分阶段上调，截至 2026 年 10 月尚未提出具体法案。据推演，相关立法可能在 2020 年代末通过并分阶段实施，同时伴随工资体系调整。",
+   "personal_hooks": [
+    "公司开始讨论高龄员工的工资峰值制度。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "据韩国媒体 2026 年 6 月和 10 月报道，朝野两党分别在准备延长退休年龄的方案，政府表示将提出自己的方案，劳动部门表示相关法案应在年内处理；国民年金领取年龄 2033 年升至 65 岁。",
+   "sources": [
+    "https://www.mt.co.kr/index.php/en/economy/2026/10/13/2026101315205058220",
+    "https://en.fnnews.com/news/202606071831491665"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "oil_demand_plateau",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2034
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast",
+     "energy_mixed"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "WAS",
+    "EEU",
+    "NAM"
+   ],
+   "countries": [
+    "SAU",
+    "RUS",
+    "USA",
+    "IRQ",
+    "ARE"
+   ],
+   "category": "economy",
+   "domain": "energy",
+   "title": "全球石油需求可能见顶或进入平台期",
+   "summary": "据推演，交通电气化和能效提高使全球石油需求约在 2030 年前后见顶或趋平，石化原料成为需求的主要支撑；产油国收入预期下调，加快经济多元化。",
+   "personal_hooks": [
+    "新闻讨论产油国如何为「后石油时代」做准备。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "国际能源署《世界能源展望 2025》既定政策情景：石油需求约在 2030 年前后趋平；但现行政策情景下需求持续增长，存在争议。",
+   "sources": [
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    "https://gcaptain.com/world-oil-and-gas-demand-could-grow-until-2050-iea-says/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "renewables_doubling_2030",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2030
+   ],
+   "requires": {
+    "energy": [
+     "energy_mixed",
+     "energy_lockin"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "CHN",
+    "IND",
+    "USA"
+   ],
+   "category": "technology",
+   "domain": "energy",
+   "title": "全球可再生能源装机可能约翻一番，但未达三倍目标",
+   "summary": "据推演，2025—2030 年全球新增可再生能源装机约 4600 吉瓦，其中约八成为太阳能，装机规模约翻一番，但距离 COP28 提出的 2030 年三倍（约 11 太瓦）目标仍有差距，风电和水电增长不足。",
+   "personal_hooks": [
+    "高速公路两旁和厂房屋顶布满了光伏板。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "国际能源署《可再生能源 2025》主案例；Ember 估计装机缺口约 15%、发电量缺口约 28%。",
+   "sources": [
+    "https://www.argusmedia.com/news-and-insights/latest-market-news/2739526-global-renewable-power-capacity-to-double-by-2030-iea",
+    "https://ember-energy.org/chapter/tracking-progress-towards-a-global-tripling-of-renewables/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "renewables_tripling_2030",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2032
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "CHN",
+    "IND",
+    "USA",
+    "BRA"
+   ],
+   "category": "technology",
+   "domain": "energy",
+   "title": "全球可再生能源装机可能接近三倍目标",
+   "summary": "据推演，能源安全压力和成本下降推动各国大幅提高部署速度，全球可再生能源装机在 2030 年前后接近 COP28 提出的三倍目标，可再生能源发电占比明显超过化石燃料发电。",
+   "personal_hooks": [
+    "家里装上屋顶光伏和储能电池，电费大幅下降。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "Ember 认为按国际能源署主案例装机距三倍目标仅差约 15%，加速部署可以弥补；2025 年可再生能源发电已超过煤电。",
+   "sources": [
+    "https://ember-energy.org/chapter/tracking-progress-towards-a-global-tripling-of-renewables/",
+    "https://ember-energy.org/latest-insights/global-electricity-review-2026/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "sdg_poverty_missed",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2030
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [],
+   "category": "economy",
+   "domain": "society",
+   "title": "2030 年消除极端贫困的目标可能落空",
+   "summary": "据世界银行预测，到 2030 年全球仍可能有约 7% 的人口生活在极端贫困中（按每天 2.15 美元口径约 6.2 亿人），可持续发展目标 1.1 无法如期实现；极端贫困人口七成以上集中在撒哈拉以南非洲。",
+   "personal_hooks": [
+    "国际援助机构呼吁把援助集中投向撒哈拉以南非洲和冲突地区。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "世界银行《贫困、繁荣与地球 2024》及 2025 年贫困线更新。",
+   "sources": [
+    "https://www.worldbank.org/en/news/press-release/2024/10/15/ending-poverty-for-half-the-world-could-take-more-than-a-century",
+    "https://pip.worldbank.org/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "singapore_65_70",
+   "year": 2030,
+   "year_range": [
+    2030,
+    2030
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SEA"
+   ],
+   "countries": [
+    "SGP"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "新加坡退休年龄可能升至 65 岁、重新雇用年龄 70 岁",
+   "summary": "新加坡 2026 年 7 月已将法定最低退休年龄和重新雇用年龄提高到 64 岁和 69 岁，按政府计划，2030 年将分别达到 65 岁和 70 岁。",
+   "personal_hooks": [
+    "年过六十的同事继续以重新雇用合同留在公司。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "新加坡人力部 2026 年宣布的分阶段上调计划。",
+   "sources": [
+    "https://www.singaporelawwatch.sg/Headlines/singapore-to-raise-retirement-age-to-64-and-re-employment-age-to-69-on-july-1-tan-see-leng",
+    "https://www.rajahtannasia.com/viewpoints/singapore-will-raise-prescribed-minimum-retirement-and-re-employment-age-to-64-and-69-respectively-from-1-july-2026/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "trade_blocs",
+   "year": 2030,
+   "year_range": [
+    2027,
+    2035
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "USA",
+    "CHN"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "全球贸易与技术可能按阵营分化",
+   "summary": "据推演，关税、出口管制和产业补贴长期化，关键技术与供应链按地缘阵营重组，部分东南亚、南亚和墨西哥等「连接型」经济体从产业转移中受益，但全球整体效率下降、物价中枢上移。",
+   "personal_hooks": [
+    "你所在的工厂把部分生产线迁往另一个国家。",
+    "进口电子产品价格比几年前明显上涨。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": -1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "IMF 工作人员讨论文件（2023）估计长期贸易碎片化成本约为全球产出的 0.2%—7%。",
+   "sources": [
+    "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2023/01/11/Geo-Economic-Fragmentation-and-the-Future-of-Multilateralism-527266"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "germany_67",
+   "year": 2031,
+   "year_range": [
+    2031,
+    2031
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "DEU"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "德国法定退休年龄升至 67 岁",
+   "summary": "按 2007 年通过的法律，德国法定退休年龄自 2012 年起逐步由 65 岁提高，到 2031 年对 1964 年及以后出生者达到 67 岁；此后是否继续提高或与预期寿命挂钩，仍是政治争论焦点。",
+   "personal_hooks": [
+    "同事中有人选择缴纳更长年限以争取提前退休。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.95,
+   "basis": "德国法定养老保险退休年龄过渡安排。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pensions_in_Germany"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "long_term_1_5c_crossed",
+   "year": 2031,
+   "year_range": [
+    2029,
+    2035
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "domain": "climate",
+   "title": "长期平均升温可能越过 1.5°C",
+   "summary": "据推演，以 20 年平均计算的全球升温约在 2030 年前后越过工业化前 1.5°C，《巴黎协定》中更严格的温控目标届时已被突破，讨论转向如何把超调幅度和时间降到最低。",
+   "personal_hooks": [
+    "科学机构宣布 1.5°C 长期阈值已被越过，引发广泛讨论。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "IPCC AR6：近期（2021—2040 年）即使在极低排放情景下升温达到 1.5°C 的可能性也超过一半，中高排放情景下可能或很可能超过；WMO 2026 年预测 2026—2030 年五年平均超过 1.5°C 的可能性约 75%；联合国环境署认为多年代平均升温至少会暂时超过 1.5°C。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/syr/",
+    "https://wmo.int/node/38645",
+    "https://www.unep.org/en/publications/report/emissions-gap-report-2025"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "thailand_super_aged",
+   "year": 2031,
+   "year_range": [
+    2029,
+    2034
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SEA"
+   ],
+   "countries": [
+    "THA"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "泰国可能进入超老龄社会",
+   "summary": "据 UN WPP 2024 中方案推演，泰国 65 岁以上人口占比约在 2031 年超过 20%，成为东南亚老龄化最快的国家之一；其人口已在 2020 年代初见顶，「未富先老」的讨论增多。",
+   "personal_hooks": [
+    "家族里留在农村的多是老人，年轻人大多在曼谷或海外工作。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "UN WPP 2024 中方案：泰国总和生育率 2024 年约 1.20，65 岁以上占比 2030 年约 19.4%、2040 年约 25.6%。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_super_aged",
+   "year": 2032,
+   "year_range": [
+    2031,
+    2035
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "中国可能进入超老龄社会",
+   "summary": "据 UN WPP 2024 中方案推演，中国 65 岁及以上人口占比约在 2032 年超过 20%，进入通常所说的「超老龄社会」；60 岁以上人口约在 2033 年超过 4 亿。养老服务、医疗和劳动力供给面临更大压力。",
+   "personal_hooks": [
+    "小区里老年人的比例明显上升，社区食堂和养老驿站越来越多。",
+    "单位里同事的平均年龄逐年升高。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "UN WPP 2024 中方案：中国 65 岁以上占比 2030 年约 18.3%、2035 年约 22.8%；60 岁以上人口 2035 年约 4.2 亿。2025 年官方数据显示 60 岁以上已约占 23%。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz",
+    "https://www.caixinglobal.com/2026-01-19/chinas-population-decline-accelerates-as-births-hit-modern-era-low-in-2025-102405521.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "coal_power_decline",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2038
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast",
+     "energy_mixed"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "EAS",
+    "SAS",
+    "SEA",
+    "WEU"
+   ],
+   "countries": [
+    "CHN",
+    "IND",
+    "IDN",
+    "DEU",
+    "POL"
+   ],
+   "category": "technology",
+   "domain": "energy",
+   "title": "全球煤电可能进入持续下降",
+   "summary": "据推演，太阳能和风能持续满足新增用电需求，全球煤电发电量在 2030 年前后进入持续下降，德国等国按法律在 2038 年前退出煤电，部分新兴经济体的煤电厂转为调峰备用。",
+   "personal_hooks": [
+    "家乡的煤矿关闭后，政府组织矿工转岗培训。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "Ember：2025 年煤电占比首次跌破三分之一，中国和印度化石燃料发电均下降；国际能源署现行政策情景中煤炭需求也在 2030 年前开始下降。",
+   "sources": [
+    "https://ember-energy.org/latest-insights/global-electricity-review-2026/",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    "https://en.wikipedia.org/wiki/Coal_phase-out"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ev_majority_fast",
+   "year": 2032,
+   "year_range": [
+    2030,
+    2035
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "CHN",
+    "DEU",
+    "IND",
+    "USA"
+   ],
+   "category": "technology",
+   "domain": "energy",
+   "title": "全球新车销售可能过半为电动车",
+   "summary": "据推演，电池成本下降和油价波动推动电动车在 2030 年代初占全球新车销量的一半以上；中国和欧洲接近全面电动化，印度、东南亚的两轮和三轮车率先电动化。",
+   "personal_hooks": [
+    "你买的第一辆车是电动车，加油站陆续改建成充电站。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "国际能源署：电动车占新车销量 2025 年约 25%、2026 年接近 30%，中国国内 2025 年约 55%。",
+   "sources": [
+    "https://www.iea.org/reports/global-ev-outlook-2026/executive-summary",
+    "https://www.iea.org/news/close-to-30-of-cars-sold-this-year-are-set-to-be-electric-as-countries-and-consumers-respond-to-energy-crisis"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "frontier_debt_defaults",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2040
+   ],
+   "requires": {
+    "economy": [
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "LAC",
+    "SAS",
+    "NAF"
+   ],
+   "countries": [],
+   "category": "economy",
+   "domain": "economy",
+   "title": "新兴与前沿市场可能出现一波主权债务违约",
+   "summary": "据推演，全球利率长期偏高、出口收入下滑，一批低收入和前沿市场国家无法偿还外债，被迫债务重组并接受国际货币基金组织援助计划；货币贬值、通胀上升和公共服务削减冲击普通家庭。",
+   "personal_hooks": [
+    "本国货币大幅贬值，家里的储蓄购买力缩水。",
+    "学校和诊所因经费削减而缩短开放时间。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.75,
+   "basis": "Laeven 与 Valencia（2018）统计 1970—2017 年共发生 74 次主权债务危机；IMF 预计全球公共债务接近 GDP 的 100%。",
+   "sources": [
+    "https://www.imf.org/-/media/Files/Publications/WP/2018/wp18206.ashx",
+    "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "korea_tfr_rebound",
+   "year": 2032,
+   "year_range": [
+    2028,
+    2036
+   ],
+   "requires": {
+    "demography_policy": [
+     "demo_pronatal"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "KOR"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "韩国生育率可能回升至 1.0 以上",
+   "summary": "据推演，韩国结婚数连续回升带动出生人数增加，总和生育率可能在 2030 年代初回到 1.0 以上，但仍远低于更替水平。",
+   "personal_hooks": [
+    "身边同龄人结婚生子的消息比几年前多了。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "韩国总和生育率由 2023 年 0.72 回升至 2024 年 0.75、2025 年约 0.80；UN WPP 2024 中方案假设韩国 2050 年约 1.03。",
+   "sources": [
+    "https://koreatimes.co.kr/southkorea/society/20260826/koreas-births-rise-67-to-254300-in-2025",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "us_ss_rescue",
+   "year": 2032,
+   "year_range": [
+    2029,
+    2034
+   ],
+   "requires": {
+    "pension": [
+     "pension_reform",
+     "pension_patchwork"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "美国可能在基金耗尽前通过社会保障补救立法",
+   "summary": "据推演，国会在信托基金耗尽前通过补救方案，可能组合采用提高工资税或其上限、调整待遇计算、逐步提高领取年龄、财政转移等措施，避免待遇自动削减。",
+   "personal_hooks": [
+    "工资单上的社保扣款或个人未来的领取年龄因新法而改变。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "美国社会保障 2026 年受托人报告：75 年精算赤字为应税工资的 4.42%；历史上 1983 年曾在基金接近耗尽时完成改革。",
+   "sources": [
+    "https://www.everycrsreport.com/reports/IF13256.html",
+    "https://www.ssa.gov/benefits/retirement/planner/agereduction.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "korea_pension_13pct",
+   "year": 2033,
+   "year_range": [
+    2033,
+    2033
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "KOR"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "韩国国民年金缴费率升至 13%、领取年龄升至 65 岁",
+   "summary": "按 2025 年修订的《国民年金法》，缴费率自 2026 年起每年提高 0.5 个百分点，2033 年达到 13%（雇主与雇员各付一半）；同年国民年金领取年龄升至 65 岁。",
+   "personal_hooks": [
+    "工资单上的养老保险扣款比几年前明显增加。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "美国社会保障署国际动态对韩国 2025 年改革的介绍；韩国法定时间表。",
+   "sources": [
+    "https://www.ssa.gov/policy/docs/progdesc/intl_update/2025-04/index.html",
+    "https://www.mt.co.kr/index.php/en/economy/2026/10/13/2026101315205058220"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "migration_restriction_shortage",
+   "year": 2033,
+   "year_range": [
+    2028,
+    2045
+   ],
+   "requires": {
+    "demography_policy": [
+     "demo_low_fertility"
+    ],
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS",
+    "EEU"
+   ],
+   "countries": [],
+   "category": "policy",
+   "domain": "society",
+   "title": "移民收紧与劳动力短缺可能并存",
+   "summary": "据推演，在经济疲弱和社会分歧加大的背景下，多个高收入国家收紧移民政策，同时护理、建筑、农业等行业长期缺工，工资上涨与服务短缺并存，部分工作转向自动化。",
+   "personal_hooks": [
+    "预约家庭护理服务需要排队数月。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "UN WPP 2024 显示多个高收入国家劳动年龄人口减少；美国等国人口增长高度依赖移民。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz",
+    "https://www.ilo.org/resource/news/global-job-quality-stagnates-despite-resilient-growth"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "us_ss_benefit_cut",
+   "year": 2033,
+   "year_range": [
+    2032,
+    2035
+   ],
+   "requires": {
+    "pension": [
+     "pension_austerity"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "美国社会保障信托基金可能耗尽，待遇自动削减",
+   "summary": "据推演，国会未能在期限前达成协议，老年与遗属保险信托基金在 2032 年底至 2033 年耗尽，此后只能按持续收入支付约 78% 的计划待遇，数千万退休者的收入下降。",
+   "personal_hooks": [
+    "祖父母的社会保障支票突然减少了约五分之一。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "美国社会保障 2026 年受托人报告：OASI 基金预计 2032 年第四季度耗尽，届时可支付约 78%。",
+   "sources": [
+    "https://www.everycrsreport.com/reports/IF13256.html",
+    "https://budgetmodel.wharton.upenn.edu/p/2026-06-11-social-security-outlook-june-2026/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "adaptation_finance_tripled",
+   "year": 2035,
+   "year_range": [
+    2033,
+    2037
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "SSA",
+    "SAS",
+    "OCE",
+    "SEA"
+   ],
+   "countries": [],
+   "category": "policy",
+   "domain": "climate",
+   "title": "国际适应资金可能增至三倍",
+   "summary": "COP30 呼吁到 2035 年至少把适应资金增至三倍，并重申到 2035 年每年至少 3000 亿美元的气候资金目标。据推演，资金能否到位取决于发达国家财政状况，若实现，脆弱国家的防洪、抗旱和预警系统将明显改善。",
+   "personal_hooks": [
+    "家乡新建了洪水预警广播和避难所。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "COP30（贝伦）最终决定的适应资金目标；美国已退出《巴黎协定》，资金缺口风险较大。",
+   "sources": [
+    "https://www.kcl.ac.uk/your-quick-guide-to-the-outcomes-of-cop30",
+    "https://www.malaymail.com/news/world/2025/11/23/from-amazon-drama-to-climate-deals-what-cop30-delivered-and-what-it-didnt/199399"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "africa_youth_jobs_gap",
+   "year": 2035,
+   "year_range": [
+    2028,
+    2045
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "NAF"
+   ],
+   "countries": [
+    "NGA",
+    "ETH",
+    "COD",
+    "KEN",
+    "EGY",
+    "SDN"
+   ],
+   "category": "economy",
+   "domain": "society",
+   "title": "非洲青年就业缺口可能扩大",
+   "summary": "据推演，在全球增长疲弱、融资成本偏高的情况下，撒哈拉以南非洲每年新增的正规就业岗位远少于新进入劳动力市场的青年人数，非正规就业和向外移民的压力上升。",
+   "personal_hooks": [
+    "毕业后只能在街头做小生意或打零工。",
+    "不少同学在讨论去海湾国家或欧洲打工。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.75,
+   "basis": "IMF 估计该地区每年可能需要新增最多约 1500 万个就业岗位；国际劳工组织显示全球非正规就业约 21 亿人，集中在非洲和南亚。",
+   "sources": [
+    "https://www.imf.org/en/blogs/articles/2024/11/12/the-clock-is-ticking-on-sub-saharan-africas-urgent-job-creation-challenge",
+    "https://www.ilo.org/resource/news/global-job-quality-stagnates-despite-resilient-growth"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_2035_modernisation",
+   "year": 2035,
+   "year_range": [
+    2033,
+    2037
+   ],
+   "requires": {
+    "economy": [
+     "econ_convergence",
+     "econ_fragmented"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "中国「2035 年基本实现现代化」目标节点",
+   "summary": "中国提出到 2035 年基本实现社会主义现代化、人均国内生产总值达到中等发达国家水平。据推演，届时中国人均收入可能明显提高，但能否达到这一水平取决于增长速度、汇率和人口老龄化的影响。",
+   "personal_hooks": [
+    "媒体集中报道各项 2035 年目标的完成情况。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "中国共产党第二十次全国代表大会报告提出的 2035 年总体目标；IMF 预测中国 2027 年增长约 4.0%，中期增速放缓。",
+   "sources": [
+    "中国共产党第二十次全国代表大会报告，2022 年 10 月 16 日（新华社全文）",
+    "https://news.cgtn.com/news/2026-10-13/IMF-raises-2026-global-growth-forecast-to-3-1--1RcEPm28WWI/share_amp.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_ndc_2035",
+   "year": 2035,
+   "year_range": [
+    2035,
+    2035
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast",
+     "energy_mixed"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "中国 2035 年减排目标节点",
+   "summary": "中国 2035 年国家自主贡献提出：全经济范围温室气体净排放比峰值下降 7%—10%，非化石能源占能源消费总量 30% 以上，风电和太阳能装机大幅增加。据推演，按当前趋势该目标可能达成甚至超额完成。",
+   "personal_hooks": [
+    "城市公交和出租车几乎全部换成了新能源车。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "气候行动追踪组织估计，按现行政策中国 2035 年排放可能比 2024 年低约 4%—24%（其可信度分析给出约 9%—16%），而国家自主贡献目标约相当于比 2024 年低 5%—10%。",
+   "sources": [
+    "https://climateactiontracker.org/countries/china/2035-ndc/",
+    "https://leap.unep.org/en/countries/cn/national-legislation/chinas-2035-nationally-determined-contribution-report"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_pension_pressure",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2042
+   ],
+   "requires": {
+    "pension": [
+     "pension_patchwork",
+     "pension_austerity"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "中国城镇职工养老保险收支压力可能加大",
+   "summary": "据推演，随着退休人数快速增加，中国城镇职工基本养老保险对财政补助的依赖上升，养老金待遇增幅放缓，个人养老金和企业年金的重要性提高。",
+   "personal_hooks": [
+    "每年养老金上调幅度比过去小了。",
+    "你开始在个人养老金账户中定期存钱。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "中国社会科学院世界社保研究中心《中国养老金精算报告 2019—2050》测算（未计入延迟退休等后续改革）城镇职工养老保险累计结余可能在 2035 年前后耗尽；UN WPP 2024 显示中国 60 岁以上人口 2035 年约 4.2 亿。",
+   "sources": [
+    "中国社会科学院世界社保研究中心《中国养老金精算报告 2019—2050》，2019 年 4 月",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "cooling_demand_surge",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SAS",
+    "SEA",
+    "WAS",
+    "SSA",
+    "NAF"
+   ],
+   "countries": [
+    "IND",
+    "IDN",
+    "PAK",
+    "EGY",
+    "NGA"
+   ],
+   "category": "technology",
+   "domain": "energy",
+   "title": "制冷用电需求可能大幅攀升",
+   "summary": "据推演，收入增长和高温加剧使空调在南亚、东南亚和中东迅速普及，全球峰值用电需求到 2035 年增长约四成（制冷是主要推动因素），电网在热浪期间频繁承压，停电对健康的威胁上升。",
+   "personal_hooks": [
+    "家里第一次装上空调，但热浪期间常因限电无法使用。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "国际能源署《世界能源展望 2025》：既定政策情景下到 2035 年峰值电力需求增长约 40%，主要来自制冷。",
+   "sources": [
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "coral_reef_decline",
+   "year": 2035,
+   "year_range": [
+    2028,
+    2045
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "OCE",
+    "SEA",
+    "LAC",
+    "SAS"
+   ],
+   "countries": [
+    "AUS",
+    "IDN",
+    "PHL",
+    "MDV",
+    "FJI"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "暖水珊瑚礁可能大面积消失",
+   "summary": "据推演，随着反复发生的海洋热浪，全球暖水珊瑚礁大面积白化死亡，依赖珊瑚礁渔业和旅游的沿海社区收入下降，海岸线失去天然屏障。",
+   "personal_hooks": [
+    "童年潜水时见过的五彩珊瑚礁如今只剩灰白的骨架。",
+    "渔民抱怨近海鱼获越来越少。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "《全球临界点报告 2025》认为暖水珊瑚礁已越过热临界点；IPCC 估计升温 1.5°C 时珊瑚礁减少 70%—90%；2023 年以来全球 80% 以上的珊瑚礁区域受到白化级别的热应激。",
+   "sources": [
+    "https://www.noc.ac.uk/news/global-tipping-points-report-2025-reveals-first-earth-system-tipping-point-reached",
+    "https://www.zsl.org/news-and-events/news/global-tipping-points-report-2025",
+    "https://www.ipcc.ch/sr15/chapter/spm/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "energy_poverty_persists",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "ETH",
+    "MOZ",
+    "NER"
+   ],
+   "category": "society",
+   "domain": "energy",
+   "title": "非洲仍可能有数亿人用不上电",
+   "summary": "据推演，融资成本高、电网投资不足，撒哈拉以南非洲的无电人口下降缓慢，到 2030 年代中期仍有数亿人用不上电、更多人依赖柴火和木炭做饭，室内空气污染继续危害妇女儿童健康。",
+   "personal_hooks": [
+    "每天傍晚要去集市给手机付费充电。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": -1,
+    "tech": -1
+   },
+   "migration_push": 1,
+   "prob": 0.7,
+   "basis": "国际能源署：全球约 7.3 亿人无电、近 20 亿人缺乏清洁炊事，主要集中在撒哈拉以南非洲。",
+   "sources": [
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings",
+    "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "europe_deadly_summers",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [
+    "ITA",
+    "ESP",
+    "FRA",
+    "DEU",
+    "GRC",
+    "PRT"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "欧洲致命高温夏季可能频繁出现",
+   "summary": "据推演，像 2022 年那样造成约 6 万人高温相关死亡的欧洲夏季，在 2030 年代后变得更为常见；南欧干旱、山火和缺水问题加剧，养老院、学校和公共交通加装空调成为政策重点。",
+   "personal_hooks": [
+    "暑假期间城市公园开放「凉爽避难所」，老人被建议白天留在室内。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.01,
+    "ages": [
+     75,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "Ballester 等（2023，《自然·医学》）估计 2022 年夏季欧洲约 61,672 人死于高温相关原因；欧洲是升温最快的大陆之一。",
+   "sources": [
+    "https://doi.org/10.1038/s41591-023-02419-z",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "global_emissions_falling",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {
+    "climate": [
+     "climate_low"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [
+    "CHN",
+    "USA",
+    "IND"
+   ],
+   "category": "policy",
+   "domain": "climate",
+   "title": "全球温室气体排放可能明显下降",
+   "summary": "据推演，主要排放国 2035 年减排目标普遍兑现并加码，全球温室气体排放比 2019 年下降约三分之一，接近联合国环境署所称 2°C 路径所需的降幅。",
+   "personal_hooks": [
+    "城市里燃油车明显减少，空气比以前清新了。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "联合国环境署《排放差距报告 2025》：2035 年年排放需比 2019 年下降 35%（2°C）或 55%（1.5°C）。",
+   "sources": [
+    "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+    "https://www.pbl.nl/en/publications/unep-emissions-gap-report-2025"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hic_labour_migration_open",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "demography_policy": [
+     "demo_migration_led"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "OCE",
+    "EAS"
+   ],
+   "countries": [
+    "USA",
+    "CAN",
+    "DEU",
+    "GBR",
+    "AUS",
+    "JPN",
+    "KOR"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "老龄化富裕国家可能大幅扩大劳动移民",
+   "summary": "据推演，为应对护理、建筑、农业和制造业的劳动力短缺，多个高收入国家扩大技能和劳务移民配额、简化定居路径，并与非洲、南亚国家签订劳务合作协议；移民融合与公共服务压力成为长期议题。",
+   "personal_hooks": [
+    "你的邻居一家刚从海外移居过来，孩子和你在同一所学校。",
+    "你考虑参加海外护理工作的语言培训和资格考试。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.7,
+   "basis": "全球国际移民 2024 年约 3.04 亿；日本 IPSS 推计上调外国人净迁入假设；世界银行显示未来劳动年龄人口增长集中在撒哈拉以南非洲。",
+   "sources": [
+    "https://www.migrationpolicy.org/article/top-statistics-global-migration-migrants",
+    "https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf",
+    "https://blogs.worldbank.org/en/opendata/what-four-charts-reveal-about-the-global-jobs-challenge"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "south_asia_extreme_heat",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND",
+    "PAK",
+    "BGD",
+    "NPL"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "南亚致命热浪可能趋于常态",
+   "summary": "据推演，印度、巴基斯坦和孟加拉国的春夏热浪变得更早、更长、更湿热，城市贫困人口、户外劳动者和老人面临的健康风险上升，各地普遍推行「热行动计划」、凉爽避难所和预警系统。",
+   "personal_hooks": [
+    "电视台每天播报湿热指数和避暑提示。",
+    "家里为老人添置了空调，但停电时只能去社区避暑中心。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.02,
+    "ages": [
+     60,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "Im 等（2017）预计高排放下南亚人口密集的农业区可能出现接近人体生理极限的湿热；IPCC 评估极端高温频率随升温显著增加；2015、2022、2024 年南亚已出现严重热浪。",
+   "sources": [
+    "https://doi.org/10.1126/sciadv.1603322",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://en.wikipedia.org/wiki/2015_Indian_heat_wave",
+    "https://en.wikipedia.org/wiki/2022_India%E2%80%93Pakistan_heat_wave"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "tuvalu_climate_mobility",
+   "year": 2035,
+   "year_range": [
+    2030,
+    2040
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "OCE"
+   ],
+   "countries": [
+    "TUV",
+    "AUS"
+   ],
+   "category": "society",
+   "domain": "climate",
+   "title": "相当一部分图瓦卢人可能已通过气候流动通道移居澳大利亚",
+   "summary": "根据图瓦卢与澳大利亚的《法莱皮利联盟条约》，澳方自 2025 年起每年通过抽签向图瓦卢公民提供 280 个永久居留名额。据推演，按此速度到 2030 年代中期累计可能有数千人移居，约占图瓦卢人口的四分之一。",
+   "personal_hooks": [
+    "岛上几乎每个家庭都有亲人在澳大利亚定居。",
+    "你在抽签结果公布那天紧张地查看名单。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.7,
+   "basis": "2025 年首轮抽签有超过半数图瓦卢公民报名；每年 280 个名额，无工作邀请和年龄要求。",
+   "sources": [
+    "https://devpolicy.org/the-first-falepili-union-visa-ballot-a-preliminary-assessment-20250826/",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "universal_electricity_access",
+   "year": 2035,
+   "year_range": [
+    2033,
+    2042
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast"
+    ],
+    "economy": [
+     "econ_convergence"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "ETH",
+    "TZA",
+    "MOZ"
+   ],
+   "category": "technology",
+   "domain": "energy",
+   "title": "非洲可能接近普及电力供应",
+   "summary": "据推演，离网太阳能、微电网和国际资金推动撒哈拉以南非洲电力普及率快速提高，到 2030 年代后期全球无电人口大幅减少，清洁炊事的普及也明显加快。",
+   "personal_hooks": [
+    "村里装上太阳能微电网，孩子晚上第一次能在电灯下写作业。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "国际能源署：全球约 7.3 亿人无电可用，其提出的新路径可在 2035 年实现普遍电力供应、2040 年实现清洁炊事。",
+   "sources": [
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "advanced_bond_stress",
+   "year": 2036,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "economy": [
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "WEU",
+    "EAS"
+   ],
+   "countries": [
+    "USA",
+    "GBR",
+    "FRA",
+    "ITA",
+    "JPN"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "发达经济体可能出现国债市场动荡",
+   "summary": "据推演，一个或多个高债务发达经济体出现国债收益率急升、评级下调和财政紧缩，养老金、医疗等支出被迫削减或推迟调整，金融市场剧烈波动。",
+   "personal_hooks": [
+    "房贷利率在短时间内明显上升。",
+    "政府宣布冻结部分公共部门工资。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "美国 CBO 预计联邦公众持有债务 2056 年约为 GDP 的 175%；IMF 预计全球公共债务 2029 年前后接近 100%。",
+   "sources": [
+    "https://www.pgpf.org/article/national-debt-projected-to-hit-175-gdp-interest-totals-99-trillion/",
+    "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "jakarta_sea_wall",
+   "year": 2036,
+   "year_range": [
+    2032,
+    2042
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SEA"
+   ],
+   "countries": [
+    "IDN"
+   ],
+   "category": "policy",
+   "domain": "climate",
+   "title": "雅加达湾海堤一期工程可能完工",
+   "summary": "印度尼西亚计划建设从万丹到东爪哇、全长约 500 公里的爪哇北岸海堤，总投资约 800 亿美元，首期雅加达湾工程估计需 8—10 年、80 亿—100 亿美元。据推演，一期工程可能在 2030 年代中后期完工，但资金与工期存在较大不确定性。",
+   "personal_hooks": [
+    "北雅加达的居民一边等待海堤完工，一边在家门口加高门槛。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.45,
+   "basis": "印度尼西亚总统 2025 年宣布的爪哇北岸海堤计划及资金安排。",
+   "sources": [
+    "https://setkab.go.id/en/president-prabowo-reiterates-commitment-to-launch-java-sea-wall-project",
+    "https://investortrust.id/national/75631/giant-sea-wall-project-to-begin-in-jakarta-semarang-and-demak-ahy-reveals"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "korea_65_30pct",
+   "year": 2036,
+   "year_range": [
+    2034,
+    2040
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "KOR"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "韩国 65 岁以上人口占比可能超过 30%",
+   "summary": "韩国已于 2024 年底进入 65 岁以上占比超过 20% 的超老龄社会。据 UN WPP 2024 中方案推演，这一比例约在 2036 年超过 30%，2050 年接近 40%，为全球最高水平之一；总人口约在 2060 年降至 4000 万以下。",
+   "personal_hooks": [
+    "地铁免费乘车的老年人越来越多，相关福利是否调整引发讨论。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "UN WPP 2024 中方案分年龄数据：韩国 65 岁以上占比 2030 年约 25%、2040 年约 34%、2050 年约 40%。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "poverty_concentrated_ssa",
+   "year": 2038,
+   "year_range": [
+    2030,
+    2045
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "ETH",
+    "MOZ",
+    "MDG",
+    "SSD",
+    "SOM"
+   ],
+   "category": "economy",
+   "domain": "society",
+   "title": "极端贫困可能高度集中于撒哈拉以南非洲与脆弱国家",
+   "summary": "据推演，在全球增长疲弱的情况下，南亚和东亚的极端贫困继续下降，而撒哈拉以南非洲及冲突、脆弱地区的贫困人口下降缓慢，到 2040 年前后全球绝大多数极端贫困人口集中在这些地区。",
+   "personal_hooks": [
+    "家里的收入很大程度上取决于雨季收成好坏。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.8,
+   "basis": "据报道，世界银行预计到 2025 年底撒哈拉以南非洲占全球极端贫困人口的比例将由约 69% 升至约 73%。",
+   "sources": [
+    "https://www.worldbank.org/en/news/press-release/2024/10/15/ending-poverty-for-half-the-world-could-take-more-than-a-century",
+    "https://eastleighvoice.co.ke/poverty%20line/163334/world-bank-raises-poverty-line-to-3-a-day-pushing-millions-into-extreme-poverty-category"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "arctic_ice_free_september",
+   "year": 2040,
+   "year_range": [
+    2030,
+    2050
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [
+    "NAM",
+    "EEU",
+    "WEU"
+   ],
+   "countries": [
+    "CAN",
+    "RUS",
+    "USA",
+    "NOR",
+    "GRL"
+   ],
+   "category": "science",
+   "domain": "climate",
+   "title": "北冰洋可能首次在 9 月基本无冰",
+   "summary": "据 IPCC 评估，在所有排放情景下，2050 年前北冰洋都可能至少出现一次 9 月份基本无海冰的情况；北极航道通航时间延长，北极生态和原住民生计受到冲击。",
+   "personal_hooks": [
+    "新闻报道货轮夏季首次几乎不受冰层阻碍地穿越北极航道。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "IPCC AR6 第一工作组决策者摘要：在所评估的五个情景下，2050 年前北极可能（likely）至少出现一次 9 月实际无冰；WMO 报告 2025 年北极海冰范围接近历史最低。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://www.rmets.org/metmatters/state-global-climate-2025"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_ret_reform_complete",
+   "year": 2040,
+   "year_range": [
+    2039,
+    2040
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "中国渐进式延迟退休过渡基本完成",
+   "summary": "按 2025 年起实施的方案，用 15 年时间将男职工法定退休年龄延至 63 岁、女职工分别延至 55 岁和 58 岁，过渡约在 2040 年前后完成；职工可在规定范围内弹性提前或推迟退休，各自最多 3 年。",
+   "personal_hooks": [
+    "你所在单位的退休欢送会越来越少见，六十出头的同事仍在岗位上。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.9,
+   "basis": "全国人大常委会 2024 年 9 月决定，自 2025 年 1 月 1 日起实施。",
+   "sources": [
+    "https://www.jurist.org/news/2024/09/china-approves-retirement-age-increase-amid-demographic-challenges/",
+    "https://www.sixthtone.com/news/1015876"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "climate_internal_migration",
+   "year": 2040,
+   "year_range": [
+    2030,
+    2050
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "SAS",
+    "SEA",
+    "EAS",
+    "NAF",
+    "LAC"
+   ],
+   "countries": [
+    "NGA",
+    "ETH",
+    "BGD",
+    "PAK",
+    "VNM",
+    "EGY"
+   ],
+   "category": "society",
+   "domain": "society",
+   "title": "气候因素推动的国内迁移可能大规模出现",
+   "summary": "据推演，缺水、农业减产和海平面上升推动大量人口从脆弱的农村和沿海地区迁往城市，撒哈拉以南非洲、东亚太平洋和南亚是主要热点，城市周边的非正规住区迅速扩张。",
+   "personal_hooks": [
+    "村里许多家庭因连续歉收搬进了城市边缘。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "prob": 0.7,
+   "basis": "世界银行《Groundswell》：若不采取行动，到 2050 年六个地区可能出现最多约 2.16 亿气候国内迁移者（撒哈拉以南非洲约 8600 万），热点最早可能在 2030 年出现；及时减排与包容性发展可将规模减少多达 80%。",
+   "sources": [
+    "https://www.worldbank.org/en/news/feature/2021/09/13/millions-on-the-move-in-their-own-countries-the-human-face-of-climate-change"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "eu_2040_target",
+   "year": 2040,
+   "year_range": [
+    2040,
+    2040
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast",
+     "energy_mixed"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [
+    "DEU",
+    "FRA",
+    "ITA",
+    "ESP",
+    "POL",
+    "NLD"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "欧盟 2040 年减排 90% 目标节点",
+   "summary": "按 2026 年修订的《欧洲气候法》，欧盟 2040 年温室气体净排放需比 1990 年减少 90%，其中最多 5 个百分点可通过国际碳信用实现。据推演，若目标达成，欧洲电力基本脱碳，供暖和工业电气化程度大幅提高。",
+   "personal_hooks": [
+    "家里的燃气锅炉换成了热泵。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "欧盟理事会 2026 年 3 月正式通过的 2040 年气候目标。",
+   "sources": [
+    "https://www.electrive.com/2026/03/06/eu-council-approves-2040-climate-target-with-90-ghg-reduction/",
+    "https://icapcarbonaction.com/en/news/eu-reaches-agreement-2040-climate-target-postpones-ets-2-one-year"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "gulf_diversification_pressure",
+   "year": 2040,
+   "year_range": [
+    2035,
+    2050
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "WAS",
+    "NAF"
+   ],
+   "countries": [
+    "SAU",
+    "ARE",
+    "KWT",
+    "QAT",
+    "OMN",
+    "IRQ",
+    "DZA",
+    "LBY"
+   ],
+   "category": "economy",
+   "domain": "energy",
+   "title": "油气出口国财政可能承压，加快经济转型",
+   "summary": "据推演，全球油气需求下降使中东、北非产油国财政收入减少，政府压缩公共部门就业和补贴，加快发展旅游、物流、制造和太阳能制氢等产业；转型较慢的国家面临青年失业上升。",
+   "personal_hooks": [
+    "政府部门不再大规模招聘，年轻人更多进入私营企业。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "国际能源署净零与既定政策情景显示石油需求在 2030 年代后下降；产油国财政高度依赖油气收入。",
+   "sources": [
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "maize_yield_stress",
+   "year": 2040,
+   "year_range": [
+    2030,
+    2050
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "LAC",
+    "SAS",
+    "SEA",
+    "NAM"
+   ],
+   "countries": [
+    "USA",
+    "BRA",
+    "MEX",
+    "NGA",
+    "ZAF",
+    "IND"
+   ],
+   "category": "economy",
+   "domain": "climate",
+   "title": "玉米等主粮可能出现明显减产压力",
+   "summary": "据推演，高温和干旱使热带、亚热带玉米单产下降的趋势在 2030 年代变得明显，粮价波动加大；高纬度地区小麦可能受益，但难以抵消全球粮食体系的风险上升。",
+   "personal_hooks": [
+    "玉米面和食用油价格比前几年涨了不少。",
+    "种地的亲戚改种更耐旱的品种。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.7,
+   "basis": "Jägermeyr 等（2021，《自然·食物》）：高排放下全球玉米单产到本世纪末可能下降约 24%，影响或在 2030 年前后显现，小麦可能增产约 17%。",
+   "sources": [
+    "https://doi.org/10.1038/s43016-021-00400-y",
+    "https://climate.nasa.gov/news/3124/global-climate-change-impact-on-crops-expected-within-10-years-nasa-study-finds"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "thames_end_century_choice",
+   "year": 2040,
+   "year_range": [
+    2038,
+    2042
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "WEU"
+   ],
+   "countries": [
+    "GBR"
+   ],
+   "category": "policy",
+   "domain": "climate",
+   "title": "英国选定泰晤士河口世纪末防洪方案",
+   "summary": "按英国环境署《泰晤士河口 2100》规划，现有泰晤士河防洪闸预计到 2070 年将无法提供所需的风暴潮防护，世纪末替代方案需在 2040 年前选定、2070 年前投入运行；此前下游防洪堤需陆续加高。",
+   "personal_hooks": [
+    "伦敦东部的居民关注新防洪闸可能的选址。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "英国环境署《泰晤士河口 2100》规划及其指导文件。",
+   "sources": [
+    "https://www.gov.uk/guidance/managing-future-flood-risk-and-thames-barrier-thames-estuary-2100",
+    "https://www.gov.uk/government/publications/thames-estuary-2100-te2100"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "wealth_concentration_rises",
+   "year": 2040,
+   "year_range": [
+    2030,
+    2050
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "economy",
+   "domain": "society",
+   "title": "财富集中度可能进一步上升",
+   "summary": "据推演，资产价格上涨快于工资、遗产财富增加以及财政紧缩，使全球最富有 10% 人口拥有的财富份额由约四分之三继续上升，住房和教育负担成为年轻一代的主要不满。",
+   "personal_hooks": [
+    "同龄人中能否买房很大程度取决于父母能否资助首付。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "《世界不平等报告 2026》：最富有的 10% 拥有约 75% 的财富，最低的 50% 仅拥有约 2%。",
+   "sources": [
+    "https://www.storyboard18.com/how-it-works/worlds-richest-10-take-over-half-of-global-income-says-world-inequality-report-87155.htm",
+    "https://wid.world/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "working_past_70",
+   "year": 2040,
+   "year_range": [
+    2035,
+    2050
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EAS",
+    "NAM",
+    "OCE"
+   ],
+   "countries": [
+    "DNK",
+    "SGP",
+    "JPN",
+    "KOR",
+    "ITA",
+    "NLD"
+   ],
+   "category": "society",
+   "domain": "society",
+   "title": "工作到 70 岁可能逐渐成为常态",
+   "summary": "据推演，随着丹麦（2040 年 70 岁）、新加坡（2030 年重新雇用年龄 70 岁）等国制度到位以及更多国家把退休年龄与预期寿命挂钩，高收入国家 65—74 岁人群的就业比例明显上升，弹性退休与部分退休更为普遍。",
+   "personal_hooks": [
+    "你的同事中有好几位已经年过七十，仍以兼职方式工作。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "丹麦已立法 2040 年领取年龄升至 70 岁；新加坡计划 2030 年重新雇用年龄达到 70 岁；OECD《养老金概览 2023》显示多国将退休年龄与预期寿命挂钩。",
+   "sources": [
+    "https://www.thelocal.dk/20250522/denmark-formally-raises-retirement-age-to-70-in-2040",
+    "https://www.singaporelawwatch.sg/Headlines/singapore-to-raise-retirement-age-to-64-and-re-employment-age-to-69-on-july-1-tan-see-leng",
+    "https://www.oecd.org/en/publications/pensions-at-a-glance-2023_678055dd-en.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "world_births_peak",
+   "year": 2041,
+   "year_range": [
+    2035,
+    2048
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "domain": "demography",
+   "title": "全球年出生人数可能见顶",
+   "summary": "据 UN WPP 2024 中方案推演，全球每年出生人数约在 2040 年前后达到约 1.36 亿的峰值后开始下降，到 2090 年约 1.15 亿；新生儿中来自撒哈拉以南非洲的比例从约 31% 升至 40% 以上。",
+   "personal_hooks": [
+    "产科医院和幼儿园在许多国家合并或关闭，而在非洲部分国家仍在扩建。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "UN WPP 2024 中方案出生数序列：2024 年约 1.324 亿，2041 年前后最高（约 1.357 亿），2090 年约 1.148 亿。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "africa_dividend_realized",
+   "year": 2045,
+   "year_range": [
+    2035,
+    2060
+   ],
+   "requires": {
+    "economy": [
+     "econ_convergence"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "ETH",
+    "KEN",
+    "TZA",
+    "GHA",
+    "CIV",
+    "RWA"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "非洲人口红利可能部分兑现",
+   "summary": "据推演，在贸易开放、基础设施和教育投入持续改善的情况下，撒哈拉以南非洲新增的数亿劳动年龄人口逐步进入制造业和服务业，部分国家出现持续多年的较快增长，中产阶层扩大。",
+   "personal_hooks": [
+    "家乡附近新建了工业园区，年轻人不必远走他乡也能找到工厂工作。",
+    "你成为家族中第一个读完大学的人。"
+   ],
+   "effects": {
+    "economy": 2,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 1,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "世界银行估计到 2050 年撒哈拉以南非洲新增约 6.25 亿劳动年龄人口；东亚经验显示抚养比下降期若配合就业创造可带来较快增长。",
+   "sources": [
+    "https://blogs.worldbank.org/en/opendata/what-four-charts-reveal-about-the-global-jobs-challenge",
+    "https://www.imf.org/en/blogs/articles/2024/11/12/the-clock-is-ticking-on-sub-saharan-africas-urgent-job-creation-challenge"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "extreme_poverty_below_3pct",
+   "year": 2045,
+   "year_range": [
+    2040,
+    2055
+   ],
+   "requires": {
+    "economy": [
+     "econ_convergence"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "SSA",
+    "SAS"
+   ],
+   "countries": [],
+   "category": "economy",
+   "domain": "society",
+   "title": "全球极端贫困率可能降至 3% 以下",
+   "summary": "据推演，若低收入国家实现持续较快增长、农业生产率和基础服务明显改善，全球极端贫困率可能在 2040 年代降至 3% 以下，但撒哈拉以南非洲部分国家仍有较高贫困率。",
+   "personal_hooks": [
+    "村里通了电和自来水，家中第一次有了稳定的现金收入。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "世界银行指出过去十年减贫明显放缓，加速减贫需要低收入国家增长显著加快；本里程碑仅在「追赶与融合」情景下出现。",
+   "sources": [
+    "https://www.worldbank.org/en/news/press-release/2024/10/15/ending-poverty-for-half-the-world-could-take-more-than-a-century",
+    "https://www.thedailystar.net/business/news/global-economys-speed-limit-set-fall-three-decade-low-3282821"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "mediterranean_drying",
+   "year": 2045,
+   "year_range": [
+    2035,
+    2060
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "NAF",
+    "WAS"
+   ],
+   "countries": [
+    "ESP",
+    "ITA",
+    "GRC",
+    "MAR",
+    "DZA",
+    "TUN",
+    "TUR",
+    "EGY"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "地中海地区干旱可能加剧",
+   "summary": "据推演，地中海周边农业和生态干旱更加频繁，水库储量下降、灌溉受限，橄榄、葡萄等作物减产，北非部分农村人口向城市和海外迁移的压力上升。",
+   "personal_hooks": [
+    "家乡实行分时段供水，农田休耕面积扩大。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.65,
+   "basis": "IPCC AR6 第一工作组以较高信度评估地中海地区农业和生态干旱将随升温增加。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "oil_demand_growth_lockin",
+   "year": 2045,
+   "year_range": [
+    2035,
+    2050
+   ],
+   "requires": {
+    "energy": [
+     "energy_lockin"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "WAS",
+    "NAM",
+    "EEU"
+   ],
+   "countries": [
+    "SAU",
+    "USA",
+    "RUS",
+    "IRQ",
+    "ARE"
+   ],
+   "category": "economy",
+   "domain": "energy",
+   "title": "全球石油需求可能持续增长至本世纪中叶",
+   "summary": "据推演，电动车普及放缓、新兴经济体用油增加，全球石油需求到 2050 年可能升至约 1.13 亿桶/日，油气出口国收入较高，但油价随地缘冲突频繁波动，减排目标普遍落空。",
+   "personal_hooks": [
+    "油价每逢地区冲突就大起大落，影响全家出行开支。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "国际能源署《世界能源展望 2025》现行政策情景：2050 年石油需求约 1.13 亿桶/日。",
+   "sources": [
+    "https://gcaptain.com/world-oil-and-gas-demand-could-grow-until-2050-iea-says/",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "old_age_poverty_rise",
+   "year": 2045,
+   "year_range": [
+    2038,
+    2055
+   ],
+   "requires": {
+    "pension": [
+     "pension_austerity"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "WEU",
+    "NAM",
+    "LAC"
+   ],
+   "countries": [],
+   "category": "society",
+   "domain": "society",
+   "title": "老年贫困率可能回升",
+   "summary": "据推演，养老金待遇削减和领取年龄大幅推迟，使无力继续工作的老年人收入下降，老年贫困率在多个国家回升，家庭代际支持和社区救助的负担加重。",
+   "personal_hooks": [
+    "年迈的亲戚不得不继续打零工维持生活。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "美国社会保障受托人报告显示基金耗尽后待遇可能按约 78%—83% 支付；OECD 指出部分国家老年收入高度依赖公共养老金。",
+   "sources": [
+    "https://www.everycrsreport.com/reports/IF13256.html",
+    "https://www.oecd.org/en/publications/pensions-at-a-glance-2023_678055dd-en.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_below_1_3bn",
+   "year": 2046,
+   "year_range": [
+    2042,
+    2050
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "中国人口可能降至 13 亿以下",
+   "summary": "据 UN WPP 2024 中方案推演，中国人口约在 2046 年降至 13 亿以下，2050 年约 12.6 亿；由于 2025 年出生人数（约 792 万）已低于该方案的假设，实际下降可能更快。",
+   "personal_hooks": [
+    "家乡的小学因生源不足被合并。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "UN WPP 2024 中方案人口序列；国家统计局 2025 年数据显示人口连续第四年减少、死亡人数约 1131 万。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://www.caixinglobal.com/2026-01-19/chinas-population-decline-accelerates-as-births-hit-modern-era-low-in-2025-102405521.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ssa_tfr_below_3",
+   "year": 2046,
+   "year_range": [
+    2040,
+    2052
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "ETH",
+    "TZA",
+    "NER",
+    "AGO"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "撒哈拉以南非洲生育率可能降至 3 以下",
+   "summary": "据 UN WPP 2024 中方案推演，撒哈拉以南非洲总和生育率将从 2024 年约 4.3 降至 2040 年代中期的 3 以下；女童教育、城市化和避孕服务普及是主要推动因素，下降速度在各国差别很大。",
+   "personal_hooks": [
+    "母亲那一代平均有五六个孩子，同龄人家庭通常只有两三个孩子。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.65,
+   "basis": "UN WPP 2024 中方案：撒哈拉以南非洲总和生育率 2024 年 4.26、2050 年 2.87。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "viksit_bharat_2047",
+   "year": 2047,
+   "year_range": [
+    2045,
+    2050
+   ],
+   "requires": {
+    "economy": [
+     "econ_convergence"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "印度「2047 发达印度」目标节点",
+   "summary": "印度政府提出在独立 100 周年的 2047 年建成发达国家。据推演，在高增长情景下印度可能接近高收入门槛，并成为全球第二或第三大经济体，但就业、教育和地区差距仍是关键挑战。",
+   "personal_hooks": [
+    "独立百年庆典上，政府宣布多项经济目标的完成情况。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.4,
+   "basis": "印度国家转型委员会（NITI Aayog）「Viksit Bharat @2047」愿景；高盛预测印度经济规模到 2075 年可能超过美国。",
+   "sources": [
+    "NITI Aayog（印度国家转型委员会），Viksit Bharat @2047 愿景文件",
+    "https://www.business-standard.com/amp/economy/news/india-to-account-for-12-of-global-m-cap-by-2075-gdp-to-surpass-us-123062400271_1.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "us_interest_over_ss",
+   "year": 2047,
+   "year_range": [
+    2040,
+    2052
+   ],
+   "requires": {
+    "economy": [
+     "econ_fragmented",
+     "econ_debt_crisis"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "NAM"
+   ],
+   "countries": [
+    "USA"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "美国联邦利息支出可能超过社会保障支出",
+   "summary": "据美国国会预算办公室 2026 年长期预测，在现行法律下净利息约在 2047 年成为联邦政府最大的单项支出，超过社会保障；财政赤字可能升至 GDP 的约 9%。",
+   "personal_hooks": [
+    "国会围绕削减支出还是加税展开激烈辩论。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "CBO 2026 年发布的长期预算数据；若延续部分临时减税，债务可能更高。",
+   "sources": [
+    "https://www.pgpf.org/article/national-debt-projected-to-hit-175-gdp-interest-totals-99-trillion/",
+    "https://www.crfb.org/blogs/debt-rises-175-gdp-under-cbos-long-term-outlook"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "africa_quarter_world",
+   "year": 2050,
+   "year_range": [
+    2047,
+    2054
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "NAF"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "ETH",
+    "EGY",
+    "TZA"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "全球约四分之一人口可能生活在非洲",
+   "summary": "据 UN WPP 2024 中方案推演，非洲人口 2050 年约 24.7 亿，约占世界人口 25.5%（2024 年约 18.6%）；到 2090 年非洲可能占世界人口约 35%，其中撒哈拉以南非洲约 31%。",
+   "personal_hooks": [
+    "课堂上老师说，未来世界上每四个年轻人中就有一个是非洲人。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "UN WPP 2024 中方案区域人口序列。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "china_80plus_130m",
+   "year": 2050,
+   "year_range": [
+    2047,
+    2054
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "中国 80 岁以上人口可能达到约 1.3 亿",
+   "summary": "据 UN WPP 2024 中方案推演，2050 年中国 80 岁以上人口约占 10.5%（约 1.3 亿人），失能和半失能老人照护成为社会重大课题，长期护理保险和护理人员需求迅速扩大。",
+   "personal_hooks": [
+    "家里讨论父母是居家养老、社区养老还是入住养老院。",
+    "护理员成为招聘需求最大的职业之一。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.8,
+   "basis": "UN WPP 2024 中方案分年龄数据：中国 80 岁以上占比 2024 年约 2.5%，2050 年约 10.5%。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "coastal_flood_exposure_mid",
+   "year": 2050,
+   "year_range": [
+    2045,
+    2056
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "SAS",
+    "SEA",
+    "EAS",
+    "SSA",
+    "NAF"
+   ],
+   "countries": [
+    "BGD",
+    "IND",
+    "VNM",
+    "IDN",
+    "CHN",
+    "THA",
+    "PHL",
+    "NGA",
+    "EGY"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "沿海洪水威胁的人口可能大幅增加",
+   "summary": "据推演，海平面上升叠加风暴潮和地面沉降，到本世纪中叶全球可能有约 3 亿人居住的土地低于年度沿海洪水水位，主要集中在亚洲三角洲和沿海大城市，海堤建设与搬迁成为长期议题。",
+   "personal_hooks": [
+    "小区每年大潮时都会进水，物业在楼门口堆起沙袋。",
+    "房价因洪水风险被重新评估。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.7,
+   "basis": "Kulp 与 Strauss（2019）：目前约 2.5 亿人居住在低于年度洪水水位的土地上，高排放下本世纪中叶最多约 3.4 亿；IPCC 预计 2050 年全球海平面较 1995—2014 年上升 0.15—0.30 米。",
+   "sources": [
+    "https://doi.org/10.1038/s41467-019-12808-z",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6820795/",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "dhaka_largest_city",
+   "year": 2050,
+   "year_range": [
+    2040,
+    2056
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "SEA"
+   ],
+   "countries": [
+    "BGD",
+    "IDN"
+   ],
+   "category": "society",
+   "domain": "society",
+   "title": "达卡可能成为世界人口最多的城市",
+   "summary": "联合国《世界城镇化展望 2025》预计，增长迅速的达卡将在 2050 年前后超过雅加达，成为世界最大城市；达卡同时面临洪水、高温和住房短缺等压力。",
+   "personal_hooks": [
+    "每天通勤要在拥堵中花上两三个小时。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "联合国经社部 2025 年 11 月发布的《世界城镇化展望 2025》。",
+   "sources": [
+    "https://www.un.org/sustainabledevelopment/blog/2025/11/press-release-wup2025/",
+    "https://www.upi.com/Top_News/World-News/2025/11/25/jakarta-worlds-biggest-city/6671764099677/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "himalaya_peak_water",
+   "year": 2050,
+   "year_range": [
+    2040,
+    2060
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "EAS",
+    "CAS"
+   ],
+   "countries": [
+    "IND",
+    "PAK",
+    "NPL",
+    "BGD",
+    "BTN",
+    "CHN",
+    "AFG"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "喜马拉雅冰川融水可能越过「峰值」",
+   "summary": "据推演，兴都库什—喜马拉雅冰川加速消融，融水量约在本世纪中叶达到峰值后下降，下游依赖冰雪融水的灌溉和水电面临季节性缺水，冰湖溃决等风险上升。",
+   "personal_hooks": [
+    "山区村庄的溪流在旱季提前断流。",
+    "政府在河流上游新建水库调节季节性供水。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.6,
+   "basis": "国际山地综合发展中心（ICIMOD）2023 年评估认为，升温 1.5—2°C 时该地区冰川到 2100 年可能损失 30%—50% 体积，融水预计在本世纪中叶前后达到峰值。",
+   "sources": [
+    "https://doi.org/10.53055/ICIMOD.1028",
+    "https://www.ipcc.ch/report/ar6/wg2/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "india_60plus_20pct",
+   "year": 2050,
+   "year_range": [
+    2047,
+    2053
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "印度 60 岁以上人口可能达到约 3.5 亿",
+   "summary": "据 UN WPP 2024 中方案推演，印度 60 岁以上人口占比将从 2024 年约 10.8% 升至 2050 年约 20.6%（约 3.46 亿人）；由于多数劳动者在非正规部门，缺乏养老金的老年人数量大幅增加。",
+   "personal_hooks": [
+    "家里老人主要依靠子女赡养，没有固定退休金。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "UN WPP 2024 中方案分年龄数据；国际劳工组织指出南亚非正规就业比例很高。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz",
+    "https://www.ilo.org/resource/news/global-job-quality-stagnates-despite-resilient-growth"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_urban_surge",
+   "year": 2050,
+   "year_range": [
+    2040,
+    2050
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "EAS",
+    "SSA"
+   ],
+   "countries": [
+    "IND",
+    "CHN",
+    "NGA"
+   ],
+   "category": "society",
+   "domain": "society",
+   "title": "印度、中国、尼日利亚城镇人口大幅增加",
+   "summary": "按联合国《世界城镇化展望 2018》，2018—2050 年印度城镇人口可能增加约 4.16 亿、中国约 2.55 亿、尼日利亚约 1.89 亿，三国合计约占全球城镇人口增量的 35%；全球城镇人口占比到 2050 年可能达到约 68%。",
+   "personal_hooks": [
+    "村里的年轻人几乎都去了城市，家乡的县城也变成了繁忙的城市。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 1,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "联合国经社部《世界城镇化展望 2018》；2025 年新版采用不同口径，但同样显示南亚和非洲城市增长最快。",
+   "sources": [
+    "https://www.un.org/development/desa/en/news/population/2018-revision-of-world-urbanization-prospects.html",
+    "https://www.un.org/sustainabledevelopment/blog/2025/11/press-release-wup2025/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "middle_income_peaks",
+   "year": 2050,
+   "year_range": [
+    2042,
+    2060
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "LAC",
+    "SEA",
+    "WAS"
+   ],
+   "countries": [
+    "BRA",
+    "VNM",
+    "TUR",
+    "IRN",
+    "IDN",
+    "PHL",
+    "MEX"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "多个中等收入人口大国相继迎来人口峰值",
+   "summary": "据 UN WPP 2024 中方案推演，巴西（约 2042 年）、土耳其（约 2047 年）、越南（约 2049 年）、伊朗（约 2053 年）、菲律宾（约 2057 年）、印度尼西亚和墨西哥（约 2058 年）人口将先后见顶，随后迅速老龄化。",
+   "personal_hooks": [
+    "政府开始讨论延迟退休和养老金改革。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "UN WPP 2024 中方案人口序列；这些国家的总和生育率均已接近或低于更替水平。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "net_zero_milestones",
+   "year": 2050,
+   "year_range": [
+    2050,
+    2070
+   ],
+   "requires": {
+    "energy": [
+     "energy_fast"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "WEU",
+    "EAS",
+    "SAS"
+   ],
+   "countries": [
+    "DEU",
+    "FRA",
+    "GBR",
+    "JPN",
+    "KOR",
+    "CHN",
+    "IND"
+   ],
+   "category": "policy",
+   "domain": "energy",
+   "title": "主要经济体可能陆续实现净零排放",
+   "summary": "据推演，在快速转型路径下，欧盟、英国、日本、韩国等约在 2050 年实现温室气体净零，中国约在 2060 年前实现碳中和，印度约在 2070 年前后实现净零，全球排放大幅下降。",
+   "personal_hooks": [
+    "电视节目回顾几十年来能源体系从煤炭、石油到风光储的转变。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 1,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 1
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "欧盟《欧洲气候法》2050 年气候中和目标、中国 2060 年碳中和承诺、印度 2070 年净零承诺；联合国环境署估计全部承诺兑现时升温约 1.9°C。",
+   "sources": [
+    "https://www.unep.org/en/publications/report/emissions-gap-report-2025",
+    "https://climateactiontracker.org/countries/china/2035-ndc/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "warming_2c_crossed",
+   "year": 2050,
+   "year_range": [
+    2043,
+    2058
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "domain": "climate",
+   "title": "全球升温可能越过 2°C",
+   "summary": "据推演，在中高排放路径下，长期平均升温约在 2040 年代后期至 2050 年代越过 2°C；过去五十年一遇的极端高温出现频率约为工业化前的 14 倍，热带与亚热带地区受影响最重。",
+   "personal_hooks": [
+    "学校在夏季热浪期间调整上课时间或改为线上教学。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "IPCC AR6：SSP2-4.5 与 SSP3-7.0 情景 2041—2060 年升温最佳估计约 2.0—2.1°C；50 年一遇极端高温在 2°C 时频率约为 13.9 倍。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "world_80plus_446m",
+   "year": 2050,
+   "year_range": [
+    2048,
+    2053
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "domain": "demography",
+   "title": "全球 80 岁以上人口接近 4.5 亿",
+   "summary": "据 UN WPP 2024 中方案推演，全球 80 岁以上人口将从 2024 年约 1.64 亿增至 2050 年约 4.46 亿，65 岁以上人口约 15.8 亿；长期护理、慢性病管理和适老化住房需求大幅上升，全球年龄中位数升至约 36 岁。",
+   "personal_hooks": [
+    "家里需要有人长期照顾高龄长辈，护理费用成为家庭开支的重要部分。",
+    "社区里出现越来越多的日间照料中心和适老化改造工程。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "UN WPP 2024 中方案分年龄人口数据：80 岁以上人口增速远快于总人口。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "world_tfr_below_replacement",
+   "year": 2050,
+   "year_range": [
+    2045,
+    2056
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "domain": "demography",
+   "title": "全球总和生育率可能跌破更替水平",
+   "summary": "据 UN WPP 2024 中方案推演，全球总和生育率约在 2050 年降至每名妇女 2.1 个孩子以下，此后人口增长主要依靠年龄结构惯性，增速持续放缓。",
+   "personal_hooks": [
+    "国际组织报告称「少子化」已从东亚、欧洲扩展为全球性现象。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "UN WPP 2024：全球总和生育率 2024 年约 2.25，并持续下降；超过一半国家和地区已低于 2.1。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://news.un.org/en/story/2024/07/1151971"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "europe_below_700m",
+   "year": 2052,
+   "year_range": [
+    2046,
+    2060
+   ],
+   "requires": {
+    "demography_policy": [
+     "demo_pronatal",
+     "demo_low_fertility"
+    ]
+   },
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [
+    "ITA",
+    "ESP",
+    "POL",
+    "UKR",
+    "DEU"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "欧洲人口可能降至 7 亿以下",
+   "summary": "据 UN WPP 2024 中方案推演，欧洲人口约在 2050 年代初降至 7 亿以下，2090 年约 6.1 亿；意大利人口约在 2055 年降至 5000 万以下，波兰、乌克兰等东欧国家降幅更大。移民规模是决定降幅的关键。",
+   "personal_hooks": [
+    "南欧和东欧许多山村几乎无人居住，当地以低价出售房屋吸引新居民。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "UN WPP 2024 中方案：欧洲人口已于 2020 年前后见顶；意大利 2050 年约 5190 万、2090 年约 3770 万；乌克兰 2090 年约 1790 万。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "asia_pop_peak",
+   "year": 2054,
+   "year_range": [
+    2048,
+    2060
+   ],
+   "requires": {},
+   "scope": "regions",
+   "regions": [
+    "EAS",
+    "SEA",
+    "SAS",
+    "CAS",
+    "WAS"
+   ],
+   "countries": [],
+   "category": "society",
+   "domain": "demography",
+   "title": "亚洲人口可能达到峰值",
+   "summary": "据 UN WPP 2024 中方案推演，亚洲人口约在 2054 年达到约 52.9 亿的峰值后下降；同期拉丁美洲与加勒比约在 2053 年见顶。世界人口增长的重心进一步转向非洲。",
+   "personal_hooks": [
+    "跨国企业把新工厂和市场开拓的重点转向非洲。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "UN WPP 2024 中方案：亚洲人口 2054 年约 52.9 亿，拉美与加勒比 2053 年约 7.31 亿。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_dividend_window_close",
+   "year": 2055,
+   "year_range": [
+    2050,
+    2060
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "economy",
+   "domain": "demography",
+   "title": "印度人口红利窗口可能逐步关闭",
+   "summary": "联合国人口基金估计印度人口红利窗口大约从 2005—2006 年延续到 2055—2056 年，各邦时间不同：南部各邦已较早老龄化，北部人口大邦仍处于窗口期。据推演，窗口期内的就业创造与教育质量将决定印度的长期收入水平。",
+   "personal_hooks": [
+    "南方邦的家庭已经开始面临养老问题，北方邦的年轻人则大量外出找工作。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.75,
+   "basis": "联合国人口基金对印度人口红利窗口的估计；UN WPP 2024 显示印度劳动年龄人口约在 2050 年前后达到峰值（约 11.3 亿）。",
+   "sources": [
+    "https://www.drishtiias.com/to-the-points/paper1/india-s-demographic-dividend",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "pakistan_nigeria_over_usa",
+   "year": 2055,
+   "year_range": [
+    2048,
+    2065
+   ],
+   "requires": {
+    "demography_policy": [
+     "demo_pronatal",
+     "demo_low_fertility"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "SSA",
+    "NAM"
+   ],
+   "countries": [
+    "PAK",
+    "NGA",
+    "USA"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "巴基斯坦、尼日利亚人口可能超过美国",
+   "summary": "据 UN WPP 2024 中方案推演，巴基斯坦和尼日利亚人口将先在约 2037 年、2040 年超过印度尼西亚，随后巴基斯坦约在 2053 年、尼日利亚约在 2057 年超过美国，届时世界人口前三位可能是印度、中国、巴基斯坦。若美国移民规模明显扩大，这一时间可能推迟。",
+   "personal_hooks": [
+    "国际新闻讨论人口大国排名变化对经济和外交的意义。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "UN WPP 2024 中方案：巴基斯坦 2050 年约 3.72 亿、尼日利亚约 3.59 亿、美国约 3.81 亿，之后前两者继续较快增长。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "japan_below_100m",
+   "year": 2056,
+   "year_range": [
+    2052,
+    2062
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "JPN"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "日本人口可能跌破 1 亿",
+   "summary": "据日本 IPSS 2023 年推计（中位），日本总人口约在 2056 年跌破 1 亿，2070 年约 8700 万，65 岁以上占比升至约 38.7%；外国居民在劳动力中的作用明显上升。鉴于 2025 年出生数低于推计，实际时间可能提前。",
+   "personal_hooks": [
+    "家乡的铁路支线因乘客太少而停运。",
+    "职场里来自东南亚的同事越来越多。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.85,
+   "basis": "IPSS 2023 年推计；日本 2025 年日本国籍出生数 671,236 人，官方称下降比推计快约 15 年。",
+   "sources": [
+    "https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf",
+    "https://www.nippon.com/en/news/yjj2026060300610/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "atoll_nations_habitability",
+   "year": 2060,
+   "year_range": [
+    2050,
+    2075
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "OCE",
+    "SAS"
+   ],
+   "countries": [
+    "TUV",
+    "KIR",
+    "MHL",
+    "MDV"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "环礁国家宜居性可能受到严重威胁",
+   "summary": "据推演，海平面上升、风暴潮和淡水透镜体盐碱化，使图瓦卢、基里巴斯、马绍尔群岛、马尔代夫等环礁国家的部分岛屿难以长期居住，人工填高岛屿、集中安置和有组织移民成为主要选项。",
+   "personal_hooks": [
+    "家族讨论是否搬到首都填高的新岛，或者移居海外。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 3,
+   "prob": 0.55,
+   "basis": "IPCC AR6 第二工作组小岛屿章节评估：环礁岛屿面临海平面上升带来的宜居性风险；IPCC 预计 2100 年海平面在中高排放下可能上升 0.44—1.01 米。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-15/",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "warming_stabilises_low",
+   "year": 2060,
+   "year_range": [
+    2050,
+    2070
+   ],
+   "requires": {
+    "climate": [
+     "climate_low"
+    ]
+   },
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "science",
+   "domain": "climate",
+   "title": "全球升温可能在 1.7°C 左右趋于稳定",
+   "summary": "据推演，在全球二氧化碳排放接近净零的情况下，升温在本世纪中叶后基本停止上升，稳定在 1.6—1.8°C 附近；但海平面仍会继续缓慢上升数百年。",
+   "personal_hooks": [
+    "气候新闻的焦点从「还会升多少」转向适应和修复生态。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "IPCC AR6：SSP1-2.6 情景 2081—2100 年升温最佳估计约 1.8°C，二氧化碳净零后升温基本停止；海平面上升具有长期惯性。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "india_pop_peak",
+   "year": 2061,
+   "year_range": [
+    2055,
+    2068
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "印度人口可能达到约 17 亿的峰值",
+   "summary": "据 UN WPP 2024 中方案推演，印度人口约在 2061 年达到约 17.0 亿的峰值后开始下降；孟加拉国约在 2071 年见顶，南亚整体约在 2072 年见顶。",
+   "personal_hooks": [
+    "印度政府宣布人口进入下降阶段，政策重心从控制人口转向应对老龄化。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "UN WPP 2024 中方案：印度总和生育率 2024 年约 1.96，已低于更替水平，人口增长依靠年龄结构惯性延续。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "korea_nps_fund_depletion",
+   "year": 2064,
+   "year_range": [
+    2060,
+    2071
+   ],
+   "requires": {
+    "pension": [
+     "pension_patchwork",
+     "pension_austerity"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "KOR"
+   ],
+   "category": "policy",
+   "domain": "society",
+   "title": "韩国国民年金基金可能耗尽",
+   "summary": "据韩国政府 2025 年估计，改革后国民年金基金耗尽时间约在 2064 年（乐观收益假设下 2071 年）。据推演，若无进一步改革，基金耗尽后将转为现收现付，在职一代的缴费负担可能大幅上升。",
+   "personal_hooks": [
+    "年轻同事担心自己将来领不到足额养老金。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.55,
+   "basis": "韩国 2025 年国民年金改革后的财政推算。",
+   "sources": [
+    "https://www.ssa.gov/policy/docs/progdesc/intl_update/2025-04/index.html",
+    "https://www.koreatimes.co.kr:443/www/biz/2025/03/126_394606.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "china_below_1bn",
+   "year": 2070,
+   "year_range": [
+    2062,
+    2080
+   ],
+   "requires": {},
+   "scope": "countries",
+   "regions": [
+    "EAS"
+   ],
+   "countries": [
+    "CHN"
+   ],
+   "category": "society",
+   "domain": "demography",
+   "title": "中国人口可能降至 10 亿左右",
+   "summary": "据 UN WPP 2024 中方案推演，中国人口约在 2070 年降至 10 亿以下，2090 年约 7.4 亿；到 2090 年印度人口约为中国的两倍。若生育支持政策显著见效，下降可能放缓。",
+   "personal_hooks": [
+    "城市规划从扩张转向「收缩与更新」。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "UN WPP 2024 中方案人口序列（2070 年约 9.99 亿、2090 年约 7.45 亿、2100 年约 6.33 亿）。",
+   "sources": [
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+    "https://www.socsci.uci.edu/newsevents/news/2024/2024-10-29-wang-feng-new-geography.php"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "emerging_giants_2075",
+   "year": 2075,
+   "year_range": [
+    2065,
+    2085
+   ],
+   "requires": {
+    "economy": [
+     "econ_convergence"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SAS",
+    "SEA",
+    "SSA",
+    "NAF"
+   ],
+   "countries": [
+    "IND",
+    "IDN",
+    "NGA",
+    "PAK",
+    "EGY"
+   ],
+   "category": "economy",
+   "domain": "economy",
+   "title": "新兴人口大国可能跻身全球最大经济体之列",
+   "summary": "据高盛《通往 2075 之路》的推算，在适当政策与制度条件下，到 2075 年全球十大经济体中可能有七个是今天的新兴市场，印度、印度尼西亚、尼日利亚、巴基斯坦、埃及等可能位列前茅。",
+   "personal_hooks": [
+    "世界经济论坛的主要议题从「欧美」转向「南方国家」。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "高盛 2022 年长期预测；该预测以人口增长与生产率追赶为前提，并提示环境灾难和民粹主义等风险。",
+   "sources": [
+    "https://www.tbsnews.net/node/547202",
+    "https://propakistani.pk/2022/12/07/pakistan-projected-to-become-worlds-6th-largest-economy-by-2075-goldman-sachs/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "gulf_extreme_humid_heat",
+   "year": 2075,
+   "year_range": [
+    2065,
+    2090
+   ],
+   "requires": {
+    "climate": [
+     "climate_high"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "WAS"
+   ],
+   "countries": [
+    "SAU",
+    "ARE",
+    "QAT",
+    "KWT",
+    "BHR",
+    "OMN",
+    "IRN",
+    "IRQ"
+   ],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "波斯湾沿岸极端湿热可能逼近人体耐受极限",
+   "summary": "据推演，在高排放路径下，本世纪后期波斯湾沿岸城市夏季可能出现接近人体适应极限的湿热天气，户外活动在一年中的部分时期几乎无法进行，社会生活高度依赖空调与室内空间。",
+   "personal_hooks": [
+    "夏季白天街道空无一人，生活几乎全部转移到室内。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": -2,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     60,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "prob": 0.6,
+   "basis": "Pal 与 Eltahir（2016，《自然·气候变化》）预计高排放下西南亚部分地区湿球温度可能超过人体适应阈值。",
+   "sources": [
+    "https://doi.org/10.1038/nclimate2833",
+    "https://www.ipcc.ch/report/ar6/wg2/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "world_65_over_u18",
+   "year": 2078,
+   "year_range": [
+    2072,
+    2085
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "domain": "demography",
+   "title": "全球 65 岁以上人口可能超过 18 岁以下人口",
+   "summary": "据 UN WPP 2024 推演，全球 65 岁及以上人口约在 2070 年代后期超过 18 岁以下人口，这在人类历史上尚属首次；东亚和欧洲早已出现这一情况，非洲仍以年轻人口为主。",
+   "personal_hooks": [
+    "媒体称世界进入「老年人多于孩子」的时代。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.7,
+   "basis": "联合国新闻对 WPP 2024 的概述：65 岁以上人口预计在 2070 年代后期超过 18 岁以下人口；分年龄数据显示交叉点约在 2078 年。",
+   "sources": [
+    "https://news.un.org/en/story/2024/07/1151971",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_PopulationByAge5GroupSex_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "african_megacities_2100",
+   "year": 2080,
+   "year_range": [
+    2065,
+    2095
+   ],
+   "requires": {
+    "climate": [
+     "climate_low",
+     "climate_mid"
+    ]
+   },
+   "scope": "countries",
+   "regions": [
+    "SSA"
+   ],
+   "countries": [
+    "NGA",
+    "COD",
+    "TZA"
+   ],
+   "category": "society",
+   "domain": "society",
+   "title": "拉各斯、金沙萨、达累斯萨拉姆可能跻身全球最大城市",
+   "summary": "据 Hoornweg 与 Pope（2017）在 SSP2 情景下的推算，到本世纪末拉各斯、金沙萨和达累斯萨拉姆可能成为全球人口最多的三座城市；城市规划、供水和交通能否跟上人口增长是主要挑战。",
+   "personal_hooks": [
+    "城市边缘不断出现新的居住区，基础设施建设跟不上人口增长。"
+   ],
+   "effects": {
+    "economy": 1,
+    "health": 0,
+    "happiness": 0,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.5,
+   "basis": "Hoornweg, D. & Pope, K. (2017) Population predictions for the world's largest cities in the 21st century, Environment & Urbanization 29(1)；UN WPP 2024 显示尼日利亚、刚果（金）、坦桑尼亚人口到 2090 年仍在增长。",
+   "sources": [
+    "https://doi.org/10.1177/0956247816663557",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "warming_3c_high",
+   "year": 2080,
+   "year_range": [
+    2070,
+    2090
+   ],
+   "requires": {
+    "climate": [
+     "climate_high"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "SAS",
+    "SSA",
+    "WAS",
+    "SEA"
+   ],
+   "countries": [],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "全球升温可能超过 3°C",
+   "summary": "据推演，在高排放路径下，2070—2080 年代升温超过 3°C，热浪、干旱和强降水明显超出现有基础设施的设计标准，部分地区农业和户外劳动受到严重限制，跨境与国内迁移显著增加。",
+   "personal_hooks": [
+    "你所在的城市在夏季实行户外劳动时间限制。",
+    "一些亲戚因家乡连年干旱而搬往其他地方。"
+   ],
+   "effects": {
+    "economy": -2,
+    "health": -2,
+    "happiness": -2,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.03,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 2,
+   "prob": 0.75,
+   "basis": "IPCC AR6：SSP3-7.0 情景 2081—2100 年升温最佳估计 3.6°C（2.8—4.6）；国际能源署现行政策情景 2100 年接近 3°C。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/",
+    "https://www.ipcc.ch/report/ar6/wg2/chapter/summary-for-policymakers/",
+    "https://www.iea.org/reports/world-energy-outlook-2025/overview-and-key-findings"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "world_pop_peak",
+   "year": 2084,
+   "year_range": [
+    2072,
+    2095
+   ],
+   "requires": {},
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "category": "society",
+   "domain": "demography",
+   "title": "世界人口可能达到约 103 亿的峰值",
+   "summary": "据 UN WPP 2024 中方案推演，世界人口约在 2084 年达到约 102.9 亿的峰值，此后全球死亡人数开始多于出生人数，人口缓慢下降；峰值时间与高度取决于非洲和南亚生育率的下降速度。",
+   "personal_hooks": [
+    "联合国发布报告，宣布世界人口进入「减少时代」。"
+   ],
+   "effects": {
+    "economy": 0,
+    "health": 0,
+    "happiness": 0,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "prob": 0.6,
+   "basis": "UN WPP 2024：世界人口本世纪内见顶的概率约 80%，中方案峰值约在 2080 年代中期。",
+   "sources": [
+    "https://news.un.org/en/story/2024/07/1151971",
+    "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "century_floods_annual",
+   "year": 2085,
+   "year_range": [
+    2070,
+    2095
+   ],
+   "requires": {
+    "climate": [
+     "climate_mid",
+     "climate_high"
+    ]
+   },
+   "scope": "global",
+   "regions": [
+    "SAS",
+    "SEA",
+    "EAS",
+    "OCE",
+    "NAM",
+    "WEU"
+   ],
+   "countries": [],
+   "category": "disaster",
+   "domain": "climate",
+   "title": "百年一遇的极端海平面可能变成每年一遇",
+   "summary": "据推演，到本世纪后期，过去百年一遇的极端海平面事件在全球半数以上的验潮站可能每年发生，低洼海岸需要大规模加高海堤或有计划地后撤。",
+   "personal_hooks": [
+    "沿海老城区的居民陆续搬往地势更高的新区。"
+   ],
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "prob": 0.6,
+   "basis": "IPCC AR6 第一工作组：到 2100 年，在所有考虑的情景下，过去百年一遇的极端海平面事件在半数以上验潮站预计至少每年发生一次。",
+   "sources": [
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "high"
+  }
+ ],
+ "random_shocks": [
+  {
+   "id": "global_recession",
+   "title": "全球经济衰退",
+   "category": "economy",
+   "domain": "economy",
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "summary": "全球人均产出出现下降，多国同时陷入衰退：企业裁员、投资收缩、资产价格下跌，政府和央行推出刺激政策。",
+   "personal_hooks": [
+    "公司宣布裁员，你或身边的人失去了工作。",
+    "股票和基金账户一度大幅缩水。"
+   ],
+   "annual_prob": 0.07,
+   "requires": {},
+   "branch_prob_mult": {
+    "economy": {
+     "econ_convergence": 0.7,
+     "econ_fragmented": 1.1,
+     "econ_debt_crisis": 1.6
+    }
+   },
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "世界银行研究认定 1975、1982、1991、2009 年为全球衰退，2020 年再次发生，即约 50 年间 5 次，约每 10 年一次；1870 年以来共 14 次。",
+   "sources": [
+    "https://openknowledge.worldbank.org/entities/publication/1946cab9-5b12-5dd9-a86a-9ba6888c546e/full",
+    "https://thedocs.worldbank.org/en/doc/799351588787987960-0050022020/original/GlobalEconomicProspectsJune2020TopicalIssue3.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "banking_crisis",
+   "title": "本国系统性银行危机",
+   "category": "economy",
+   "domain": "economy",
+   "scope": "countries",
+   "regions": [],
+   "countries": [],
+   "summary": "本国银行体系出现大面积坏账和挤兑风险，政府被迫注资、担保存款或接管银行，信贷收缩导致经济下滑，失业上升。",
+   "personal_hooks": [
+    "储户在银行门口排队取款。",
+    "买房贷款突然很难批下来。"
+   ],
+   "annual_prob": 0.017,
+   "requires": {},
+   "branch_prob_mult": {
+    "economy": {
+     "econ_convergence": 0.8,
+     "econ_fragmented": 1.0,
+     "econ_debt_crisis": 1.8
+    }
+   },
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "duration_years": 2,
+   "basis": "Laeven 与 Valencia（2018）统计 1970—2017 年全球共发生 151 次系统性银行危机；按约 48 年、160—190 个国家计算，单个国家每年发生概率约 1.5%—2%。",
+   "sources": [
+    "https://www.imf.org/-/media/Files/Publications/WP/2018/wp18206.ashx"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "sovereign_debt_crisis",
+   "title": "本国主权债务危机",
+   "category": "economy",
+   "domain": "economy",
+   "scope": "countries",
+   "regions": [
+    "LAC",
+    "SSA",
+    "NAF",
+    "SAS",
+    "WAS",
+    "EEU"
+   ],
+   "countries": [],
+   "summary": "政府无法按期偿还债务，被迫重组债务并寻求国际货币基金组织援助；本币贬值、通胀上升，公共服务和补贴被削减。",
+   "personal_hooks": [
+    "一夜之间进口商品价格大涨，家里存的本币贬值。",
+    "公立医院药品短缺，教师工资被拖欠。"
+   ],
+   "annual_prob": 0.009,
+   "region_annual_prob": {
+    "LAC": 0.015,
+    "SSA": 0.015,
+    "NAF": 0.012,
+    "SAS": 0.01,
+    "WAS": 0.01,
+    "EEU": 0.008,
+    "WEU": 0.003,
+    "NAM": 0.001,
+    "EAS": 0.002,
+    "SEA": 0.006,
+    "CAS": 0.008,
+    "OCE": 0.003
+   },
+   "requires": {},
+   "branch_prob_mult": {
+    "economy": {
+     "econ_convergence": 0.6,
+     "econ_fragmented": 1.0,
+     "econ_debt_crisis": 2.0
+    }
+   },
+   "effects": {
+    "economy": -3,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "migration_push": 2,
+   "duration_years": 3,
+   "basis": "Laeven 与 Valencia（2018）统计 1970—2017 年共发生 74 次主权债务危机，平均每个国家每年约 1%；IMF 预计全球公共债务接近 GDP 的 100%。",
+   "sources": [
+    "https://www.imf.org/-/media/Files/Publications/WP/2018/wp18206.ashx",
+    "https://www.imf.org/en/publications/fm/issues/2026/04/15/fiscal-monitor-april-2026"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "currency_crisis",
+   "title": "本币危机与高通胀",
+   "category": "economy",
+   "domain": "economy",
+   "scope": "countries",
+   "regions": [],
+   "countries": [],
+   "summary": "本国货币在短期内大幅贬值，进口物价飞涨，工资购买力下降，居民争相购买外币或黄金保值。",
+   "personal_hooks": [
+    "超市价签每隔几周就要更换一次。",
+    "家里把积蓄换成美元或黄金。"
+   ],
+   "annual_prob": 0.02,
+   "region_annual_prob": {
+    "NAM": 0.003,
+    "WEU": 0.005,
+    "OCE": 0.005,
+    "EAS": 0.01,
+    "LAC": 0.035,
+    "SSA": 0.035,
+    "NAF": 0.03,
+    "WAS": 0.03,
+    "SAS": 0.025,
+    "EEU": 0.03,
+    "CAS": 0.03,
+    "SEA": 0.02
+   },
+   "requires": {},
+   "branch_prob_mult": {
+    "economy": {
+     "econ_convergence": 0.7,
+     "econ_fragmented": 1.0,
+     "econ_debt_crisis": 1.6
+    }
+   },
+   "effects": {
+    "economy": -2,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 1,
+   "duration_years": 1,
+   "basis": "Laeven 与 Valencia（2018）统计 1970—2017 年共发生 236 次货币危机，约为每国每年 2.5%—3%，新兴和发展中经济体明显高于发达经济体。",
+   "sources": [
+    "https://www.imf.org/-/media/Files/Publications/WP/2018/wp18206.ashx"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "oil_price_shock",
+   "title": "国际油价暴涨",
+   "category": "economy",
+   "domain": "energy",
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "summary": "地缘冲突或供应中断导致国际油价在数月内大幅上涨，汽油、柴油、化肥和运输成本上升，能源进口国通胀抬头、增长放缓，出口国短期获益。",
+   "personal_hooks": [
+    "加油一次的花费比上个月多出不少。",
+    "航空公司加收燃油附加费，机票变贵。"
+   ],
+   "annual_prob": 0.08,
+   "requires": {},
+   "branch_prob_mult": {
+    "energy": {
+     "energy_fast": 0.6,
+     "energy_mixed": 1.0,
+     "energy_lockin": 1.5
+    }
+   },
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "1973、1979、1990、2008、2022、2026 年均出现重大油价冲击，约 53 年 6 次；2026 年霍尔木兹海峡航运中断被国际能源署称为石油市场史上最大供应中断。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/1973_oil_crisis",
+    "https://en.wikipedia.org/wiki/2021%E2%80%932023_global_energy_crisis",
+    "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "food_price_spike",
+   "title": "全球粮价飙升",
+   "category": "economy",
+   "domain": "climate",
+   "scope": "global",
+   "regions": [
+    "SSA",
+    "SAS",
+    "NAF",
+    "WAS"
+   ],
+   "countries": [],
+   "summary": "主产区歉收、能源和化肥价格上涨或出口限制叠加，国际粮价在短期内大幅上涨，依赖粮食进口的低收入国家家庭食物支出激增，营养状况恶化。",
+   "personal_hooks": [
+    "面粉和食用油价格一个月内涨了三成。",
+    "学校供餐的分量减少了。"
+   ],
+   "annual_prob": 0.08,
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 0.9,
+     "climate_mid": 1.2,
+     "climate_high": 1.6
+    }
+   },
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.01,
+    "ages": [
+     0,
+     4
+    ]
+   },
+   "migration_push": 1,
+   "duration_years": 1,
+   "basis": "粮农组织食品价格指数在 2007—2008、2010—2011、2021—2022 年出现三次大幅飙升，约 20 年 3 次；Jägermeyr 等（2021）预计中高排放下主粮单产压力上升。",
+   "sources": [
+    "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
+    "https://en.wikipedia.org/wiki/2007%E2%80%932008_world_food_price_crisis",
+    "https://doi.org/10.1038/s43016-021-00400-y"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "heatwave_south_asia",
+   "title": "南亚致命热浪",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "regions",
+   "regions": [
+    "SAS"
+   ],
+   "countries": [
+    "IND",
+    "PAK",
+    "BGD",
+    "NPL"
+   ],
+   "summary": "持续数周的极端高温与高湿笼罩南亚，户外劳动者、老人和城市贫困人口健康风险急剧上升，电网负荷创新高并出现停电。",
+   "personal_hooks": [
+    "学校提前放暑假，白天街上几乎没人。",
+    "家里老人中暑被送往医院。"
+   ],
+   "annual_prob": 0.2,
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 1.0,
+     "climate_mid": 1.3,
+     "climate_high": 1.8
+    }
+   },
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.02,
+    "ages": [
+     60,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "南亚在 2015、2022、2024 年等年份均出现造成严重伤亡或重大影响的热浪；《柳叶刀倒计时》显示高温相关死亡比 1990 年代增加约 63%；IPCC 评估极端高温频率随升温上升。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2015_Indian_heat_wave",
+    "https://en.wikipedia.org/wiki/2022_India%E2%80%93Pakistan_heat_wave",
+    "https://www.who.int/news/item/29-10-2025-climate-inaction-is-claiming-millions-of-lives-every-year--warns-new-lancet-countdown-report"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "heatwave_europe",
+   "title": "欧洲极端热浪夏季",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "regions",
+   "regions": [
+    "WEU",
+    "EEU"
+   ],
+   "countries": [
+    "ITA",
+    "ESP",
+    "FRA",
+    "DEU",
+    "GRC",
+    "PRT"
+   ],
+   "summary": "欧洲多国夏季遭遇持续热浪，许多城市气温打破纪录，老年人高温相关死亡大幅增加，河流水位下降影响航运和发电，山火频发。",
+   "personal_hooks": [
+    "家里没有空调，只能去商场或图书馆避暑。",
+    "邻居独居的老人在热浪中需要社区上门探访。"
+   ],
+   "annual_prob": 0.2,
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 1.0,
+     "climate_mid": 1.3,
+     "climate_high": 1.8
+    }
+   },
+   "effects": {
+    "economy": 0,
+    "health": -1,
+    "happiness": -1,
+    "safety": 0,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.02,
+    "ages": [
+     75,
+     120
+    ]
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "2003 年欧洲热浪造成超过 7 万人死亡（Robine 等，2008），2022 年夏季约 61,672 人死于高温相关原因（Ballester 等，2023）；近十年此类夏季明显更频繁。",
+   "sources": [
+    "https://doi.org/10.1016/j.crvi.2007.12.001",
+    "https://doi.org/10.1038/s41591-023-02419-z"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "tropical_cyclone_major",
+   "title": "强台风或飓风重创沿海",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "regions",
+   "regions": [
+    "SEA",
+    "EAS",
+    "SAS",
+    "NAM",
+    "LAC",
+    "OCE"
+   ],
+   "countries": [
+    "PHL",
+    "VNM",
+    "CHN",
+    "JPN",
+    "BGD",
+    "IND",
+    "USA",
+    "MEX",
+    "CUB",
+    "HTI",
+    "FJI",
+    "VUT"
+   ],
+   "summary": "一场强热带气旋带着狂风、暴雨和风暴潮登陆，沿海城镇大面积停电、房屋受损，部分地区需要长期重建。",
+   "personal_hooks": [
+    "全家在台风登陆前撤离到政府设立的避难中心。",
+    "风灾过后，家里的屋顶需要重新修建。"
+   ],
+   "annual_prob": 0.1,
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 1.0,
+     "climate_mid": 1.15,
+     "climate_high": 1.35
+    }
+   },
+   "effects": {
+    "economy": -1,
+    "health": 0,
+    "happiness": -1,
+    "safety": -2,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.005,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "duration_years": 1,
+   "basis": "西北太平洋、北大西洋、北印度洋和南太平洋每年都会生成多个强热带气旋，如 2013 年台风「海燕」、2024 年飓风「海伦」；IPCC 评估强热带气旋（4—5 级）所占比例随升温上升。对单个暴露国家取约每十年一次的全国性重大风灾作为游戏化近似。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Typhoon_Haiyan",
+    "https://en.wikipedia.org/wiki/Hurricane_Helene",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "major_flood",
+   "title": "特大洪水",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "regions",
+   "regions": [
+    "SAS",
+    "EAS",
+    "SEA",
+    "SSA",
+    "WEU"
+   ],
+   "countries": [
+    "PAK",
+    "BGD",
+    "IND",
+    "CHN",
+    "VNM",
+    "NGA",
+    "DEU",
+    "ESP"
+   ],
+   "summary": "持续强降雨引发大范围河流洪水和城市内涝，农田被淹、道路和桥梁损毁，大量居民临时转移，灾后疫病和粮食短缺风险上升。",
+   "personal_hooks": [
+    "一楼被水淹，全家暂住亲戚家。",
+    "洪水冲毁了家里的庄稼和牲畜。"
+   ],
+   "annual_prob": 0.1,
+   "region_annual_prob": {
+    "SAS": 0.15,
+    "EAS": 0.1,
+    "SEA": 0.12,
+    "SSA": 0.1,
+    "WEU": 0.05
+   },
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 1.0,
+     "climate_mid": 1.2,
+     "climate_high": 1.5
+    }
+   },
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -2,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.005,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "duration_years": 1,
+   "basis": "2010 年和 2022 年巴基斯坦特大洪水、2021 年德国和中国河南洪水、2024 年西班牙瓦伦西亚洪水等表明重大洪灾频繁发生；IPCC 评估强降水随升温增强。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2022_Pakistan_floods",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "drought_food_crisis",
+   "title": "严重干旱与粮食危机",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "regions",
+   "regions": [
+    "SSA",
+    "NAF",
+    "WAS",
+    "SAS"
+   ],
+   "countries": [
+    "SOM",
+    "ETH",
+    "KEN",
+    "NER",
+    "MLI",
+    "TCD",
+    "SDN",
+    "AFG"
+   ],
+   "summary": "连续多个雨季降水不足，作物歉收、牲畜死亡，农牧民失去生计，粮价上涨，大量人口依赖人道援助或被迫迁移。",
+   "personal_hooks": [
+    "家里的牲畜大批死亡，只能变卖剩下的牛羊换粮食。",
+    "全家搬到有援助发放点的城镇附近。"
+   ],
+   "annual_prob": 0.08,
+   "region_annual_prob": {
+    "SSA": 0.12,
+    "NAF": 0.06,
+    "WAS": 0.06,
+    "SAS": 0.05
+   },
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 1.0,
+     "climate_mid": 1.2,
+     "climate_high": 1.6
+    },
+    "economy": {
+     "econ_convergence": 0.8,
+     "econ_fragmented": 1.0,
+     "econ_debt_crisis": 1.2
+    }
+   },
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -2,
+    "safety": -1,
+    "education": -1,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.02,
+    "ages": [
+     0,
+     4
+    ]
+   },
+   "migration_push": 2,
+   "duration_years": 2,
+   "basis": "东非之角在 2010—2011 年和 2020—2023 年遭遇严重干旱，萨赫勒地区也多次出现粮食危机；IPCC 评估多个地区农业和生态干旱随升温增加。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2011_East_Africa_drought",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "wildfire_extreme_season",
+   "title": "极端山火季",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "regions",
+   "regions": [
+    "NAM",
+    "OCE",
+    "WEU",
+    "EEU",
+    "LAC"
+   ],
+   "countries": [
+    "CAN",
+    "USA",
+    "AUS",
+    "GRC",
+    "PRT",
+    "RUS",
+    "BRA",
+    "CHL"
+   ],
+   "summary": "高温干旱使山火季提前并延长，大片森林和草原燃烧，浓烟影响数千公里外城市的空气质量，部分社区被迫疏散。",
+   "personal_hooks": [
+    "连续多日天空呈橙色，出门必须戴口罩。",
+    "全家按通知连夜撤离，回来时邻近街区已被烧毁。"
+   ],
+   "annual_prob": 0.12,
+   "requires": {},
+   "branch_prob_mult": {
+    "climate": {
+     "climate_low": 1.0,
+     "climate_mid": 1.25,
+     "climate_high": 1.6
+    }
+   },
+   "effects": {
+    "economy": -1,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "migration_push": 0,
+   "duration_years": 1,
+   "basis": "2019—2020 年澳大利亚山火季和 2023 年加拿大山火都创下历史纪录；IPCC 评估有利于火灾的天气条件随升温在多个地区增加。",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2019%E2%80%9320_Australian_bushfire_season",
+    "https://en.wikipedia.org/wiki/2023_Canadian_wildfires",
+    "https://www.ipcc.ch/report/ar6/wg1/chapter/summary-for-policymakers/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "large_volcanic_eruption",
+   "title": "超大规模火山喷发",
+   "category": "disaster",
+   "domain": "climate",
+   "scope": "global",
+   "regions": [],
+   "countries": [],
+   "summary": "一座火山发生极大规模喷发，大量火山灰和硫酸盐气溶胶进入平流层，此后一两年全球气温明显下降，多地农作物歉收，航空和贸易受到冲击。",
+   "personal_hooks": [
+    "夏天异常寒冷，田里的庄稼迟迟不熟。",
+    "新闻里反复提到 1815 年坦博拉火山喷发后的「无夏之年」。"
+   ],
+   "annual_prob": 0.0018,
+   "requires": {},
+   "branch_prob_mult": {},
+   "effects": {
+    "economy": -2,
+    "health": -1,
+    "happiness": -1,
+    "safety": -1,
+    "education": 0,
+    "tech": 0
+   },
+   "mortality": {
+    "mult": 1.01,
+    "ages": [
+     0,
+     120
+    ]
+   },
+   "migration_push": 1,
+   "duration_years": 2,
+   "basis": "Cassidy 与 Mani（2022，《自然》）估计本世纪发生 7 级规模喷发的概率约为六分之一，折合每年约 0.18%；1815 年坦博拉火山喷发导致 1816 年北半球「无夏之年」。",
+   "sources": [
+    "https://doi.org/10.1038/d41586-022-02177-x",
+    "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora"
+   ],
+   "confidence": "medium"
+  }
+ ]
+}
