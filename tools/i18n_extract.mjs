@@ -96,10 +96,10 @@ function walkDir(d) {
   return readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? walkDir(p) : [p]; });
 }
 
-function walkData(o, add, key = '') {
-  if (typeof o === 'string') { if (CJK.test(o) && !SKIP_FIELDS.has(key)) add(o, key); return; }
-  if (Array.isArray(o)) { for (const v of o) walkData(v, add, key); return; }
-  if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) walkData(v, add, /^[A-Z]{2,3}$/.test(k) ? key : k);
+function walkData(o, add, key = '', skip = SKIP_FIELDS) {
+  if (typeof o === 'string') { if (CJK.test(o) && !skip.has(key)) add(o, key); return; }
+  if (Array.isArray(o)) { for (const v of o) walkData(v, add, key, skip); return; }
+  if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) walkData(v, add, /^[A-Z]{2,3}$/.test(k) ? key : k, skip);
 }
 
 const areas = {};
@@ -154,7 +154,7 @@ mkdirSync(join(root, 'i18n/en'), { recursive: true });
 writeFileSync(join(root, 'i18n/en/0_names.json'), JSON.stringify(nameEntries, null, 0).replace(/","/g, '",\n"') + '\n');
 
 walkData(content.history, (s) => put('history', s));
-walkData(content.future, (s) => put('future', s));
+walkData(content.future, (s) => put('future', s), '', new Set(['sources', 'source', 'fields', 'generated']));
 walkData(content.lifePaths, (s) => put('lifepaths', s));
 walkData(content.econ, (s) => put('data_misc', s));
 walkData(JSON.parse(readFileSync(join(root, 'data/countries.json'), 'utf8')).countries, (s, k) => { if (k === 'name') put('countries', s); });

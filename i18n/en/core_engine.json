@@ -382,4 +382,15 @@
 "同一年":"the same year",
 "多":"longer",
 "少":"shorter",
-"如果{0}出生在{1}，预期寿命会{2}约 {3} 岁。":"If born {0} in {1}, life expectancy would be about {3} years {2}."}
+"如果{0}出生在{1}，预期寿命会{2}约 {3} 岁。":"If born {0} in {1}, life expectancy would be about {3} years {2}.",
+"上大学":"Go to university",
+"求职":"Job hunting",
+"恋爱":"Dating",
+"读大学":"Studying at university",
+"务农":"Farming",
+"弹吉他":"Playing guitar",
+"写小说":"Writing a novel",
+"摄影":"Photography",
+"编程":"Coding",
+"跑步":"Running",
+"徒步":"Hiking"}
