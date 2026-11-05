@@ -72,6 +72,15 @@ export function scanJs(code) {
   }
   while (i < code.length) {
     const c = code[i];
+    // kw: [...] lists are what free-text input is matched against; the player never reads them.
+    if (c === '[' && /(^|[^\w])kw:$/.test(prev)) {
+      while (i < code.length && code[i] !== ']') {
+        if (code[i] === "'" || code[i] === '"') { const q = code[i++]; while (code[i] !== q) i += code[i] === BACKSLASH ? 2 : 1; }
+        i++;
+      }
+      prev = 'x';
+      continue;
+    }
     if (c === '/' && code[i + 1] === '/') { while (i < code.length && code[i] !== '\n') i++; continue; }
     if (c === '/' && code[i + 1] === '*') { i = code.indexOf('*/', i) + 2; continue; }
     if (c === '/' && regexAllowed()) { skipRegex(); prev = '/x'; continue; }
@@ -110,7 +119,9 @@ for (const p of walkDir(join(root, 'src')).filter((f) => f.endsWith('.js'))) {
   const rel = relative(root, p).split('\\').join('/');
   if (SKIP_FILES.has(rel)) continue;
   const area = rel.startsWith('src/core/') ? 'core_' + rel.split('/').pop().replace('.js', '') : 'ui';
-  for (const s of scanJs(readFileSync(p, 'utf8'))) put(area, s);
+  // Lookup tables that only match what the player types, never shown.
+  const code = readFileSync(p, 'utf8').replace(/const EXTRA_KW = \{[\s\S]*?\n\};/, '').replace(/const CN_PLACES = [\s\S]*?\.split\(' '\);/, '');
+  for (const s of scanJs(code)) if (s !== '撑不下去' && s !== '当') put(area, s);
 }
 const content = JSON.parse(readFileSync(join(root, 'data/content.json'), 'utf8'));
 
