@@ -5,6 +5,7 @@
 // (孝亲费, 聚餐·送礼 via engine.setHabit). Reads engine.familyView (CONTRACT §10); without it a plain view is built
 // from the LifeState so the panel always works.
 
+import { tr } from '../../i18n/index.js';
 import { h, clear, append } from '../dom.js';
 import { RELATIONSHIP_LABELS } from '../../core/constants.js';
 import * as engineMod from '../../core/engine.js';
@@ -211,7 +212,7 @@ export function mount(root, params = {}, app = {}) {
       sections.push(h('section.ll-pn-sec', { 'aria-labelledby': 'll-fam-pf' },
         h('h3.ll-pn-h', { id: 'll-fam-pf' }, '宠物与朋友'),
         pets.length ? h('ul.ll-fam-list', pets.map((pet) => h('li.ll-fam-m.ll-fam-m--pet',
-          h('span.ll-fam-av', { 'aria-hidden': 'true' }, petKind(pet.kind).slice(0, 1)),
+          h('span.ll-fam-av', { 'aria-hidden': 'true' }, tr(petKind(pet.kind)).slice(0, 1)),
           h('div.ll-fam-main',
             h('p.ll-fam-l1', h('span.ll-fam-name', str(pet.name) || '没取名字'), h('span.ll-fam-role', petKind(pet.kind)),
               isNum(pet.age) ? h('span.ll-fam-age', `${pet.age} 岁`) : null))))) : null,
@@ -255,7 +256,7 @@ export function mount(root, params = {}, app = {}) {
     const alive = m.alive !== false;
     const label = roleLabel(m, state);
     const name = str(m.name);
-    const initial = (name && name !== label ? name : label).slice(0, 1) || '·';
+    const initial = tr(name && name !== label ? name : label).slice(0, 1) || '·';
     const ageText = !alive ? '已离世' : isNum(m.age) ? `${Math.max(0, Math.round(m.age))} 岁` : '';
     const c = alive && CLOSENESS[m.closeness];
     return h('li.ll-fam-m', { class: alive ? '' : 'is-gone' },

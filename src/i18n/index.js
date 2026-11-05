@@ -59,6 +59,7 @@ function polishEnglish(s) {
 
 let lang = 'zh';
 let exact = new Map();
+let allTemplates = [];
 let index = new Map(); // first bigram of a template's longest literal -> templates
 let surnames = new Map();
 let givenNames = new Map();
@@ -86,11 +87,12 @@ function addTemplate(zh, en) {
   let list = index.get(key);
   if (!list) index.set(key, list = []);
   list.push(t);
+  allTemplates.push(t);
 }
 
 /** Replace the catalog: { zh: en }; keys containing {name} are templates. */
 export function setCatalog(map, { merge = false } = {}) {
-  if (!merge) { exact = new Map(); index = new Map(); surnames = new Map(); givenNames = new Map(); }
+  if (!merge) { allTemplates = []; exact = new Map(); index = new Map(); surnames = new Map(); givenNames = new Map(); }
   for (const [zh, en] of Object.entries(map)) {
     if (zh.startsWith('@s:')) surnames.set(zh.slice(3), en);
     else if (zh.startsWith('@g:')) givenNames.set(zh.slice(3), en);
@@ -159,6 +161,8 @@ function fromWrapped(text) {
   }
   const tag = /^#(\S+)$/.exec(text);
   if (tag && exact.has(tag[1])) return `#${exact.get(tag[1]).toLowerCase()}`;
+  const bullet = /^· (.+)$/s.exec(text);
+  if (bullet) return `· ${translate(bullet[1])}`;
   const quoted = /^「(.+)」$/s.exec(text);
   if (quoted) return `"${translate(quoted[1])}"`;
   const noted = /^(.+?)（(.+)）$/s.exec(text);
@@ -229,6 +233,45 @@ function fromPrefix(text) {
     if (!clipped && !/[，。：；！？]/.test(zh[start.length])) continue;
     const m = /^.*?[.!?;](?=\s|$)/s.exec(en);
     return (m ? m[0] : en).replace(/[.;]$/, '');
+  }
+  return null;
+}
+
+/**
+ * The life map's headline is an event cut at its first clause, after the slots are filled:
+ * {kin}去世了，…… shows as 祖母去世了. Read it with the template's first clause, and the English up to its first break.
+ */
+function fromClause(text) {
+  if (scanning || depth > 2 || /[。！？]/.test(text)) return null;
+  const clipped = text.endsWith('…');
+  const start = text.replace(/…+$/, '').replace(/^「/, '');
+  if (start.length < 2) return null;
+  if (clipped && start.includes('（') && exact.has(start.split('（')[0])) return exact.get(start.split('（')[0]);
+  for (const t of allTemplates) {
+    const stop = t.zh.search(/[，。：；！？]/);
+    if (stop < 2) continue;
+    const head = t.zh.slice(0, stop);
+    const clause = /^[^,.;:!?]*/.exec(t.en)[0].trim();
+    if (!clause) continue;
+    const names = head.match(PLACEHOLDER) || [];
+    if (!(clause.match(PLACEHOLDER) || []).every((n) => names.includes(n))) continue;
+    if (!names.length) {
+      if (clipped ? t.zh.startsWith(start) : head === start) return clause;
+      continue;
+    }
+    const literals = head.split(PLACEHOLDER);
+    if (clipped || cjkCount(literals.join('')) < 2) continue;
+    t.headRe ??= new RegExp(`^${literals.map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.+?)')}$`, 's');
+    const m = t.headRe.exec(start);
+    if (!m) continue;
+    let out = clause;
+    let clean = true;
+    names.forEach((name, i) => {
+      const piece = translate(m[i + 1]);
+      if (CJK.test(piece)) clean = false;
+      out = out.split(name).join(piece);
+    });
+    if (clean) return out;
   }
   return null;
 }
@@ -360,6 +403,13 @@ function fromName(text) {
   return null;
 }
 
+/** The text with a stop added, only if that reads completely. */
+function wholeStopped(stopped) {
+  if (!stopped) return null;
+  const hit = exact.get(stopped) ?? fromTemplate(stopped);
+  return hit != null && !CJK.test(hit) ? hit : null;
+}
+
 function translate(raw) {
   if (!raw || !CJK.test(raw)) return raw;
   const hit = cache.get(raw);
@@ -372,7 +422,7 @@ function translate(raw) {
   const direct = exact.get(text) ?? (dotted != null && !CJK.test(dotted) ? dotted : null) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
   const templated = (direct != null && !CJK.test(direct) ? direct : null) ?? fromTemplate(text) ?? direct;
   const clean = templated != null && !CJK.test(templated) ? templated
-    : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? fromPrefix(text) ?? fromNamed(text) ?? dotted ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+    : wholeStopped(stopped) ?? fromPrefix(text) ?? fromClause(text) ?? fromNamed(text) ?? dotted ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   const result = clean ?? templated;
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);

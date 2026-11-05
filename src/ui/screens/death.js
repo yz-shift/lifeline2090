@@ -8,6 +8,7 @@
 // (in-page confirm), live again (new or same world line), past lives, about the data.
 // The past-life record is kept up to date automatically (saves.addPastLife / updatePastLife).
 
+import { tr } from '../../i18n/index.js';
 import { h, clear, reducedMotion, storage } from '../dom.js';
 import { STATS, STAT_LABELS, HISTORY_END, YEAR_TAG_LABELS } from '../../core/constants.js';
 import * as charts from '../charts.js';
@@ -659,7 +660,7 @@ export function mount(root, params = {}, app) {
         const span = lifespan(pe);
         const cause = pe.deathCause && typeof pe.deathCause === 'object' ? pe.deathCause.name : pe.deathCause;
         return h('li.g-peer', { class: isFinite(span) ? 'g-peer--gone' : '' },
-          h('span.g-peer-av', { 'aria-hidden': 'true' }, String(pe.name || '?').slice(0, 1)),
+          h('span.g-peer-av', { 'aria-hidden': 'true' }, tr(String(pe.name || '?')).slice(0, 1)),
           h('span.g-peer-main',
             h('span.g-peer-n', pe.name || '无名', h('span.g-peer-sx', pe.sex === 'male' ? '男' : '女')),
             h('span.g-peer-c', `${countryName(data, pe.country)} · ${isFinite(span) ? `${span} 岁离世${cause ? `（${cause}）` : ''}` : '在推演结束时仍然在世'}`),
@@ -773,7 +774,7 @@ export function mount(root, params = {}, app) {
     ? h('section.g-panel.g-kids', { 'aria-labelledby': 'g-kids-t' },
       h('h2.g-h#g-kids-t', '子女们的人生', h('span.g-h-sub', `${kidLines.length} 个孩子`)),
       h('ul.g-peers.g-peers--fates', kidLines.map((k) => h('li.g-peer',
-        h('span.g-peer-av', { 'aria-hidden': 'true' }, k.name.slice(0, 1)),
+        h('span.g-peer-av', { 'aria-hidden': 'true' }, tr(k.name).slice(0, 1)),
         h('span.g-peer-main',
           h('span.g-peer-n', k.name, h('span.g-peer-sx', [k.sex === 'female' ? '女' : k.sex === 'male' ? '男' : '', k.birthYear ? `${k.birthYear} 年生` : ''].filter(Boolean).join(' · '))),
           h('span.g-peer-s', k.line))))),

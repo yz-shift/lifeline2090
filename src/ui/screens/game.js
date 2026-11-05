@@ -6,6 +6,7 @@
 // (moments.js, opened by the controller), and a sticky bottom control bar with play/pause, speed 0.5×–16×,
 // 跳到下一个抉择, 自动抉择 + its texture (性子), 主动选择, 家人与生活, 花钱·投资, 写下想法 and ♪ 音乐.
 
+import { tr } from '../../i18n/index.js';
 import { h, s, clear, append, fmt, reducedMotion, storage, bus } from '../dom.js';
 import {
   STATS, STAT_LABELS, YEAR_TAG_LABELS, EDU_LABELS, CAREER_LABELS, RELATIONSHIP_LABELS, REGIONS,
@@ -1340,7 +1341,7 @@ export function mount(root, params = {}, app) {
       const st = peerNow(peer, year);
       const cause = peer.deathCause && typeof peer.deathCause === 'object' ? peer.deathCause.name : peer.deathCause;
       return h('li.g-peer', { class: st.alive ? '' : 'g-peer--gone' },
-        h('span.g-peer-av', { 'aria-hidden': 'true' }, String(peer.name || '?').slice(0, 1)),
+        h('span.g-peer-av', { 'aria-hidden': 'true' }, tr(String(peer.name || '?')).slice(0, 1)),
         h('span.g-peer-main',
           h('span.g-peer-n', peer.name || '无名', h('span.g-peer-sx', peer.sex === 'male' ? '男' : '女')),
           h('span.g-peer-c', `${cname(peer.country)}${isNum(peer.familyPct) ? ` · 家境${familyLabel(peer.familyPct)}` : ''}`),

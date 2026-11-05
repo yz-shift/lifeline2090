@@ -1361,6 +1361,13 @@ html[lang^="en"] .ll-reg-name { font-size: clamp(24px, 4.6vw, 38px); overflow-wr
 html[lang^="en"] .ll-reg-row:not(.ll-reg-row--wide) { grid-template-columns: minmax(7.5em, 9.5em) minmax(0, 1fr); }
 html[lang^="en"] .ll-reg-row dt { letter-spacing: .02em; overflow-wrap: normal; }
 html[lang^="en"] .ll-reg-row dd { overflow-wrap: break-word; }
+html[lang^="en"] .g-strip-name { white-space: normal; overflow: visible; text-overflow: clip; }
+@media (max-width: 560px) {
+  html[lang^="en"] .ll-brand-words { display: none; } /* the English title does not fit beside the switch */
+  html[lang^="en"] .g-cb--tool { flex-direction: column; gap: 2px; padding-inline: 2px; min-width: 0; }
+  html[lang^="en"] .g-cb--tool .g-cb-lb { font-size: 11px; }
+  html[lang^="en"] .g-tex-k { font-size: 10px; letter-spacing: 0; }
+}
 
 /* in English the main name is already the romanised one */
 html[lang^="en"] .ll-zh-only, html[lang^="en"] .ll-reg-latin, html[lang^="en"] .g-cert-latin, html[lang^="en"] .g-card-latin { display: none; }
