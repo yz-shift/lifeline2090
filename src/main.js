@@ -8,7 +8,7 @@ import * as dataMod from './core/data.js';
 import * as aiMod from './ai/claude.js';
 import * as socialMod from './social/store.js';
 import { createApp } from './ui/app.js';
-import { initLang, loadLang } from './i18n/index.js';
+import { initLang, loadLang, englishOf } from './i18n/index.js';
 import { installDomTranslator } from './i18n/dom.js';
 
 const FILES = [
@@ -189,6 +189,7 @@ async function boot(snapshotSource) {
   try {
     const catalog = loadLang().then(refreshLanguage, (e) => console.error('English text unavailable', e));
     data = await loadAllData(loader);
+    data.nameAlias = englishOf; // lets free text name places in English
     await catalog;
     loader.finishAll();
   } catch (e) {

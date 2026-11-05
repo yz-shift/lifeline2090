@@ -125,8 +125,8 @@ for (const p of walkDir(join(root, 'src')).filter((f) => f.endsWith('.js'))) {
 }
 const content = JSON.parse(readFileSync(join(root, 'data/content.json'), 'utf8'));
 
-// Names already carry their romanisation, so they need no translating. @s:/@g: mark surnames and given names of
-// surname-first countries, which lets tr() read a joined name such as 王浩然.
+// Names already carry their romanisation, so they need no translating. @s:/@g: mark surnames and given names, which
+// lets tr() read a joined name such as 王浩然, or a child's name that mixes two countries.
 const nameEntries = {};
 const addName = (zh, en, tag) => {
   if (!zh || !en) return;
@@ -136,17 +136,15 @@ const addName = (zh, en, tag) => {
 const pairs = (s) => s.split(',').map((x) => x.split('|'));
 const personJs = readFileSync(join(root, 'src/core/person.js'), 'utf8');
 for (const m of personJs.matchAll(/\w+: \{ fmt: '(sg|gs)', sur: P\('([^']+)'\)[\s\S]*?male: P\('([^']+)'\),?\s*female: P\('([^']+)'\)/g)) {
-  const first = m[1] === 'sg';
-  for (const [zh, en] of pairs(m[2])) addName(zh, en, first ? 's' : '');
-  for (const [zh, en] of [...pairs(m[3]), ...pairs(m[4])]) addName(zh, en, first ? 'g' : '');
+  for (const [zh, en] of pairs(m[2])) addName(zh, en, 's');
+  for (const [zh, en] of [...pairs(m[3]), ...pairs(m[4])]) addName(zh, en, 'g');
 }
 for (const m of personJs.matchAll(/surF: P\('([^']+)'\)/g)) for (const [zh, en] of pairs(m[1])) addName(zh, en, '');
 const countryNames = Object.entries(content.names.countries);
 countryNames.sort(([a], [b]) => (a === 'CHN' ? -1 : b === 'CHN' ? 1 : 0));
 for (const [, c] of countryNames) {
-  const first = c.format === 'surname+given';
   for (const [key, tag] of [['surnames', 's'], ['surnames_female', 's'], ['male', 'g'], ['female', 'g']]) {
-    (c[key] || []).forEach((zh, i) => addName(zh, c.latin?.[key]?.[i], first ? tag : ''));
+    (c[key] || []).forEach((zh, i) => addName(zh, c.latin?.[key]?.[i], tag));
   }
 }
 const COMPOUND = { 欧阳: 'Ouyang', 司马: 'Sima', 上官: 'Shangguan', 诸葛: 'Zhuge', 东方: 'Dongfang', 皇甫: 'Huangfu', 尉迟: 'Yuchi', 公孙: 'Gongsun', 慕容: 'Murong', 长孙: 'Zhangsun', 宇文: 'Yuwen', 司徒: 'Situ', 夏侯: 'Xiahou', 令狐: 'Linghu', 端木: 'Duanmu', 南宫: 'Nangong' };

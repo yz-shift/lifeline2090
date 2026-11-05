@@ -11,6 +11,7 @@
 // - Prompts over 256 KiB (UTF-8) are refused locally with prompt_too_large; nothing is sent.
 // - Every rejection is a plain object {code, message, text?, local?}.
 
+import { isEn } from '../i18n/index.js';
 import { bus } from '../ui/dom.js';
 import { parseLooseJSON, splitNarrativeJSON } from './validate.js';
 
@@ -294,7 +295,10 @@ function buildOptions(opts, t) {
   return o;
 }
 
+const ENGLISH_OUTPUT = '\n\nLANGUAGE: the player is reading in English. The data above is in Chinese, but write every player-facing string in natural, plain English, with no Chinese characters. Keep the output format, JSON keys, ids and enumerated values exactly as specified above.';
+
 async function run(kind, prompt, opts, exec) {
+  prompt = isEn() ? prompt + ENGLISH_OUTPUT : prompt;
   const { fn, tier: t } = await ready(prompt, opts);
   counter.calls++;
   counter.byKind[kind] = (counter.byKind[kind] || 0) + 1;

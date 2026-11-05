@@ -485,8 +485,8 @@ function looksLikeNoise(text) {
   const s = String(text || '').replace(/[\s\p{P}\p{S}]/gu, '');
   if (s.length <= 1) return true;
   const cjk = s.match(/[一-龥]/g) || [];
-  // the game speaks Chinese: Latin letters or digits that matched no English keyword are treated as noise
-  if (!cjk.length) return true;
+  // Latin letters or digits that matched no keyword are noise, unless they read like words: "plant a tree"
+  if (!cjk.length) return !/[a-z]{2,}[\s,.'-]+[a-z]{2,}/i.test(String(text || ''));
   return cjk.length === s.length && /^[啊哈呵嘿嗯哦呃额喔唉哎呀嘻噢哇呜嗷]+$/.test(s);
 }
 const INTENT_BY_ID = new Map(INTENTS.map((i) => [i.id, i]));
@@ -512,7 +512,92 @@ const EXTRA_KW = {
   exercise: ['游泳', '打球', '爬山', '骑车', '练瑜伽'],
   save: ['省钱', '少花钱', '理财'],
 };
-for (const [id, list] of Object.entries(EXTRA_KW)) {
+// What English-speaking players type. Whole-word matches, so inflected forms are listed.
+const ENGLISH_KW = {
+  study: ['study', 'studying', 'keep studying', 'stay in school', 'go to university', 'go to college', 'university', 'college', 'degree', 'get a degree', 'night school', 'take a course', 'go back to school', 'read more'],
+  grad: ['graduate school', 'grad school', 'masters', 'master degree', 'phd', 'doctorate', 'postgraduate'],
+  drop_out: ['drop out', 'dropout', 'leave school', 'quit school', 'stop studying'],
+  change_major: ['change major', 'change my major', 'switch major', 'switch majors'],
+  study_abroad: ['study abroad', 'exchange student', 'exchange program'],
+  labor_abroad: ['work abroad', 'working abroad', 'work overseas', 'migrant worker'],
+  emigrate: ['emigrate', 'move abroad', 'move overseas', 'leave the country', 'immigrate', 'go abroad', 'live abroad', 'green card'],
+  move_city: ['move to the city', 'go to the city', 'big city', 'move to a city', 'change cities', 'leave home', 'move away', 'move out'],
+  return_home: ['go home', 'go back home', 'return home', 'move back', 'home town', 'hometown', 'go back to my village'],
+  job_hunt: ['find a job', 'find work', 'look for work', 'look for a job', 'get a job', 'new job', 'change jobs', 'job hunt', 'job hunting', 'apply for jobs', 'switch jobs'],
+  career_change: ['change careers', 'change career', 'switch careers', 'new career', 'career change'],
+  quit_job: ['quit', 'quit my job', 'resign', 'leave my job', 'quit work'],
+  gig: ['delivery rider', 'deliver food', 'food delivery', 'uber', 'drive a taxi', 'taxi driver', 'ride hailing', 'gig work', 'odd jobs', 'courier'],
+  civil_service: ['civil service', 'civil servant', 'government job', 'public sector'],
+  start_business: ['startup', 'start a business', 'start a company', 'open a shop', 'open a store', 'open a restaurant', 'open a cafe', 'run a business', 'own business', 'entrepreneur', 'become my own boss', 'set up a stall'],
+  promotion: ['promotion', 'get promoted', 'ask for a raise', 'get a raise', 'pay rise', 'work harder', 'work hard', 'overtime', 'focus on career', 'focus on my career'],
+  side_hustle: ['side job', 'side hustle', 'part time', 'part-time', 'freelance', 'livestream', 'influencer', 'youtube'],
+  learn_ai: ['learn ai', 'learn to code', 'learn coding', 'learn programming', 'programming', 'programmer', 'coding', 'python', 'software engineer', 'machine learning', 'data analysis'],
+  learn_trade: ['learn a trade', 'learn a skill', 'apprentice', 'apprenticeship', 'vocational school', 'trade school', 'become a chef', 'electrician', 'mechanic', 'carpenter', 'welder', 'plumber'],
+  learn_language: ['learn english', 'learn a language', 'learn chinese', 'learn spanish', 'learn french', 'learn german', 'learn japanese', 'foreign language'],
+  medicine: ['medical school', 'become a doctor', 'study medicine', 'be a doctor'],
+  nursing: ['become a nurse', 'study nursing', 'be a nurse', 'nursing'],
+  teach: ['become a teacher', 'be a teacher', 'teach', 'teaching'],
+  farming: ['farm', 'farming', 'farmer', 'grow crops', 'raise livestock', 'work the land'],
+  military: ['join the army', 'join the military', 'enlist', 'army', 'join the navy', 'military service', 'become a soldier'],
+  avoid_military: ['alternative service', 'avoid the draft', 'dodge the draft', 'conscientious objector', 'defer service'],
+  date: ['date', 'dating', 'find love', 'girlfriend', 'boyfriend', 'ask her out', 'ask him out', 'ask them out', 'fall in love', 'find a partner', 'blind date', 'matchmaking'],
+  marry: ['marry', 'get married', 'marriage', 'propose', 'wedding', 'marry her', 'marry him', 'marry them'],
+  stay_single: ['stay single', 'remain single', 'not marry', 'live alone', 'be alone'],
+  breakup: ['break up', 'breakup', 'split up', 'leave her', 'leave him', 'leave them'],
+  divorce: ['divorce', 'get divorced', 'separate'],
+  reconcile: ['make up', 'apologize', 'apologise', 'say sorry', 'forgive', 'reconcile', 'get back together'],
+  have_child: ['have a baby', 'have a child', 'have children', 'have kids', 'have a kid', 'start a family', 'another child', 'another baby'],
+  childfree: ['no kids', 'no children', 'childfree', 'not have kids', 'not have children', 'stay child free'],
+  adopt: ['adopt', 'adopt a child', 'adoption', 'foster'],
+  family_time: ['spend time with family', 'time with family', 'time with my family', 'time with the kids', 'time with my kids', 'be with family', 'family time', 'stay with my family'],
+  kid_abroad: ['send my child abroad', 'send my kid abroad', 'send the kids abroad'],
+  kid_tutor: ['tutor', 'hire a tutor', 'extra classes', 'tutoring'],
+  care_parents: ['care for my parents', 'look after my parents', 'take care of my parents', 'care for parents', 'look after mum', 'look after dad', 'care for my mother', 'care for my father', 'visit my parents'],
+  exercise: ['gym', 'exercise', 'work out', 'workout', 'run', 'running', 'jogging', 'marathon', 'swim', 'swimming', 'yoga', 'cycling', 'hiking', 'get fit', 'keep fit'],
+  quit_smoking: ['quit smoking', 'stop smoking', 'quit drinking', 'stop drinking', 'drink less', 'smoke less', 'give up smoking'],
+  smoke: ['smoke', 'smoking', 'drink', 'drinking', 'get drunk', 'stay up late', 'alcohol'],
+  diet: ['diet', 'lose weight', 'eat less', 'eat healthy', 'eat better', 'go vegetarian', 'go vegan'],
+  screen: ['less phone', 'put down my phone', 'stop scrolling', 'less screen time', 'digital detox', 'delete social media'],
+  sleep: ['sleep early', 'sleep more', 'get more sleep', 'go to bed early', 'early to bed', 'regular hours', 'sleep better'],
+  health_check: ['see a doctor', 'go to the doctor', 'go to hospital', 'check up', 'checkup', 'health check', 'medical check'],
+  therapy: ['therapy', 'therapist', 'counselling', 'counseling', 'psychologist', 'depression', 'anxiety', 'mental health', 'see a counsellor'],
+  crisis: ['kill myself', 'suicide', 'end my life', 'want to die', 'no reason to live', 'take my life'],
+  faith: ['faith', 'religion', 'pray', 'church', 'temple', 'mosque', 'become a monk', 'become a nun', 'meditate', 'meditation'],
+  volunteer: ['volunteer', 'volunteering', 'charity', 'donate', 'give to charity', 'help others', 'help people'],
+  activism: ['activism', 'activist', 'protest', 'campaign', 'petition', 'climate march', 'environmental'],
+  travel: ['travel', 'travelling', 'traveling', 'see the world', 'backpack', 'backpacking', 'road trip', 'go on a trip', 'take a trip', 'holiday', 'vacation'],
+  rest: ['gap', 'gap year', 'relax', 'rest', 'take a break', 'take time off', 'lie flat', 'slow down', 'have a break'],
+  invest_stocks: ['etf', 'stocks', 'shares', 'index fund', 'index funds', 'mutual fund', 'invest', 'investing', 'stock market', 'buy stocks'],
+  ai_money: ['aigc', 'chatgpt', 'gpt', 'make money with ai', 'earn with ai', 'use ai to earn', 'claude'],
+  invest_crypto: ['crypto', 'bitcoin', 'ethereum', 'cryptocurrency'],
+  invest_property: ['buy to let', 'investment property', 'become a landlord', 'rental property', 'second home'],
+  buy_home: ['buy a house', 'buy a home', 'buy a flat', 'buy an apartment', 'mortgage', 'down payment', 'own a home'],
+  rent: ['rent', 'keep renting', 'rent a flat', 'rent a house', 'rent an apartment'],
+  save: ['save money', 'save up', 'savings', 'spend less', 'be frugal', 'budget'],
+  spend: ['buy a car', 'spend money', 'treat myself', 'splurge', 'buy something nice', 'luxury'],
+  gamble: ['gamble', 'gambling', 'lottery', 'casino', 'bet', 'betting'],
+  artist: ['paint', 'painting', 'painter', 'artist', 'art', 'draw', 'drawing', 'photography', 'photographer'],
+  writer: ['write', 'writing', 'writer', 'write a novel', 'write a book', 'novelist', 'poet', 'poetry', 'journalist'],
+  musician: ['music', 'musician', 'band', 'sing', 'singer', 'singing', 'guitar', 'piano', 'join a band', 'play music'],
+  athlete: ['athlete', 'professional athlete', 'olympics', 'play football', 'play soccer', 'play basketball', 'go pro', 'sports career'],
+  learn_hobby: ['learn to cook', 'learn to dance', 'learn to paint', 'learn to draw', 'learn an instrument', 'take up a hobby', 'new hobby', 'hobby', 'learn to swim'],
+  retire_early: ['fire', 'retire early', 'early retirement', 'financial independence'],
+  retire: ['retire', 'retirement', 'stop working'],
+  keep_working: ['keep working', 'carry on working', 'work longer', 'not retire', 'go back to work'],
+  grandkids: ['grandchildren', 'grandkids', 'grandchild', 'grandson', 'granddaughter', 'mind the grandchildren'],
+  memoir: ['memoir', 'memoirs', 'autobiography', 'write my life', 'write my story', 'tell my story'],
+  will: ['make a will', 'write a will', 'my will', 'inheritance', 'estate'],
+  nursing_home: ['nursing home', 'care home', 'retirement home', 'assisted living', 'old folks home'],
+  reunion: ['reunion', 'old classmates', 'old friends', 'class reunion', 'see old friends'],
+  friends: ['friends', 'make friends', 'make new friends', 'party', 'socialize', 'socialise', 'meet people'],
+  pet: ['get a dog', 'get a cat', 'adopt a dog', 'adopt a cat', 'pet', 'a dog', 'a cat', 'get a pet', 'puppy', 'kitten'],
+  longevity: ['anti aging', 'anti ageing', 'life extension', 'live longer', 'longevity', 'gene therapy'],
+  space: ['space', 'mars', 'the moon', 'astronaut', 'go to space', 'go to mars'],
+  illegal: ['steal', 'rob', 'robbery', 'sell drugs', 'deal drugs', 'scam', 'fraud', 'commit a crime', 'crime', 'shoplift'],
+  stay: ['stay the same', 'keep things as they are', 'do nothing', 'carry on', 'keep going', 'go with the flow', 'stay put', 'nothing'],
+  ignore_health: ['ignore my health', 'skip the doctor', 'not see a doctor'],
+};
+for (const [id, list] of [...Object.entries(EXTRA_KW), ...Object.entries(ENGLISH_KW)]) {
   const it = INTENT_BY_ID.get(id);
   if (it) for (const k of list) if (!it.kw.includes(k)) it.kw.push(k);
 }
@@ -554,13 +639,21 @@ let NAME_INDEX = null;
 let NAME_INDEX_SRC = null;
 function nameIndex(data) {
   const src = data && (data.countries || null);
-  if (NAME_INDEX && NAME_INDEX_SRC === src) return NAME_INDEX;
+  const alias = data && data.nameAlias; // optional zh -> English place names, set by the page in English mode
+  if (NAME_INDEX && NAME_INDEX_SRC === src && !alias) return NAME_INDEX;
   const list = [];
   if (src) for (const [iso, c] of Object.entries(src)) if (c && typeof c.name === 'string' && c.name.length >= 2) list.push([c.name.replace(/[（(].*$/, ''), iso, 'country']);
   for (const [k, iso] of Object.entries(COUNTRY_ALIAS)) list.push([k, iso, 'country']);
   for (const [iso, cities] of Object.entries(CITIES)) for (const c of cities) if (c.length >= 2) list.push([c, iso, 'city']);
   for (const c of CN_PLACES) list.push([c, 'CHN', 'city']);
+  if (alias) {
+    for (const [zh, iso, kind] of list.slice()) {
+      const en = alias(zh);
+      if (en) list.push([en, iso, kind, zh]);
+    }
+  }
   list.sort((a, b) => b[0].length - a[0].length);
+  if (alias) return list;
   NAME_INDEX = list;
   NAME_INDEX_SRC = src;
   return list;
@@ -583,8 +676,13 @@ export function classifyIntent(text, data) {
       const kw = normalizeIntentText(kwRaw.toLowerCase());
       if (/^[a-z ]+$/.test(kw)) {
         const re = new RegExp(`(^|[^a-z])${kw.replace(/ /g, '\\s*')}([^a-z]|$)`);
-        if (!re.test(low)) continue;
-        score.set(it.id, (score.get(it.id) || 0) + kw.length + 1);
+        const hit = re.exec(low);
+        if (!hit) continue;
+        // "don't quit", "never marry" count for the opposite intent, as 不 does in Chinese
+        const isNeg = /(?:^|[^a-z])(?:not|never|no|don'?t|do not|won'?t|wouldn'?t|refuse to|stop|avoid)\s+(?:[a-z']+\s+){0,2}$/.test(low.slice(0, hit.index + hit[1].length));
+        const target = isNeg ? it.neg : it.id;
+        if (isNeg) negated.push(it.id);
+        if (target) score.set(target, (score.get(target) || 0) + kw.length + 1);
         keywords.push(kwRaw);
         continue;
       }
@@ -639,17 +737,18 @@ export function classifyIntent(text, data) {
   let scan = raw;
   let targetCountry = null;
   let targetCity = null;
-  for (const [nm, iso, kind] of nameIndex(data)) {
-    const i = scan.indexOf(nm);
+  for (const [nm, iso, kind, zh] of nameIndex(data)) {
+    // English names match case-insensitively and as whole words, so Mali is not found in "normality"
+    const i = zh ? scan.search(new RegExp(`(?<![A-Za-z])${nm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![A-Za-z])`, 'i')) : scan.indexOf(nm);
     if (i < 0) continue;
-    if (kind === 'city' && !targetCity) targetCity = nm;
+    if (kind === 'city' && !targetCity) targetCity = zh || nm;
     if (!targetCountry) targetCountry = iso;
     scan = scan.slice(0, i) + '□'.repeat(nm.length) + scan.slice(i + nm.length);
     if (targetCountry && targetCity) break;
   }
   if (targetCountry && data && !safe(() => data.country(targetCountry)) && !safe(() => data.countries[targetCountry])) targetCountry = null;
   // a bare destination is a trip; living, working or studying there is a move
-  if (targetCountry && !score.size) score.set(/住|定居|生活|工作|打工|搬|发展|读书|上学|移民|扎根|落户/.test(raw) ? 'emigrate' : 'travel', 1);
+  if (targetCountry && !score.size) score.set(/住|定居|生活|工作|打工|搬|发展|读书|上学|移民|扎根|落户|b(?:live|work|study|move|settle|emigrate)b/i.test(raw) ? 'emigrate' : 'travel', 1);
   // a named place plus a trip word is a trip, whoever comes along
   if (targetCountry && score.has('travel')) add('travel', 2);
   // ties go to the intent named first in the text ("回国照顾父母": the purpose and the move score alike)

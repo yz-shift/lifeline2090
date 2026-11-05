@@ -74,6 +74,25 @@ test('Chinese number units become English ones', () => {
   });
 });
 
+test('news lines use the first sentence of a translated summary', () => {
+  withCatalog({ 大事件: 'A big event', '第一句话很重要；第二句话不重要。': 'The first sentence matters; the second does not.', '【推演】': '[Projected]' }, () => {
+    assert.equal(tr('大事件：第一句话很重要。'), 'A big event: The first sentence matters.');
+    assert.equal(tr('【推演】大事件：第一句话很重要。'), '[Projected] A big event: The first sentence matters.');
+  });
+});
+
+test('a template ending in a full stop works inside a longer text', () => {
+  withCatalog({ '「{0}」的消息传开。': 'News of "{0}" spread.', 大事件: 'the big event', '你很担心。': 'You were worried.' }, () => {
+    assert.equal(tr('「大事件」的消息传开。你很担心。'), 'News of "the big event" spread. You were worried.');
+  });
+});
+
+test('adjacent placeholders split where both sides are known', () => {
+  withCatalog({ '每周给{0}{1}': 'weekly {1} with {0}', 父母: 'your parents', 视频: 'video calls' }, () => {
+    assert.equal(tr('每周给父母视频'), 'weekly video calls with your parents');
+  });
+});
+
 test('generated names are read from their parts', () => {
   const names = { '@s:王': 'Wang', '@g:浩然': 'Haoran', '@s:欧阳': 'Ouyang', 阿尔琼: 'Arjun', 辛格: 'Singh', 约翰: 'John', 史密斯: 'Smith', '{0}来了': '{0} came' };
   withCatalog(names, () => {

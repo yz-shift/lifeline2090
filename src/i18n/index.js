@@ -54,6 +54,7 @@ let exact = new Map();
 let index = new Map(); // first bigram of a template's longest literal -> templates
 let surnames = new Map();
 let givenNames = new Map();
+let heads = null; // clipped first sentence -> English first sentence, built on first use
 let cache = new Map();
 let catalogLoaded = false;
 const misses = new Set();
@@ -92,6 +93,57 @@ export function setCatalog(map, { merge = false } = {}) {
     PLACEHOLDER.lastIndex = 0;
   }
   cache = new Map();
+  heads = null;
+}
+
+/** The engine shows only an event's first sentence, clipped; this is how it cuts them (engine.js firstSentence). */
+function clippedHead(zh) {
+  const t = zh.replace(/\s+/g, ' ').trim();
+  const i = t.search(/[。！？；]/);
+  const one = i >= 0 ? t.slice(0, i + 1) : t;
+  return one.length > 70 ? `${one.slice(0, 70)}……` : one.replace(/；$/, '。');
+}
+
+function headIndex() {
+  if (heads) return heads;
+  heads = new Map();
+  for (const [zh, en] of exact) {
+    // exam and scheme names lose their bracketed notes and are cut short in a sentence (events.js)
+    if (/（[^（）]*）/.test(zh)) {
+      const short = zh.replace(/[（(][^）)]*[）)]/g, '').replace(/\s+/g, ' ').trim();
+      const name = en.replace(/\s*\([^()]*\)/g, '').trim();
+      heads.set(short, name);
+      heads.set(short.slice(0, 24), name);
+    }
+    if (zh.length < 12 || !/[。！？；]/.test(zh)) continue;
+    const m = /^.*?[.!?;](?=\s|$)/s.exec(en);
+    const first = (m ? m[0] : en).replace(/;$/, '.');
+    const head = clippedHead(zh);
+    heads.set(head, first);
+    heads.set(head.replace(/。$/, ''), first);
+  }
+  return heads;
+}
+
+/** Text wrapped by the engine at run time: 「title」 and cause（detail）. */
+function fromWrapped(text) {
+  const quoted = /^「(.+)」$/s.exec(text);
+  if (quoted) return `"${translate(quoted[1])}"`;
+  const noted = /^(.+?)（(.+)）$/s.exec(text);
+  if (noted && !CJK.test(translate(noted[1]))) return `${translate(noted[1])} (${translate(noted[2])})`;
+  return null;
+}
+
+/** A news line: 【推演】title：first sentence of the summary. */
+function fromNews(text) {
+  const m = /^(【推演】)?([^：]{2,60})：(.+)$/s.exec(text);
+  if (!m) return null;
+  // projected events name the countries they hit: 特大洪水（中国、印度）
+  const place = /^(.+)（([^（）]+)）$/.exec(m[2]);
+  const title = place && exact.has(place[1]) ? `${exact.get(place[1])} (${translate(place[2])})` : exact.get(m[2]);
+  const body =exact.get(m[3]) ?? headIndex().get(m[3]);
+  if (title === undefined || body === undefined) return null;
+  return `${m[1] ? `${exact.get('【推演】') ?? '[Projected]'} ` : ''}${title}: ${body}`;
 }
 
 function compile(t) {
@@ -99,6 +151,30 @@ function compile(t) {
   const src = t.zh.split(PLACEHOLDER).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('([^。！？]*?)');
   t.re = new RegExp(`^${src}$`, 's');
   return t.re;
+}
+
+/** A long template may also hold whole sentences in a slot: {0}……{1}窗外安静。 */
+function compileLoose(t) {
+  if (t.loose) return t.loose;
+  const src = t.zh.split(PLACEHOLDER).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.*?)');
+  t.loose = new RegExp(`^${src}$`, 's');
+  return t.loose;
+}
+
+/** In {0}{1} a lazy match gives everything to one capture; find the cut where both sides are known text. */
+function splitAdjacent(t, caps) {
+  const known = (s) => !CJK.test(s) || exact.has(s) || fromName(s) != null;
+  for (let i = 0; i + 1 < caps.length; i++) {
+    if (!t.zh.includes(t.names[i] + t.names[i + 1])) continue;
+    const joined = caps[i] + caps[i + 1];
+    for (let k = 1; k < joined.length; k++) {
+      if (known(joined.slice(0, k)) && known(joined.slice(k))) {
+        caps[i] = joined.slice(0, k);
+        caps[i + 1] = joined.slice(k);
+        break;
+      }
+    }
+  }
 }
 
 function fromTemplate(text) {
@@ -111,10 +187,11 @@ function fromTemplate(text) {
   for (let i = 0; i < text.length; i++) { collect(text.slice(i, i + 1)); collect(text.slice(i, i + 2)); }
   found.sort((a, b) => b.weight - a.weight);
   for (const t of found) {
-    const m = compile(t).exec(text);
+    const m = compile(t).exec(text) ?? (t.weight >= 5 ? compileLoose(t).exec(text) : null);
     if (!m) continue;
     const caps = m.slice(1);
-    if (t.plainOnly && caps.some((c) => CJK.test(c) && !exact.has(c.trim()) && !fromName(c.trim()))) continue;
+    if (t.plainOnly && caps.some((c) => CJK.test(translate(c)))) continue;
+    splitAdjacent(t, caps);
     let out = t.en;
     t.names.forEach((name, i) => { out = out.split(name).join(translate(caps[i])); });
     return out;
@@ -131,9 +208,18 @@ function bySegments(text, splitter) {
     const p = parts[i];
     if (!p) continue;
     if (i % 2) { out += p; continue; }
+    // a catalog entry can span several sentences: try the longest run first
+    let joined = false;
+    for (let j = parts.length - 2; j > i + 1 && !joined; j -= 2) {
+      const run = parts.slice(i, j + 1).join('');
+      const hit = exact.get(run);
+      if (hit !== undefined) { out += hit + ' '; i = j; joined = true; }
+    }
+    if (joined) continue;
     const delim = parts[i + 1] || '';
-    const full = delim ? exact.get(p + delim.slice(0, 1)) : undefined;
-    if (full !== undefined) { out += full + ' '; i++; continue; }
+    const whole = delim ? p + delim.slice(0, 1) : '';
+    const full = delim ? exact.get(whole) ?? headIndex().get(whole) ?? fromTemplate(whole) : null;
+    if (full != null) { out += full + ' '; i++; continue; }
     out += translate(p);
   }
   return out;
@@ -160,7 +246,7 @@ function translate(raw) {
   const lead = raw.match(/^\s*/)[0];
   const tail = raw.match(/\s*$/)[0];
   const text = raw.trim();
-  const result = exact.get(text) ?? fromName(text) ?? fromTemplate(text) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+  const result = exact.get(text) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text) ?? fromTemplate(text) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   if (result == null) misses.add(text);
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);
@@ -175,6 +261,9 @@ export function tr(text) {
   const tidy = polishEnglish(PUNCT.reduce((s, [re, to]) => s.replace(re, to), out));
   return /\s$/.test(text) ? tidy : tidy.trimEnd();
 }
+
+/** The catalog's English for an exact string, whatever the current language; used to recognise typed place names. */
+export const englishOf = (zh) => exact.get(zh) ?? null;
 
 export const getLang = () => lang;
 export const isEn = () => lang === 'en';
