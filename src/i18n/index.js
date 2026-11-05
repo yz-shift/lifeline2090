@@ -438,7 +438,7 @@ function bySegments(text, splitter) {
     const delim = parts[i + 1] || '';
     const whole = delim && !/^\s/.test(delim) ? p + delim.slice(0, 1) : '';
     const full = whole ? exact.get(whole) ?? headIndex().get(whole) ?? fromTemplate(whole) : null;
-    if (full != null) { out += full + ' '; i++; continue; }
+    if (full != null && !CJK.test(full)) { out += full + ' '; i++; continue; }
     out += translate(p);
   }
   return out;
@@ -471,6 +471,30 @@ function fromName(text) {
   return null;
 }
 
+function fromFirstSentence(text) {
+  if (scanning || depth > 2 || !/。$/.test(text) || /[。！？]./.test(text)) return null;
+  for (const t of allTemplates) {
+    const stop = t.zh.search(/[。！？]/);
+    if (stop < 4 || stop === t.zh.length - 1) continue;
+    const m0 = /^.*?[.!?](?=\s|$)/s.exec(t.en);
+    if (!m0) continue;
+    const head = t.zh.slice(0, stop + 1);
+    const names = head.match(PLACEHOLDER) || [];
+    if (!names.length || !(m0[0].match(PLACEHOLDER) || []).every((n) => names.includes(n))) continue;
+    const literals = head.split(PLACEHOLDER);
+    if (cjkCount(literals.join('')) < 4 || !literals.every((l) => text.includes(l))) continue;
+    t.sentRe ??= new RegExp(`^${literals.map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.+?)')}$`, 's');
+    const m = t.sentRe.exec(text);
+    if (!m) continue;
+    const caps = m.slice(1);
+    splitAdjacent({ zh: head, names }, caps);
+    let out = m0[0];
+    names.forEach((name, i) => { out = out.split(name).join(translate(caps[i])); });
+    if (!CJK.test(out)) return out;
+  }
+  return null;
+}
+
 /** The text with a stop added, only if that reads completely. */
 function wholeStopped(stopped) {
   if (!stopped) return null;
@@ -490,7 +514,7 @@ function translate(raw) {
   const direct = exact.get(text) ?? (dotted != null && !CJK.test(dotted) ? dotted : null) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
   const templated = (direct != null && !CJK.test(direct) ? direct : null) ?? fromTemplate(text) ?? direct;
   const clean = templated != null && !CJK.test(templated) ? templated
-    : wholeStopped(stopped) ?? fromPrefix(text) ?? fromClause(text) ?? fromNamed(text) ?? dotted ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+    : wholeStopped(stopped) ?? fromFirstSentence(text) ?? fromPrefix(text) ?? fromClause(text) ?? fromNamed(text) ?? dotted ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   const result = clean ?? templated;
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);
