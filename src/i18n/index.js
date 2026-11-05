@@ -167,8 +167,8 @@ function fromWrapped(text) {
     const items = listed.map((x) => translate(x));
     if (!items.some((x) => CJK.test(x))) return items.join(', ');
   }
-  const bullet = /^· (.+)$/s.exec(text);
-  if (bullet) return `· ${translate(bullet[1])}`;
+  const bullet = /^([·→]) (.+)$/s.exec(text);
+  if (bullet) return `${bullet[1]} ${translate(bullet[2])}`;
   const quoted = /^[「“](.+)[」”]$/s.exec(text);
   if (quoted && !/[」”].*[「“]/s.test(quoted[1])) return `"${translate(quoted[1])}"`;
   const bracketed = /^（(.+)）$/s.exec(text);
@@ -288,6 +288,26 @@ function fromClause(text) {
       out = out.split(name).join(piece);
     });
     if (clean) return out;
+  }
+  if (!clipped) {
+    const nth = (zh, en) => {
+      const i = zh.split(/[，。：；！？]/).indexOf(start);
+      if (i < 1) return null;
+      const part = en.split(/[,.;:!?]\s/)[i]?.trim();
+      return part && !PLACEHOLDER.test(part) ? part : null;
+    };
+    for (const t of allTemplates) {
+      PLACEHOLDER.lastIndex = 0;
+      const hit = t.zh.includes(start) ? nth(t.zh, t.en) : null;
+      PLACEHOLDER.lastIndex = 0;
+      if (hit) return hit;
+    }
+    for (const [zh, en] of exact) {
+      if (!zh.includes(start)) continue;
+      const hit = nth(zh, en);
+      PLACEHOLDER.lastIndex = 0;
+      if (hit) return hit;
+    }
   }
   if (clipped || start.length >= 10) {
     for (const [zh, en] of exact) if (zh.length > start.length && zh.startsWith(start)) return /^.*?[.!?;](?=\s|$)/s.exec(en)?.[0].replace(/[.;]$/, '') ?? en;

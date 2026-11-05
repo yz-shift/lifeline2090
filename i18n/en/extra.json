@@ -152,5 +152,12 @@
  "她读完了大学。": "She finished university.",
  "当地背景：{0}": "Local background: {0}",
  "的城市": ", in a city",
- "的乡村": ", in the countryside"
+ "的乡村": ", in the countryside",
+ "{0}（生于{1}）": "{0} (born in {1})",
+ "回头看，几个选择改变了他的路：{0}。": "Looking back, a few choices changed his path: {0}.",
+ "回头看，几个选择改变了她的路：{0}。": "Looking back, a few choices changed her path: {0}.",
+ "留在{0}身边": "Stay with {0}",
+ "留在这里": "Stay here",
+ "{0} 年，{1}出生在{2}的乡村{3}。": "In {0}, {1} was born in the countryside of {2}{3}.",
+ "{0} 年，{1}出生在{2}的城市{3}。": "In {0}, {1} was born in a city in {2}{3}."
 }
