@@ -1354,5 +1354,9 @@ html:has(.g-ctrl) .ll-toasts { padding-bottom: calc(96px + env(safe-area-inset-b
 .ll-lang--wide .ll-lang-btn { font-size: 14px; padding: 10px 18px; min-height: 42px; }
 @media (max-width: 560px) { .ll-header .ll-lang-btn { padding: 7px 6px; font-size: 11px; } }
 
+/* English labels are longer and must not break inside a word */
+html[lang^="en"] .g-cert-grid { grid-template-columns: minmax(7.5em, max-content) 1fr; }
+html[lang^="en"] .g-cert-grid dt { letter-spacing: .04em; overflow-wrap: normal; }
+
 /* in English the main name is already the romanised one */
 html[lang^="en"] .ll-zh-only, html[lang^="en"] .ll-reg-latin, html[lang^="en"] .g-cert-latin, html[lang^="en"] .g-card-latin { display: none; }

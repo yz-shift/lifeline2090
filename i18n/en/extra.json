@@ -46,4 +46,7 @@
 "{0} 年，{1} 岁，{2}：{3}":"{0}, age {1}, {2}: {3}",
 "{0} 年，{1} 岁，{2}，推演年份：{3}":"{0}, age {1}, {2}, projected year: {3}",
 "{0} 年，{1} 岁，{2}：{3}，这一年做出了抉择":"{0}, age {1}, {2}: {3}, and a decision this year",
-"{0} 年，{1} 岁，{2}，推演年份：{3}，这一年做出了抉择":"{0}, age {1}, {2}, projected year: {3}, and a decision this year"}
+"{0} 年，{1} 岁，{2}，推演年份：{3}，这一年做出了抉择":"{0}, age {1}, {2}, projected year: {3}, and a decision this year",
+"安享晚年":"Enjoy your later years",
+"含饴弄孙":"Enjoy your grandchildren",
+"财富":"Wealth"}

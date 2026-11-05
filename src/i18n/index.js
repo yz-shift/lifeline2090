@@ -138,9 +138,9 @@ function headIndex() {
 /** Text wrapped by the engine at run time: 「title」 and cause（detail）. */
 function fromWrapped(text) {
   // a label and its number: 健康 76; an amount in a named currency: 3242万印度尼西亚盾
-  const stat = /^(\S+) ([-−+\d.,%]+)$/.exec(text);
-  if (stat && exact.has(stat[1])) return `${exact.get(stat[1])} ${stat[2]}`;
-  const money = /^(-?[\d.,]+(?:万亿|亿|万)?)\s*([^\d\s]{2,})$/.exec(text);
+  const stat = /^(\S+) ([-−+]?[\d.,%].*)$/.exec(text);
+  if (stat && exact.has(stat[1])) return `${exact.get(stat[1])} ${translate(stat[2])}`;
+  const money = /^([-−]?[\d.,]+(?:万亿|亿|万)?)\s*([^\d\s]{2,})$/.exec(text);
   if (money && exact.has(money[2])) return `${money[1]} ${exact.get(money[2])}`;
   // effect chips: 知识↑ 快乐略↓ 婚姻更稳
   const chips = text.split(' ');
@@ -182,7 +182,7 @@ function fromNews(text) {
 
 function compile(t) {
   if (t.re) return t.re;
-  const src = t.zh.split(PLACEHOLDER).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('([^。！？]*?)');
+  const src = t.zh.split(PLACEHOLDER).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('([^。！？]*?)').replace(/\(\[\^。！？\]\*\?\)$/, '(.*?)');
   t.re = new RegExp(`^${src}$`, 's');
   return t.re;
 }
@@ -216,6 +216,18 @@ function fromPrefix(text) {
     if (!clipped && !/[，。：；！？]/.test(zh[start.length])) continue;
     const m = /^.*?[.!?;](?=\s|$)/s.exec(en);
     return (m ? m[0] : en).replace(/[.;]$/, '');
+  }
+  return null;
+}
+
+/** A sentence that opens with a generated name and nothing else to match on: 西曼准塔克心春读了职业学校，…… */
+function fromNamed(text) {
+  if (scanning || depth > 1) return null;
+  for (let n = Math.min(text.length - 1, 10); n >= 2; n--) {
+    const name = fromName(text.slice(0, n));
+    if (!name) continue;
+    const rest = translate(text.slice(n));
+    if (!CJK.test(rest)) return `${name} ${rest}`;
   }
   return null;
 }
@@ -261,7 +273,7 @@ function fromTemplate(text) {
   try {
     if (depth > 8) return null;
     for (const t of found.slice(0, 40)) {
-      for (const m of [compile(t).exec(text), t.weight >= 4 ? compileGreedy(t).exec(text) : null, t.weight >= 4 ? compileLoose(t).exec(text) : null]) {
+      for (const m of [compile(t).exec(text), t.weight >= 4 ? compileGreedy(t).exec(text) : null, t.weight >= 4 && (/[。！？]./.test(t.zh) || t.zh.includes('「')) ? compileLoose(t).exec(text) : null]) {
         if (!m) continue;
         const out = fill(t, m);
         if (out == null) continue;
@@ -324,10 +336,11 @@ function translate(raw) {
   const tail = raw.match(/\s*$/)[0];
   const text = raw.trim();
   const stopped = /[。！？，；]$/.test(text) ? null : `${text}。`; // a clause cut from a sentence whose entry ends in a stop
-  const direct = exact.get(text) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
+  const dotted = text.includes(' · ') && !exact.has(text) ? bySegments(text, DOTTED) : null;
+  const direct = exact.get(text) ?? (dotted != null && !CJK.test(dotted) ? dotted : null) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
   const templated = direct ?? fromTemplate(text);
   const clean = templated != null && !CJK.test(templated) ? templated
-    : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? fromPrefix(text) ?? bySegments(text, DOTTED) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+    : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? fromPrefix(text) ?? fromNamed(text) ?? dotted ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   const result = clean ?? templated;
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);
