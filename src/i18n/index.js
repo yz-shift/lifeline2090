@@ -45,6 +45,8 @@ function polishEnglish(s) {
     .replace(/\b([Aa]) (?=[aeio]|un[^iv]|ho(?:ur|nest))/g, '$1n ') // a/an depends on what was filled in
     .replace(/\b(of|to|with|for|beside|about|remembered) he\b/g, '$1 him')
     .replace(/\b(of|to|with|for|beside|about|remembered) she\b/g, '$1 her')
+    .replace(/(?<!\.)\.[ ]*\.(?!\.)/g, '.') // pieces joined at a stop
+    .replace(/([.!?]["')]?[ ]+)([a-z])/g, (_, gap, c) => gap + c.toUpperCase()) // a new sentence after pieces are joined
     .replace(/ {2,}/g, ' ');
   return /[.!?]["')]?$/.test(singular) ? singular.replace(/^[a-z]/, (c) => c.toUpperCase()) : singular;
 }
@@ -55,6 +57,7 @@ let index = new Map(); // first bigram of a template's longest literal -> templa
 let surnames = new Map();
 let givenNames = new Map();
 let heads = null; // clipped first sentence -> English first sentence, built on first use
+let depth = 0;
 let cache = new Map();
 let catalogLoaded = false;
 const misses = new Set();
@@ -109,7 +112,7 @@ function headIndex() {
   heads = new Map();
   for (const [zh, en] of exact) {
     // exam and scheme names lose their bracketed notes and are cut short in a sentence (events.js)
-    if (/（[^（）]*）/.test(zh)) {
+    if (/[（(][^）)]*[）)]/.test(zh)) {
       const short = zh.replace(/[（(][^）)]*[）)]/g, '').replace(/\s+/g, ' ').trim();
       const name = en.replace(/\s*\([^()]*\)/g, '').trim();
       heads.set(short, name);
@@ -136,14 +139,22 @@ function fromWrapped(text) {
 
 /** A news line: 【推演】title：first sentence of the summary. */
 function fromNews(text) {
-  const m = /^(【推演】)?([^：]{2,60})：(.+)$/s.exec(text);
-  if (!m) return null;
-  // projected events name the countries they hit: 特大洪水（中国、印度）
-  const place = /^(.+)（([^（）]+)）$/.exec(m[2]);
-  const title = place && exact.has(place[1]) ? `${exact.get(place[1])} (${translate(place[2])})` : exact.get(m[2]);
-  const body =exact.get(m[3]) ?? headIndex().get(m[3]);
-  if (title === undefined || body === undefined) return null;
-  return `${m[1] ? `${exact.get('【推演】') ?? '[Projected]'} ` : ''}${title}: ${body}`;
+  const prefix = text.startsWith('【推演】') ? '【推演】' : '';
+  const line = text.slice(prefix.length);
+  // the title itself may hold a colon, so try each one
+  for (let at = line.indexOf('：'); at >= 0; at = line.indexOf('：', at + 1)) {
+    const head = line.slice(0, at);
+    const rest = line.slice(at + 1);
+    // projected events name the countries they hit: 特大洪水（中国、印度）
+    const place = /^(.+)（([^（）]+)）$/.exec(head);
+    const named = place && exact.has(place[1]) ? `${exact.get(place[1])} (${translate(place[2])})` : exact.get(head);
+    const title = named ?? translate(head);
+    if (CJK.test(title)) continue;
+    const body = exact.get(rest) ?? headIndex().get(rest) ?? translate(rest);
+    if (CJK.test(body)) continue;
+    return `${prefix ? `${exact.get('【推演】') ?? '[Projected]'} ` : ''}${title}: ${body}`;
+  }
+  return null;
 }
 
 function compile(t) {
@@ -161,9 +172,17 @@ function compileLoose(t) {
   return t.loose;
 }
 
+/** A name can end in the same character the template goes on with: 侯赛因因病…… */
+function compileGreedy(t) {
+  if (t.greedy) return t.greedy;
+  const src = t.zh.split(PLACEHOLDER).map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('([^。！？]*)');
+  t.greedy = new RegExp(`^${src}$`, 's');
+  return t.greedy;
+}
+
 /** In {0}{1} a lazy match gives everything to one capture; find the cut where both sides are known text. */
 function splitAdjacent(t, caps) {
-  const known = (s) => !CJK.test(s) || exact.has(s) || fromName(s) != null;
+  const known = (s) => !CJK.test(translate(s));
   for (let i = 0; i + 1 < caps.length; i++) {
     if (!t.zh.includes(t.names[i] + t.names[i + 1])) continue;
     const joined = caps[i] + caps[i + 1];
@@ -186,17 +205,32 @@ function fromTemplate(text) {
   };
   for (let i = 0; i < text.length; i++) { collect(text.slice(i, i + 1)); collect(text.slice(i, i + 2)); }
   found.sort((a, b) => b.weight - a.weight);
-  for (const t of found) {
-    const m = compile(t).exec(text) ?? (t.weight >= 5 ? compileLoose(t).exec(text) : null);
-    if (!m) continue;
+  const fill = (t, m) => {
     const caps = m.slice(1);
-    if (t.plainOnly && caps.some((c) => CJK.test(translate(c)))) continue;
+    if (t.plainOnly && caps.some((c) => CJK.test(translate(c)))) return null;
     splitAdjacent(t, caps);
     let out = t.en;
     t.names.forEach((name, i) => { out = out.split(name).join(translate(caps[i])); });
     return out;
+  };
+  // the first fully translated reading wins; a partial one is only kept in case nothing better turns up
+  let partial = null;
+  depth++;
+  try {
+    if (depth > 8) return null;
+    for (const t of found.slice(0, 40)) {
+      for (const m of [compile(t).exec(text), t.weight >= 4 ? compileGreedy(t).exec(text) : null, t.weight >= 4 ? compileLoose(t).exec(text) : null]) {
+        if (!m) continue;
+        const out = fill(t, m);
+        if (out == null) continue;
+        if (!CJK.test(out)) return out;
+        partial ??= out;
+      }
+    }
+  } finally {
+    depth--;
   }
-  return null;
+  return partial;
 }
 
 /** Split on a delimiter set and translate each piece; null when nothing was split off. */
@@ -212,7 +246,8 @@ function bySegments(text, splitter) {
     let joined = false;
     for (let j = parts.length - 2; j > i + 1 && !joined; j -= 2) {
       const run = parts.slice(i, j + 1).join('');
-      const hit = exact.get(run);
+      const tried = exact.get(run) ?? fromTemplate(run);
+      const hit = tried != null && !CJK.test(tried) ? tried : undefined;
       if (hit !== undefined) { out += hit + ' '; i = j; joined = true; }
     }
     if (joined) continue;
@@ -231,7 +266,7 @@ function fromName(text) {
     const parts = text.split(/[·\s]+/);
     return parts.every((p) => exact.has(p)) ? parts.map((p) => exact.get(p)).join(' ') : null;
   }
-  for (const n of [2, 1]) {
+  for (let n = Math.min(text.length - 1, 8); n >= 1; n--) {
     const sur = surnames.get(text.slice(0, n));
     const given = givenNames.get(text.slice(n));
     if (sur && given) return `${sur} ${given}`;
@@ -246,7 +281,12 @@ function translate(raw) {
   const lead = raw.match(/^\s*/)[0];
   const tail = raw.match(/\s*$/)[0];
   const text = raw.trim();
-  const result = exact.get(text) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text) ?? fromTemplate(text) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+  const stopped = /[。！？，；]$/.test(text) ? null : `${text}。`; // a clause cut from a sentence whose entry ends in a stop
+  const direct = exact.get(text) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
+  const templated = direct ?? fromTemplate(text);
+  const clean = templated != null && !CJK.test(templated) ? templated
+    : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+  const result = clean ?? templated;
   if (result == null) misses.add(text);
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);
