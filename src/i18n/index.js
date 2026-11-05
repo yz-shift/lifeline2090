@@ -162,6 +162,11 @@ function fromWrapped(text) {
   }
   const tag = /^#(\S+)$/.exec(text);
   if (tag && exact.has(tag[1])) return `#${exact.get(tag[1]).toLowerCase()}`;
+  const ages = text.split(/；(?=\d+ 岁那年，)/);
+  if (ages.length > 1) {
+    const items = ages.map((x) => translate(x));
+    if (!items.some((x) => CJK.test(x))) return items.join('; ');
+  }
   const listed = text.split(/(?<=”)、/);
   if (listed.length > 1) {
     const items = listed.map((x) => translate(x));
@@ -509,6 +514,10 @@ function translate(raw) {
   const lead = raw.match(/^\s*/)[0];
   const tail = raw.match(/\s*$/)[0];
   const text = raw.trim().replace(/『/g, '“').replace(/』/g, '”');
+  if (/^[^\u4e00-\u9fff]*\d[\d.,]* ?(万亿|亿|万)[^\u4e00-\u9fff]*$/.test(text)) {
+    const amount = finishEnglish(text);
+    if (!CJK.test(amount)) { const done = lead + amount + tail; cache.set(raw, done); return done; }
+  }
   const stopped = /[。！？，；]$/.test(text) ? null : `${text}。`; // a clause cut from a sentence whose entry ends in a stop
   const dotted = text.includes(' · ') && !exact.has(text) ? bySegments(text, DOTTED) : null;
   const direct = exact.get(text) ?? (dotted != null && !CJK.test(dotted) ? dotted : null) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);

@@ -127,3 +127,39 @@ test('catalog entries contain no Chinese and keep their placeholders', { skip: !
     assert.equal(holders(zh), holders(en), zh);
   }
 });
+
+test('an event title with inner quotes matches when written with 『』 inside 「」', () => {
+  withCatalog({ '这一年，{0}。': 'This year, {0}.', '“一带一路”倡议提出': 'The Belt and Road Initiative is proposed' }, () => {
+    assert.equal(tr('这一年，「『一带一路』倡议提出」。'), 'This year, "The Belt and Road Initiative is proposed".');
+  });
+});
+
+test('a life map headline is read from the first clause of its template', () => {
+  withCatalog({ '{0}去世了，你很难过。': '{0} died, and you grieved.', 祖母: 'Grandma' }, () => {
+    assert.equal(tr('祖母去世了'), 'Grandma died');
+  });
+});
+
+test('a half-translated label does not shut out a template', () => {
+  withCatalog({ 高考: 'Gaokao', '高考 {0} 分': 'Gaokao score: {0}' }, () => {
+    assert.equal(tr('高考 315 分'), 'Gaokao score: 315');
+  });
+});
+
+test('a bare amount counts as translated inside a template', () => {
+  withCatalog({ '收入约为 {0}。': 'Income of about {0}.' }, () => {
+    assert.equal(tr('收入约为 ؋10万。'), 'Income of about ؋100K.');
+  });
+});
+
+test('dotted pieces keep their separator', () => {
+  withCatalog({ '死亡率 ×{0}': 'Mortality ×{0}', '基尼系数 {0}': 'Gini {0}' }, () => {
+    assert.equal(tr('死亡率 ×1.01 · 基尼系数 +0.01'), 'Mortality ×1.01 · Gini +0.01');
+  });
+});
+
+test('a multi-part given name is found whole', () => {
+  withCatalog({ '厄梅尔·阿萨夫': 'Ömer Asaf', 西塞: 'Cissé' }, () => {
+    assert.equal(tr('厄梅尔·阿萨夫·西塞'), 'Ömer Asaf Cissé');
+  });
+});
