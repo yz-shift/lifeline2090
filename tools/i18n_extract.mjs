@@ -101,7 +101,7 @@ const put = (area, s) => {
   const t = s.trim();
   const currency = CURRENCY_ROW.exec(t);
   if (currency) { put(area, currency[1]); return; }
-  if (!t || !CJK.test(t) || seen.has(t) || NAME_TABLE.test(t) || /^\{0\} ?(万亿|亿|万)$/.test(t)) return; // number units are converted by finishEnglish
+  if (!t || !CJK.test(t) || seen.has(t) || NAME_TABLE.test(t) || /^https?:/.test(t) || /^\{0\} ?(万亿|亿|万)$/.test(t)) return; // number units are converted by finishEnglish
   seen.add(t);
   (areas[area] ||= []).push(t);
 };
