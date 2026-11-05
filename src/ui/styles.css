@@ -1357,6 +1357,10 @@ html:has(.g-ctrl) .ll-toasts { padding-bottom: calc(96px + env(safe-area-inset-b
 /* English labels are longer and must not break inside a word */
 html[lang^="en"] .g-cert-grid { grid-template-columns: minmax(7.5em, max-content) 1fr; }
 html[lang^="en"] .g-cert-grid dt { letter-spacing: .04em; overflow-wrap: normal; }
+html[lang^="en"] .ll-reg-name { font-size: clamp(24px, 4.6vw, 38px); overflow-wrap: break-word; }
+html[lang^="en"] .ll-reg-row:not(.ll-reg-row--wide) { grid-template-columns: minmax(7.5em, 9.5em) minmax(0, 1fr); }
+html[lang^="en"] .ll-reg-row dt { letter-spacing: .02em; overflow-wrap: normal; }
+html[lang^="en"] .ll-reg-row dd { overflow-wrap: break-word; }
 
 /* in English the main name is already the romanised one */
 html[lang^="en"] .ll-zh-only, html[lang^="en"] .ll-reg-latin, html[lang^="en"] .g-cert-latin, html[lang^="en"] .g-card-latin { display: none; }

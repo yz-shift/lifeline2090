@@ -324,8 +324,8 @@ function bySegments(text, splitter) {
     }
     if (joined) continue;
     const delim = parts[i + 1] || '';
-    const whole = delim ? p + delim.slice(0, 1) : '';
-    const full = delim ? exact.get(whole) ?? headIndex().get(whole) ?? fromTemplate(whole) : null;
+    const whole = delim && !/^\s/.test(delim) ? p + delim.slice(0, 1) : '';
+    const full = whole ? exact.get(whole) ?? headIndex().get(whole) ?? fromTemplate(whole) : null;
     if (full != null) { out += full + ' '; i++; continue; }
     out += translate(p);
   }
