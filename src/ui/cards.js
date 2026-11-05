@@ -236,7 +236,8 @@ function painter(ctx, fonts) {
     /** Largest size <= size (>= min) at which str fits maxW. */
     fit(str, kind, weight, size, min, maxW) {
       let s = size;
-      for (; s > min; s -= 2) { P.font(kind, s, weight); if (P.measure(str) <= maxW) return s; }
+      const shown = tr(String(str ?? '')); // measure what will be drawn, not the Chinese original
+      for (; s > min; s -= 2) { P.font(kind, s, weight); if (P.measure(shown) <= maxW) return s; }
       return min;
     },
     /** CJK-aware wrap with simple kinsoku; ellipsises the last allowed line. */
@@ -366,7 +367,7 @@ function drawSeal(P, cx, cy, r, { ring = '人生长河档案登记处', center =
   o.lineWidth = r * 0.02;
   o.beginPath(); o.arc(c, c, r * 0.8, 0, Math.PI * 2); o.stroke();
   // ring text along the upper arc
-  const chars = [...ring];
+  const chars = [...(isEn() ? 'LIFELINE ARCHIVE' : ring)];
   const fs = r * 0.19;
   o.font = `700 ${fs}px ${fonts.display}`;
   o.textAlign = 'center';
@@ -428,8 +429,9 @@ function drawFooter(P) {
 
 /** Labelled field: small grey label, value below. */
 function field(P, label, value, x, y, w, { size = 30, kind = 'body', weight = 500, labelSize = 20, gap = 12, min = 22 } = {}) {
-  P.text(label, x, y, { size: labelSize, color: P.pal.ink3, spacing: 2, maxW: w });
-  const v = value || '—';
+  const cap = (t) => (isEn() ? tr(t).replace(/^[a-z]/, (c) => c.toUpperCase()) : t); // a short phrase alone on the card
+  P.text(cap(label), x, y, { size: labelSize, color: P.pal.ink3, spacing: 2, maxW: w });
+  const v = cap(value || '—');
   const fitted = P.fit(v, kind, weight, size, min, w);
   P.text(v, x, y + size + gap, { kind, size: fitted, weight, color: P.pal.ink, maxW: w });
 }
@@ -570,9 +572,9 @@ export async function birthCard(state, data) {
     ['世界线', state?.worldLabel ? String(state.worldLabel) : '—'],
   ];
   const metrics = [
-    { v: isNum(births) ? cnNum(births * 1000) : '—', l: '当年本国新生儿' },
-    { v: isNum(le) ? `${le.toFixed(1)} 岁` : '—', l: `出生时预期寿命${sex === '—' ? '' : `·${sex}`}` },
-    { v: isNum(gdp) ? `${cnNum(gdp)}` : '—', l: '人均 GDP（国际元）' },
+    { v: isNum(births) ? cnNum(births * 1000) : '—', l: isEn() ? 'Births there that year' : '当年本国新生儿' },
+    { v: isNum(le) ? (isEn() ? le.toFixed(1) : `${le.toFixed(1)} 岁`) : '—', l: isEn() ? `Life expectancy${sex === '—' ? '' : sex === '女' ? ' (F)' : ' (M)'}` : `出生时预期寿命${sex === '—' ? '' : `·${sex}`}` },
+    { v: isNum(gdp) ? `${cnNum(gdp)}` : '—', l: isEn() ? 'GDP per person (int. $)' : '人均 GDP（国际元）' },
     { v: isNum(net) ? `${Math.round(net)}%` : '—', l: '互联网使用率' },
   ];
   let rarity = '';

@@ -50,6 +50,7 @@ function polishEnglish(s) {
     .replace(/\b(of|to|with|for|beside|about|remembered) he\b/g, '$1 him')
     .replace(/\b(of|to|with|for|beside|about|remembered) she\b/g, '$1 her')
     .replace(/(?<!\.)\.[ ]*\.(?!\.)/g, '.') // pieces joined at a stop
+    .replace(/\.;/g, ';')
     .replace(/([.!?]["')]?[ ]+)([a-z])/g, (_, gap, c) => gap + c.toUpperCase()) // a new sentence after pieces are joined
     .replace(/([a-z]\.)([A-Z])/g, '$1 $2') // pieces joined with no gap
     .replace(/ {2,}/g, ' ');
@@ -142,7 +143,7 @@ function headIndex() {
 function fromWrapped(text) {
   // a label and its number: 健康 76; an amount in a named currency: 3242万印度尼西亚盾
   const stat = /^(\S+) ([-−+]?[\d.,%].*)$/.exec(text);
-  if (stat && exact.has(stat[1])) return `${exact.get(stat[1])} ${translate(stat[2])}`;
+  if (stat && exact.has(stat[1]) && !CJK.test(stat[2])) return `${exact.get(stat[1])} ${translate(stat[2])}`;
   const money = /^([-−]?[\d.,]+(?:万亿|亿|万)?)\s*([^\d\s]{2,})$/.exec(text);
   if (money && exact.has(money[2])) return `${money[1]} ${exact.get(money[2])}`;
   // effect chips: 知识↑ 快乐略↓ 婚姻更稳
