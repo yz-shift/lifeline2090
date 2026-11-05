@@ -29,6 +29,8 @@ const store = {
 /** Chinese number units and bare year/age suffixes that survive inside otherwise translated text. */
 function finishEnglish(s) {
   return s
+    .replace(/(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/g, '$1-$2-$3')
+    .replace(/(\d{4})\s*年\s*(\d{1,2})\s*月/g, '$1-$2')
     .replace(/(-?\d+(?:\.\d+)?)\s*万亿/g, '$1T')
     .replace(/(-?\d+(?:\.\d+)?)\s*亿/g, (_, n) => { const v = +n * 100; return v >= 1000 ? `${+(v / 1000).toFixed(1)}B` : `${+v.toFixed(1)}M`; })
     .replace(/(-?\d+(?:\.\d+)?)\s*万/g, (_, n) => { const v = +n * 10; return v >= 1000 ? `${+(v / 1000).toFixed(1)}M` : `${+v.toFixed(1)}K`; })
@@ -153,6 +155,8 @@ function fromWrapped(text) {
     });
     if (named.every((n) => n !== undefined)) return named.join(', ');
   }
+  const tag = /^#(\S+)$/.exec(text);
+  if (tag && exact.has(tag[1])) return `#${exact.get(tag[1]).toLowerCase()}`;
   const quoted = /^「(.+)」$/s.exec(text);
   if (quoted) return `"${translate(quoted[1])}"`;
   const noted = /^(.+?)（(.+)）$/s.exec(text);
