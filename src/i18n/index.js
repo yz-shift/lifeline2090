@@ -51,6 +51,7 @@ function polishEnglish(s) {
     .replace(/\b(of|to|with|for|beside|about|remembered) she\b/g, '$1 her')
     .replace(/(?<!\.)\.[ ]*\.(?!\.)/g, '.') // pieces joined at a stop
     .replace(/([.!?]["')]?[ ]+)([a-z])/g, (_, gap, c) => gap + c.toUpperCase()) // a new sentence after pieces are joined
+    .replace(/([a-z]\.)([A-Z])/g, '$1 $2') // pieces joined with no gap
     .replace(/ {2,}/g, ' ');
   return /[.!?]["')]?$/.test(singular) ? singular.replace(/^[a-z]/, (c) => c.toUpperCase()) : singular;
 }
@@ -77,7 +78,7 @@ function addTemplate(zh, en) {
   if (at < 0) return;
   const key = longest.slice(at, at + 2);
   const t = {
-    zh, en, weight: cjkCount(literals.join('')), names: zh.match(PLACEHOLDER), re: null,
+    zh, en, literals: literals.filter(Boolean), weight: cjkCount(literals.join('')), names: zh.match(PLACEHOLDER), re: null,
     // A one-character literal such as "{0} 岁" is only trusted when the capture is a number or other non-Chinese text.
     plainOnly: cjkCount(literals.join('')) < 2,
   };
@@ -199,6 +200,13 @@ function compileLoose(t) {
   return t.loose;
 }
 
+function compileLooseGreedy(t) {
+  if (t.looseGreedy) return t.looseGreedy;
+  const src = t.zh.split(PLACEHOLDER).map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.*)');
+  t.looseGreedy = new RegExp(`^${src}$`, 's');
+  return t.looseGreedy;
+}
+
 /** A name can end in the same character the template goes on with: 侯赛因因病…… */
 function compileGreedy(t) {
   if (t.greedy) return t.greedy;
@@ -243,7 +251,7 @@ function splitAdjacent(t, caps) {
   for (let i = 0; i + 1 < caps.length; i++) {
     if (!t.zh.includes(t.names[i] + t.names[i + 1])) continue;
     const joined = caps[i] + caps[i + 1];
-    for (let k = 1; k < joined.length; k++) {
+    for (let k = joined.length - 1; k >= 1; k--) {
       if (known(joined.slice(0, k)) && known(joined.slice(k))) {
         caps[i] = joined.slice(0, k);
         caps[i + 1] = joined.slice(k);
@@ -262,7 +270,8 @@ function fromTemplate(text) {
     if (list && !seen.has(key)) { seen.add(key); found.push(...list); }
   };
   for (let i = 0; i < text.length; i++) { collect(text.slice(i, i + 1)); collect(text.slice(i, i + 2)); }
-  found.sort((a, b) => b.weight - a.weight);
+  const possible = found.filter((t) => t.literals.every((l) => text.includes(l)));
+  possible.sort((a, b) => b.weight - a.weight);
   const fill = (t, m) => {
     const caps = m.slice(1);
     if (t.plainOnly && caps.some((c) => CJK.test(translate(c)))) return null;
@@ -276,8 +285,8 @@ function fromTemplate(text) {
   depth++;
   try {
     if (depth > 8) return null;
-    for (const t of found.slice(0, 40)) {
-      for (const m of [compile(t).exec(text), t.weight >= 4 ? compileGreedy(t).exec(text) : null, t.weight >= 4 && (/[。！？]./.test(t.zh) || t.zh.includes('「')) ? compileLoose(t).exec(text) : null]) {
+    for (const t of possible.slice(0, 40)) {
+      for (const m of [compile(t).exec(text), t.weight >= 4 ? compileGreedy(t).exec(text) : null, ...(t.weight >= 4 && (/[。！？]./.test(t.zh) || t.zh.includes('「')) ? [compileLoose(t).exec(text), compileLooseGreedy(t).exec(text)] : [])]) {
         if (!m) continue;
         const out = fill(t, m);
         if (out == null) continue;
@@ -302,6 +311,11 @@ function bySegments(text, splitter) {
     if (i % 2) { out += p; continue; }
     // a catalog entry can span several sentences: try the longest run first
     let joined = false;
+    if (i > 0 && i + 2 < parts.length) {
+      const rest = parts.slice(i).join('');
+      const tail = exact.get(rest) ?? fromTemplate(rest);
+      if (tail != null && !CJK.test(tail)) return `${out}${tail}`;
+    }
     for (let j = parts.length - 2; j > i + 1 && !joined; j -= 2) {
       const run = parts.slice(i, j + 1).join('');
       const tried = exact.get(run) ?? fromTemplate(run);
@@ -322,11 +336,24 @@ function bySegments(text, splitter) {
 function fromName(text) {
   if (/[·\s]/.test(text)) {
     const parts = text.split(/[·\s]+/);
-    return parts.every((p) => exact.has(p)) ? parts.map((p) => exact.get(p)).join(' ') : null;
+    const named = [];
+    for (let i = 0; i < parts.length;) {
+      let j = parts.length;
+      while (j > i && !exact.has(parts.slice(i, j).join('·'))) j--;
+      if (j === i) return null;
+      named.push(exact.get(parts.slice(i, j).join('·')));
+      i = j;
+    }
+    return named.join(' ');
   }
   for (let n = Math.min(text.length - 1, 8); n >= 1; n--) {
     const sur = surnames.get(text.slice(0, n));
     const given = givenNames.get(text.slice(n));
+    if (sur && given) return `${sur} ${given}`;
+  }
+  for (let n = Math.min(text.length - 1, 3); n >= 2; n--) {
+    const given = givenNames.get(text.slice(n));
+    const sur = surnames.get(text[0]);
     if (sur && given) return `${sur} ${given}`;
   }
   return null;
@@ -338,11 +365,11 @@ function translate(raw) {
   if (hit !== undefined) return hit;
   const lead = raw.match(/^\s*/)[0];
   const tail = raw.match(/\s*$/)[0];
-  const text = raw.trim();
+  const text = raw.trim().replace(/『/g, '“').replace(/』/g, '”');
   const stopped = /[。！？，；]$/.test(text) ? null : `${text}。`; // a clause cut from a sentence whose entry ends in a stop
   const dotted = text.includes(' · ') && !exact.has(text) ? bySegments(text, DOTTED) : null;
   const direct = exact.get(text) ?? (dotted != null && !CJK.test(dotted) ? dotted : null) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
-  const templated = direct ?? fromTemplate(text);
+  const templated = (direct != null && !CJK.test(direct) ? direct : null) ?? fromTemplate(text) ?? direct;
   const clean = templated != null && !CJK.test(templated) ? templated
     : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? fromPrefix(text) ?? fromNamed(text) ?? dotted ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   const result = clean ?? templated;
