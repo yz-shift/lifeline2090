@@ -53,6 +53,7 @@ function polishEnglish(s) {
     .replace(/\.;/g, ';')
     .replace(/([.!?]["')]?[ ]+)([a-z])/g, (_, gap, c) => gap + c.toUpperCase()) // a new sentence after pieces are joined
     .replace(/([a-z]\.)([A-Z])/g, '$1 $2') // pieces joined with no gap
+    .replace(/\b([Yy]our) (Big|Little|Older|Younger) /g, (_, y, w) => `${y} ${w.toLowerCase()} `)
     .replace(/ {2,}/g, ' ');
   return /[.!?]["')]?$/.test(singular) ? singular.replace(/^[a-z]/, (c) => c.toUpperCase()) : singular;
 }
@@ -174,6 +175,7 @@ function fromWrapped(text) {
 function fromNews(text) {
   const prefix = text.startsWith('【推演】') ? '【推演】' : '';
   const line = text.slice(prefix.length);
+  if (/^\d{4} 年，\d+ 岁，/.test(line)) return null; // a life map label has its own template
   // the title itself may hold a colon, so try each one
   for (let at = line.indexOf('：'); at >= 0; at = line.indexOf('：', at + 1)) {
     const head = line.slice(0, at);
@@ -251,10 +253,17 @@ function fromClause(text) {
     const stop = t.zh.search(/[，。：；！？]/);
     if (stop < 2) continue;
     const head = t.zh.slice(0, stop);
-    const clause = /^[^,.;:!?]*/.exec(t.en)[0].trim();
+    let clause = /^[^,.;:!?]*/.exec(t.en)[0].trim();
     if (!clause) continue;
     const names = head.match(PLACEHOLDER) || [];
-    if (!(clause.match(PLACEHOLDER) || []).every((n) => names.includes(n))) continue;
+    if (!(clause.match(PLACEHOLDER) || []).every((n) => names.includes(n)) || (clipped && t.zh.startsWith(start) && names.length)) {
+      // the English goes on to a slot this text never got to: stop short of it
+      const cut = clause.search(PLACEHOLDER);
+      PLACEHOLDER.lastIndex = 0;
+      const hasHead = clipped ? t.zh.startsWith(start) : head === start;
+      if (!hasHead || cut < 8) continue;
+      return `${clause.slice(0, cut).trim()}…`;
+    }
     if (!names.length) {
       if (clipped ? t.zh.startsWith(start) : head === start) return clause;
       continue;
@@ -272,6 +281,35 @@ function fromClause(text) {
       out = out.split(name).join(piece);
     });
     if (clean) return out;
+  }
+  return clipped ? fromCutTemplate(start) : null;
+}
+
+/** A label cut in the middle of a template, after some of its slots: 你的姐姐玛丽·里希特因病离开… */
+function fromCutTemplate(start) {
+  const esc = (x) => x.replace(/[.*+?^${}()|[]\]/g, '\$&');
+  for (const t of allTemplates) {
+    if (!t.literals.length || !start.startsWith(t.zh.split(PLACEHOLDER)[0])) continue;
+    const lits = t.zh.split(PLACEHOLDER);
+    for (let k = 1; k < lits.length; k++) {
+      const next = lits[k];
+      if (cjkCount(next) < 2) continue;
+      const m = new RegExp(`^${lits.slice(0, k).map(esc).join('(.+?)')}(.+)$`, 's').exec(start);
+      if (!m) continue;
+      const caps = m.slice(1);
+      const last = caps[caps.length - 1];
+      let cut = 0;
+      for (let n = Math.min(next.length, last.length - 1); n >= 2 && !cut; n--) if (next.startsWith(last.slice(-n))) cut = n;
+      if (!cut) continue;
+      caps[caps.length - 1] = last.slice(0, -cut);
+      splitAdjacent(t, caps);
+      const clause = /^[^,.;:!?]*/.exec(t.en)[0].trim();
+      const filled = t.names.slice(0, k);
+      if (!(clause.match(PLACEHOLDER) || []).every((n) => filled.includes(n))) continue;
+      let out = clause;
+      filled.forEach((name, i) => { out = out.split(name).join(translate(caps[i])); });
+      if (!CJK.test(out)) return out;
+    }
   }
   return null;
 }
@@ -431,7 +469,10 @@ function translate(raw) {
 
 /** Text as the player should read it in the current language. */
 export function tr(text) {
-  if (lang === 'zh' || typeof text !== 'string' || !CJK.test(text)) return text;
+  if (lang === 'zh' || typeof text !== 'string') return text;
+  if (text === '「') return '“'; // quote marks written as their own text node, around an epitaph
+  if (text === '」') return '”';
+  if (!CJK.test(text)) return text;
   const out = finishEnglish(translate(text));
   if (CJK.test(out)) misses.add(text);
   if (out === text) return text;
