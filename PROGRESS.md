@@ -2,6 +2,13 @@
 
 > 进度日志。新的写在最上面；只追加，不删改旧记录。
 
+## 2026-11-05 16:30 · T-002 · 进行中
+- 做了：加了翻译层（引擎和存档仍是中文，显示时才翻译，同一种子两种语言人生相同，旧存档也能看英文）；页头和设置页加了中文/English 切换；提取工具收集到约 1.9 万条要翻译的文字；界面文字 1936 条译完
+- 改了：src/i18n/（新增）、src/ui/langSwitch.js（新增）、tools/i18n_extract.mjs、tools/i18n_batch.mjs、tools/serve.mjs（新增）、i18n/、data/i18n_en.json、tests/i18n.test.mjs、src/main.js、src/ui/（dom、app、cards、charts、settings 等）
+- 验证：npm test 见本次提交；浏览器里切到 English，首页和导航是英文、切换不用刷新、页面没有横向溢出
+- 问题：剧情、历史事件、国家名和姓名还没译，所以英文模式目前是中英混杂；本地 python http.server 不带字符集会让页面打不开，npm run serve 已换成 tools/serve.mjs
+- 下一步：翻译剩余约 30 万字（等用户决定方式），加英文自由输入，模拟多局查漏
+
 ## 2026-10-30 18:10 · 源码上 GitHub + 自动部署 · 完成
 - 做了：用户同意上线。CI 加了部署步骤（测试通过才部署），Pages 从 `site-legacy` 分支切到 GitHub Actions；10-27 的"人生长卷"海报和高考分数随之上线
 - 改了：.github/workflows/ci.yml

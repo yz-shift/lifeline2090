@@ -47,7 +47,7 @@ export function formatValue(v, unit = '') {
   const a = Math.abs(v);
   let t;
   if (a >= 1e4) t = fmt.cn(v);
-  else if (a >= 100) t = Math.round(v).toLocaleString('zh-CN');
+  else if (a >= 100) t = fmt.int(v);
   else if (a >= 10) t = trimZeros(v.toFixed(1));
   else t = trimZeros(v.toFixed(2));
   return t + unit;

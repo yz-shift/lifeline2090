@@ -1,6 +1,8 @@
 // Tiny DOM helpers shared by every UI module. Never put untrusted text (AI output, shared db data, user input)
 // into innerHTML: h() sets text via textContent.
 
+import { isEn, locale } from '../i18n/index.js';
+
 /**
  * h('div.card#id', {onclick, class, style, dataset, attrs...}, ...children)
  * children: strings (text nodes), nodes, arrays, null/false (skipped)
@@ -60,16 +62,22 @@ export function s(tag, attrs = {}, ...children) {
 }
 
 export const fmt = {
-  int: (n) => (n == null || !isFinite(n) ? '—' : Math.round(n).toLocaleString('zh-CN')),
+  int: (n) => (n == null || !isFinite(n) ? '—' : Math.round(n).toLocaleString(locale())),
   num: (n, d = 1) => (n == null || !isFinite(n) ? '—' : Number(n).toFixed(d)),
   pct: (n, d = 0) => (n == null || !isFinite(n) ? '—' : `${Number(n).toFixed(d)}%`),
   /** large numbers in Chinese units: 1.2万, 3.4亿 */
   cn: (n) => {
     if (n == null || !isFinite(n)) return '—';
     const a = Math.abs(n);
+    if (isEn()) {
+      if (a >= 1e9) return `${+(n / 1e9).toFixed(1)}B`;
+      if (a >= 1e6) return `${+(n / 1e6).toFixed(1)}M`;
+      if (a >= 1e4) return `${+(n / 1e3).toFixed(a >= 1e5 ? 0 : 1)}K`;
+      return Math.round(n).toLocaleString(locale());
+    }
     if (a >= 1e8) return (n / 1e8).toFixed(a >= 1e9 ? 0 : 1) + '亿';
     if (a >= 1e4) return (n / 1e4).toFixed(a >= 1e5 ? 0 : 1) + '万';
-    return Math.round(n).toLocaleString('zh-CN');
+    return Math.round(n).toLocaleString(locale());
   },
   age: (a) => `${Math.floor(a)} 岁`,
   year: (y) => `${y} 年`,

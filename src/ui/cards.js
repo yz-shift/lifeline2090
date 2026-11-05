@@ -12,6 +12,8 @@
 
 import { hashString, Rng } from '../core/rng.js';
 import { qrMatrix } from './qr.js';
+import { fmt } from './dom.js';
+import { tr, isEn, locale } from '../i18n/index.js';
 import {
   YEAR_TAGS, YEAR_TAG_LABELS, STATS, STAT_LABELS, EDU_LABELS, CAREER_LABELS, RELATIONSHIP_LABELS, REGIONS, HISTORY_END,
 } from '../core/constants.js';
@@ -52,10 +54,11 @@ const num = (v) => (v == null || v === '' ? null : isNum(Number(v)) ? Number(v) 
 
 function cnNum(n) {
   if (!isNum(n)) return '—';
+  if (isEn()) return fmt.cn(n);
   const a = Math.abs(n);
   if (a >= 1e8) return `${(n / 1e8).toFixed(a >= 1e9 ? 0 : 1)}亿`;
   if (a >= 1e4) return `${(n / 1e4).toFixed(a >= 1e5 ? 0 : 1)}万`;
-  return Math.round(n).toLocaleString('zh-CN');
+  return Math.round(n).toLocaleString(locale());
 }
 
 function dateParts(date, fallbackYear) {
@@ -224,7 +227,7 @@ function painter(ctx, fonts) {
       ctx.fillStyle = color;
       ctx.textAlign = align;
       ctx.textBaseline = 'alphabetic';
-      const s = P.clip(str, maxW);
+      const s = P.clip(tr(String(str ?? '')), maxW);
       ctx.fillText(s, x, y);
       const w = P.measure(s);
       P.spacing(0);
@@ -240,7 +243,7 @@ function painter(ctx, fonts) {
     wrap(str, maxW, maxLines, kind = 'body', size = 24, weight = 400) {
       P.font(kind, size, weight);
       const lines = [];
-      for (const para of String(str ?? '').split(/\n+/)) {
+      for (const para of tr(String(str ?? '')).split(/\n+/)) {
         const toks = tokenize(para.trim());
         let line = '';
         for (const tok of toks) {
@@ -382,11 +385,11 @@ function drawSeal(P, cx, cy, r, { ring = '人生长河档案登记处', center =
   o.fill();
   if (center) {
     o.font = `700 ${r * 0.2}px ${fonts.display}`;
-    o.fillText(center, c, c + r * 0.27);
+    o.fillText(tr(center), c, c + r * 0.27);
   }
   if (bottom) {
     o.font = `600 ${r * 0.13}px ${fonts.mono}`;
-    o.fillText(bottom, c, c + r * 0.52);
+    o.fillText(tr(bottom), c, c + r * 0.52);
   }
   // wear: punch tiny gaps so it reads as an inked stamp, not a vector badge
   const rng = new Rng(seed);

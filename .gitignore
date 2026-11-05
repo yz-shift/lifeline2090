@@ -7,3 +7,4 @@ tests/screens/
 __pycache__/
 *.pyc
 .env
+i18n/.batch/

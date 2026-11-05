@@ -25,7 +25,9 @@ import * as feedback from './screens/feedback.js';
 import * as stories from './screens/stories.js';
 import * as album from './screens/album.js';
 import * as familyPanel from './screens/family.js';
-import * as moneyPanel from './screens/money.js';
+import * as moneyPanel from './screens/money.js';
+import { tr, locale } from '../i18n/index.js';
+import { langSwitch } from './langSwitch.js';
 
 /** How automatic choices lean (CONTRACT §10 settings.autoTexture). Shown in settings and on the home screen. */
 export const AUTO_TEXTURES = Object.freeze([
@@ -292,7 +294,7 @@ function compareFields({ id = 'll-cmp', data = null, iso = null, year = null, on
   const sel = h('select.ll-select.ll-cmp-country', { id: id + '-c' },
     h('option', { value: '' }, '不想选择'),
     order.map((r) => h('optgroup', { label: r ? REGIONS[r] : '其他' },
-      groups.get(r).sort((a, b) => nameOf(a).localeCompare(nameOf(b), 'zh-CN')).map((c) => h('option', { value: c }, nameOf(c))))));
+      groups.get(r).sort((a, b) => tr(nameOf(a)).localeCompare(tr(nameOf(b)), locale())).map((c) => h('option', { value: c }, nameOf(c))))));
   const yr = h('input.ll-input.ll-cmp-year', {
     id: id + '-y', type: 'number', inputmode: 'numeric', min: COMPARE_YEAR_MIN, max: COMPARE_YEAR_MAX, step: 1,
     placeholder: '例如 1998', 'aria-describedby': id + '-yh',
@@ -589,7 +591,7 @@ export function createApp(root, { data, ai = {}, social = {}, snapshot = null } 
   const menuStatus = h('div.ll-menu-status');
   const menu = h('div#ll-menu.ll-menu', { hidden: true }, h('div.ll-menu-in', h('p.ll-menu-title', '卷宗目录'), menuLinks, menuStatus));
   const header = h('header.ll-header',
-    h('div.ll-header-in', backBtn, brand, h('div.ll-header-sp'), lifePill, aiChip, socialChip, nav, menuBtn),
+    h('div.ll-header-in', backBtn, brand, h('div.ll-header-sp'), lifePill, aiChip, socialChip, nav, langSwitch(), menuBtn),
     menu);
   const main = h('main#ll-main.ll-main', { tabindex: '-1' });
   const foot = h('footer.ll-foot', h('div.ll-foot-in',

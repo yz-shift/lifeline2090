@@ -4,7 +4,8 @@
 import { h, clear, storage } from '../dom.js';
 import { REGIONS } from '../../core/constants.js';
 import { initSocial, setDataSource, subscribeShared, filterLives, ERAS } from '../../social/store.js';
-import { lifeCard, renderLifeDetail, liveBanner, emptyState } from './lifeDetail.js';
+import { lifeCard, renderLifeDetail, liveBanner, emptyState } from './lifeDetail.js';
+import { tr, locale } from '../../i18n/index.js';
 
 const FILTER_KEY = 'll2090.social.filters';
 const PAGE = 24;
@@ -99,7 +100,7 @@ export function mount(root, params = {}, app) {
     const cc = countBy(pool, 'country');
     const countries = Array.from(names.entries())
       .filter(([iso]) => iso)
-      .sort((a, b) => (cc.get(b[0]) - cc.get(a[0])) || a[1].localeCompare(b[1], 'zh-CN'))
+      .sort((a, b) => (cc.get(b[0]) - cc.get(a[0])) || tr(a[1]).localeCompare(tr(b[1]), locale()))
       .map(([iso, name]) => ({ value: iso, label: `${name}（${cc.get(iso)}）` }));
     if (filters.country && !names.has(filters.country)) {
       const name = (app && app.data && typeof app.data.country === 'function' && app.data.country(filters.country)?.name) || filters.country;

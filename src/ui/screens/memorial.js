@@ -101,7 +101,7 @@ export function mount(root, params = {}, app) {
     }
     sortBar.hidden = false;
     const candles = lives.reduce((sum, l) => sum + (l.candles || 0), 0);
-    totals.textContent = `${lives.length} 段人生安放于此 · ${candles >= 1000 ? candles.toLocaleString('zh-CN') : candles} 支烛光` + (meta.error ? `（${meta.error}）` : '');
+    totals.textContent = `${lives.length} 段人生安放于此 · ${candles >= 1000 ? fmt.int(candles) : candles} 支烛光` + (meta.error ? `（${meta.error}）` : '');
     const list = sortLives(lives, sort);
     for (const life of list.slice(0, shown)) grid.appendChild(plaque(life, (l) => openDetail(l, true)));
     more.hidden = list.length <= shown;

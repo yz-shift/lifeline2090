@@ -8,6 +8,8 @@ import * as dataMod from './core/data.js';
 import * as aiMod from './ai/claude.js';
 import * as socialMod from './social/store.js';
 import { createApp } from './ui/app.js';
+import { initLang, loadLang } from './i18n/index.js';
+import { installDomTranslator } from './i18n/dom.js';
 
 const FILES = [
   { name: 'countries.json', label: '各国人口与经济指标', src: '联合国 WPP 2024 · 世界银行 WDI', est: 2363000 },
@@ -19,6 +21,9 @@ const SERVICE_WAIT_MS = 2500; // longest the loader waits for AI / sharing befor
 const HOT_WAIT_MS = 1500;     // longest boot waits for a hot-reload snapshot (data loading normally takes longer)
 
 let currentApp = null;
+
+initLang();
+const refreshLanguage = installDomTranslator();
 
 function fmtMB(bytes) {
   return (bytes / 1048576).toFixed(bytes >= 10485760 ? 0 : 1);
@@ -182,7 +187,9 @@ async function boot(snapshotSource) {
   const loader = loaderView(root);
   let data;
   try {
+    const catalog = loadLang().then(refreshLanguage, (e) => console.error('English text unavailable', e));
     data = await loadAllData(loader);
+    await catalog;
     loader.finishAll();
   } catch (e) {
     console.error(e);

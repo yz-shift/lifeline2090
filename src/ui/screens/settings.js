@@ -6,6 +6,7 @@
 import { h, clear, storage, bus } from '../dom.js';
 import { STORAGE_KEYS, AI_MODES, LIFE_LENGTH_OPTIONS, DECISION_FREQUENCY, DECISION_AGES } from '../../core/constants.js';
 import * as saves from '../../social/saves.js';
+import { langSwitch } from '../langSwitch.js';
 
 // same values as DEFAULT_SETTINGS in app.js (app.defaults is preferred; not imported: app.js imports this screen)
 const RESET_SETTINGS = {
@@ -193,6 +194,7 @@ export function mount(root, params, app) {
       section('ll-set-sec-freq', '抉择频率', '人生中停下来让你做选择的次数。战争、失业、重病等突发情况会另外触发抉择；每年的重心和一些小事随时可以自己定。', freqG, autoSw, textureG),
       section('ll-set-sec-tone', '节奏与氛围', '这些只改变人生怎样呈现给你，不改变它按真实数据推演的方式。', reflectSw, gentleSw, musicSw),
       cmpF ? section('ll-set-sec-cmp', '和你自己的出生地对照', '可以不填。填了以后，一生结束时会把你实际出生的地方和这一生的出生地放在一起看看。', cmpF) : null,
+      section('ll-set-sec-lang', '语言', null, langSwitch({ wide: true })),
       section('ll-set-sec-theme', '外观', null, themeG),
       section('ll-set-sec-data', '本机数据', '存档只保存在这个浏览器里，换设备或清除浏览器数据后不会保留。可以在“前世纪录”里导出备份。',
         h('dl.ll-set-data',

@@ -17,7 +17,7 @@ function writeHtml() {
   const css = cssFiles.map((p) => '/* ' + p.slice(root.length + 1).split('\\').join('/') + ' */\n' + readFileSync(p, 'utf8')).join('\n');
   const html = tpl.replace('/*__STYLES__*/', css);
   writeFileSync(join(dist, 'index.html'), html);
-  for (const f of ['countries.json', 'mortality.json', 'content.json']) {
+  for (const f of ['countries.json', 'mortality.json', 'content.json', 'i18n_en.json']) {
     const src = join(root, 'data', f);
     if (existsSync(src)) copyFileSync(src, join(dist, 'data', f));
   }
