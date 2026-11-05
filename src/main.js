@@ -8,7 +8,7 @@ import * as dataMod from './core/data.js';
 import * as aiMod from './ai/claude.js';
 import * as socialMod from './social/store.js';
 import { createApp } from './ui/app.js';
-import { initLang, loadLang, englishOf } from './i18n/index.js';
+import { initLang, loadLang, englishOf, missedStrings } from './i18n/index.js';
 import { installDomTranslator } from './i18n/dom.js';
 
 const FILES = [
@@ -23,6 +23,7 @@ const HOT_WAIT_MS = 1500;     // longest boot waits for a hot-reload snapshot (d
 let currentApp = null;
 
 initLang();
+if (typeof window !== 'undefined') window.ll2090Untranslated = missedStrings; // for checking coverage from the console
 const refreshLanguage = installDomTranslator();
 
 function fmtMB(bytes) {

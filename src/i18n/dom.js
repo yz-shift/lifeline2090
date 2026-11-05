@@ -19,9 +19,16 @@ function renderText(node) {
   const st = textState.get(node);
   const orig = st && st.shown === current ? st.orig : current;
   if (!st && !CJK.test(orig)) return;
-  const shown = tr(orig);
+  const shown = labelCase(node, tr(orig));
   textState.set(node, { orig, shown });
   if (shown !== current) node.nodeValue = shown;
+}
+
+/** A short phrase alone in its element is a label, and the catalog may hold it in sentence case: city -> City. */
+function labelCase(node, text) {
+  if (!/^[a-z]/.test(text) || text.split(' ').length > 3) return text;
+  if (getLang() !== 'en' || node.parentNode?.childNodes.length !== 1) return text;
+  return text[0].toUpperCase() + text.slice(1);
 }
 
 function renderAttrs(el) {

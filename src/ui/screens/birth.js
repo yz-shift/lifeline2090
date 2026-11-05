@@ -342,7 +342,7 @@ export function mount(root, params, app) {
     const rows = [
       ['性别', SEX_LABEL[sex]],
       ['出生时间', h('span.ll-num', dateWords(spec.date, spec.time))],
-      ['出生地', h('span', cname(data, iso), h('span.ll-reg-en', ` ${country.en || ''} · ${iso}`))],
+      ['出生地', h('span', cname(data, iso), h('span.ll-reg-en', h('span.ll-zh-only', ` ${country.en || ''}`), ` · ${iso}`))],
       ['所在地区', REGIONS[country.region] || country.subregion || '—'],
       ['城乡', (spec.urban ? '城市' : '农村') + (spec.city ? ` · ${spec.city}` : '')],
       ['家庭经济', h('span', familyWords(spec.familyPct),
@@ -691,7 +691,7 @@ export function mount(root, params, app) {
       if (form.country) {
         const c = data.countries[form.country] || {};
         chosen.append(
-          h('span.ll-combo-pick', h('b', c.name || form.country), h('span.ll-combo-en', ` ${c.en || ''} · ${form.country}`),
+          h('span.ll-combo-pick', h('b', c.name || form.country), h('span.ll-combo-en', h('span.ll-zh-only', ` ${c.en || ''}`), ` · ${form.country}`),
             aiFields.has('country') ? aiTag() : null),
           h('button.ll-btn.ll-btn--ghost.ll-btn--small', {
             type: 'button', onclick: () => { form.country = null; touched.add('country'); aiFields.delete('country'); saveDraft(); paintChosen(); input.focus(); },

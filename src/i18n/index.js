@@ -13,6 +13,7 @@ export const LANGS = [{ id: 'zh', label: '中文' }, { id: 'en', label: 'English
 
 const CJK = /[一-鿿]/;
 const SENTENCE = /([。！？；\n]+)/;
+const DOTTED = /( · )/;
 const CLAUSE = /([，、：]+)/;
 const PLACEHOLDER = /\{\w+\}/g;
 const PUNCT = [
@@ -40,6 +41,7 @@ function polishEnglish(s) {
   const singular = s
     .replace(/(?<![\d.,])1 children\b/g, '1 child')
     .replace(/(?<![\d.,])1 lives\b/g, '1 life')
+    .replace(/(?<![\d.,])1 people\b/g, '1 person')
     .replace(/(?<![\d.,])1 ([a-z]+[^s\W])s\b/g, '1 $1')
     .replace(/([a-z0-9%])\(/g, '$1 (') // a note joined on from a separate string
     .replace(/\b([Aa]) (?=[aeio]|un[^iv]|ho(?:ur|nest))/g, '$1n ') // a/an depends on what was filled in
@@ -58,6 +60,7 @@ let surnames = new Map();
 let givenNames = new Map();
 let heads = null; // clipped first sentence -> English first sentence, built on first use
 let depth = 0;
+let scanning = 0;
 let cache = new Map();
 let catalogLoaded = false;
 const misses = new Set();
@@ -87,11 +90,15 @@ export function setCatalog(map, { merge = false } = {}) {
   for (const [zh, en] of Object.entries(map)) {
     if (zh.startsWith('@s:')) surnames.set(zh.slice(3), en);
     else if (zh.startsWith('@g:')) givenNames.set(zh.slice(3), en);
-    else if (PLACEHOLDER.test(zh)) addTemplate(zh, en);
+    else if (PLACEHOLDER.test(zh)) {
+      addTemplate(zh, en);
+      // a piece that joins on to the sentence before it: ；每 1000 个…… is also met without its lead-in
+      if (/^[。；，]/.test(zh)) addTemplate(zh.slice(1), en.replace(/^[.;,\s]+/, ''));
+    }
     else {
       exact.set(zh, en);
       // "。那一年……" joins on to the sentence before it, and splitting into sentences loses the leading stop.
-      if (zh[0] === '。') exact.set(zh.slice(1), en.replace(/^[.\s]+/, ''));
+      if (/^[。；，]/.test(zh)) exact.set(zh.slice(1), en.replace(/^[.;,\s]+/, ''));
     }
     PLACEHOLDER.lastIndex = 0;
   }
@@ -130,6 +137,22 @@ function headIndex() {
 
 /** Text wrapped by the engine at run time: 「title」 and cause（detail）. */
 function fromWrapped(text) {
+  // a label and its number: 健康 76; an amount in a named currency: 3242万印度尼西亚盾
+  const stat = /^(\S+) ([-−+\d.,%]+)$/.exec(text);
+  if (stat && exact.has(stat[1])) return `${exact.get(stat[1])} ${stat[2]}`;
+  const money = /^(-?[\d.,]+(?:万亿|亿|万)?)\s*([^\d\s]{2,})$/.exec(text);
+  if (money && exact.has(money[2])) return `${money[1]} ${exact.get(money[2])}`;
+  // effect chips: 知识↑ 快乐略↓ 婚姻更稳
+  const chips = text.split(' ');
+  if (chips.length > 1 || /[↑↓]$/.test(text)) {
+    const named = chips.map((c) => {
+      const m = /^(\S+?)(略)?([↑↓])$/.exec(c);
+      if (!m) return exact.get(c);
+      const label = exact.get(m[1]);
+      return label ? `${label} ${m[2] ? 'slightly ' : ''}${m[3]}` : undefined;
+    });
+    if (named.every((n) => n !== undefined)) return named.join(', ');
+  }
   const quoted = /^「(.+)」$/s.exec(text);
   if (quoted) return `"${translate(quoted[1])}"`;
   const noted = /^(.+?)（(.+)）$/s.exec(text);
@@ -180,9 +203,27 @@ function compileGreedy(t) {
   return t.greedy;
 }
 
+/**
+ * Short labels cut an entry at its first clause, or after so many characters: 你开始怕黑 / 一位老师发现你的作业本总是写到….
+ * Slow, so only for a whole piece of text and never while trying out splits.
+ */
+function fromPrefix(text) {
+  if (scanning || depth > 1 || text.length < 4) return null;
+  const clipped = text.endsWith('…');
+  const start = clipped ? text.replace(/…+$/, '') : text;
+  for (const [zh, en] of exact) {
+    if (!zh.startsWith(start) || zh.length === start.length) continue;
+    if (!clipped && !/[，。：；！？]/.test(zh[start.length])) continue;
+    const m = /^.*?[.!?;](?=\s|$)/s.exec(en);
+    return (m ? m[0] : en).replace(/[.;]$/, '');
+  }
+  return null;
+}
+
 /** In {0}{1} a lazy match gives everything to one capture; find the cut where both sides are known text. */
 function splitAdjacent(t, caps) {
   const known = (s) => !CJK.test(translate(s));
+  scanning++;
   for (let i = 0; i + 1 < caps.length; i++) {
     if (!t.zh.includes(t.names[i] + t.names[i + 1])) continue;
     const joined = caps[i] + caps[i + 1];
@@ -194,6 +235,7 @@ function splitAdjacent(t, caps) {
       }
     }
   }
+  scanning--;
 }
 
 function fromTemplate(text) {
@@ -285,9 +327,8 @@ function translate(raw) {
   const direct = exact.get(text) ?? headIndex().get(text) ?? fromName(text) ?? fromWrapped(text) ?? fromNews(text);
   const templated = direct ?? fromTemplate(text);
   const clean = templated != null && !CJK.test(templated) ? templated
-    : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+    : (stopped ? exact.get(stopped) ?? fromTemplate(stopped) : null) ?? fromPrefix(text) ?? bySegments(text, DOTTED) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   const result = clean ?? templated;
-  if (result == null) misses.add(text);
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);
   return out;
@@ -297,9 +338,10 @@ function translate(raw) {
 export function tr(text) {
   if (lang === 'zh' || typeof text !== 'string' || !CJK.test(text)) return text;
   const out = finishEnglish(translate(text));
+  if (CJK.test(out)) misses.add(text);
   if (out === text) return text;
   const tidy = polishEnglish(PUNCT.reduce((s, [re, to]) => s.replace(re, to), out));
-  return /\s$/.test(text) ? tidy : tidy.trimEnd();
+  return /[\s，：]$/.test(text) ? tidy : tidy.trimEnd(); // a clause ending in a comma runs on into the next piece
 }
 
 /** The catalog's English for an exact string, whatever the current language; used to recognise typed place names. */
