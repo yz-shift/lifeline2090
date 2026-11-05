@@ -162,6 +162,8 @@ walkData(content.econ, (s) => put('data_misc', s));
 walkData(JSON.parse(readFileSync(join(root, 'data/countries.json'), 'utf8')).countries, (s, k) => { if (k === 'name') put('countries', s); });
 walkData(JSON.parse(readFileSync(join(root, 'web_seed/seed.json'), 'utf8')), (s) => put('seed', s));
 
+// A short string that is also a generated name already has its English.
+for (const a of Object.keys(areas)) if (a !== 'ui') areas[a] = areas[a].filter((s) => !(s in nameEntries));
 writeFileSync(join(root, 'i18n/source.json'), JSON.stringify(areas, null, 1) + '\n');
 const zh = (a) => a.reduce((n, s) => n + (s.match(/[\u4e00-\u9fff]/g) || []).length, 0);
 for (const [a, v] of Object.entries(areas)) console.log(a.padEnd(22), String(v.length).padStart(6), String(zh(v)).padStart(8));
