@@ -162,10 +162,17 @@ function fromWrapped(text) {
   }
   const tag = /^#(\S+)$/.exec(text);
   if (tag && exact.has(tag[1])) return `#${exact.get(tag[1]).toLowerCase()}`;
+  const listed = text.split(/(?<=”)、/);
+  if (listed.length > 1) {
+    const items = listed.map((x) => translate(x));
+    if (!items.some((x) => CJK.test(x))) return items.join(', ');
+  }
   const bullet = /^· (.+)$/s.exec(text);
   if (bullet) return `· ${translate(bullet[1])}`;
-  const quoted = /^「(.+)」$/s.exec(text);
-  if (quoted) return `"${translate(quoted[1])}"`;
+  const quoted = /^[「“](.+)[」”]$/s.exec(text);
+  if (quoted && !/[」”].*[「“]/s.test(quoted[1])) return `"${translate(quoted[1])}"`;
+  const bracketed = /^（(.+)）$/s.exec(text);
+  if (bracketed) return ` (${translate(bracketed[1])})`;
   const noted = /^(.+?)（(.+)）$/s.exec(text);
   if (noted && !CJK.test(translate(noted[1]))) return `${translate(noted[1])} (${translate(noted[2])})`;
   return null;
@@ -281,6 +288,9 @@ function fromClause(text) {
       out = out.split(name).join(piece);
     });
     if (clean) return out;
+  }
+  if (clipped || start.length >= 10) {
+    for (const [zh, en] of exact) if (zh.length > start.length && zh.startsWith(start)) return /^.*?[.!?;](?=\s|$)/s.exec(en)?.[0].replace(/[.;]$/, '') ?? en;
   }
   return clipped ? fromCutTemplate(start) : null;
 }

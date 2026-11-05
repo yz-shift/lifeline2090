@@ -137,5 +137,20 @@
  "{0}做过{1}，在{2}行业。": "{0} worked as {1} in {2}.",
  "{0}做过{1}，前后工作了 {2} 年。": "{0} worked as {1} for {2} years.",
  "{0}做过{1}。": "{0} worked as {1}.",
- "{0}{1}，学的是{2}。": "{0} {1}, studying {2}."
+ "{0}{1}，学的是{2}。": "{0} {1}, studying {2}.",
+ "他没有机会进学校读书。": "He never had the chance to go to school.",
+ "她没有机会进学校读书。": "She never had the chance to go to school.",
+ "他只读过学前班。": "He only attended preschool.",
+ "她只读过学前班。": "She only attended preschool.",
+ "他读完了小学。": "He finished primary school.",
+ "她读完了小学。": "She finished primary school.",
+ "他读完了中学。": "He finished secondary school.",
+ "她读完了中学。": "She finished secondary school.",
+ "他上了职业学校。": "He went to vocational school.",
+ "她上了职业学校。": "She went to vocational school.",
+ "他读完了大学。": "He finished university.",
+ "她读完了大学。": "She finished university.",
+ "当地背景：{0}": "Local background: {0}",
+ "的城市": ", in a city",
+ "的乡村": ", in the countryside"
 }

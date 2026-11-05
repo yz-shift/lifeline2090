@@ -509,7 +509,7 @@ function drawLegend(P, items, x, y, w) {
   const sw = 16;
   P.font('body', 18, 400);
   for (const it of items) {
-    const tw = P.measure(it.label);
+    const tw = P.measure(tr(it.label));
     const iw = sw + 8 + tw + 18;
     if (cx > x && cx + iw > x + w) { cx = x; cy += 28; }
     if (it.hatch) {
@@ -747,7 +747,7 @@ export async function deathCard(state, data, extra = {}) {
   const mapX = 560, mapW = CARD_WIDTH - 84 - mapX;
   P.text('一生 · 每格一年', mapX, midTop + 38, { size: 18, color: pal.ink3, spacing: 2 });
   P.font('body', 18, 400);
-  const legendRows = legendItems.length ? Math.ceil(legendItems.reduce((a, it) => a + 16 + 8 + P.measure(it.label) + 18, 0) / mapW + 0.35) : 0;
+  const legendRows = legendItems.length ? Math.ceil(legendItems.reduce((a, it) => a + 16 + 8 + P.measure(tr(it.label)) + 18, 0) / mapW + 0.35) : 0;
   const legendH = legendRows * 28;
   const gridTop = midTop + 56;
   const gridH = drawLifeGrid(P, history, { x: mapX, y: gridTop, w: mapW, maxH: midBottom - gridTop - legendH - 14, birthYear });
@@ -759,7 +759,7 @@ export async function deathCard(state, data, extra = {}) {
   STATS.forEach((k, i) => {
     const x = 84 + i * colW;
     const v = Math.max(0, Math.min(100, Math.round(num(stats[k]) ?? 0)));
-    P.text(STAT_LABELS[k], x, statsY + 24, { size: 20, color: pal.ink3 });
+    P.text(isEn() && k === 'relationships' ? 'Social' : STAT_LABELS[k], x, statsY + 24, { size: 20, color: pal.ink3 });
     P.text(String(v), x + colW - 24, statsY + 26, { kind: 'mono', size: 28, weight: 600, color: pal.ink, align: 'right' });
     ctx.fillStyle = pal.paper2;
     roundRect(ctx, x, statsY + 40, colW - 24, 10, 5);

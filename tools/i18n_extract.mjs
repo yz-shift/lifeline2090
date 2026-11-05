@@ -156,6 +156,11 @@ writeFileSync(join(root, 'i18n/en/0_names.json'), JSON.stringify(nameEntries, nu
 walkData(content.history, (s) => put('history', s));
 walkData(content.future, (s) => put('future', s), '', new Set(['sources', 'source', 'fields', 'generated']));
 walkData(content.lifePaths, (s) => put('lifepaths', s));
+// the one note per country shown on the birth card as local background (person.js)
+for (const c of Object.values(content.lifePaths.countries)) {
+  const n = (Array.isArray(c.notes) ? c.notes : []).find((x) => typeof x === 'string' && x.trim() && x.length <= 90);
+  if (n) put('lifepaths', n);
+}
 walkData(content.econ, (s) => put('data_misc', s));
 walkData(JSON.parse(readFileSync(join(root, 'data/countries.json'), 'utf8')).countries, (s, k) => { if (k === 'name') put('countries', s); });
 walkData(JSON.parse(readFileSync(join(root, 'web_seed/seed.json'), 'utf8')), (s) => put('seed', s));
