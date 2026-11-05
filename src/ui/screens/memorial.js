@@ -1,7 +1,7 @@
 // "追思馆": a quieter, candle-lit presentation of the shared lives, sorted by candles or by recency.
 // Uses the same live feed as the shared screen and the same detail view (variant 'memorial').
 
-import { h, clear, storage } from '../dom.js';
+import { h, clear, storage, fmt } from '../dom.js';
 import { initSocial, setDataSource, subscribeShared } from '../../social/store.js';
 import { renderLifeDetail, liveBanner, emptyState, candleIcon, candleText, archiveNo, SEX_LABELS } from './lifeDetail.js';
 

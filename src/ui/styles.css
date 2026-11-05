@@ -1342,3 +1342,17 @@ html:has(.g-ctrl) .ll-toasts { padding-bottom: calc(96px + env(safe-area-inset-b
     scroll-behavior: auto !important;
   }
 }
+
+/* language switch */
+.ll-lang { display: inline-flex; flex: none; border: 1px solid var(--line); margin-left: 8px; }
+.ll-lang.is-busy { opacity: .55; pointer-events: none; }
+.ll-lang-btn { appearance: none; background: transparent; border: 0; color: var(--ink); font: inherit; font-size: 12px; line-height: 1; padding: 7px 8px; min-height: 30px; cursor: pointer; }
+.ll-lang-btn + .ll-lang-btn { border-left: 1px solid var(--line); }
+.ll-lang-btn.is-on { background: var(--ink); color: var(--paper); }
+.ll-lang-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.ll-lang--wide { margin-left: 0; }
+.ll-lang--wide .ll-lang-btn { font-size: 14px; padding: 10px 18px; min-height: 42px; }
+@media (max-width: 560px) { .ll-header .ll-lang-btn { padding: 7px 6px; font-size: 11px; } }
+
+/* in English the main name is already the romanised one */
+html[lang^="en"] .ll-reg-latin, html[lang^="en"] .g-cert-latin, html[lang^="en"] .g-card-latin { display: none; }

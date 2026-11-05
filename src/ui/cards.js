@@ -548,7 +548,7 @@ export async function birthCard(state, data) {
   const year = num(b.year) ?? dateParts(b.date).y ?? HISTORY_END;
   const proj = year > HISTORY_END;
   const name = String(b.name || person.name || '无名');
-  const latin = b.nameLatin ? String(b.nameLatin) : '';
+  const latin = b.nameLatin && !isEn() ? String(b.nameLatin) : '';
   const sex = b.sex === 'female' ? '女' : b.sex === 'male' ? '男' : '—';
   const cName = countryName(data, iso);
   const region = C?.region ? REGIONS[C.region] || '' : '';
@@ -668,7 +668,7 @@ export async function deathCard(state, data, extra = {}) {
   const deathYear = num(dead.year) ?? num(state?.year) ?? birthYear;
   const age = num(dead.age) ?? num(state?.age) ?? Math.max(0, deathYear - birthYear);
   const name = String(b.name || p.name || '无名');
-  const latin = b.nameLatin ? String(b.nameLatin) : '';
+  const latin = b.nameLatin && !isEn() ? String(b.nameLatin) : '';
   const birthIso = b.country || p.country;
   const placeIso = dead.place || p.country || birthIso;
   const no = archiveNumber(state);

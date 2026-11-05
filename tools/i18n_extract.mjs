@@ -2,7 +2,7 @@
 // Code is scanned with a small tokenizer (comments and regex literals are skipped, so the Chinese lexicons in
 // classifyIntent stay out). `${expr}` becomes {0}, {1}... and literals nested inside expr are collected on their own.
 // Usage: node tools/i18n_extract.mjs
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -95,9 +95,13 @@ function walkData(o, add, key = '') {
 
 const areas = {};
 const seen = new Set();
+const NAME_TABLE = /^[^|,]+\|[A-Za-z]/; // "王|Wang,李|Li": romanised names, taken from person.js below
+const CURRENCY_ROW = /^[A-Z,]+:[A-Z]{3}:([^:]+):/; // "CHN:CNY:人民币:¥": only the name is shown
 const put = (area, s) => {
   const t = s.trim();
-  if (!t || !CJK.test(t) || seen.has(t)) return;
+  const currency = CURRENCY_ROW.exec(t);
+  if (currency) { put(area, currency[1]); return; }
+  if (!t || !CJK.test(t) || seen.has(t) || NAME_TABLE.test(t) || /^\{0\} ?(万亿|亿|万)$/.test(t)) return; // number units are converted by finishEnglish
   seen.add(t);
   (areas[area] ||= []).push(t);
 };
@@ -109,8 +113,37 @@ for (const p of walkDir(join(root, 'src')).filter((f) => f.endsWith('.js'))) {
   for (const s of scanJs(readFileSync(p, 'utf8'))) put(area, s);
 }
 const content = JSON.parse(readFileSync(join(root, 'data/content.json'), 'utf8'));
-const NAME_KEYS = new Set(['surnames', 'surnames_female', 'male', 'female']);
-walkData(content.names, (s, k) => put(NAME_KEYS.has(k) ? 'names' : 'data_misc', s));
+
+// Names already carry their romanisation, so they need no translating. @s:/@g: mark surnames and given names of
+// surname-first countries, which lets tr() read a joined name such as 王浩然.
+const nameEntries = {};
+const addName = (zh, en, tag) => {
+  if (!zh || !en) return;
+  nameEntries[zh] ??= en;
+  if (tag) nameEntries[`@${tag}:${zh}`] ??= en;
+};
+const pairs = (s) => s.split(',').map((x) => x.split('|'));
+const personJs = readFileSync(join(root, 'src/core/person.js'), 'utf8');
+for (const m of personJs.matchAll(/\w+: \{ fmt: '(sg|gs)', sur: P\('([^']+)'\)[\s\S]*?male: P\('([^']+)'\),?\s*female: P\('([^']+)'\)/g)) {
+  const first = m[1] === 'sg';
+  for (const [zh, en] of pairs(m[2])) addName(zh, en, first ? 's' : '');
+  for (const [zh, en] of [...pairs(m[3]), ...pairs(m[4])]) addName(zh, en, first ? 'g' : '');
+}
+for (const m of personJs.matchAll(/surF: P\('([^']+)'\)/g)) for (const [zh, en] of pairs(m[1])) addName(zh, en, '');
+const countryNames = Object.entries(content.names.countries);
+countryNames.sort(([a], [b]) => (a === 'CHN' ? -1 : b === 'CHN' ? 1 : 0));
+for (const [, c] of countryNames) {
+  const first = c.format === 'surname+given';
+  for (const [key, tag] of [['surnames', 's'], ['surnames_female', 's'], ['male', 'g'], ['female', 'g']]) {
+    (c[key] || []).forEach((zh, i) => addName(zh, c.latin?.[key]?.[i], first ? tag : ''));
+  }
+}
+const COMPOUND = { 欧阳: 'Ouyang', 司马: 'Sima', 上官: 'Shangguan', 诸葛: 'Zhuge', 东方: 'Dongfang', 皇甫: 'Huangfu', 尉迟: 'Yuchi', 公孙: 'Gongsun', 慕容: 'Murong', 长孙: 'Zhangsun', 宇文: 'Yuwen', 司徒: 'Situ', 夏侯: 'Xiahou', 令狐: 'Linghu', 端木: 'Duanmu', 南宫: 'Nangong' };
+for (const [zh, en] of Object.entries(COMPOUND)) { nameEntries[`@s:${zh}`] = en; seen.add(zh); }
+mkdirSync(join(root, 'i18n/en'), { recursive: true });
+// "0_" sorts first, so a real translation of the same text wins over a name when the catalog is built.
+writeFileSync(join(root, 'i18n/en/0_names.json'), JSON.stringify(nameEntries, null, 0).replace(/","/g, '",\n"') + '\n');
+
 walkData(content.history, (s) => put('history', s));
 walkData(content.future, (s) => put('future', s));
 walkData(content.lifePaths, (s) => put('lifepaths', s));

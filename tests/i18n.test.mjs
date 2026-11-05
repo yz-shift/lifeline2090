@@ -37,10 +37,19 @@ test('named placeholders work like numbered ones', () => {
   });
 });
 
-test('a one-character template only accepts non-Chinese captures', () => {
+test('a one-character template only accepts captures it can fully translate', () => {
   withCatalog({ '{0} 个': '{0} items', 猫: 'cat' }, () => {
     assert.equal(tr('12 个'), '12 items');
-    assert.match(tr('猫 个'), /猫/);
+    assert.equal(tr('猫 个'), 'cat items');
+    assert.match(tr('没见过的动物 个'), /没见过的动物/);
+  });
+});
+
+test('a/an and pronoun case follow what was filled in', () => {
+  withCatalog({ '成了{0}。': 'You became a {0}.', 会计: 'accountant', 司机: 'driver', '记得{0}。': 'You remembered {0}.', 他: 'he' }, () => {
+    assert.equal(tr('成了会计。'), 'You became an accountant.');
+    assert.equal(tr('成了司机。'), 'You became a driver.');
+    assert.equal(tr('记得他。'), 'You remembered him.');
   });
 });
 
@@ -61,6 +70,29 @@ test('Chinese number units become English ones', () => {
     assert.equal(tr('3.4亿'), '340M');
     assert.equal(tr('12万'), '120K');
     assert.equal(tr('25亿'), '2.5B');
+    assert.equal(tr('1.2万亿'), '1.2T');
+  });
+});
+
+test('generated names are read from their parts', () => {
+  const names = { '@s:王': 'Wang', '@g:浩然': 'Haoran', '@s:欧阳': 'Ouyang', 阿尔琼: 'Arjun', 辛格: 'Singh', 约翰: 'John', 史密斯: 'Smith', '{0}来了': '{0} came' };
+  withCatalog(names, () => {
+    assert.equal(tr('王浩然'), 'Wang Haoran');
+    assert.equal(tr('欧阳浩然'), 'Ouyang Haoran');
+    assert.equal(tr('阿尔琼·辛格'), 'Arjun Singh');
+    assert.equal(tr('约翰 史密斯'), 'John Smith');
+    assert.equal(tr('王浩然来了'), 'Wang Haoran came');
+  });
+});
+
+test('filled-in templates get singular nouns and a sentence capital', () => {
+  withCatalog({ '有{0}个孩子': 'had {0} children', '活了{0}年': 'lived {0} years', '{0}走了。': '{0} left.', 你: 'you' }, () => {
+    assert.equal(tr('有1个孩子'), 'had 1 child');
+    assert.equal(tr('有2个孩子'), 'had 2 children');
+    assert.equal(tr('活了1年'), 'lived 1 year');
+    assert.equal(tr('活了2.1年'), 'lived 2.1 years');
+    assert.equal(tr('活了11年'), 'lived 11 years');
+    assert.equal(tr('你走了。'), 'You left.');
   });
 });
 

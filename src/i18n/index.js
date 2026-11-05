@@ -28,15 +28,32 @@ const store = {
 /** Chinese number units and bare year/age suffixes that survive inside otherwise translated text. */
 function finishEnglish(s) {
   return s
+    .replace(/(-?\d+(?:\.\d+)?)\s*万亿/g, '$1T')
     .replace(/(-?\d+(?:\.\d+)?)\s*亿/g, (_, n) => { const v = +n * 100; return v >= 1000 ? `${+(v / 1000).toFixed(1)}B` : `${+v.toFixed(1)}M`; })
     .replace(/(-?\d+(?:\.\d+)?)\s*万/g, (_, n) => { const v = +n * 10; return v >= 1000 ? `${+(v / 1000).toFixed(1)}M` : `${+v.toFixed(1)}K`; })
     .replace(/(\d{4})\s*年/g, '$1')
     .replace(/(\d+)\s*岁/g, '$1');
 }
 
+/** Grammar a filled-in template can't know in advance: singular after 1, and a capital at the start of a full sentence. */
+function polishEnglish(s) {
+  const singular = s
+    .replace(/(?<![\d.,])1 children\b/g, '1 child')
+    .replace(/(?<![\d.,])1 lives\b/g, '1 life')
+    .replace(/(?<![\d.,])1 ([a-z]+[^s\W])s\b/g, '1 $1')
+    .replace(/([a-z0-9%])\(/g, '$1 (') // a note joined on from a separate string
+    .replace(/\b([Aa]) (?=[aeio]|un[^iv]|ho(?:ur|nest))/g, '$1n ') // a/an depends on what was filled in
+    .replace(/\b(of|to|with|for|beside|about|remembered) he\b/g, '$1 him')
+    .replace(/\b(of|to|with|for|beside|about|remembered) she\b/g, '$1 her')
+    .replace(/ {2,}/g, ' ');
+  return /[.!?]["')]?$/.test(singular) ? singular.replace(/^[a-z]/, (c) => c.toUpperCase()) : singular;
+}
+
 let lang = 'zh';
 let exact = new Map();
 let index = new Map(); // first bigram of a template's longest literal -> templates
+let surnames = new Map();
+let givenNames = new Map();
 let cache = new Map();
 let catalogLoaded = false;
 const misses = new Set();
@@ -62,10 +79,16 @@ function addTemplate(zh, en) {
 
 /** Replace the catalog: { zh: en }; keys containing {name} are templates. */
 export function setCatalog(map, { merge = false } = {}) {
-  if (!merge) { exact = new Map(); index = new Map(); }
+  if (!merge) { exact = new Map(); index = new Map(); surnames = new Map(); givenNames = new Map(); }
   for (const [zh, en] of Object.entries(map)) {
-    if (PLACEHOLDER.test(zh)) addTemplate(zh, en);
-    else exact.set(zh, en);
+    if (zh.startsWith('@s:')) surnames.set(zh.slice(3), en);
+    else if (zh.startsWith('@g:')) givenNames.set(zh.slice(3), en);
+    else if (PLACEHOLDER.test(zh)) addTemplate(zh, en);
+    else {
+      exact.set(zh, en);
+      // "。那一年……" joins on to the sentence before it, and splitting into sentences loses the leading stop.
+      if (zh[0] === '。') exact.set(zh.slice(1), en.replace(/^[.\s]+/, ''));
+    }
     PLACEHOLDER.lastIndex = 0;
   }
   cache = new Map();
@@ -91,7 +114,7 @@ function fromTemplate(text) {
     const m = compile(t).exec(text);
     if (!m) continue;
     const caps = m.slice(1);
-    if (t.plainOnly && caps.some((c) => CJK.test(c))) continue;
+    if (t.plainOnly && caps.some((c) => CJK.test(c) && !exact.has(c.trim()) && !fromName(c.trim()))) continue;
     let out = t.en;
     t.names.forEach((name, i) => { out = out.split(name).join(translate(caps[i])); });
     return out;
@@ -116,6 +139,20 @@ function bySegments(text, splitter) {
   return out;
 }
 
+/** A generated name: 阿尔琼·辛格 and 约翰 史密斯 by their parts, 王浩然 and 欧阳浩然 as surname + given name. */
+function fromName(text) {
+  if (/[·\s]/.test(text)) {
+    const parts = text.split(/[·\s]+/);
+    return parts.every((p) => exact.has(p)) ? parts.map((p) => exact.get(p)).join(' ') : null;
+  }
+  for (const n of [2, 1]) {
+    const sur = surnames.get(text.slice(0, n));
+    const given = givenNames.get(text.slice(n));
+    if (sur && given) return `${sur} ${given}`;
+  }
+  return null;
+}
+
 function translate(raw) {
   if (!raw || !CJK.test(raw)) return raw;
   const hit = cache.get(raw);
@@ -123,7 +160,7 @@ function translate(raw) {
   const lead = raw.match(/^\s*/)[0];
   const tail = raw.match(/\s*$/)[0];
   const text = raw.trim();
-  const result = exact.get(text) ?? fromTemplate(text) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
+  const result = exact.get(text) ?? fromName(text) ?? fromTemplate(text) ?? bySegments(text, SENTENCE) ?? bySegments(text, CLAUSE);
   if (result == null) misses.add(text);
   const out = lead + (result ?? text) + tail;
   cache.set(raw, out);
@@ -135,7 +172,7 @@ export function tr(text) {
   if (lang === 'zh' || typeof text !== 'string' || !CJK.test(text)) return text;
   const out = finishEnglish(translate(text));
   if (out === text) return text;
-  const tidy = PUNCT.reduce((s, [re, to]) => s.replace(re, to), out);
+  const tidy = polishEnglish(PUNCT.reduce((s, [re, to]) => s.replace(re, to), out));
   return /\s$/.test(text) ? tidy : tidy.trimEnd();
 }
 
