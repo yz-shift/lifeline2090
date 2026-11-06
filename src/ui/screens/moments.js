@@ -8,6 +8,7 @@
 
 import { h, $$, clear, reducedMotion } from '../dom.js';
 import { HISTORY_END } from '../../core/constants.js';
+import { tr, isEn } from '../../i18n/index.js';
 
 export const NAME_MAX = 12;
 export const NOTE_MAX = 200;
@@ -178,6 +179,10 @@ export function openNaming(app, opts = {}) {
   const suggestions = (Array.isArray(naming.suggestions) ? naming.suggestions : [])
     .map((s) => cleanText(s, NAME_MAX)).filter(Boolean).slice(0, 5);
   const fallback = suggestions[0] || cleanText(child.name, NAME_MAX) || '';
+  // In English the field shows romanised names, which are longer; a suggestion picked as shown is saved as itself.
+  const MAX = isEn() ? 20 : NAME_MAX;
+  const shown = (n) => (isEn() ? tr(n) : n);
+  const original = (v) => suggestions.find((n) => shown(n) === v) ?? (fallback && shown(fallback) === v ? fallback : v);
   const year = state?.year;
   const projected = year > HISTORY_END;
   let done = false;
@@ -196,13 +201,13 @@ export function openNaming(app, opts = {}) {
   };
   const keep = () => finish(opts.onKeep || noop, fallback);
   const submit = () => {
-    const name = cleanText(input.value, NAME_MAX);
+    const name = cleanText(input.value, MAX);
     if (!name) { input.focus(); return; }
-    finish(opts.onName || noop, name);
+    finish(opts.onName || noop, original(name));
   };
   const sync = () => {
-    const v = cleanText(input.value, NAME_MAX);
-    counter.textContent = `${charCount(input.value)}/${NAME_MAX}`;
+    const v = cleanText(input.value, MAX);
+    counter.textContent = `${charCount(input.value)}/${MAX}`;
     okBtn.disabled = !v;
     for (const b of $$('.g-mchip', chipWrap)) b.setAttribute('aria-pressed', b.dataset.name === v ? 'true' : 'false');
   };
@@ -216,17 +221,17 @@ export function openNaming(app, opts = {}) {
     initialFocus: () => input,
     build(body, id) {
       chipWrap = h('div.g-mchips', { role: 'group', 'aria-label': '推荐的名字' }, suggestions.map((s) => h('button.g-mchip', {
-        type: 'button', dataset: { name: s }, 'aria-pressed': 'false',
-        onclick: () => { stopAuto(); input.value = s; sync(); input.focus(); },
+        type: 'button', dataset: { name: shown(s) }, 'aria-pressed': 'false',
+        onclick: () => { stopAuto(); input.value = shown(s); sync(); input.focus(); },
       }, s)));
-      counter = h('span.g-custom-n', { id: `${id}-n` }, `0/${NAME_MAX}`);
+      counter = h('span.g-custom-n', { id: `${id}-n` }, `0/${MAX}`);
       input = h('input.g-mom-input', {
-        id: `${id}-in`, type: 'text', maxlength: String(NAME_MAX * 2), autocomplete: 'off', spellcheck: 'false',
-        value: fallback, 'aria-describedby': `${id}-hint ${id}-n`, placeholder: '写下一个名字',
+        id: `${id}-in`, type: 'text', maxlength: String(MAX * 2), autocomplete: 'off', spellcheck: 'false',
+        value: shown(fallback), 'aria-describedby': `${id}-hint ${id}-n`, placeholder: '写下一个名字',
       });
       input.addEventListener('input', () => {
         stopAuto();
-        if (charCount(input.value) > NAME_MAX) input.value = Array.from(input.value).slice(0, NAME_MAX).join('');
+        if (charCount(input.value) > MAX) input.value = Array.from(input.value).slice(0, MAX).join('');
         sync();
       });
       input.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') { ev.preventDefault(); submit(); } });
@@ -241,7 +246,7 @@ export function openNaming(app, opts = {}) {
           h('label.g-custom-lb', { for: `${id}-in` }, '名字'),
           input,
           h('div.g-custom-row',
-            h('span.g-custom-hint', { id: `${id}-hint` }, `可以选一个，也可以自己写（最多 ${NAME_MAX} 个字）`),
+            h('span.g-custom-hint', { id: `${id}-hint` }, `可以选一个，也可以自己写（最多 ${MAX} 个字）`),
             counter)),
         h('div.g-dlg-actions',
           autoLine,

@@ -146,9 +146,12 @@ function headIndex() {
 function fromWrapped(text) {
   // a label and its number: 健康 76; an amount in a named currency: 3242万印度尼西亚盾
   const stat = /^(\S+) ([-−+]?[\d.,%].*)$/.exec(text);
-  if (stat && exact.has(stat[1]) && !CJK.test(stat[2])) return `${exact.get(stat[1])} ${translate(stat[2])}`;
-  const money = /^([-−]?[\d.,]+(?:万亿|亿|万)?)\s*([^\d\s]{2,})$/.exec(text);
-  if (money && exact.has(money[2])) return `${money[1]} ${exact.get(money[2])}`;
+  if (stat && exact.has(stat[1])) {
+    const rest = translate(stat[2]);
+    if (!CJK.test(rest)) return `${exact.get(stat[1])} ${rest}`;
+  }
+  const money = /^([-−+]?[\d.,]+(?:万亿|亿|万)?)\s*([^\d\s]{2,})$/.exec(text);
+  if (money && exact.has(money[2])) return `${finishEnglish(money[1])} ${exact.get(money[2])}`;
   // effect chips: 知识↑ 快乐略↓ 婚姻更稳
   const chips = text.split(' ');
   if (chips.length > 1 || /[↑↓]$/.test(text)) {
@@ -457,7 +460,12 @@ function fromName(text) {
     for (let i = 0; i < parts.length;) {
       let j = parts.length;
       while (j > i && !exact.has(parts.slice(i, j).join('·'))) j--;
-      if (j === i) return null;
+      if (j === i) {
+        // only a real name cut short: the leftover must be the start of a known name part
+        const rest = parts.slice(i).join('·');
+        const cut = !/\s/.test(text) && named.length && (rest === '' || [...givenNames.keys(), ...surnames.keys()].some((k) => k.length > rest.length && k.startsWith(rest)));
+        return cut ? `${named.join(' ')}…` : null;
+      }
       named.push(exact.get(parts.slice(i, j).join('·')));
       i = j;
     }

@@ -933,7 +933,7 @@ export class GameController {
     const s = this.state;
     const np = s.namingPending;
     let entries = [];
-    const clean = cleanText(name, 12);
+    const clean = cleanText(name, 20); // the dialog allows 12 in Chinese, 20 for a romanised name (engine limit)
     if (isObj(np) && clean) {
       const f = this._eng('nameChild');
       if (f) {
