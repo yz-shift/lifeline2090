@@ -3,6 +3,7 @@
 // that the AI can read, "沿用上一条世界线"). Both end on the same registration card built from real data for the
 // birth year: life expectancy, infant mortality, GDP per capita, internet use, and the same-second cohort.
 
+import { isEn } from '../../i18n/index.js';
 import { h, clear, fmt, storage, reducedMotion } from '../dom.js';
 import { FIRST_YEAR, HISTORY_END, LAST_YEAR, DATA_DATE, REGIONS } from '../../core/constants.js';
 import { Rng, newSeed } from '../../core/rng.js';
@@ -739,7 +740,7 @@ export function mount(root, params, app) {
           onmousedown: (e) => { e.preventDefault(); pick(r.it.iso); },
         },
         h('span.ll-combo-opt-name', r.it.name),
-        h('span.ll-combo-opt-en', `${r.it.en} · ${r.it.iso}`),
+        h('span.ll-combo-opt-en', isEn() ? r.it.iso : `${r.it.en} · ${r.it.iso}`), // in English the name above is already this
         r.b ? h('span.ll-combo-opt-share', `占新生儿 ${((r.b / tot) * 100).toFixed(r.b / tot < 0.01 ? 2 : 1)}%`) : null));
       });
       list.hidden = false;

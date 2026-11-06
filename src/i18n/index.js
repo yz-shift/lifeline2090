@@ -349,6 +349,15 @@ function fromCutTemplate(start) {
       if (!CJK.test(out)) return out;
     }
   }
+  for (const t of allTemplates) {
+    const lit0 = t.zh.split(PLACEHOLDER)[0];
+    if (cjkCount(lit0) < 4 || start.length <= lit0.length || !start.startsWith(lit0)) continue;
+    const first = t.zh.slice(lit0.length).match(PLACEHOLDER)?.[0];
+    const at = first ? t.en.indexOf(first) : -1;
+    const before = at > 0 ? t.en.slice(0, at).trim() : '';
+    if (before.length >= 8 && !/["“(]$/.test(before) && !/[.!?]\s/.test(before) && !PLACEHOLDER.test(before)) { PLACEHOLDER.lastIndex = 0; return `${before}…`; }
+    PLACEHOLDER.lastIndex = 0;
+  }
   return null;
 }
 
